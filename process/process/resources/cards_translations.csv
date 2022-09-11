@@ -1,0 +1,751 @@
+card,en,fr,de,nl,es
+adventures_amulet,Amulet,Amulette,Amulett,Amulet,Amuleto
+adventures_artificer,Artificer,Maître artisan,Kunsthandwerker,Kanonnengieter,Vidriero
+adventures_bridgetroll,Bridge Troll,Pont aux trolls,Brückentroll,Brugtrol,Puente del Trol
+adventures_caravanguard,Caravan Guard,Escorte,Karawanenwächter,Karavaanescorte,Escolta
+adventures_distantlands,Distant Lands,Terres lointaines,Ferne Lande,Verre landen,Tierras Lejanas
+adventures_dungeon,Dungeon,Donjon,Verlies,Kerker,Mazmorra
+adventures_duplicate,Duplicate,Copie,Duplikat,Duplicaat,Réplica
+adventures_gear,Gear,Équipement,Ausrüstung,Uitrusting,Equipamiento
+adventures_giant,Giant,Géant,Riese,Reus,Gigante
+adventures_guide,Guide,Guide,Kundschafter,Gids,Guía
+adventures_hauntedwoods,Haunted Woods,Bois hantés,Geisterwald,Spookbos,Bosque Encantado
+adventures_hireling,Hireling,Recrue,Gefolgsmann,Huursoldaat,Recluta
+adventures_lostcity,Lost City,Cité perdue,Verlorene Stadt,Verloren stad,Ciudad Perdida
+adventures_magpie,Magpie,Pie voleuse,Elster,Ekster,Urraca
+adventures_messenger,Messenger,Courrier,Kurier,Koerier,Mensajero
+adventures_miser,Miser,Miséreux,Geizhals,Vrek,Avaro
+adventures_page,Page,Page,Page,Wapenknecht,Paje
+adventures_peasant,Peasant,Paysan,Kleinbauer,Boer,Campesino
+adventures_port,Port,Ville portuaire,Hafenstadt,Zeehaven,Aldea Portuaria
+adventures_ranger,Ranger,Forestier,Wildhüter,Woudloper,Guarda Forestal
+adventures_ratcatcher,Ratcatcher,Chasseur de rats,Rattenfänger,Rattenvanger,Cazador de Ratas
+adventures_raze,Raze,Démolition,Zerstörung,Afbraak,Arrasar
+adventures_relic,Relic,Relique,Relikt,Relikwie,Reliquia
+adventures_royalcarriage,Royal Carriage,Cortège royal,Königliche Kutsche,Koninklijke koets,Carruaje Real
+adventures_storyteller,Storyteller,Conteuse,Geschichtenerzähler,Verteller,Cuentacuentos
+adventures_swamphag,Swamp Hag,Sorcière des marais,Sumpfhexe,Heks uit het moeras,Bruja del Pantano
+adventures_transmogrify,Transmogrify,Transfiguration,Transformation,Metamorfose,Transfigurar
+adventures_treasuretrove,Treasure Trove,Pierres précieuses,Schatz,Verborgen schat,Piedras Preciosas
+adventures_winemerchant,Wine Merchant,Marchand de vin,Weinhändler,Wijnhandelaar,Comerciante de Vino
+adventures_coinoftherealm,Coin of the Realm,Monnaie royale,Königliche Münzen,Koninklijke munt,Moneda Real
+adventures_event_mission,Mission,Mission,Mission,Missie,Misión
+adventures_event_scoutingparty,Scouting Party,Pistage,Spähtrupp,Verkennerseenheid,Avanzadilla
+adventures_event_pathfinding,Pathfinding,Reconnaissance,Wegsuche,Woudlopen,Rastreo
+adventures_event_bonfire,Bonfire,Feu de joie,Freudenfeuer,Vreugdevuur,Hoguera
+adventures_event_pilgrimage,Pilgrimage,Pèlerinage,Pilgerfahrt,Bedevaart,Peregrinaje
+adventures_event_training,Training,Entraînement,Training,Training,Entrenamiento
+adventures_event_ball,Ball,Bal,Ball,Bal,Baile
+adventures_event_travellingfair,Travelling Fair,Forains,Wanderzirkus,Kermis,Feria Ambulante
+adventures_event_save,Save,Resserre,Zuflucht,Sparen,Reserva
+adventures_event_borrow,Borrow,Emprunt,Leihgabe,Lenen,Crédito
+adventures_event_lostarts,Lost Arts,Arts anciens,Verlorene Kunst,Verloren Kunst,Artes Perdidas
+adventures_event_trade,Trade,Commerce,Handel,Handel,Intercambio
+adventures_event_raid,Raid,Raid,Überfall,Overval,Asalto
+adventures_event_quest,Quest,Quête,Quest,Queeste,Búsqueda
+adventures_event_expedition,Expedition,Expédition,Expedition,Expeditie,Expedición
+adventures_event_alms,Alms,Aumône,Almosen,Aalmoes,Limosna
+adventures_event_inheritance,Inheritance,Héritage,Erbschaft,Erfenis,Herencia
+adventures_event_ferry,Ferry,Bac,Überfahrt,Veerboot,Barca
+adventures_event_plan,Plan,Plan de bataille,Planung,Plan,Estrategia
+adventures_event_seaway,Seaway,Route maritime,Seeweg,Zeeroute,Vía Marítima
+adventures_treasurehunter,Treasure Hunter,Chasseuse de Trésor,,,
+adventures_warrior,Warrior,Guerrière,,,
+adventures_hero,Hero,Héroïne,,,
+adventures_champion,Champion,Championne,,,
+adventures_soldier,Soldier,Soldat,,,
+adventures_fugitive,Fugitive,Fugitif,,,
+adventures_disciple,Disciple,Disciple,,,,
+adventures_teacher,Teacher,Maître,,,
+card,en,fr,de,nl,es
+alchemy_alchemist,Alchemist,Alchimiste,Alchemist,Alchemist,Alquimista
+alchemy_apothecary,Apothecary,Apothicaire,Apotheker,Apotheker,Boticario
+alchemy_apprentice,Apprentice,Apprenti,Lehrling,Leerling,Aprendiz
+alchemy_familiar,Familiar,Familier,Vertrauter,Oude bekende,Familiar
+alchemy_golem,Golem,Golem,Golem,Golem,Gólem
+alchemy_herbalist,Herbalist,Herboriste,Kräuterkundiger,Kruidenexpert,Herbalista
+alchemy_philosophersstone,Philosopher's Stone,Pierre philosophale,Stein der Weisen,Steen der wijzen,Piedra Filosofal
+alchemy_possession,Possession,Possession,Besessenheit,Bezeten,Posesión
+alchemy_scryingpool,Scrying Pool,Bassin divinatoire,Vision,Visioen,Hidromancia
+alchemy_transmute,Transmute,Transmutation,Verwandlung,Transformatie,Transmutar
+alchemy_university,University,Université,Universität,Universiteit,Universidad
+alchemy_vineyard,Vineyard,Vignoble,Weinberg,Wijnberg,Viñedo
+card,en,fr,de,nl,es
+allies_bauble,Bauble,Babiole,,,
+allies_sycophant,Sycophant,Sycophante,,,
+allies_townsfolk,Townsfolk,Citoyens,,,
+allies_augurs,Augurs,Augures,,,
+allies_clashes,Clashes,Affrontements,,,
+allies_forts,Forts,Fortifications,,,
+allies_importer,Importer,importateur,,,
+allies_merchantcamp,Merchant Camp,Camp de Marchands,,,
+allies_odysseys,Odysseys,Odyssées,,,
+allies_sentinel,Sentinel,Guetteur,,,
+allies_underling,Underling,Subalterne,,,
+allies_wizards,Wizards,Magiciens,,,
+allies_broker,Broker,Courtier,,,
+allies_carpenter,Carpenter,Charpentière,,,
+allies_courier,Courier,Courrier Rapide,,,
+allies_innkeeper,Innkeeper,Aubergiste,,,
+allies_royalgalley,Royal Galley,Galère Royale,,,
+allies_town,Town,Bourg,,,
+allies_barbarian,Barbarian,Barbare,,,
+allies_capitalcity,Capital City,Capitale,,,
+allies_contract,Contract,Contrat,,,
+allies_emissary,Emissary,Émissaire,,,
+allies_galleria,Galleria,Marché Couvert,,,
+allies_guildmaster,Guildmaster,Maître de Guilde,,,
+allies_highwayman,Highwayman,Bandit de Grand Chemin,,,
+allies_hunter,Hunter,Chasseuse,,,
+allies_modify,Modify,Modification,,,
+allies_skirmisher,Skirmisher,Tirailleur,,,
+allies_specialist,Specialist,Spécialiste,,,
+allies_swap,Swap,Troc,,,
+allies_marquis,Marquis,Marquis,,,
+allies_ally_architectsguild,Architects' Guild,Guilde des Architectes,,,
+allies_ally_bandofnomads,Band of Nomads,Bande de Nomades,,,
+allies_ally_cavedwellers,Cave Dwellers,Troglodytes,,,
+allies_ally_circleofwitches,Circle of Witches,Cercle des Sorcières,,,
+allies_ally_citystate,City-state,Cité-État,,,
+allies_ally_coastalhaven,Coastal Haven,Havre-Côtier,,,
+allies_ally_craftersguild,Crafters' Guild,Guilde des Artisans,,,
+allies_ally_desertguides,Desert Guides,Guides du Déserrt,,,
+allies_ally_familyofinventors,Family of Inventors,Famille d'Inventeurs,,,
+allies_ally_fellowshipofscribes,Fellowship of Scribes,Confrérie des Scribes,,,
+allies_ally_forestdwellers,Forest Dwellers,Habitants des Forêts,,,
+allies_ally_gangofpickpockets,Gang of Pickpockets,Détrousseurs,,,
+allies_ally_islandfolk,Island Folk,Peuple des Îles,,,
+allies_ally_leagueofbankers,League of Bankers,Ligue des Banquiers,,,
+allies_ally_leagueofshopkeepers,League of Shopkeepers,Ligue des Commerçants,,,
+allies_ally_markettowns,Market Towns,Villes Commerçantes,,,
+allies_ally_mountainfolk,Mountain Folk,Montagnards,,,
+allies_ally_orderofastrologers,Order of Astrologers,Ordre des Astrologues,,,
+allies_ally_orderofmasons,Order of Masons,Ordre des Maçons,,,
+allies_ally_peacefulcult,Peaceful Cult,Culte Pacifiuqe,,,
+allies_ally_plateaushepherds,Plateau Shepherds,Bergers du Plateau,,,
+allies_ally_trapperslodge,Trappers' Lodge,Cabane de Trappeurs,,,
+allies_ally_woodworkersguild,Woodworkers' Guild,Guilde des Meunuisiers,,,
+allies_augurstohidesplitcard,Augurs - to hide split card,Augures,,,
+allies_herbgatherer,Herb Gatherer,Cueilleuse d'Herbes,,,
+allies_acolyte,Acolyte,Acolyte,,,
+allies_sorceress,Sorceress,Sorcière Maléfique,,,
+allies_sibyl,Sibyl,Sibylle,,,
+allies_clashestohidesplitcard,Clashes - to hide split card,Affrontements,,,
+allies_battleplan,Battle Plan,Tactique,,,
+allies_archer,Archer,Archère,,,
+allies_warlord,Warlord,Seigneur de Guerre,,,
+allies_territory,Territory,Teritoire,,,
+allies_fortstohidesplitcard,Forts - to hide split card,Fortifications,,,
+allies_tent,Tent,Tente,,,
+allies_garrison,Garrison,Garnison,,,
+allies_hillfort,Hill Fort,Fort de la Colline,,,
+allies_stronghold,Stronghold,Bastion,,,
+allies_odysseystohidesplitcard,Odysseys - to hide split card,Odyssées,,,
+allies_oldmap,Old Map,Vieille Carte,,,
+allies_voyage,Voyage,Voyage,,,
+allies_sunkentreasure,Sunken Treasure,Trésor Englouti,,,
+allies_distantshore,Distant Shore,Rivage Lointain,,,
+allies_townsfolktohidesplitcard,Townsfolk - to hide split card,Citoyens,,,
+allies_towncrier,Town Crier,Crieuse Publique,,,
+allies_blacksmith,Blacksmith,Forgeur,,,
+allies_miller,Miller,Meunier,,,
+allies_elder,Elder,Aînée,,,
+allies_wizardstohidesplitcard,Wizards - to hide split card,Magiciens,,,
+allies_student,Student,Apprenti Magicien,,,
+allies_conjurer,Conjurer,Illusioniste,,,
+allies_sorcerer,Sorcerer,Sorcier,,,
+allies_lich,Lich,Liche,,,
+card,en,fr,de,nl,es
+baseset2_harbinger,Harbinger,Présage,Vorbotin,Voorbode,Emisario
+baseset2_merchant,Merchant,Marchand,Händlerin,Koopman,Tendera
+baseset2_vassal,Vassal,Vassal,Vasall,Vazal,Vasallo
+baseset2_poacher,Poacher,Braconnier,Wilddiebin,Wilddief,Cazadora
+baseset2_bandit,Bandit,Brigand,Banditin,Bandiet,Bandida
+baseset2_sentry,Sentry,Sentinelle,Torwächterin,Cipier,Protectora
+baseset2_artisan,Artisan,Artisan,Töpferei,Ambachtsman,Artesana
+baseset_adventurer,Adventurer,Aventurier,Abenteurer,Avonturier,Aventurero
+baseset_bureaucrat,Bureaucrat,Bureaucrate,Bürokrat,Bureaucraat,Burócrata
+baseset_cellar,Cellar,Cave,Keller,Kelder,Sótano
+baseset_chancellor,Chancellor,Chancelier,Kanzler,Raadsheer,Canciller
+baseset_chapel,Chapel,Chapelle,Kapelle,Kapel,Capilla
+baseset_councilroom,Council Room,Chambre du conseil,Ratsversammlung,Raadszaal,Sala del Consejo
+baseset_feast,Feast,Festin,Festmahl,Feest,Banquete
+baseset_festival,Festival,Festival,Jahrmarkt,Festival,Festival
+baseset_gardens,Gardens,Jardins,Gärten,Tuinen,Jardines
+baseset_laboratory,Laboratory,Laboratoire,Laboratorium,Laboratorium,Laboratorio
+baseset_library,Library,Bibliothèque,Bibliothek,Bibliotheek,Biblioteca
+baseset_market,Market,Marché,Markt,Markt,Mercado
+baseset_militia,Militia,Milice,Miliz,Militie,Milicia
+baseset_mine,Mine,Mine,Mine,Mijn,Mina
+baseset_moat,Moat,Douves,Burggraben,Slotgracht,Foso
+baseset_moneylender,Moneylender,Prêteur sur gages,Geldverleiher,Geldschieter,Prestamista
+baseset_remodel,Remodel,Rénovation,Umbau,Verbouwing,Remodelar
+baseset_smithy,Smithy,Forgeron,Schmiede,Smidse,Herrería
+baseset_spy,Spy,Espion,Spion,Spion,Espía
+baseset_thief,Thief,Voleur,Dieb,Dief,Ladrón
+baseset_throneroom,Throne Room,Salle du trône,Thronsaal,Troonzaal,Salón del Trono
+baseset_village,Village,Village,Dorf,Dorp,Aldea
+baseset_witch,Witch,Sorcière,Hexe,Heks,Bruja
+baseset_woodcutter,Woodcutter,Bûcheron,Holzfäller,Houthakker,Leñadores
+baseset_workshop,Workshop,Atelier,Werkstatt,Werkplaats,Taller
+card,en,fr,de,nl,es
+cornucopia_harvest,Harvest,Récolte,Ernte,Oogst,Cosecha
+cornucopia_youngwitch,Young Witch,Jeune sorcière,Junge Hexe,Jonge heks,Bruja Joven
+cornucopia_horsetraders,Horse Traders,Maquignons,Pferdehändler,Paardenhandelaars,Tratantes de Caballos
+cornucopia_tournament,Tournament,Tournoi,Turnier,Toernooi,Torneo
+cornucopia_hamlet,Hamlet,Hameau,Weiler,Gehucht,Caserío
+cornucopia_jester,Jester,Bouffon,Harlekin,Nar,Bufón
+cornucopia_fortuneteller,Fortune Teller,Diseuse de bonne aventure,Wahrsagerin,Waarzegster,Adivinadora
+cornucopia_fairgrounds,Fairgrounds,Champ de foire,Festplatz,Kermisterrein,Recinto Ferial
+cornucopia_hornofplenty,Horn of Plenty,Corne d'abondance,Füllhorn,Hoorn des overvloeds,Cornucopia
+cornucopia_huntingparty,Hunting Party,Chasseurs,Treibjagd,Jachtgezelschap,Cacería
+cornucopia_menagerie,Menagerie,Ménagerie,Menagerie,Menagerie,Colección de Animales
+cornucopia_farmingvillage,Farming Village,Village agricole,Bauerndorf,Boerendorp,Poblado Agrícola
+cornucopia_remake,Remake,Renouvellement,Nachbau,Nieuwe versie,Reconstrucción
+cornucopia_bagofgold,Bag of Gold,Sac d'Or,,,
+cornucopia_diadem,Diadem,Diadème,,,
+cornucopia_followers,Followers,Partisans,,,
+cornucopia_princess,Princess,Princesse,,,
+cornucopia_trustysteed,Trusty Steed,Fidèle Destrier,,,
+
+card,en,fr,de,nl,es
+darkages_armory,Armory,Armurerie,Waffenkammer,Wapenkamer,Armría
+darkages_vagrant,Vagrant,Vagabond,Landstreicher,Landloper,Vagabundo
+darkages_catacombs,Catacombs,Catacombes,Katakomben,Gewelven,Catacumbas
+darkages_count,Count,Comte,Graf,Graaf,Conde
+darkages_knights,Knights,Chevaliers,Ritter,Ridders,Caballeros
+darkages_fortress,Fortress,Forteresse,Festung,Vesting,Fortaleza
+darkages_scavenger,Scavenger,Pilleur,Lumpensammler,Scharrelaar,Carroñero
+darkages_marketsquare,Market Square,Place du marché,Marktplatz,Marktplein,Plaza del Mercado
+darkages_urchin,Urchin,Orphelin,Gassenjunge,Straatjongen,Pillastre
+darkages_rats,Rats,Rats,Ratten,Ratten,Ratas
+darkages_sage,Sage,Sage,Weiser,Wijsgeer,Sabio
+darkages_forager,Forager,Cueilleur,Mundraub,Jager-Verzamelaar,Merodeador
+darkages_altar,Altar,Autel,Altar,Altaar,Altar
+darkages_procession,Procession,Procession,Prozession,Optocht,Procesión
+darkages_squire,Squire,Écuyer,Knappe,Schildknaap,Escudero
+darkages_beggar,Beggar,Mendiant,Bettler,Bedelaar,Mendigo
+darkages_poorhouse,Poor House,Hospice,Armenhaus,Armenhuis,Hospicio
+darkages_deathcart,Death Cart,Charrette de cadavres,Leichenkarren,Dodenkar,Carro de los Muertos
+darkages_wanderingminstrel,Wandering Minstrel,Ménestrel errant,Barde,Reizende Minstreel,Juglar
+darkages_ironmonger,Ironmonger,Ferronnier,Eisenhändler,Metaalhandelaar,Ferretero
+darkages_hermit,Hermit,Ermite,Eremit,Kluizenaar,Ermitaño
+darkages_pillage,Pillage,Pillage,Raubzug,Plundering,Pillaje
+darkages_mystic,Mystic,Mystique,Medium,Toverfeeks,Pitonisa
+darkages_storeroom,Storeroom,Salle d'entreposage,Lagerraum,Berghok,Depósito
+darkages_huntinggrounds,Hunting Grounds,Territoire de chasse,Jagdgründe,Jachtvelden,Coto de Caza
+darkages_graverobber,Graverobber,Pilleur de tombes,Grabräuber,Grafrover,Ladrón de Tumbas
+darkages_counterfeit,Counterfeit,Contrefaçon,Falschgeld,Vals Geld,Falsificación
+darkages_cultist,Cultist,Cultiste,Kultist,Cultist,Sectario
+darkages_rogue,Rogue,Bandit,Schurke,Schurk,Granuja
+darkages_marauder,Marauder,Maraudeur,Marodeur,Stroper,Salteador
+darkages_bandofmisfits,Band of Misfits,Malfaiteurs,Vogelfreie,Groep Mislukkelingen,Banda de Rufianes
+darkages_junkdealer,Junk Dealer,Brocanteur,Schrotthändler,Opkoper,Chatarrero
+darkages_feodum,Feodum,Fief,Lehen,Feodum,Feudo
+darkages_rebuild,Rebuild,Reconstruction,Neubau,Wederopbouw,Reconstruir
+darkages_banditcamp,Bandit Camp,Camp de bandits,Banditenlager,Bandietenkamp,Campamento de Bandidos
+darkages_abandonedmine,Abandoned Mine,Mine abandonnée,,,
+darkages_ruinedlibrary,Ruined Library,Bibliothèque en ruines,,,
+darkages_ruinedmarket,Ruined Market,Marché en ruines,,,
+darkages_ruinedvillage,Ruined Village,Village en ruines,,,
+darkages_survivors,Survivors,rescapés,,,
+darkages_madman,Madman,Fou,,,
+darkages_mercenary,Mercenary,Mercenaire,,,
+darkages_spoils,Spoils,Butin,,,
+darkages_hovel,Hovel,Cabane,,,
+darkages_necropolis,Necropolis,Nécropole,,,
+darkages_overgrownestate,Overgrown Estate,Domaine luxuriant,,,
+darkages_dameanna,Dame Anna,Dame Anna,,,
+darkages_damejosephine,Dame Josephine,Dame Josephine,,,
+darkages_damemolly,Dame Molly,Dame Molly,,,
+darkages_damenatalie,Dame Natalie,Dame Natalie,,,
+darkages_damesylvia,Dame Sylvia,Dame Sylvia,,,
+darkages_sirbailey,Sir Bailey,Sir Bailey,,,
+darkages_sirdestry,Sir Destry,Sir Destry,,,
+darkages_sirmartin,Sir Martin,Sir Martin,,,
+darkages_sirmichael,Sir Michael,Sir Michael,,,
+darkages_sirvander,Sir Vander,Sir Vander,,,
+card,en,fr,de,nl,es
+empires_engineer,Engineer,Ingénieur,Ingenieurin,Ingenieur,Ingeniero
+empires_cityquarter,City Quarter,Faubourg,Stadtviertel,Stadswijk,Suburbios
+empires_overlord,Overlord,Seigneur,Lehnsherr,Despoot,Déspota
+empires_royalblacksmith,Royal Blacksmith,Forgeron royal,Königlicher Schmied,Koninklijke smid,Herrero Real
+empires_encampmentplunder,Encampment / Plunder,Camp / Saccage,Feldlager / Diebesgut,Kampement / Plunderen,Campamento / Saqueo
+empires_patricianemporium,Patrician / Emporium,Patricien / Emporium,Patrizier / Handelsplatz,Patriciër / Emporium,Patricio / Emporio
+empires_settlersbustlingvillage,Settlers / Bustling Village,Colons / Village en effervescence,Siedler / Emsiges Dorf,Kolonisten / Levendig dorp,Colonos / Aldea Bulliciosa
+empires_castles,Castles,Châteaux,Schlösser,Kastelen,Castillos
+empires_catapultrocks,Catapult / Rocks,Catapulte / Rocher,Katapult / Felsen,Katapult / Rotsblokken,Catapulta / Rocas
+empires_chariotrace,Chariot Race,Course de chars,Wagenrennen,Strijdwagenrace,Carrera de Cuádrigas
+empires_enchantress,Enchantress,Magicienne,Zauberin,Tovenares,Hechicera
+empires_farmersmarket,Farmers Market,Marché agricole,Bauernmarkt,Boerenmarkt,Mercado Agrícola
+empires_gladiatorfortune,Gladiator / Fortune,Gladiateur / Fortune,Gladiator / Reichtum,Gladiator / Fortuin,Gladiador / Fortuna
+empires_sacrifice,Sacrifice,Sacrifice,Opfer,Offer,Sacrificio
+empires_temple,Temple,Temple,Tempel,Tempel,Templo
+empires_villa,Villa,Villa,Villa,Villa,Villa
+empires_archive,Archive,Archives,Archiv,Archief,Archivo
+empires_capital,Capital,Capital,Vermögen,Kapitaal,Capital
+empires_charm,Charm,Sort,Zauber,Geluksbrenger,Fetiche
+empires_crown,Crown,Couronne,Krone,Kroon,Corona
+empires_forum,Forum,Forum,Forum,Forum,Foro
+empires_groundskeeper,Groundskeeper,Jardinière,Gärtnerin,Kasteelhovenier,Jardinero
+empires_legionary,Legionary,Légionnaire,Legionär,Legioensoldaat,Legionario
+empires_wildhunt,Wild Hunt,Chasse fantastique,Wilde Jagd,Wilde jacht,Cacería Salvaje
+empires_event_triumph,Triumph,Triomphe,Siegeszug,Triomf,Triunfo
+empires_event_annex,Annex,Annexion,Schlacht,Overname,Anexión
+empires_event_donate,Donate,Donation,Spende,Donatie,Donación
+empires_event_advance,Advance,Adoubement,Aufstieg,Promotie,Promoción
+empires_event_delve,Delve,Trouée,Erforschen,Delven,Excavación
+empires_event_tax,Tax,Taxe,Steuer,Belasting,Impuesto
+empires_event_banquet,Banquet,Banquet,Bankett,Banket,Banquete
+empires_event_ritual,Ritual,Rituel,Ritual,Ritueel,Ritual
+empires_event_salttheearth,Salt the Earth,Épandage de sel,Versalztes Land,Zout der aarde,Salar la Tierra
+empires_event_wedding,Wedding,Mariage,Hochzeit,Bruiloft,Boda
+empires_event_windfall,Windfall,Manne,Glüksfall,Meevaller,Golpe de Suerte
+empires_event_conquest,Conquest,Conquête,Eroberung,Verovering,Conquista
+empires_event_dominate,Dominate,Domination,Beherrschen,Overheersing,Dominación
+empires_landmark_aqueduct,Aqueduct,Aqueduc,Aquädukt,Aquaduct,Acueducto
+empires_landmark_arena,Arena,Arène,Arena,Arena,Arena
+empires_landmark_banditfort,Bandit Fort,Fort des bandits,Räuberfestung,Bandietenfort,Fuerte Bandido
+empires_landmark_basilica,Basilica,Basilique,Basilika,Basiliek,Basílica
+empires_landmark_baths,Baths,Bains,Badehaus,Baden,Baños
+empires_landmark_battlefield,Battlefield,Champ de bataille,Schlachtfeld,Slagveld,Campo de Batalla
+empires_landmark_colonnade,Colonnade,Colonnade,Kolonnaden,Zuilengalerij,Columnata
+empires_landmark_defiledshrine,Defiled Shrine,Profanation,Entweihter Schrein,Geschonden altaar,Santuario Profanado
+empires_landmark_fountain,Fountain,Fontaine,Brunnen,Fontein,Fuente
+empires_landmark_keep,Keep,Fort,Bollwerk,Hoofdtoren,Fuerte
+empires_landmark_labyrinth,Labyrinth,Labyrinthe,Labyrinth,Labyrint,Laberinto
+empires_landmark_mountainpass,Mountain Pass,Col,Gebirgspass,Bergpas,Desfiladero
+empires_landmark_museum,Museum,Musée,Museum,Museum,Museo
+empires_landmark_obelisk,Obelisk,Obélisque,Obelisk,Obelisk,Obelisco
+empires_landmark_orchard,Orchard,Verger,Obstgarten,Boomgaard,Vergel
+empires_landmark_palace,Palace,Palais,Palast,Paleis,Palacio
+empires_landmark_tomb,Tomb,Tombe,Grabmal,Tombe,Tumba
+empires_landmark_tower,Tower,Tour,Turm,Toren,Torre
+empires_landmark_triumphalarch,Triumphal Arch,Arc de triomphe,Triumphbogen,Triomfboog,Arco del Triunfo
+empires_landmark_wall,Wall,Remparts,Mauer,Muur,Muro
+empires_landmark_wolfden,Wolf Den,Tanière des loups,Wolfsbau,Wolvenhol,Guarida de Lobos
+empires_castlestohidesplitcard,Castles - to hide split card,Châteaux,,,
+empires_humblecastle,Humble Castle,Château modeste,,,
+empires_crumblingcastle,Crumbling Castle,Château délabré,,,
+empires_smallcastle,Small Castle,Petit château,,,
+empires_hauntedcastle,Haunted Castle,Château hanté,,,
+empires_opulentcastle,Opulent Castle,Somptueux château,,,
+empires_sprawlingcastle,Sprawling Castle,Château prospère,,,
+empires_grandcastle,Grand Castle,Grand château,,,
+empires_kingscastle,Kings Castle,Château royal,,,
+empires_catapultrockstohidesplitcard,Catapult / Rocks - to hide split card,Catapulte/Rocher,,,
+empires_catapult,Catapult,Catapulte,,,
+empires_rocks,Rocks,Rocher,,,
+empires_encampmentplundertohidesplitcard,Encampment / Plunder - to hide split card,Camp/Saccage,,,
+empires_encampment,Encampment,Camp,,,
+empires_plunder,Plunder,Saccage,,,
+empires_patricianemporiumtohidesplitcard,Patrician / Emporium - to hide split card,Patricien/Emporium,,,
+empires_patrician,Patrician,Patricien,,,
+empires_emporium,Emporium,Emporium,,,
+empires_settlersbustlingvillagetohidesplitcard,Settlers / Bustling Village - to hide split card,Colons/Village en effervescence,,,
+empires_settlers,Settlers,Colons,,,
+empires_bustlingvillage,Bustling Village,Village en effervescence,,,
+empires_gladiatorfortunetohidesplitcard,Gladiator / Fortune - to hide split card,Gladiateur/Fortune,,,
+empires_gladiator,Gladiator,Gladiateur,,,
+empires_fortune,Fortune,Fortune,,,
+card,en,fr,de,nl,es
+guilds_advisor,Advisor,Conseiller,Berater,Adviseur,Asesor
+guilds_baker,Baker,Boulanger,Bäcker,Bakker,Panadero
+guilds_butcher,Butcher,Boucher,Metzger,Slager,Carnicero
+guilds_candlestickmaker,Candlestick Maker,Cirier,Leuchtenmacher,Kandelaarmaker,Fabricante de Velas
+guilds_doctor,Doctor,Médecin,Arzt,Arts,Doctor
+guilds_herald,Herald,Héraut,Herold,Heraut,Heraldo
+guilds_journeyman,Journeyman,Compagnon,Wandergeselle,Gezel,Oficial
+guilds_masterpiece,Masterpiece,Chef-d'œuvre,Meisterstück,Meesterwerk,Obra Maestra
+guilds_merchantguild,Merchant Guild,Guilde des marchands,Kaufmannsgilde,Koopmansgilde,Gremio Mercantil
+guilds_plaza,Plaza,Place du village,Platz,Plaza,Plaza
+guilds_soothsayer,Soothsayer,Devin,Hellseherin,Helderziende,Vidente
+guilds_stonemason,Stonemason,Tailleur de pierre,Steinmetz,Steenhouwer,Cantero
+guilds_taxman,Taxman,Percepteur,Steuereintreiber,Belastinginner,Recaudador
+card,en,fr,de,nl,es
+hinterlands_bordervillage,Border Village,Village frontalier,Grenzdorf,Grensdorp,Pueblo Fronterizo
+hinterlands_foolsgold,Fool's Gold,Or des fous,Katzengold,Klatergoud,Oro Falso
+hinterlands_trader,Trader,Troqueuse,Fahrender Händler,Handelaar,Comerciante
+hinterlands_highway,Highway,Route,Fernstrasse,Hoofdweg,Carretera
+hinterlands_silkroad,Silk Road,Route de la soie,Seidenstrasse,Zijderoute,Ruta de la Seda
+hinterlands_illgottengains,Ill-Gotten Gains,Argent noir,Blutzoll,Gestolen goed,Dinero Sucio
+hinterlands_embassy,Embassy,Ambassade,Botschaft,Ambassade,Embajada
+hinterlands_nomadcamp,Nomad Camp,Campement nomade,Nomadencamp,Nomadenkamp,Campamento Nómada
+hinterlands_spicemerchant,Spice Merchant,Marchand d'épices,Gewürzhändler,Specerijenkoopman,Mercader de Especias
+hinterlands_oracle,Oracle,Oracle,Orakel,Orakel,Oráculo
+hinterlands_cartographer,Cartographer,Cartographe,Kartograph,Cartograaf,Cartógrafo
+hinterlands_farmland,Farmland,Terre agricole,Fruchtbares Land,Landbouwgrond,Tierra de Labranza
+hinterlands_noblebrigand,Noble Brigand,Noble brigand,Edler Räuber,Nobele bandiet,Bandido Honrado
+hinterlands_margrave,Margrave,Margrave,Markgraf,Markgraaf,Margrave
+hinterlands_haggler,Haggler,Marchandeur,Feilscher,Sjacheraar,Regateador
+hinterlands_scheme,Scheme,Complot,Komplott,Gekonkel,Confabulación
+hinterlands_inn,Inn,Auberge,Gasthaus,Herberg,Posada
+hinterlands_tunnel,Tunnel,Tunnel,Tunnel,Tunnel,Túnel
+hinterlands_crossroads,Crossroads,Carrefour,Wegkreuzung,Splitsing,Encrucijada
+hinterlands_develop,Develop,Développement,Aufbau,Ontwikkelen,Desarrollo
+hinterlands_oasis,Oasis,Oasis,Oase,Oase,Oasis
+hinterlands_mandarin,Mandarin,Mandarin,Mandarin,Mandarijn,Mandarín
+hinterlands_cache,Cache,Cache,Schatztruhe,Bewaarplaats,Hallazgo
+hinterlands_duchess,Duchess,Duchesse,Herzogin,Hertogin,Duquesa
+hinterlands_stables,Stables,Écuries,Stallungen,Stallen,Caballerizas
+hinterlands_jackofalltrades,Jack of All Trades,Touche-à-tout,Lebenskünstler,Manusje-van-alles,Chico para Todo
+hinterlands2_trail,Trail,Sentier,,,
+hinterlands2_weaver,Weaver,Tisserande,,,
+hinterlands2_berserker,Berserker,Berserker,,,
+hinterlands2_cauldron,Cauldron,Chaudron,,,
+hinterlands2_guarddog,Guard Dog,Chien de Garde,,,
+hinterlands2_nomads,Nomads,Nomades,,,
+hinterlands2_souk,Souk,Souk,,,
+hinterlands2_wheelwright,Wheelwright,Charronne,,,
+hinterlands2_witchshut,Witch's Hut,Cabanne de Sorcière,,,
+card,en,fr,de,nl,es
+intrigue2_nobles,Nobles,Nobles,Adelige,Adel,Nobles
+intrigue2_conspirator,Conspirator,Conspirateur,Verschwörer,Samenzweerder,Conspirador
+intrigue2_miningvillage,Mining Village,Village minier,Bergwerk,Mijndorp,Aldea Minera
+intrigue2_pawn,Pawn,Pion,Handlanger,Pion,Peón
+intrigue2_courtyard,Courtyard,Cour,Burghof,Binnenplaats,Patio
+intrigue2_tradingpost,Trading Post,Comptoir,Handelsposten,Handelspost,Puesto Comercial
+intrigue2_duke,Duke,Duc,Herzog,Hertog,Duque
+intrigue2_baron,Baron,Baron,Baron,Baron,Barón
+intrigue2_swindler,Swindler,Escroc,Trickser,Oplichter,Embaucador
+intrigue2_bridge,Bridge,Pont,Brücke,Brug,Puente
+intrigue2_torturer,Torturer,Bourreau,Kerkermeister,Folteraar,Torturador
+intrigue2_wishingwell,Wishing Well,Puits aux souhaits,Wunschbrunnen,Wensput,Pozo de los Deseos
+intrigue2_masquerade,Masquerade,Mascarade,Maskerade,Maskerade,Mascarada
+intrigue2_ironworks,Ironworks,Fonderie,Eisenhütte,IJzergieterij,Fundición
+intrigue2_steward,Steward,Intendant,Verwalter,Lakei,Mayordomo
+intrigue2_harem,Harem,Harem,Harem,Harem,Harén
+intrigue2_minion,Minion,Larbin,Lakai,Dienaar,Esbirro
+intrigue2_upgrade,Upgrade,Mise à niveau,Anbau,Opwaardering,Mejora
+intrigue2_shantytown,Shanty Town,Taudis,Armenviertel,Sloppenwijk,Chabolas
+intrigue2_lurker,Lurker,Rôdeur,Herumtreiberin,Voyeur,Acechador
+intrigue2_diplomat,Diplomat,Diplomate,Diplomatin,Diplomaat,Diplomática
+intrigue2_mill,Mill,Moulin,Mühle,Molen,Molino
+intrigue2_secretpassage,Secret Passage,Passage secret,Geheimgang,Geheime Doorgang,Pasadizo Secreto
+intrigue2_patrol,Patrol,Patrouille,Patrouille,Patrouille,Patrulla
+intrigue2_courtier,Courtier,Courtisan,Höflinge,Makelaar,Cortesano
+intrigue2_replace,Replace,Remplacement,Austausch,Vervanging,Reemplazar
+intrigue_nobles,Nobles,Nobles,Adelige,Adel,Nobles
+intrigue_conspirator,Conspirator,Conspirateur,Verschwörer,Samenzweerder,Conspirador
+intrigue_miningvillage,Mining Village,Village minier,Bergwerk,Mijndorp,Aldea Minera
+intrigue_secretchamber,Secret Chamber,Chambre secrète,Geheimkammer,Geheime Kamer,Cámara Secreta
+intrigue_coppersmith,Coppersmith,Chaudronnier,Kupferschmied,Kopersmid,Artesano del Cobre
+intrigue_pawn,Pawn,Pion,Handlanger,Pion,Peón
+intrigue_courtyard,Courtyard,Cour,Burghof,Binnenplaats,Patio
+intrigue_tradingpost,Trading Post,Comptoir,Handelsposten,Handelspost,Puesto Comercial
+intrigue_scout,Scout,Éclaireur,Späher,Verkenner,Explorador
+intrigue_duke,Duke,Duc,Herzog,Hertog,Duque
+intrigue_baron,Baron,Baron,Baron,Baron,Barón
+intrigue_swindler,Swindler,Escroc,Trickser,Oplichter,Embaucador
+intrigue_bridge,Bridge,Pont,Brücke,Brug,Puente
+intrigue_torturer,Torturer,Bourreau,Kerkermeister,Folteraar,Torturador
+intrigue_wishingwell,Wishing Well,Puits aux souhaits,Wunschbrunnen,Wensput,Pozo de los Deseos
+intrigue_masquerade,Masquerade,Mascarade,Maskerade,Maskerade,Mascarada
+intrigue_ironworks,Ironworks,Fonderie,Eisenhütte,IJzergieterij,Fundición
+intrigue_steward,Steward,Intendant,Verwalter,Lakei,Mayordomo
+intrigue_harem,Harem,Harem,Harem,Harem,Harén
+intrigue_minion,Minion,Larbin,Lakai,Dienaar,Esbirro
+intrigue_saboteur,Saboteur,Saboteur,Saboteur,Saboteur,Saboteador
+intrigue_upgrade,Upgrade,Mise à niveau,Anbau,Opwaardering,Mejora
+intrigue_tribute,Tribute,Hommage,Tribut,Tolheffing,Tributo
+intrigue_greathall,Great Hall,Grand hall,Grosse Halle,Grote Zaal,Gran Sala
+intrigue_shantytown,Shanty Town,Taudis,Armenviertel,Sloppenwijk,Chabolas
+card,en,fr,de,nl,es
+menagerie_animalfair,Animal Fair,Foire aux bestiaux,Viehmarkt,,Feria de Ganado
+menagerie_barge,Barge,Chaland,Lastkahn,,Gabarra
+menagerie_blackcat,Black Cat,Chat noir,Schwarze Katze,,Gato Negro
+menagerie_bountyhunter,Bounty Hunter,Chasseur de prime,Kopfgeldjägerin,,Cazarrecompensas
+menagerie_cameltrain,Camel Train,Caravane de chameaux,Kamelzug,,Recua de Camellos
+menagerie_cardinal,Cardinal,Cardinal,Kardinal,,Cardenal
+menagerie_cavalry,Cavalry,Cavalière,Kavallerie,,Caballería
+menagerie_coven,Coven,Clan de sorciers,Hexenzirkel,,Aquelarre
+menagerie_destrier,Destrier,Destrier,Schlachtross,,Destrero
+menagerie_displace,Displace,Déplacement,Vertreibung,,Migración
+menagerie_falconer,Falconer,Fauconnière,Falknerin,,Halconera
+menagerie_fisherman,Fisherman,Pêcheur,Fischer,,Pescador
+menagerie_gatekeeper,Gatekeeper,Garde,Wache,,Centinela
+menagerie_goatherd,Goatherd,Chevrière,Ziegenhirtin,,Cabrera
+menagerie_groom,Groom,Palefrenier,Stallbursche,,Caballerizo
+menagerie_hostelry,Hostelry,Hôtel,Herberge,,Hostal
+menagerie_huntinglodge,Hunting Lodge,Pavillon de chasse,Jagdhütte,,Refugio de Caza
+menagerie_kiln,Kiln,Four,Brennofen,,Horno
+menagerie_livery,Livery,Pension,Pferdestall,,Librea
+menagerie_mastermind,Mastermind,Génie,Drahtzieher,,Cerebro
+menagerie_paddock,Paddock,Enclos,Koppel,,Establo
+menagerie_sanctuary,Sanctuary,Sanctuaire,Zufluchtsort,,Santuario
+menagerie_scrap,Scrap,Ferraille,Schrott,,Chatarra
+menagerie_sheepdog,Sheepdog,Chien de berger,Hirtenhund,,Perro Pastor
+menagerie_sleigh,Sleigh,Traîneau,Schlitten,,Trineo
+menagerie_snowyvillage,Snowy Village,Village enneigé,Verschneites Dorf,,Aldea Nevada
+menagerie_stockpile,Stockpile,Stocks,Depot,,Reservas
+menagerie_supplies,Supplies,Réserves,Nachschub,,Suministros
+menagerie_villagegreen,Village Green,Espace vert,Dorfanger,,Prado del Pueblo
+menagerie_wayfarer,Wayfarer,Voyageuse,Wanderin,,Caminante
+menagerie_event_alliance,Alliance,Alliance,Bündnis,,Alianza
+menagerie_event_banish,Banish,Bannissement,Verbannung,,Destierro
+menagerie_event_bargain,Bargain,Affaire,Gutes Geschäft,,Ganga
+menagerie_event_commerce,Commerce,Négoce,Kommerz,,Comercio
+menagerie_event_delay,Delay,Retard,Verzögerung,,Retraso
+menagerie_event_demand,Demand,Demande,Forderung,,Exigencia
+menagerie_event_desperation,Desperation,Désespoir,Verzweiflung,,Desesperación
+menagerie_event_enclave,Enclave,Enclave,Enklave,,Enclave
+menagerie_event_enhance,Enhance,Réhaussement,Verbesserung,,Reforma
+menagerie_event_gamble,Gamble,Pari,Wagnis,,Apuesta
+menagerie_event_invest,Invest,Investissement,Investition,,Inversión
+menagerie_event_march,March,Marche,Fußmarsch,,Marcha
+menagerie_event_populate,Populate,Peuplement,Besiedlung,,Repoblar
+menagerie_event_pursue,Pursue,Poursuite,Verfolgung,,Persecución
+menagerie_event_reap,Reap,Moisson,Reiche Ernte,,Siega
+menagerie_event_ride,Ride,Chevauchée,Reiten,,Paseo
+menagerie_event_seizetheday,Seize the Day,Carpe Diem,Nutze den Tag,,Aprovecha el Día
+menagerie_event_stampede,Stampede,Ruée,Stampede,,Estampida
+menagerie_event_toil,Toil,Labeur,Plackerei,,Labor
+menagerie_event_transport,Transport,Transport,Transport,,Transporte
+menagerie_way_wayofthebutterfly,Way of the Butterfly,Voie du papillon,Weg des Schmetterlings,,Senda de la Mariposa
+menagerie_way_wayofthecamel,Way of the Camel,Voie du chameau,Weg des Kamels,,Senda del Camello
+menagerie_way_wayofthechameleon,Way of the Chameleon,Voie du caméléon,Weg des Chamäleons,,Senda del Camaleón
+menagerie_way_wayofthefrog,Way of the Frog,Voie de la grenouille,Weg des Frosches,,Senda de la Rana
+menagerie_way_wayofthegoat,Way of the Goat,Voie de la chèvre,Weg der Ziege,,Senda de la Cabra
+menagerie_way_wayofthehorse,Way of the Horse,Voie du cheval,Weg des Pferdes,,Senda del Caballo
+menagerie_way_wayofthemole,Way of the Mole,Voie de la taupe,Weg des Maulwurfs,,Senda del Topo
+menagerie_way_wayofthemonkey,Way of the Monkey,Voie du singe,Weg des Affen,,Senda del Mono
+menagerie_way_wayofthemouse,Way of the Mouse,Voie de la souirs,Weg der Maus,,Senda del Ratón
+menagerie_way_wayofthemule,Way of the Mule,Voie de la mule,Weg des Maultiers,,Senda de la Mula
+menagerie_way_wayoftheotter,Way of the Otter,Voie de la loutre,Weg des Otters,,Senda de la Nutria
+menagerie_way_wayoftheowl,Way of the Owl,Voie du hibou,Weg der Eule,,Senda del Búho
+menagerie_way_wayoftheox,Way of the Ox,Voie du bœuf,Weg des Ochsen,,Senda del Buey
+menagerie_way_wayofthepig,Way of the Pig,Voie du porc,Weg des Schweins,,Senda del Cerdo
+menagerie_way_wayoftherat,Way of the Rat,Voie du rat,Weg der Ratte,,Senda de la Rata
+menagerie_way_wayoftheseal,Way of the Seal,Voie du phoque,Weg der Robbe,,Senda de la Foca
+menagerie_way_wayofthesheep,Way of the Sheep,Voie du mouton,Weg des Schafes,,Senda de la Oveja
+menagerie_way_wayofthesquirrel,Way of the Squirrel,Voie de l'écureuil,Weg des Eichhörnchens,,Senda de la Ardilla
+menagerie_way_wayoftheturtle,Way of the Turtle,Voie de la tortue,Weg der Schildkröte,,Senda de la Tortuga
+menagerie_way_wayoftheworm,Way of the Worm,Voie du ver,Weg des Wurms,,Senda del Gusano
+menagerie_horse,Horse,Cheval,,,
+
+card,en,fr,de,nl,es
+nocturne_druid,Druid,Druide,Druidin,Druïde,Druida
+nocturne_faithfulhound,Faithful Hound,Chien fidèle,Getreuer Hund,Trouwe hond,Perro Leal
+nocturne_guardian,Guardian,Gardienne,Wächterin,Beschermer,Guardián
+nocturne_monastery,Monastery,Monastère,Kloster,Klooster,Monasterio
+nocturne_pixie,Pixie,Pixie,Fee,Elfje,Hada
+nocturne_tracker,Tracker,Traqueur,Fährtensucher,Spoorzoeker,Rastreador
+nocturne_changeling,Changeling,Changelin,Wechselbalg,Wisselkind,Intercambio
+nocturne_fool,Fool,Benêt,Narr,Dwaas,Necio
+nocturne_ghosttown,Ghost Town,Ville fantôme,Geisterstadt,Spookstad,Pueblo Fantasma
+nocturne_leprechaun,Leprechaun,Leprechaun,Kobold,Leprechaun,Duende
+nocturne_nightwatchman,Night Watchman,Veilleur de nuit,Nachtwache,Nachtwaker,Vigilante
+nocturne_secretcave,Secret Cave,Grotte secrète,Geheime Höhle,Geheime grot,Cueva Secreta
+nocturne_bard,Bard,Barde,Minnesängerin,Bard,Bardo
+nocturne_blessedvillage,Blessed Village,Village béni,Seliges Dorf,Gezegend dorp,Aldea Bendita
+nocturne_cemetery,Cemetery,Cimetière,Friedhof,Kerkhof,Cementerio
+nocturne_conclave,Conclave,Conclave,Konklave,Conclaaf,Cónclave
+nocturne_devilsworkshop,Devil's Workshop,Atelier du diable,Teufelswerkstatt,Atelier van de duivel,Taller del Diablo
+nocturne_exorcist,Exorcist,Exorciste,Exorzistin,Exorcist,Exorcista
+nocturne_necromancer,Necromancer,Nécromancien,Totenbeschwörer,Dodenbezweerder,Nigromante
+nocturne_shepherd,Shepherd,Berger,Schäferin,Schaapsherder,Pastor
+nocturne_skulk,Skulk,Malandrin,Attentäter,Skulk,Ladrón Sigiloso
+nocturne_cobbler,Cobbler,Cordonnier,Schuster,Schoenmaker,Zapatero
+nocturne_crypt,Crypt,Crypte,Krypta,Crypte,Cripta
+nocturne_cursedvillage,Cursed Village,Village maudit,Verfluchtes Dorf,Vervloekt dorp,Aldea Maldita
+nocturne_denofsin,Den of Sin,Antre du péché,Sündenpfuhl,Huis der zonden,Casa del Pecado
+nocturne_idol,Idol,Idole,Götze,Idool,Ídolo
+nocturne_pooka,Pooka,Pooka,Puka,Pooka,Pooka
+nocturne_sacredgrove,Sacred Grove,Bois sacré,Heiliger Hain,Heilig kreupelbos,Bosque Sagrado
+nocturne_tormentor,Tormentor,Persécuteur,Folterknecht,Kwelgeest,Verdugo
+nocturne_tragichero,Tragic Hero,Héros de tragédie,Tragischer Held,Tragische held,Héroe Trágico
+nocturne_vampire,Vampire,Vampire,Vampirin,Vampier,Vampiro
+nocturne_werewolf,Werewolf,Loup-garou,Werwolf,Weerwolf,Hombre Lobo
+nocturne_raider,Raider,Razzia,Plünderer,Plunderaar,Saqueador
+nocturne_boon_theearthsgift,The Earth's Gift,Don de la terre,Geschenk der Erde,Gift van de aarde,Don de la Tierra
+nocturne_boon_thefieldsgift,The Field's Gift,Don des champs,Geschenk des Feldes,Gift van de akker,Don del Campo
+nocturne_boon_theflamesgift,The Flame's Gift,Don des flammes,Geschenk des Feuers,Gift van het vuur,Don de la Llama
+nocturne_boon_theforestsgift,The Forest's Gift,Don des forêts,Geschenk des Waldes,Gift van het bos,Don del Bosque
+nocturne_boon_themoonsgift,The Moon's Gift,Don de la lune,Geschenk des Mondes,Gift van de maan,Don de la Luna
+nocturne_boon_themountainsgift,The Mountain's Gift,Don des montagnes,Geschenk des Berges,Gift van de bergen,Don de la Montaña
+nocturne_boon_theriversgift,The River's Gift,Don de la rivière,Geschenk des Flusses,Gift van de rivier,Don del Río
+nocturne_boon_theseasgift,The Sea's Gift,Don de la mer,Geschenk des Meeres,Gift van de zee,Don del Mar
+nocturne_boon_theskysgift,The Sky's Gift,Don du ciel,Geschenk des Himmels,Gift van de hemel,Don del Cielo
+nocturne_boon_thesunsgift,The Sun's Gift,Don du soleil,Geschenk der Sonne,Gift van de zon,Don del Sol
+nocturne_boon_theswampsgift,The Swamp's Gift,Don des marais,Geschenk des Sumpfes,Gift van het moeras,Don del Pantano
+nocturne_boon_thewindsgift,The Wind's Gift,Don du vent,Geschenk des Windes,Gift van de wind,Don del Viento
+nocturne_hauntedmirror,Haunted Mirror,Mirroir hanté,,,
+nocturne_magiclamp,Magic Lamp,Lampe magique,,,
+nocturne_goat,Goat,Chèvre,,,
+nocturne_pasture,Pasture,Pâturage,,,
+nocturne_pouch,Pouch,Pochette,,,
+nocturne_cursedgold,Cursed Gold,Or maudit,,,
+nocturne_luckycoin,Lucky Coin,Porte-bonheur,,,
+nocturne_willowisp,Will-O'Wisp,Feux follet,,,
+nocturne_wish,Wish,Vœu,,,
+nocturne_bat,Bat,Chauve-souris,,,
+nocturne_imp,Imp,Farfadet,,,
+nocturne_zombieapprentice,Zombie Apprentice,Zombie apprenti,,,
+nocturne_zombiemason,Zombie Mason,Zombie maçon,,,
+nocturne_zombiespy,Zombie Spy,Zombie espion,,,
+nocturne_ghost,Ghost,Fantôme,,,
+nocturne_badomens,Bad Omens,Mauvais augure,,,
+nocturne_delusion,Delusion,Envoûtement,,,
+nocturne_envy,Envy,Jalousie,,,
+nocturne_famine,Famine,Famine,,,
+nocturne_fear,Fear,Peur,,,
+nocturne_greed,Greed,Avidité,,,
+nocturne_haunting,Haunting,Obsession,,,
+nocturne_locusts,Locusts,Sauterelles,,,
+nocturne_misery,Misery,Détresse,,,
+nocturne_plague,Plague,Peste,,,
+nocturne_poverty,Poverty,Pauvreté,,,
+nocturne_war,War,Guerre,,,
+nocturne_deluded,Deluded,Envoûté,,,
+nocturne_envious,Envious,Jalous,,,
+nocturne_miserable,Miserable,En détresse,,,
+nocturne_twicemiserable,Twice Miserable,En grande détresse,,,
+nocturne_lostinthewoods,Lost in the Woods,Perdu dans les bois,,,
+
+card,en,fr,de,nl,es
+promos_avanto,Avanto,Trou Dans La Glace,Avanto,Avanto,Avanto
+promos_blackmarket,Black Market,Marché noir,Schwarzmarkt,Zwarte Markt,Mercado Negro
+promos_captain,Captain,Capitaine,Kapitän Tobias,Captain,Captain
+promos_church,Church,Église,Schweriner Dom,Church,Church
+promos_dismantle,Dismantle,Démantelement,Abbruch,Ontmantelen,Dismantle
+promos_envoy,Envoy,Délégué,Gesandter,Gezant,Enviado
+promos_event_summon,Summon,Convocation,Einladung,Summon,Summon
+promos_governor,Governor,Gouverneur,Gouverneur,Gouverneur,Gobernador
+promos_prince,Prince,Prince,Prinz,Prins,Príncipe
+promos_sauna,Sauna,Sauna,Sauna,Sauna,Sauna
+promos_saunaavanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto
+promos_stash,Stash,Cachette,Geldversteck,Geldbuidel,Alijo
+promos_walledvillage,Walled Village,Ville fortifiée,Befestigtes Dorf,Ommuurd Dorp,Aldea Amurallada
+card,en,fr,de,nl,es
+prosperity_bank,Bank,Banque,Bank,Bank,Banco
+prosperity_city,City,Ville,Stadt,Stad,Ciudad
+prosperity_contraband,Contraband,Contrebande,Schmuggelware,Smokkelwaar,Contrabando
+prosperity_countinghouse,Counting House,Bureau de comptabilité,Leihhaus,Boekhouding,Casa de Cuentas
+prosperity_bishop,Bishop,Évêque,Bischof,Bisschop,Obispo
+prosperity_grandmarket,Grand Market,Grand marché,Grosser Markt,Grote markt,Gran Mercado
+prosperity_goons,Goons,Fiers-à-bras,Halsabschneider,Domkoppen,Matones
+prosperity_watchtower,Watchtower,Mirador,Wachturm,Uitkijktoren,Atalaya
+prosperity_expand,Expand,Agrandissement,Ausbau,Uitbreiden,Expansión
+prosperity_kingscourt,King's Court,Cour du roi,Königshof,Koningshof,Corte Real
+prosperity_hoard,Hoard,Magot,Hort,Spaargeld,Tesoro Escondido
+prosperity_peddler,Peddler,Colporteur,Hausierer,Venter,Buhonero
+prosperity_monument,Monument,Monument,Denkmal,Monument,Monumento
+prosperity_forge,Forge,Forge,Kunstschmiede,Vervalsen,Forja
+prosperity_rabble,Rabble,Foule,Gesindel,Gespuis,Chusma
+prosperity_talisman,Talisman,Talisman,Talisman,Talisman,Talismán
+prosperity_mint,Mint,Hôtel de la monnaie,Münzer,Aanmunten,Acuñador
+prosperity_loan,Loan,Prêt,Lohn,Lening,Préstamo
+prosperity_traderoute,Trade Route,Route commerciale,Handelsroute,Handelsroute,Ruta Comercial
+prosperity_quarry,Quarry,Carrière,Steinbruch,Steengroeve,Cantera
+prosperity_royalseal,Royal Seal,Sceau royal,Königliches Siegel,Koninklijk zegel,Sello Real
+prosperity_mountebank,Mountebank,Charlatan,Quacksalber,Charlatan,Charlatán
+prosperity_workersvillage,Worker's Village,Village ouvrier,Arbeiterdorf,Arbeidersdorp,Pueblo de Trabajadores
+prosperity_vault,Vault,Chambre forte,Gewölbe,Schatkelder,Bóveda
+prosperity_venture,Venture,Entreprise risquée,Abenteuer,Waagstuk,Especulación
+prosperity2_anvil,Anvil,Enclume,,,
+prosperity2_clerk,Clerk,Compatble,,,
+prosperity2_investment,Investment,Placement,,,
+prosperity2_tiara,Tiara,Couronne de Mariée,,,
+prosperity2_charlatan,Charlatan,Charlatane,,,
+prosperity2_collection,Collection,Collection,,,
+prosperity2_crystalball,Crystal Ball,Boule de Cristal,,,
+prosperity2_magnate,Magnate,Magnat,,,
+prosperity2_warchest,War Chest,Trésor de Guerre,,,
+
+card,en,fr,de,nl,es
+renaissance_borderguard,Border Guard,Garde-frontière,Grenzposten,Grenswacht,Guarda Fronterizo
+renaissance_ducat,Ducat,Ducat,Goldmünze,Dukaat,Florín
+renaissance_lackeys,Lackeys,Laquais,Diener,Kamerbedienden,Lacayos
+renaissance_actingtroupe,Acting Troupe,Troupe de théâtre,Schauspieltruppe,Toneelgezelschap,Compañía de Teatro
+renaissance_cargoship,Cargo Ship,Cargo,Frachtschiff,Vrachtschip,Buque de Carga
+renaissance_experiment,Experiment,Expérience,Experiment,Experiment,Experimento
+renaissance_improve,Improve,Amélioration,Fortschritt,Verbetering,Perfeccionar
+renaissance_flagbearer,Flag Bearer,Porte-drapeau,Fahnenträger,Vaandeldrager,Abanderado
+renaissance_hideout,Hideout,Planque,Versteck,Schuilplaats,Guarida
+renaissance_inventor,Inventor,Inventeur,Erfinder,Uitvinder,Inventor
+renaissance_mountainvillage,Mountain Village,Village de montagne,Bergdorf,Bergdorp,Aldea de Montaña
+renaissance_patron,Patron,Mécène,Patron,Beschermheer,Mecenas
+renaissance_priest,Priest,Prêtre,Priester,Priester,Sacerdote
+renaissance_research,Research,Recherche,Forscherin,Onderzoek,Investigación
+renaissance_silkmerchant,Silk Merchant,Marchande de soie,Seidenhändlerin,Zijdekoopman,Vendedor de Seda
+renaissance_oldwitch,Old Witch,Vieille sorcière,Alte Hexe,Oude heks,Bruja Anciana
+renaissance_recruiter,Recruiter,Recruteur,Anwerber,Ronselaar,Reclutador
+renaissance_scepter,Scepter,Sceptre,Zepter,Scepter,Cetro
+renaissance_scholar,Scholar,Érudite,Gelehrte,Geleerde,Erudita
+renaissance_sculptor,Sculptor,Sculptrice,Bildhauerin,Beeldhouwer,Escultora
+renaissance_seer,Seer,Prophète,Seher,Ziener,Profeta
+renaissance_spices,Spices,Épices,Gewürze,Specerijen,Especias
+renaissance_swashbuckler,Swashbuckler,Bretteuse,Freibeuterin,Ijzervreter,Espadachina
+renaissance_treasurer,Treasurer,Trésorière,Schatzmeisterin,Schatbewaarder,Tesorera
+renaissance_villain,Villain,Scélérat,Schwarzer Meister,Slechterik,Villano
+renaissance_project_cathedral,Cathedral,Cathédrale,Kathedrale,Kathedraal,Catedral
+renaissance_project_citygate,City Gate,Porte,Stadttor,Stadspoort,Portón
+renaissance_project_pageant,Pageant,Spectacle,Festzug,Spektakel,Espectáculo
+renaissance_project_sewers,Sewers,Égouts,Abwasserkanal,Riolen,Alcantarillas
+renaissance_project_starchart,Star Chart,Carte céleste,Sternenkarte,Sterrenkaart,Carta Estelar
+renaissance_project_exploration,Exploration,Exploration,Erkundung,Ontdekkingsreis,Exploración
+renaissance_project_fair,Fair,Foire,Kleiner Markt,Braderie,Feria
+renaissance_project_silos,Silos,Silos,Speicher,Silo's,Silos
+renaissance_project_sinisterplot,Sinister Plot,Machination,Finsterer Plan,Duistere samenzwering,Confabulación
+renaissance_project_academy,Academy,Académie,Akademie,Academie,Academia
+renaissance_project_capitalism,Capitalism,Capitalisme,Kapitalismus,Kapitalisme,Capitalismo
+renaissance_project_fleet,Fleet,Flotte,Flotte,Vloot,Flota
+renaissance_project_guildhall,Guildhall,Hôtel de ville,Gildenhaus,Gildehuis,Ayuntamiento
+renaissance_project_piazza,Piazza,Piazza,Piazza,Plein,Pórtico
+renaissance_project_roadnetwork,Road Network,Réseau routier,Strassennetz,Wegennet,Red de Caminos
+renaissance_project_barracks,Barracks,Caserne,Kaserne,Kazerne,Cuartel
+renaissance_project_croprotation,Crop Rotation,Assolement,Fruchtwechsel,Wisselbouw,Barbecho
+renaissance_project_innovation,Innovation,Innovation,Innovation,Vernieuwing,Innovación
+renaissance_project_canal,Canal,Canal,Kanal,Kanaal,Canal
+renaissance_project_citadel,Citadel,Citadelle,Zitdelle,Burcht,Ciudadela
+renaissance_flag,Flag,Drapeau,,,
+renaissance_horn,Horn,Corne,,,
+renaissance_key,Key,Clé,,,
+renaissance_lantern,Lantern,Lanterne,,,
+renaissance_treasurechest,Treasure Chest,Coffre,,,
+  
+  
+
+
+
+
+
+
+card,en,fr,de,nl,es
+seaside_ghostship,Ghost Ship,Vaisseau fantôme,Geisterschiff,De Vliegende Hollander,Barco Fantasma
+seaside_smugglers,Smugglers,Contrebandiers,Schmuggler,Smokkelaar,Contrabandistas
+seaside_salvager,Salvager,Sauveteur,Müllverwerter,Afvalverwerker,Rescatador
+seaside_haven,Haven,Havre,Hafen,Haven,Puerto
+seaside_ambassador,Ambassador,Ambassadeur,Botschafter,Boodschapper,Embajador
+seaside_seahag,Sea Hag,Sorcière de mer,Seehexe,Zeeheks,Bruja del Mar
+seaside_nativevillage,Native Village,Village indigène,Eingeborenendorf,Inheems Dorp,Poblado Indígena
+seaside_navigator,Navigator,Navigateur,Navigator,Navigator,Navegante
+seaside_tactician,Tactician,Tacticien,Taktiker,Strateeg,Estratega
+seaside_fishingvillage,Fishing Village,Village de pêcheurs,Fischerdorf,Vissersdorp,Pueblo de Pescadores
+seaside_island,Island,Île,Insel,Eiland,Isla
+seaside_wharf,Wharf,Quai,Werft,Scheepswerf,Muelle
+seaside_bazaar,Bazaar,Bazar,Bazar,Bazaar,Bazar
+seaside_treasuremap,Treasure Map,Carte aux trésors,Schatzkarte,Schatkaart,Mapa del Tesoro
+seaside_explorer,Explorer,Explorateur,Entdecker,Ontdekkingsreiziger,Explordora
+seaside_lookout,Lookout,Vigie,Ausguck,Uitkijk,Vigía
+seaside_treasury,Treasury,Trésorerie,Schatzkammer,Schatkamer,Tesorería
+seaside_cutpurse,Cutpurse,Coupeur de bourse,Beutelschneider,Beurzensnijder,Ratero
+seaside_caravan,Caravan,Caravane,Karawane,Karavaan,Caravana
+seaside_warehouse,Warehouse,Entrepôt,Lagerhaus,Pakhuis,Almacén
+seaside_lighthouse,Lighthouse,Phare,Leuchtturm,Vuurtoren,Faro
+seaside_pirateship,Pirate Ship,Bateau pirate,Piratenschiff,Piratenschip,Barco Pirata
+seaside_pearldiver,Pearl Diver,Plongeur de perles,Perlentaucher,Parelduiker,Pescador de Perlas
+seaside_merchantship,Merchant Ship,Navire marchand,Handelsschiff,Handelsschip,Barco Mercante
+seaside_embargo,Embargo,Embargo,Embargo,Embargo,Embargo
+seaside_outpost,Outpost,Avant-poste,Aussenposten,Voorpost,Puesto Avanzado
+seaside2_astrolabe,Astrolabe,Astrolabe,,,
+seaside2_monkey,Monkey,Singe,,,
+seaside2_seachart,Sea Chart,Carte Maritime
+seaside2_blockade,Blockade,Blocus,,,
+seaside2_sailor,Sailor,Navigatrice,,,
+seaside2_tidepools,Tide Pools,Marée,,,
+seaside2_corsair,Corsair,Corsaire,,,
+seaside2_pirate,Pirate,Pirate,,,
+seaside2_seawitch,Sea Witch,Sorcière Marine,,,
+
+

@@ -1,0 +1,83 @@
+card,en,fr,de,nl,es
+empires_engineer,Engineer,Ingénieur,Ingenieurin,Ingenieur,Ingeniero
+empires_cityquarter,City Quarter,Faubourg,Stadtviertel,Stadswijk,Suburbios
+empires_overlord,Overlord,Seigneur,Lehnsherr,Despoot,Déspota
+empires_royalblacksmith,Royal Blacksmith,Forgeron royal,Königlicher Schmied,Koninklijke smid,Herrero Real
+empires_encampmentplunder,Encampment / Plunder,Camp / Saccage,Feldlager / Diebesgut,Kampement / Plunderen,Campamento / Saqueo
+empires_patricianemporium,Patrician / Emporium,Patricien / Emporium,Patrizier / Handelsplatz,Patriciër / Emporium,Patricio / Emporio
+empires_settlersbustlingvillage,Settlers / Bustling Village,Colons / Village en effervescence,Siedler / Emsiges Dorf,Kolonisten / Levendig dorp,Colonos / Aldea Bulliciosa
+empires_castles,Castles,Châteaux,Schlösser,Kastelen,Castillos
+empires_catapultrocks,Catapult / Rocks,Catapulte / Rocher,Katapult / Felsen,Katapult / Rotsblokken,Catapulta / Rocas
+empires_chariotrace,Chariot Race,Course de chars,Wagenrennen,Strijdwagenrace,Carrera de Cuádrigas
+empires_enchantress,Enchantress,Magicienne,Zauberin,Tovenares,Hechicera
+empires_farmersmarket,Farmers Market,Marché agricole,Bauernmarkt,Boerenmarkt,Mercado Agrícola
+empires_gladiatorfortune,Gladiator / Fortune,Gladiateur / Fortune,Gladiator / Reichtum,Gladiator / Fortuin,Gladiador / Fortuna
+empires_sacrifice,Sacrifice,Sacrifice,Opfer,Offer,Sacrificio
+empires_temple,Temple,Temple,Tempel,Tempel,Templo
+empires_villa,Villa,Villa,Villa,Villa,Villa
+empires_archive,Archive,Archives,Archiv,Archief,Archivo
+empires_capital,Capital,Capital,Vermögen,Kapitaal,Capital
+empires_charm,Charm,Sort,Zauber,Geluksbrenger,Fetiche
+empires_crown,Crown,Couronne,Krone,Kroon,Corona
+empires_forum,Forum,Forum,Forum,Forum,Foro
+empires_groundskeeper,Groundskeeper,Jardinière,Gärtnerin,Kasteelhovenier,Jardinero
+empires_legionary,Legionary,Légionnaire,Legionär,Legioensoldaat,Legionario
+empires_wildhunt,Wild Hunt,Chasse fantastique,Wilde Jagd,Wilde jacht,Cacería Salvaje
+empires_event_triumph,Triumph,Triomphe,Siegeszug,Triomf,Triunfo
+empires_event_annex,Annex,Annexion,Schlacht,Overname,Anexión
+empires_event_donate,Donate,Donation,Spende,Donatie,Donación
+empires_event_advance,Advance,Adoubement,Aufstieg,Promotie,Promoción
+empires_event_delve,Delve,Trouée,Erforschen,Delven,Excavación
+empires_event_tax,Tax,Taxe,Steuer,Belasting,Impuesto
+empires_event_banquet,Banquet,Banquet,Bankett,Banket,Banquete
+empires_event_ritual,Ritual,Rituel,Ritual,Ritueel,Ritual
+empires_event_salttheearth,Salt the Earth,Épandage de sel,Versalztes Land,Zout der aarde,Salar la Tierra
+empires_event_wedding,Wedding,Mariage,Hochzeit,Bruiloft,Boda
+empires_event_windfall,Windfall,Manne,Glüksfall,Meevaller,Golpe de Suerte
+empires_event_conquest,Conquest,Conquête,Eroberung,Verovering,Conquista
+empires_event_dominate,Dominate,Domination,Beherrschen,Overheersing,Dominación
+empires_landmark_aqueduct,Aqueduct,Aqueduc,Aquädukt,Aquaduct,Acueducto
+empires_landmark_arena,Arena,Arène,Arena,Arena,Arena
+empires_landmark_banditfort,Bandit Fort,Fort des bandits,Räuberfestung,Bandietenfort,Fuerte Bandido
+empires_landmark_basilica,Basilica,Basilique,Basilika,Basiliek,Basílica
+empires_landmark_baths,Baths,Bains,Badehaus,Baden,Baños
+empires_landmark_battlefield,Battlefield,Champ de bataille,Schlachtfeld,Slagveld,Campo de Batalla
+empires_landmark_colonnade,Colonnade,Colonnade,Kolonnaden,Zuilengalerij,Columnata
+empires_landmark_defiledshrine,Defiled Shrine,Profanation,Entweihter Schrein,Geschonden altaar,Santuario Profanado
+empires_landmark_fountain,Fountain,Fontaine,Brunnen,Fontein,Fuente
+empires_landmark_keep,Keep,Fort,Bollwerk,Hoofdtoren,Fuerte
+empires_landmark_labyrinth,Labyrinth,Labyrinthe,Labyrinth,Labyrint,Laberinto
+empires_landmark_mountainpass,Mountain Pass,Col,Gebirgspass,Bergpas,Desfiladero
+empires_landmark_museum,Museum,Musée,Museum,Museum,Museo
+empires_landmark_obelisk,Obelisk,Obélisque,Obelisk,Obelisk,Obelisco
+empires_landmark_orchard,Orchard,Verger,Obstgarten,Boomgaard,Vergel
+empires_landmark_palace,Palace,Palais,Palast,Paleis,Palacio
+empires_landmark_tomb,Tomb,Tombe,Grabmal,Tombe,Tumba
+empires_landmark_tower,Tower,Tour,Turm,Toren,Torre
+empires_landmark_triumphalarch,Triumphal Arch,Arc de triomphe,Triumphbogen,Triomfboog,Arco del Triunfo
+empires_landmark_wall,Wall,Remparts,Mauer,Muur,Muro
+empires_landmark_wolfden,Wolf Den,Tanière des loups,Wolfsbau,Wolvenhol,Guarida de Lobos
+empires_castlestohidesplitcard,Castles - to hide split card,Châteaux,,,
+empires_humblecastle,Humble Castle,Château modeste,,,
+empires_crumblingcastle,Crumbling Castle,Château délabré,,,
+empires_smallcastle,Small Castle,Petit château,,,
+empires_hauntedcastle,Haunted Castle,Château hanté,,,
+empires_opulentcastle,Opulent Castle,Somptueux château,,,
+empires_sprawlingcastle,Sprawling Castle,Château prospère,,,
+empires_grandcastle,Grand Castle,Grand château,,,
+empires_kingscastle,Kings Castle,Château royal,,,
+empires_catapultrockstohidesplitcard,Catapult / Rocks - to hide split card,Catapulte/Rocher,,,
+empires_catapult,Catapult,Catapulte,,,
+empires_rocks,Rocks,Rocher,,,
+empires_encampmentplundertohidesplitcard,Encampment / Plunder - to hide split card,Camp/Saccage,,,
+empires_encampment,Encampment,Camp,,,
+empires_plunder,Plunder,Saccage,,,
+empires_patricianemporiumtohidesplitcard,Patrician / Emporium - to hide split card,Patricien/Emporium,,,
+empires_patrician,Patrician,Patricien,,,
+empires_emporium,Emporium,Emporium,,,
+empires_settlersbustlingvillagetohidesplitcard,Settlers / Bustling Village - to hide split card,Colons/Village en effervescence,,,
+empires_settlers,Settlers,Colons,,,
+empires_bustlingvillage,Bustling Village,Village en effervescence,,,
+empires_gladiatorfortunetohidesplitcard,Gladiator / Fortune - to hide split card,Gladiateur/Fortune,,,
+empires_gladiator,Gladiator,Gladiateur,,,
+empires_fortune,Fortune,Fortune,,,

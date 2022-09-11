@@ -1,0 +1,72 @@
+card,en,fr,de,nl,es
+menagerie_animalfair,Animal Fair,Foire aux bestiaux,Viehmarkt,,Feria de Ganado
+menagerie_barge,Barge,Chaland,Lastkahn,,Gabarra
+menagerie_blackcat,Black Cat,Chat noir,Schwarze Katze,,Gato Negro
+menagerie_bountyhunter,Bounty Hunter,Chasseur de prime,Kopfgeldjägerin,,Cazarrecompensas
+menagerie_cameltrain,Camel Train,Caravane de chameaux,Kamelzug,,Recua de Camellos
+menagerie_cardinal,Cardinal,Cardinal,Kardinal,,Cardenal
+menagerie_cavalry,Cavalry,Cavalière,Kavallerie,,Caballería
+menagerie_coven,Coven,Clan de sorciers,Hexenzirkel,,Aquelarre
+menagerie_destrier,Destrier,Destrier,Schlachtross,,Destrero
+menagerie_displace,Displace,Déplacement,Vertreibung,,Migración
+menagerie_falconer,Falconer,Fauconnière,Falknerin,,Halconera
+menagerie_fisherman,Fisherman,Pêcheur,Fischer,,Pescador
+menagerie_gatekeeper,Gatekeeper,Garde,Wache,,Centinela
+menagerie_goatherd,Goatherd,Chevrière,Ziegenhirtin,,Cabrera
+menagerie_groom,Groom,Palefrenier,Stallbursche,,Caballerizo
+menagerie_hostelry,Hostelry,Hôtel,Herberge,,Hostal
+menagerie_huntinglodge,Hunting Lodge,Pavillon de chasse,Jagdhütte,,Refugio de Caza
+menagerie_kiln,Kiln,Four,Brennofen,,Horno
+menagerie_livery,Livery,Pension,Pferdestall,,Librea
+menagerie_mastermind,Mastermind,Génie,Drahtzieher,,Cerebro
+menagerie_paddock,Paddock,Enclos,Koppel,,Establo
+menagerie_sanctuary,Sanctuary,Sanctuaire,Zufluchtsort,,Santuario
+menagerie_scrap,Scrap,Ferraille,Schrott,,Chatarra
+menagerie_sheepdog,Sheepdog,Chien de berger,Hirtenhund,,Perro Pastor
+menagerie_sleigh,Sleigh,Traîneau,Schlitten,,Trineo
+menagerie_snowyvillage,Snowy Village,Village enneigé,Verschneites Dorf,,Aldea Nevada
+menagerie_stockpile,Stockpile,Stocks,Depot,,Reservas
+menagerie_supplies,Supplies,Réserves,Nachschub,,Suministros
+menagerie_villagegreen,Village Green,Espace vert,Dorfanger,,Prado del Pueblo
+menagerie_wayfarer,Wayfarer,Voyageuse,Wanderin,,Caminante
+menagerie_event_alliance,Alliance,Alliance,Bündnis,,Alianza
+menagerie_event_banish,Banish,Bannissement,Verbannung,,Destierro
+menagerie_event_bargain,Bargain,Affaire,Gutes Geschäft,,Ganga
+menagerie_event_commerce,Commerce,Négoce,Kommerz,,Comercio
+menagerie_event_delay,Delay,Retard,Verzögerung,,Retraso
+menagerie_event_demand,Demand,Demande,Forderung,,Exigencia
+menagerie_event_desperation,Desperation,Désespoir,Verzweiflung,,Desesperación
+menagerie_event_enclave,Enclave,Enclave,Enklave,,Enclave
+menagerie_event_enhance,Enhance,Réhaussement,Verbesserung,,Reforma
+menagerie_event_gamble,Gamble,Pari,Wagnis,,Apuesta
+menagerie_event_invest,Invest,Investissement,Investition,,Inversión
+menagerie_event_march,March,Marche,Fußmarsch,,Marcha
+menagerie_event_populate,Populate,Peuplement,Besiedlung,,Repoblar
+menagerie_event_pursue,Pursue,Poursuite,Verfolgung,,Persecución
+menagerie_event_reap,Reap,Moisson,Reiche Ernte,,Siega
+menagerie_event_ride,Ride,Chevauchée,Reiten,,Paseo
+menagerie_event_seizetheday,Seize the Day,Carpe Diem,Nutze den Tag,,Aprovecha el Día
+menagerie_event_stampede,Stampede,Ruée,Stampede,,Estampida
+menagerie_event_toil,Toil,Labeur,Plackerei,,Labor
+menagerie_event_transport,Transport,Transport,Transport,,Transporte
+menagerie_way_wayofthebutterfly,Way of the Butterfly,Voie du papillon,Weg des Schmetterlings,,Senda de la Mariposa
+menagerie_way_wayofthecamel,Way of the Camel,Voie du chameau,Weg des Kamels,,Senda del Camello
+menagerie_way_wayofthechameleon,Way of the Chameleon,Voie du caméléon,Weg des Chamäleons,,Senda del Camaleón
+menagerie_way_wayofthefrog,Way of the Frog,Voie de la grenouille,Weg des Frosches,,Senda de la Rana
+menagerie_way_wayofthegoat,Way of the Goat,Voie de la chèvre,Weg der Ziege,,Senda de la Cabra
+menagerie_way_wayofthehorse,Way of the Horse,Voie du cheval,Weg des Pferdes,,Senda del Caballo
+menagerie_way_wayofthemole,Way of the Mole,Voie de la taupe,Weg des Maulwurfs,,Senda del Topo
+menagerie_way_wayofthemonkey,Way of the Monkey,Voie du singe,Weg des Affen,,Senda del Mono
+menagerie_way_wayofthemouse,Way of the Mouse,Voie de la souirs,Weg der Maus,,Senda del Ratón
+menagerie_way_wayofthemule,Way of the Mule,Voie de la mule,Weg des Maultiers,,Senda de la Mula
+menagerie_way_wayoftheotter,Way of the Otter,Voie de la loutre,Weg des Otters,,Senda de la Nutria
+menagerie_way_wayoftheowl,Way of the Owl,Voie du hibou,Weg der Eule,,Senda del Búho
+menagerie_way_wayoftheox,Way of the Ox,Voie du bœuf,Weg des Ochsen,,Senda del Buey
+menagerie_way_wayofthepig,Way of the Pig,Voie du porc,Weg des Schweins,,Senda del Cerdo
+menagerie_way_wayoftherat,Way of the Rat,Voie du rat,Weg der Ratte,,Senda de la Rata
+menagerie_way_wayoftheseal,Way of the Seal,Voie du phoque,Weg der Robbe,,Senda de la Foca
+menagerie_way_wayofthesheep,Way of the Sheep,Voie du mouton,Weg des Schafes,,Senda de la Oveja
+menagerie_way_wayofthesquirrel,Way of the Squirrel,Voie de l'écureuil,Weg des Eichhörnchens,,Senda de la Ardilla
+menagerie_way_wayoftheturtle,Way of the Turtle,Voie de la tortue,Weg der Schildkröte,,Senda de la Tortuga
+menagerie_way_wayoftheworm,Way of the Worm,Voie du ver,Weg des Wurms,,Senda del Gusano
+menagerie_horse,Horse,Cheval,,,
