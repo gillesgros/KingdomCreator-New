@@ -1,23 +1,23 @@
-# KingdomCreator for Blake 
+# KingdomCreator-New 
 # based on Dominion Randomizer (aka Kingdom Creator) form Blake
 
+https://71yeti.fr is a kingdom randomizer, or card picker, for Dominion, based on 
 https://www.dominionrandomizer.com is a kingdom randomizer, or card picker, for Dominion.
 
 Feel free to make any improvements you see fit and send me a pull request!
 
 ## Development
-This is a static site served through GitHub Pages. Check the `/docs` directory in `master` to see the source currently being served at http://www.dominionrandomizer.com.
+This is a static site served through GitHub Pages. Check the `/docs` directory in `master` to see the source currently being served at https://71yeti.fr
+
+# Install globally to execute .coffee files anywhere:
+npm install --global coffeescript
+# npm-check-updates upgrades your package.json dependencies to the latest versions, ignoring specified versions.
+npm install -g npm-check-updates
 
 ### Commands
 
-
-set PATH=%PATH%;"%cd%\..\..\# Portable App\node-v16.15.1-win-x64"
-
-$env:Path = (($env:Path -split ';') + ((Get-Location).ToString()+"/../../# Portable App\node-v16.15.1-win-x64")) -join ';'
-
-
-
-
+set PATH=%PATH%;"%cd%\..\..\# Portable App\node-v18.9.0-win-x64"
+$env:Path = (($env:Path -split ';') + ((Get-Location).ToString()+"/../../# Portable App\node-v18.9.0-win-x64")) -join ';'
 
 `npm start` - Run the development server with hot reloading at `localhost:8080`
 

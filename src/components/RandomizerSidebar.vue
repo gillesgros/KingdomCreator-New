@@ -13,7 +13,7 @@
           <label class="checkbox">
             <input type="checkbox" v-model="selectedSetIds" :id="set.setId" :value="set.setId">
             <span>{{ $t(set.setId) }} 
-              <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> -  1st
+              <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> - 1st
                 <input type="checkbox" v-model="selectedSetIds" :id="(FindMultipleVersionSets(set.setId))[0].idv2" :value="(FindMultipleVersionSets(set.setId))[0].idv2">2nd
               </span>
             </span>

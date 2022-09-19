@@ -79,9 +79,4 @@ export const HideMultipleVersionSets = [
       SetId.SEASIDE_2,
       SetId.PROSPERITY_2,
       SetId.HINTERLANDS_2,
-      SetId.BASE_SET_2_ADD,
-      SetId.INTRIGUE_2_ADD,
-      SetId.SEASIDE_2_ADD,
-      SetId.PROSPERITY_2_ADD,
-      SetId.HINTERLANDS_2_ADD,
 ];

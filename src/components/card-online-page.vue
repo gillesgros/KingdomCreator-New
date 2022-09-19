@@ -102,8 +102,8 @@ const IsZeroStar =
 
 const NeedHeirloom = 
     new Set ([ 
-"pooka", "shepherd", "pixie", 
-"fool", "tracker", "secretcave", "cemetery",
+        "pooka", "shepherd", "pixie", 
+        "fool", "tracker", "secretcave", "cemetery",
 ]);
 
 const IsKnight = 
@@ -117,9 +117,6 @@ interface DisplayableCardType {
     readonly png: string,
     readonly label: string
 }
-
-
-
 
 @Component
 export default class CardOnlinePageComponent extends Vue {
@@ -139,9 +136,176 @@ export default class CardOnlinePageComponent extends Vue {
   if (setName == this.getCardSetById (Work_Card)) {
     LocalTemp_CardsList= Cards_list.filter(card => card.id == Work_Card.id)
 
-    LocalTemp_CardsList[0].text_html = Work_Card.text_html;
+   // LocalTemp_CardsList[0].text_html = Work_Card.text_html;
   }
-  //console.log(this.set.otherCards);
+
+  let text="|+1 Carte|//|+1 Action|////Consultez les 2 premi\xE8res cartes//de votre pioche. \xC9cartez-en et/ou//d\xE9faussez-en autant que vous le//voulez. Replacez le reste sur votre//pioche dans l'ordre de votre choix.";
+  /*
+  <div class="card-text" style="top:5px;">
+  <div style="font-weight: bold;"><div style="line-height:28px;">
+  <div style="display:inline;"><div style="display:inline; font-size:28px;">+1 Carte</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:28px;">+1 Action</div></div><br>
+  </div></div>
+  <div style="position:relative; top:0px;"><div style="line-height:18px;">
+  <div style="display:inline;"><div style="display:inline; font-size:18px;">Consultez les 2 premières cartes</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:18px;">de votre pioche. Écartez-en et/ou</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:18px;">défaussez-en autant que vous le</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:18px;">voulez. Replacez le reste sur votre</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:18px;">pioche dans l'ordre de votre choix.</div></div><br>
+  </div></div>
+  </div>
+  
+  <div class="card-text" style="top:29px;">
+  <div style="position:relative; top:-5px;"><div style="font-weight: bold;"><div style="line-height:28px;">
+  <div style="display:inline;"><div style="display:inline; font-size:28px;">+4 Cartes</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:28px;">+1 Achat</div></div><br>
+  </div></div></div>
+  <div style="position:relative; top:10px;"><div style="line-height:20px;">
+  <div style="display:inline;"><div style="display:inline; font-size:20px;">Tous vos adversaires</div></div><br>
+  <div style="display:inline;"><div style="display:inline; font-size:20px;">piochent une carte.</div></div><br>
+  </div></div>
+  </div>
+  
+  
+  */
+  
+  let tests = [{ regex: /^([^\[{\|%]+)/, type: "normal" }, { regex: /^\|(.*?)\|/, type: "bold" }, { regex: /^%(.*?)%/, type: "italics" }, { regex: /^\[!(.*?)\]/, type: "bigcoin" }, { regex: /^\[(.*?)\]/, type: "coin" }, { regex: /^{!(.*?)}/, type: "bigshield" }, { regex: /^{(.*?)}/, type: "shield" }];
+
+console.log(tests[0])
+
+console.log(text)
+console.log(tests[Symbol.iterator]())
+console.log("text.length : " + text.length)
+
+
+let _iteratorNormalCompletion = true;
+
+console.log("start loop")
+for (var _iterator of tests) {
+	let test= _iterator
+	let match = text.match(test.regex);
+	console.log(test)
+	console.log(test.regex)
+	console.log(match)
+	console.log(_iteratorNormalCompletion)
+	                if (match) {
+                    //console.log(test.type + ' ' + match[1] );
+                    text = text.slice(match[0].length);
+                }
+
+}
+
+/*
+
+webclient.component('cardTextLine', {
+    bindings: {
+        text: "<"
+    },
+    controller: function controller() {
+        var self = this;
+
+        var text = self.text;
+        self.blocks = [];
+        self.isSeparator = self.text === "---";
+        self.isBlank = self.text === "";
+
+        var tests = [{ regex: /^([^\[{\|%]+)/, type: "normal" }, { regex: /^\|(.*?)\|/, type: "bold" }, { regex: /^%(.*?)%/, type: "italics" }, { regex: /^\[!(.*?)\]/, type: "bigcoin" }, { regex: /^\[(.*?)\]/, type: "coin" }, { regex: /^{!(.*?)}/, type: "bigshield" }, { regex: /^{(.*?)}/, type: "shield" }];
+
+        if (!self.isSeparator && !self.isBlank) {
+            while (text.length > 0) {
+                var _iteratorNormalCompletion = true;
+                var _didIteratorError = false;
+                var _iteratorError = undefined;
+
+                try {
+                    for (var _iterator = tests[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                        var test = _step.value;
+
+                        var match = text.match(test.regex);
+                        if (match) {
+                            self.blocks.push({ type: test.type, inner: match[1] });
+                            text = text.slice(match[0].length);
+                            break;
+                        }
+                    }
+                } catch (err) {
+                    _didIteratorError = true;
+                    _iteratorError = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion && _iterator.return) {
+                            _iterator.return();
+                        }
+                    } finally {
+                        if (_didIteratorError) {
+                            throw _iteratorError;
+                        }
+                    }
+                }
+            }
+        }
+
+        self.blockClasses = {
+            "normal": "card-text-block",
+            "bold": "card-text-block bold",
+            "italics": "card-text-block italics",
+            "bigcoin": "card-text-block cost-large",
+            "coin": "card-text-block cost",
+            "bigshield": "card-text-block shield-large",
+            "shield": "card-text-block shield"
+        };
+    },
+    template: "\n        <card-text-block\n            ng-repeat=\"b in $ctrl.blocks\"\n            type=\"b.type\"\n            ng-class=\"$ctrl.blockClasses[b.type]\"\n            inner=\"b.inner\"\n        ></card-text-block>\n    "
+});
+
+webclient.component('cardText', {
+    bindings: {
+        cardText: "<",
+        isLandscape: "<"
+    },
+    controller: ['$scope', function ($scope) {
+        var self = this;
+
+        var updateLines = function updateLines() {
+            self.lines = self.cardText.split("//");
+        };
+        $scope.$watch("$ctrl.cardText", updateLines);
+
+        var getFontStyle = function getFontStyle() {
+            return LANGUAGE.getEnvironment.determineFontStyle(self.isLandscape, self.lines);
+        };
+
+        var lineIsBold = function lineIsBold(line) {
+            return line.match(/^\|.*?\|$/) ? " bold-line" : "";
+        };
+        var lineIsItalics = function lineIsItalics(line) {
+            return line.match(/^%.*?%$/) ? " italics-line" : "";
+        };
+        var lineIsSeparator = function lineIsSeparator(line) {
+            return line === "---" ? " separator-line" : "";
+        };
+        var lineIsBlank = function lineIsBlank(line) {
+            return line === "" ? " blank-line" : "";
+        };
+        var lineIsBig = function lineIsBig(line) {
+            return line.match(/^[\[{]!.*?[\]}]$/) ? " huge-line" : "";
+        };
+
+        self.getLineClass = function (line) {
+            return getFontStyle() + lineIsBold(line) + lineIsItalics(line) + lineIsSeparator(line) + lineIsBlank(line) + lineIsBig(line);
+        };
+        self.getLineText = function (line) {
+            return lineIsBold(line) || lineIsItalics(line) ? line.slice(1, line.length - 1) : line;
+        };
+
+        self.trackBy = function (l, i) {
+            return "" + i + l;
+        };
+    }],
+    template: "\n        <card-text-line\n            ng-repeat=\"l in $ctrl.lines track by $ctrl.trackBy(l, $index)\"\n            text=\"$ctrl.getLineText(l)\"\n            ng-class=\"$ctrl.getLineClass(l)\"\n            ng-click=\"$ctrl.onClick()\">\n        </card-text-line>\n    "
+});
+
+*/
   
   
   

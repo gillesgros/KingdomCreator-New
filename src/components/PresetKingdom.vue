@@ -8,7 +8,6 @@
           <span class="preset-kingdom_set-name" :class="[set.setId]">
             {{ $t(set.setId) }}</span>
         </div>
-		{{ $t("Use Shelters") }}
       </div>
       <div class="right-top-sign-div">
         <img style="width: 15px; height: 15px; cursor: pointer;" :src='"/img/elements/" +isPlayFavImg(kingdom.name) +".png"' 

@@ -8,7 +8,7 @@
             <input type="radio" id="selectedSet" :value="set" v-model="selectedSetId" />
             <span>{{ $t(set) }}</span>
 			<span v-if="FindMultipleVersionSets(set).length !== 0"> -  1st
-                <input type="radio" v-model="selectedSetId" :id="(FindMultipleVersionSets(set))[0].idv2" :value="(FindMultipleVersionSets(set))[0].idv2">2nd
+                <input type="radio" v-model="selectedSetId" id="selectedSet" :value="(FindMultipleVersionSets(set))[0].idv2">2nd
               </span>
             </span>
           </label>

@@ -1,7 +1,7 @@
 import { DigitalCard } from "./digital-cards-type"
 
 
-export const Work_Card:DigitalCard = {	id: "townsfolk", 
+export const Work_Card:DigitalCard = {	id: "bureaucrat", 
 frenchName: "",  artwork:"",
 text_html: '<div class="card-text" style="top:20px;">\
 <div style="position:relative; top:15px;">\

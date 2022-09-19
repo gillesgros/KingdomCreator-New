@@ -50,11 +50,11 @@ kingdoms:
       - baseset2
       - seaside2
     supply:
-      - baseset_festival
-      - baseset_militia
-      - baseset_workshop
-      - baseset_harbinger
-      - baseset_remodel
+      - baseset2_festival
+      - baseset2_militia
+      - baseset2_workshop
+      - baseset2_harbinger
+      - baseset2_remodel
       - seaside2_caravan
       - seaside2_seachart
       - seaside2_outpost
@@ -147,14 +147,14 @@ kingdoms:
       
   - name: Travelers (2nd)
     sets:
-      - hinterlands
+      - hinterlands2
       - seaside2
     supply:
-      - hinterlands_cartographer
-      - hinterlands_crossroads
-      - hinterlands_farmland
-      - hinterlands_souk
-      - hinterlands_stables
+      - hinterlands2_cartographer
+      - hinterlands2_crossroads
+      - hinterlands2_farmland
+      - hinterlands2_souk
+      - hinterlands2_stables
       - seaside2_cutpurse
       - seaside2_island
       - seaside2_lookout
@@ -163,14 +163,14 @@ kingdoms:
       
   - name: Runners (2nd)
     sets:
-      - hinterlands
+      - hinterlands2
       - seaside2
     supply:
-      - hinterlands_berserker
-      - hinterlands_cauldron
-      - hinterlands_guarddog
-      - hinterlands_nomads
-      - hinterlands_wheelwright
+      - hinterlands2_berserker
+      - hinterlands2_cauldron
+      - hinterlands2_guarddog
+      - hinterlands2_nomads
+      - hinterlands2_wheelwright
       - seaside2_bazaar
       - seaside2_blockade
       - seaside2_caravan
@@ -182,11 +182,11 @@ kingdoms:
       - cornucopia
       - seaside2
     supply:
-      - cornucopia_Fairgrounds
+      - cornucopia_fairgrounds
       - cornucopia_farmingvillage
       - cornucopia_fortuneteller
       - cornucopia_harvest
-      - cornucopia_huntingarty 
+      - cornucopia_huntingparty 
       - seaside2_blockade
       - seaside2_fishingvillage
       - seaside2_merchantship
@@ -211,7 +211,7 @@ kingdoms:
  
   - name: Watery Graves (2nd)
     sets:
-      - Darkages
+      - darkages
       - seaside2
     supply:
       - darkages_count
@@ -402,7 +402,7 @@ kingdoms:
       - menagerie_fisherman
       - menagerie_sheepdog
       - seaside2_caravan
-      - seaside2_explorer
+      - seaside2_lighthouse
       - seaside2_fishingvillage
       - seaside2_tidepools
       - seaside2_pirate
@@ -447,7 +447,7 @@ kingdoms:
       - seaside2_tactician
       - seaside2_warehouse
     allies:
-      - allies_cavedwellers
+      - allies_ally_cavedwellers
       
   - name: Treasure Hunt
     sets:
@@ -465,4 +465,4 @@ kingdoms:
       - seaside2_treasuremap
       - seaside2_treasury
     allies:
-      - allies_markettowns
+      - allies_ally_markettowns

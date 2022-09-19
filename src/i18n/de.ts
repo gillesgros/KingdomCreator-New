@@ -4,6 +4,7 @@ import * as Languages from "./messages/languages.de.json";
 import * as PageIndex from "./messages/page-index.de.json";
 import * as PageRules from "./messages/page-rules.de.json";
 import * as PageSets from "./messages/page-sets.de.json";
+import * as PageBoxes from "./messages/page-boxes.en.json";
 import * as Sets from "./messages/sets.de.json";
 
 export const messages = {
@@ -13,5 +14,6 @@ export const messages = {
   ...(PageIndex as any).default,
   ...(PageRules as any).default,
   ...(PageSets as any).default,
+  ...(PageBoxes as any).default,
   ...(Sets as any).default,
 }

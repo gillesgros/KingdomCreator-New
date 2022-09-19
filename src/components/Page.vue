@@ -44,12 +44,12 @@
 
         <i18n class="github-info" path="github_info" tag="div">
           <template v-slot:source>
-            <a href="https://github.com/blakevanlan/KingdomCreator">{{
+            <a href="https://github.com/gillesgros/KingdomCreator-New">{{
               $t("github_info_source")
             }}</a>
           </template>
           <template v-slot:issues>
-            <a href="https://github.com/blakevanlan/KingdomCreator/issues">{{
+            <a href="https://github.com/gillesgros/KingdomCreator-New/issues">{{
               $t("github_info_issues")
             }}</a>
           </template>

@@ -1,0 +1,1 @@
+$env:Path = (($env:Path -split ';') + ((Get-Location).ToString()+"/../../# Portable App\node-v18.9.0-win-x64")) -join ';'
