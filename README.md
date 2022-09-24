@@ -1,5 +1,5 @@
 # KingdomCreator-New 
-# based on Dominion Randomizer (aka Kingdom Creator) form Blake
+# based on Dominion Randomizer (aka Kingdom Creator) from Blake
 
 https://71yeti.fr is a kingdom randomizer, or card picker, for Dominion, based on 
 https://www.dominionrandomizer.com is a kingdom randomizer, or card picker, for Dominion.

@@ -3,8 +3,10 @@ import { IllustratorCard, YearOfSet } from "./digital-cards-type"
 export const Year_set:YearOfSet[]=[
 { id: "baseset", year: 2008 },
 { id: "baseset2", year: 2016 },
+{ id: "baseset2add", year: 2016 },
 { id: "intrigue", year: 2009 },
 { id: "intrigue2", year: 2016 },
+{ id: "intrigue2add", year: 2016 },
 { id: "seaside", year: 2009 },
 { id: "alchemy", year: 2010 },
 { id: "prosperity", year: 2010 },
@@ -20,8 +22,11 @@ export const Year_set:YearOfSet[]=[
 { id: "allies", year: 2021 },
 
 { id: "seaside2", year: 2022 },
+{ id: "seaside2add", year: 2022 },
 { id: "prosperity2", year: 2022 },
-{ id: "hinterlands", year: 2022 },
+{ id: "prosperity2add", year: 2022 },
+{ id: "hinterlands2", year: 2022 },
+{ id: "hinterlands2add", year: 2022 },
 
 { id: "envoy", year: 2008 },
 { id: "blackmarket", year: 2009 },
