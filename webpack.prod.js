@@ -1,4 +1,4 @@
-* webpack 5 */
+/* webpack 5 */
 const { merge } = require('webpack-merge');
 /* webpack 3
 const merge = require('webpack-merge');
