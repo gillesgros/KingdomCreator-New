@@ -63,7 +63,7 @@ export default class Randomizer extends Vue {
   }
 
   mounted() {
-    const kingdomFromUrl = deserializeKingdom(this.$route.query);
+    const kingdomFromUrl = deserializeKingdom(this.$route.query, this.settings.selectedSets);
     this.$store.dispatch(LOAD_INITIAL_KINGDOM, kingdomFromUrl);
   }
 

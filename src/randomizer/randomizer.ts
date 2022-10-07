@@ -28,7 +28,10 @@ import {Ally} from "../dominion/ally";
 
 const SETS_WITH_DUPLICATES: {[index: string]: string} = {
   'baseset': 'baseset2',
-  'intrigue': 'intrigue2'
+  'intrigue': 'intrigue2',
+  'seaside': 'seaside2',
+  'prosperity': 'prosperity2',
+  'hinterlands': 'hinterlands2'
 };
 const MAX_RETRIES = 3;
 const NUM_CARDS_IN_KINGDOM = 10;
@@ -246,7 +249,6 @@ export class Randomizer {
   }
 
   static getRandomBoons(supply: Supply, keepBoons: Boon[]) {
-    // if (!supply.supplyCards.some((s) =>  s.isFate == true )) {
     if (!supply.supplyCards.some((s) => s.id == "nocturne_druid")) {
       return [];
     }
@@ -257,7 +259,7 @@ export class Randomizer {
   }
 
   static getRandomAlly(supply: Supply, skipAllyId: string | null = null): Ally | null {
- console.log('in getRandomAlly - ' + supply.supplyCards.every((s) => !s.isLiaison))
+    console.log('in getRandomAlly - ' + supply.supplyCards.every((s) => !s.isLiaison))
 
     if (supply.supplyCards.every((s) => !s.isLiaison)) {
       return null;

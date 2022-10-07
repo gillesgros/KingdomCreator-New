@@ -12,7 +12,7 @@ module.exports = merge(common(false), {
 	client: {
       overlay: false,
     }, 
-	liveReload: true,
+    liveReload: true,
     static: {
       directory: __dirname
     },

@@ -88,6 +88,22 @@ export class DominionSets {
     return card;
   }
 
+  public static getSupplyCardByIdSetFiltered(cardId: string, filteredSet:string[]): SupplyCard {
+    let card;
+    for (let set of filteredSet) {
+      try {
+        card = DominionSets.getCardById(set+'_'+cardId);
+        break;
+      } catch (e) {
+        // Silently catch failed lookups.
+      }
+    }
+    if (!(card instanceof SupplyCard)) {
+      throw new Error(`Card id (${cardId}) does not refer to a supply card`);
+    }
+    return card;
+  }
+
   public static getEventById(cardId: string): Event {
     const card = DominionSets.getCardById(cardId);
     if (!(card instanceof Event)) {
@@ -148,6 +164,7 @@ export class DominionSets {
   private static createCardMap() {
     const cards: {[index: string]: Card} = {};
     const setIds = Object.keys(DominionSets.sets);
+	let extension = "";
     for (let setId of setIds) {
       const set = DominionSets.sets[setId as SetId] as DominionSet;
       const cardsFromSet: Card[] = 
@@ -156,11 +173,22 @@ export class DominionSets {
             set.ways, set.boons, set.allies, set.otherCards);
       for (let card of cardsFromSet) {
         cards[card.id] = card;
-        if (!cards[card.shortId]) {
-          cards[card.shortId] = card;
+        /* insert card with setId_cardId */
+		/*
+        if (card.setId.includes('2add')) {
+          extension ='_2add';
+        } else if (card.setId.includes('2')) {
+          extension ='_2';
+        } else {
+          extension ='';
+        }
+		*/
+        if (!cards[card.shortId + extension]) {
+          cards[card.shortId +extension] = card;
         }
       }
     }
+    //console.log(cards)
     return cards;
   }
 }

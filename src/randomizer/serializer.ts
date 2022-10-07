@@ -34,7 +34,7 @@ export function serializeKingdom(kingdom: Kingdom): {[index: string]: string} {
   return result;
 }
 
-export function deserializeKingdom(serializedKingdom: any): Kingdom | null {
+export function deserializeKingdom(serializedKingdom: any, selectedSets: string[]): Kingdom | null {
   const serializedSupply = serializedKingdom.supply || serializedKingdom.cards;
   const supplyIds = parseCommaSeparatedValues(serializedSupply)
 
@@ -51,7 +51,8 @@ export function deserializeKingdom(serializedKingdom: any): Kingdom | null {
   const wayIds = parseCommaSeparatedValues(serializedKingdom.ways) || [];
   const allyIds = parseCommaSeparatedValues(serializedKingdom.ally) || [];
   
-  const supplyCards = findByIds(supplyIds, DominionSets.getSupplyCardById).slice(0, 10);
+  const supplyCards = findByIdsFiltered(supplyIds, selectedSets, DominionSets.getSupplyCardByIdSetFiltered).slice(0, 10);
+  console.log(supplyCards)
   let baneCard: SupplyCard | null = null;
   if (baneIds.length) {
      baneCard = findByIds(baneIds, DominionSets.getSupplyCardById)[0] || null;
@@ -111,7 +112,20 @@ function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
   const results = [];
   for (let id of ids) {
     try {
+      console.log(lookupFn(id))
       results.push(lookupFn(id));
+    } catch (e) {
+      // Silently catch failed lookups.
+    }
+  }
+  return results;
+} 
+
+function findByIdsFiltered<T>(ids: string[], filteredSet: string[], lookupFn: (id: string, sets:string[]) => T): T[] {
+  const results = [];
+  for (let id of ids) {
+    try {
+      results.push(lookupFn(id,filteredSet));
     } catch (e) {
       // Silently catch failed lookups.
     }

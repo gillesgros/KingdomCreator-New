@@ -1,4 +1,7 @@
-import { UPDATE_KINGDOM, UPDATE_SELECTION, CLEAR_SELECTION } from "./mutation-types";
+import { 
+  UPDATE_KINGDOM, 
+  UPDATE_SELECTION, 
+  CLEAR_SELECTION } from "./mutation-types";
 import {
   RANDOMIZE,
   RANDOMIZE_FULL_KINGDOM,
@@ -6,6 +9,7 @@ import {
   SELECT_CARD,
   RandomizeSupplyCardParams,
 } from "./action-types";
+
 import { EventTracker } from "../../analytics/event-tracker";
 import { EventType } from "../../analytics/event-tracker";
 import { State } from "./randomizer-store";
@@ -31,7 +35,7 @@ interface Context extends ActionContext<State, any> {}
 export const actions = {
   LOAD_INITIAL_KINGDOM(context: Context, initialKingdom: Kingdom | null) {
   console.log('LOAD_INITIAL_KINGDOM')
-  console.log(context)
+//  console.log(context)
   console.log(initialKingdom)
     if (initialKingdom) {
       // Use the kingdom as-is if it contains 10 supply cards.
