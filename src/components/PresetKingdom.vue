@@ -149,9 +149,11 @@ export default class PresetKingdom extends Vue {
     if (this.kingdom.baneCardId) {
       Cards.push(this.getCards([this.kingdom.baneCardId])[0]);
     }
+    /*
     if (this.kingdom.obeliskCardId) {
       Cards.push(this.getCards([this.kingdom.obeliskCardId])[0]);
     }
+    */
     return Cards;
   }
 

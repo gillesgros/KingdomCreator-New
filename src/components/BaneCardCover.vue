@@ -49,17 +49,17 @@ export default class BaneCardCover extends Vue {
   box-sizing: border-box;
 }
 .bane-color {
-  border: 5px solid #b78eca /* curse-color */;
+  border: 8px solid #b78eca /* curse-color */;
 }
 .obelisk-color {
-  border: 5px solid #55AC6A /* curse-color */;
+  border: 8px solid #55AC6A /* landmark-color */;
 }
 
 .card-cover-div {
   position : relative;
   transform: rotate(0.75turn);
-  bottom: -71%;
-  right: -35%;
+  bottom: -70%;
+  right: -38%;
 }
 
 .card-cover-text {

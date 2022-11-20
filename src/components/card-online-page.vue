@@ -103,7 +103,7 @@ const QuestionMarkValue =
 ]);
 
 const TreasureWithNoGain =
-    new Set([ "tiara", "investment", "warchest"
+    new Set([ "tiara", "investment", "warchest", "astrolabe"
 ]);
 
 const IsLooter = 
@@ -112,6 +112,7 @@ const IsLooter =
 
 const IsZeroStar = 
     new Set([ 
+        "peddler",
         "spoils", "madman", "mercenary", 
         "masterpiece", "stonemason", "doctor", "herald", 
         "willopwisp", "wish", "bat", "imp", "ghost",
@@ -160,21 +161,37 @@ export default class CardOnlinePageComponent extends Vue {
   get Cards() {
   let setName = this.set.setId
   console.log("in get Cards - setName= " + setName)
+  // to have only card at a time
   console.log(this.getCardSetById (Work_Card));
   console.log(Work_Card.id);
   let LocalTemp_CardsList:DigitalCard[] = Cards_list;
   if (setName == this.getCardSetById (Work_Card)) {
-  //console.log(Cards_list)
     LocalTemp_CardsList= Cards_list.filter(card => card.id == Work_Card.id)
-	 // console.log(LocalTemp_CardsList)
-
-	//LocalTemp_CardsList[0].text_html = Work_Card.text_html;
+    LocalTemp_CardsList[0].text_html = Work_Card.text_html;
    return LocalTemp_CardsList;
   }
- 	console.log("full")
-
-	//console.log(LocalTemp_CardsList)
-
+console.log(LocalTemp_CardsList.filter(card => 
+            this.set.supplyCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
+    .concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.otherCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
+    ).concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.boons.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.ways.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.events.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.projects.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        LocalTemp_CardsList.filter(card => 
+            this.set.landmarks.some(function(item) { return item.shortId == card.id; }))
+    ))
+	
     return LocalTemp_CardsList.filter(card => 
             this.set.supplyCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
     .concat (
@@ -486,13 +503,18 @@ export default class CardOnlinePageComponent extends Vue {
   
   getCardSetById(currentCard: DigitalCard) {
     //return this.set.setId;
-    return DominionSets.getCardById(currentCard.id).setId; 
+    let curr_Card_setid= DominionSets.getCardById(currentCard.id).setId;
+    if (this.set.setId.substring(0,this.set.setId.length-2)== curr_Card_setid.substring(0,this.set.setId.length-2)) 
+	{
+		return this.set.setId
+	}
+    return curr_Card_setid;
   }
   
   getCardTypeFontSize(currentCard: DigitalCard) {
     var typeOfCard = this.getCardTypeById(currentCard).label
     /* 1.43em top: 50 px; */
-    if (typeOfCard.length >= 35 ) { return "font-size: 1.43em;  top:50px;"; } /* Action - Attaque - Chevalier -Vitoire*/
+    if (typeOfCard.length >= 35 ) { return "font-size: 1.43em;  top:50px;"; } /* Action - Attaque - Chevalier - Vitoire*/
     if (typeOfCard.length >= 28 ) { return "font-size: 1.75em;  top:50px;"; } /* Action - Attaque - Chevalier */
     if (typeOfCard.length >= 26 ) { return "font-size: 2em;     top:45px;"; } /* Action - Attaque - Pillard */
     if (typeOfCard.length >= 22 ) { return "font-size: 2.2em;   top:40px;"; } /* Action - Attaque - Prix */

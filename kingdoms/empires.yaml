@@ -16,7 +16,9 @@ kingdoms:
     events:
       - empires_event_wedding
     landmarks:
+      - empires_landmark_obelisk
       - empires_landmark_tower
+    obeliskActionCard: empires_forum
 
   - name: Advanced Intro
     sets:

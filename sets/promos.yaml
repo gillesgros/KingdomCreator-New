@@ -179,7 +179,7 @@ events:
     isTrashing: false
 
 othercards:
-  - name: Sauna / Avanto
+  - name: Sauna / Avanto - to hide split card
     type: Action - Split Cards
     orderstring: Sauna / Avanto
   - name: Sauna
