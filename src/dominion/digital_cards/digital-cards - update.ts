@@ -140,27 +140,55 @@ FrenchCardTexts[CardNames.WITCHS_HUT]="<div class="card-text" style="top:20px;">
 </div>\
 </div>" ;
 
-
-
 */
 
 
-export const Work_Card:DigitalCard = {	id: "sauna", frenchName: "",  artwork:"",
+export const Work_Card:DigitalCard = {	id: "village", frenchName: "Chaudron",  artwork:"",
 text_html: '<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
+<div style="position:relative; top:10px;">\
 <div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Vous pouvez défausser un Trésor</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">pour recevoir une carte</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">coûtant jusqu\'à     .</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:22px;">+1 Achat</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:22px;">+    </div></div><br>\
+</div>\
+<div style="line-height:12px;">\
+<div style="display:inline;"><div style="display:inline; font-size:16px;">-     par carte en main. (Vous ne pouvez</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:16px;">pas aller en-dessous de     .)</div></div><br>\
+</div></div>\
+<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
+<div style="position:relative; top:10px;">\
+<div style="line-height:14px;">\
+<div style="display:inline;"><div style="display:inline; font-size:16px;">Quand vous recevez cette carte, écartez</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:16px;">jusqu\'à 2 cartes de votre main.</div></div><br>\
 </div>\
 </div>\
-<div class="card-text-coin-icon" style="transform:scale(0.35); top:10px; display: inline; left:120px;">\
+<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
+<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">7</div></div>\
+</div>\
+<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
 <div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">1</div></div>\
 </div>\
-<div class="card-text-coin-icon" style="transform:scale(0.18); top:108px; display: inline; left:188px;">\
-<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">4</div></div>\
+<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
+<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">0</div></div>\
 </div>\
-</div>'};
+</div>\
+'};
+
+
+
+export const Work_Card10:DigitalCard = {	id: "trail", frenchName: "Tisserande",  artwork:"",
+text_html: '<div class="card-text" style="top:10px;">\
+<div style="position:relative; top:5px;">\
+<div style="line-height:28px;">\
+<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:28px;">+1 Carte</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:28px;">+1 Action</div></div><br>\
+</div></div><div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
+<div style="position:relative; top:5px;"><div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">Quand vous recevez, écartez,</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">ou défaussez cette carte en</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">dehors de la phase Ajustement,</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">vous pouvez la jouer.</div></div><br>\
+</div></div></div>'
+};
 
 
 export const Work_Card_pro9:DigitalCard = {	id: "anvil", frenchName: "",  artwork:"",

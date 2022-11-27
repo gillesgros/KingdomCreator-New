@@ -167,7 +167,7 @@ export default class CardOnlinePageComponent extends Vue {
   let LocalTemp_CardsList:DigitalCard[] = Cards_list;
   if (setName == this.getCardSetById (Work_Card)) {
     LocalTemp_CardsList= Cards_list.filter(card => card.id == Work_Card.id)
-    LocalTemp_CardsList[0].text_html = Work_Card.text_html;
+    //LocalTemp_CardsList[0].text_html = Work_Card.text_html;
    return LocalTemp_CardsList;
   }
 console.log(LocalTemp_CardsList.filter(card => 

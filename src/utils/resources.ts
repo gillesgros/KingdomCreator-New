@@ -4,7 +4,6 @@ const IMAGE_PREFEX = "/img/cards";
 const BOXES_IMAGE_PREFEX = "/img/boxes";
 const RULE_PDF_PREFEX = "/rules";
 const PNG_SET_IMAGES = new Set(["alchemy", "cornucopia", "guilds"]);
-const FR_no_images = new Set(["allies", "seaside2add", "prosperity2add", "hinterlands2add"])
 
 export function getCardImageUrl(cardId: string, language: Language) {
   let SetName = cardId.split('_',2);
@@ -12,9 +11,6 @@ export function getCardImageUrl(cardId: string, language: Language) {
 
   switch (language) {
     case Language.FRENCH:
-	  if (FR_no_images.has(SetName[0])) {
-		  return `${IMAGE_PREFEX}/${SetName[0]}/${SetName[0]}_${cardName}.jpg`;
-      }
 	  return `${IMAGE_PREFEX}.${language}/${SetName[0]}/${cardName}.jpg`;
     default:
       return `${IMAGE_PREFEX}/${SetName[0]}/${SetName[0]}_${cardName}.jpg`;
