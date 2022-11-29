@@ -45,6 +45,7 @@ export class SupplyCard implements Card {
 
     // Allies
     readonly isLiaison: boolean,
+    readonly isCover: boolean,
     ) {
   }
 
@@ -105,6 +106,8 @@ export class SupplyCard implements Card {
   // Allies
       case CardType.LIAISON:
         return this.isLiaison;
+      case CardType.COVER:
+        return this.isCover;
 
       default:
         throw new Error(`Unknown card type: ${cardType}`);
@@ -152,8 +155,8 @@ export class SupplyCard implements Card {
       json["isVillageSupplier"] || false,
 
   // Allies
-      json["isLiaison"] || false
-
+      json["isLiaison"] || false,
+      json["isCover"] || false,
     )
   }
 }

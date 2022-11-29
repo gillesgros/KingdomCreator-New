@@ -1,133 +1,5 @@
 import { DigitalCard } from "./digital-cards-type"
 /*
-
-FrenchCardTexts[CardNames.BERSERKER] = "Recevez une carte coûtant//moins que celle-ci.//Tous vos adversaires défaussent//jusqu'à avoir 3 cartes en main.//---//Quand vous recevez cette carte,//jouez-la si vous avez//une carte Action en jeu.";
-FrenchCardTexts[CardNames.GUARD_DOG] = "|+2 Cartes|//Si vous avez en main 5 cartes//ou moins, |+2 Cartes|.//---//Quand un autre joueur joue une//Attaque, vous pouvez d'abord jouer//cette carte depuis votre main.";
-FrenchCardTexts[CardNames.NOMADS] = "|+1 Achat|//|+[2]|//---//Quand vous recevez ou//écartez cette carte, +[2].";
-FrenchCardTexts[CardNames.TRAIL] = "|+1 Carte|//|+1 Action|//---//Quand vous recevez, écartez,//ou défaussez cette carte en//dehors de la phase Ajustement,//vous pouvez la jouer.";
-FrenchCardTexts[CardNames.WEAVER] = "Recevez deux Argents ou//une carte coûtant jusqu'à [4].//---//Quand vous défaussez cette carte//en dehors de la phase Ajustement,//vous pouvez la jouer.";
-FrenchCardTexts[CardNames.SOUK] = "|+1 Achat|//|+[7]|//-[1] par carte en main. (Vous ne pouvez//pas aller en-dessous de [0].)//---//Quand vous recevez cette carte, écartez//jusqu'à 2 cartes de votre main.";
-FrenchCardTexts[CardNames.CAULDRON] = "[!2]//|+1 Achat|//La troisième fois que vous//recevez une Action à ce tour,//tous vos adversaires//reçoivent une Malédiction.";
-FrenchCardTexts[CardNames.WHEELWRIGHT] = "|+1 Carte|//|+1 Action|//Vous pouvez défausser une carte//pour recevoir une Action//coûtant autant ou moins.";
-FrenchCardTexts[CardNames.WITCHS_HUT] = "|+4 Cartes|//Défaussez 2 cartes, dévoilées.//Si les deux sont des Actions,//tous vos adversaires//reçoivent une Malédiction.";
-
-FrenchCardTexts[CardNames.BERSERKER]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Recevez une carte coûtant</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">moins que celle-ci.</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Tous vos adversaires défaussent</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">jusqu'à avoir 3 cartes en main.</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand vous recevez cette carte,</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">jouez-la si vous avez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">une carte Action en jeu.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.GUARD_DOG]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+2 Cartes|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Si vous avez en main 5 cartes</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">ou moins, |+2 Cartes|.</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand un autre joueur joue une</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Attaque, vous pouvez d'abord jouer</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">cette carte depuis votre main.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.NOMADS]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Achat|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+[2]|</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand vous recevez ou</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">écartez cette carte, +[2].</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.TRAIL]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Carte|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Action|</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand vous recevez, écartez,</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">ou défaussez cette carte en</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">dehors de la phase Ajustement,</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">vous pouvez la jouer.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.WEAVER]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Recevez deux Argents ou</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">une carte coûtant jusqu'à [4].</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand vous défaussez cette carte</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">en dehors de la phase Ajustement,</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">vous pouvez la jouer.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.SOUK]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Achat|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+[7]|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">-[1] par carte en main. (Vous ne pouvez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">pas aller en-dessous de [0].)</div></div><br>\
-</div></div>\
-<div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Quand vous recevez cette carte, écartez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">jusqu'à 2 cartes de votre main.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.CAULDRON]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">[!2]</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Achat|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">La troisième fois que vous</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">recevez une Action à ce tour,</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">tous vos adversaires</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">reçoivent une Malédiction.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
-FrenchCardTexts[CardNames.WHEELWRIGHT]="<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:60px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Carte|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">|+1 Action|</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">Vous pouvez défausser une carte</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">pour recevoir une Action</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:20px;">coûtant autant ou moins.</div></div><br>\
-</div>\
-</div>\
-</div>" ;
 FrenchCardTexts[CardNames.WITCHS_HUT]="<div class="card-text" style="top:20px;">\
 <div style="position:relative; top:60px;">\
 <div style="line-height:18px;">\
@@ -140,38 +12,33 @@ FrenchCardTexts[CardNames.WITCHS_HUT]="<div class="card-text" style="top:20px;">
 </div>\
 </div>" ;
 
+
+|+1 Action|//Défaussez 3 cartes. Si vous en//avez défaussé au moins une, |+|[3].//---//Lorsque vous recevez ou //écartez cette carte, |+2 Faveurs|.";
+
 */
 
 
-export const Work_Card:DigitalCard = {	id: "village", frenchName: "Chaudron",  artwork:"",
-text_html: '<div class="card-text" style="top:20px;">\
-<div style="position:relative; top:10px;">\
-<div style="line-height:18px;">\
-<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:22px;">+1 Achat</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:22px;">+    </div></div><br>\
-</div>\
-<div style="line-height:12px;">\
-<div style="display:inline;"><div style="display:inline; font-size:16px;">-     par carte en main. (Vous ne pouvez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:16px;">pas aller en-dessous de     .)</div></div><br>\
+export const Work_Card33:DigitalCard = {	id: "Archer", frenchName: "Chaudron",  artwork:"",
+text_html: '<div class="card-text" style="top:10px;">\
+<div style="position:relative; top:5px;">\
+<div style="line-height:26px;">\
+<div style="display:inline;"><div style="display:inline; font-weight: bold; font-size:26px;">+1 Action</div></div><br>\
+</div></div>\
+<div style="position:relative; top:5px;"><div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">Défaussez 3 cartes.</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">Si vous en avez défaussé</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">au moins une, <div style="display:inline; font-weight: bold">+     </div>.</div></div><br>\
 </div></div>\
 <div class="horizontal-line" style="width:200px; height:3px; margin-top:15px;"></div>\
-<div style="position:relative; top:10px;">\
-<div style="line-height:14px;">\
-<div style="display:inline;"><div style="display:inline; font-size:16px;">Quand vous recevez cette carte, écartez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:16px;">jusqu\'à 2 cartes de votre main.</div></div><br>\
+<div style="position:relative; top:5px;"><div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">Lorsque vous recevez ou </div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">écartez cette carte, <div style="display:inline; font-weight: bold; font-size:20px;">+2 Faveurs</div>.</div></div><br>\
+</div></div>\
+<div class="card-text-coin-icon" style="transform:scale(0.15); top:75px; display: inline; left:190px;">\
+<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">3</div></div>\
 </div>\
-</div>\
-<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
-<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">7</div></div>\
-</div>\
-<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
-<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">1</div></div>\
-</div>\
-<div class="card-text-coin-icon" style="transform:scale(0.15); top:10px; display: inline; left:120px;">\
-<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">0</div></div>\
-</div>\
-</div>\
-'};
+</div>'
+};
 
 
 
@@ -228,24 +95,33 @@ text_html: '<div class="card-text" style="top:10px;">\
 </div>\
 </div>'};
 
-
-export const Work_Card_pro7:DigitalCard = {	id: "investment", frenchName: "",  artwork:"",
-text_html: '<div class="card-text" style="top:20px;">\
+export const Work_Card:DigitalCard = {	id: "wizards", frenchName: "",  artwork:"",
+text_html: '<div class="card-text" style="top:10px;">\
+<div style="position:relative; top:05px;">\
+<div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">Cette pile commence avec</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">4 exemplaires de</div></div><br>\
+</div></div>\
+<div style="position:relative; top:10px;">\
+<div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:16px;"><b>Tente</b>, <b>Garnison</b>,</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:16px;"><b>Fort de la Colline</b> et <b>Bastion</b>,</div></div><br>\
+</div></div>\
 <div style="position:relative; top:15px;">\
-<div style="line-height:20px;">\
-<div style="display:inline;"><div style="display:inline; font-size:18px;">Écartez une carte de votre main.</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:18px;">Choisissez : +      ; ou écartez</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:18px;">cette carte pour dévoiler votre main</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:18px;">pour +        par Trésor révélé</div></div><br>\
-<div style="display:inline;"><div style="display:inline; font-size:18px;">de nom différent.</div></div><br>\
+<div style="line-height:16px;">\
+<div style="display:inline;"><div style="display:inline; font-size:18px;"> dans cette ordre. Seule la carte</div></div><br>\
+<div style="display:inline;"><div style="display:inline; font-size:18px;">du haut peut être reçue ou achetée.</div></div><br>\
 </div>\
 </div>\
-<div class="card-text-coin-icon" style="transform:scale(0.18); top:40px; display: inline;left:140px;">\
-<div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">1</div></div>\
-</div>\
-<div class="card-text-vp-icon-container" style="display:inline; transform:scale(0.18); top:90px; left:100px;"><div class="card-text-vp-text-container">\
-<div class="card-text-vp-text" style="top:8px;">1</div></div><div class="card-text-vp-icon"></div></div>\
 </div>'};
+/*
+Vieille Carte, Voyage,//Trésor Englouti et Rivage Lointain,
+Cueilleuse d'Herbes, Acolyte,//Sorcière Maléfique et Sibylle,
+Crieuse Publique, Forgeur,//Meunier et Aînée,
+Tactique, Archère,//Seigneur de Guerre et Territoire,
+Tente, Garnison,//Fort de la Colline et Bastion,
+";
+*/
 
 export const Work_Card_pro6:DigitalCard = {	id: "tiara", frenchName: "",  artwork:"",
 text_html: '<div class="card-text" style="top:20px;">\

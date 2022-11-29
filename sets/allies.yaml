@@ -22,6 +22,7 @@ cards:
     isTrashing: false
     isTreasure: true
     isVictory: false
+
   - name: Sycophant
     cost:
       treasure: 2
@@ -44,6 +45,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Townsfolk
     cost:
       treasure: 2
@@ -66,6 +68,8 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+    isCover: true
+
   - name: Augurs
     cost:
       treasure: 3
@@ -88,6 +92,8 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+    isCover: true
+
   - name: Clashes
     cost:
       treasure: 3
@@ -110,6 +116,8 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: true
+    isCover: true
+
   - name: Forts
     cost:
       treasure: 3
@@ -132,6 +140,8 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: true
+    isCover: true
+
   - name: Importer
     cost:
       treasure: 3
@@ -154,6 +164,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Merchant Camp
     cost:
       treasure: 3
@@ -176,6 +187,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Odysseys
     cost:
       treasure: 3
@@ -198,6 +210,8 @@ cards:
     isTrashing: false
     isTreasure: true
     isVictory: true
+    isCover: true
+
   - name: Sentinel
     cost:
       treasure: 3
@@ -220,6 +234,7 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+
   - name: Underling
     cost:
       treasure: 2
@@ -242,6 +257,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Wizards
     cost:
       treasure: 3
@@ -264,6 +280,8 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+    isCover: true
+ 
   - name: Broker
     cost:
       treasure: 4
@@ -286,6 +304,7 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+
   - name: Carpenter
     cost:
       treasure: 4
@@ -308,6 +327,7 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+
   - name: Courier
     cost:
       treasure: 4
@@ -330,6 +350,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Innkeeper
     cost:
       treasure: 4
@@ -352,6 +373,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Royal Galley
     cost:
       treasure: 4
@@ -374,6 +396,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Town
     cost:
       treasure: 4
@@ -396,6 +419,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Barbarian
     cost:
       treasure: 5
@@ -418,6 +442,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Capital City
     cost:
       treasure: 5
@@ -440,6 +465,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Contract
     cost:
       treasure: 5
@@ -462,6 +488,7 @@ cards:
     isTrashing: false
     isTreasure: true
     isVictory: false
+
   - name: Emissary
     cost:
       treasure: 5
@@ -484,6 +511,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Galleria
     cost:
       treasure: 5
@@ -506,6 +534,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Guildmaster
     cost:
       treasure: 5
@@ -528,6 +557,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Highwayman
     cost:
       treasure: 5
@@ -550,6 +580,8 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
+
   - name: Hunter
     cost:
       treasure: 5
@@ -572,6 +604,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Modify
     cost:
       treasure: 5
@@ -594,6 +627,7 @@ cards:
     isTrashing: true
     isTreasure: false
     isVictory: false
+
   - name: Skirmisher
     cost:
       treasure: 5
@@ -616,6 +650,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Specialist
     cost:
       treasure: 5
@@ -638,6 +673,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Swap
     cost:
       treasure: 5
@@ -660,6 +696,7 @@ cards:
     isTrashing: false
     isTreasure: false
     isVictory: false
+
   - name: Marquis
     cost:
       treasure: 6
@@ -734,15 +771,15 @@ othercards:
       treasure: 6
       
   - name: Clashes - to hide split card
-    type: Action - Split Cards
+    type: Action - Clashes - Split Cards
     orderstring: Clashes
   - name: Battle Plan
-    type: Action - Split Cards
+    type: Action - Clashes - Split Cards
     orderstring: Clashes step 1
     cost:
       treasure: 3
   - name: Archer
-    type: Action - Split Cards
+    type: Action - Attack - Clashes - Split Cards
     orderstring: Clashes step 2
     cost:
       treasure: 4   

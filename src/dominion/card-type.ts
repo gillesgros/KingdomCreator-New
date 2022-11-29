@@ -32,5 +32,6 @@ export enum CardType {
   VILLAGE_SUPPLIER = "isVillageSupplier",
 
   // Allies
-  LIAISON = "isLiaison"
+  LIAISON = "isLiaison",
+  COVER = "isCover"
 }

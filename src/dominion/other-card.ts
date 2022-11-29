@@ -80,6 +80,7 @@ export class OtherCard implements Card {
         return this.isTreasure;
       case CardType.VICTORY:
         return this.isVictory;
+
       default:
         throw new Error(`Unknown card type: ${cardType}`);
     }

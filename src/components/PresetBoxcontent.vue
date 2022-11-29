@@ -174,6 +174,8 @@ export default class PresetBoxcontent extends Vue {
 
   challenge_sortBoxesSet(mycard_type : string) {
     if (mycard_type == "Travellers Page" || mycard_type == "Travellers Peasant") return SortOption.COST;
+    if (mycard_type == "Split Cards") return SortOption.ORDERSTRING;
+    if (mycard_type == "Castle") return SortOption.COST;
     return this.sortBoxesSet
   }
 }

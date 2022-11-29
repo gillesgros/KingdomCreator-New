@@ -103,7 +103,7 @@ const QuestionMarkValue =
 ]);
 
 const TreasureWithNoGain =
-    new Set([ "tiara", "investment", "warchest", "astrolabe"
+    new Set([ "tiara", "investment", "warchest", "astrolabe", "odysseys",
 ]);
 
 const IsLooter = 
@@ -160,38 +160,17 @@ export default class CardOnlinePageComponent extends Vue {
 
   get Cards() {
   let setName = this.set.setId
-  console.log("in get Cards - setName= " + setName)
+  //console.log("in get Cards - setName= " + setName)
   // to have only card at a time
-  console.log(this.getCardSetById (Work_Card));
-  console.log(Work_Card.id);
+  //console.log(this.getCardSetById (Work_Card));
+  //console.log(Work_Card.id);
   let LocalTemp_CardsList:DigitalCard[] = Cards_list;
   if (setName == this.getCardSetById (Work_Card)) {
     LocalTemp_CardsList= Cards_list.filter(card => card.id == Work_Card.id)
-    //LocalTemp_CardsList[0].text_html = Work_Card.text_html;
+    LocalTemp_CardsList[0].text_html = Work_Card.text_html;
    return LocalTemp_CardsList;
   }
-console.log(LocalTemp_CardsList.filter(card => 
-            this.set.supplyCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
-    .concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.otherCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
-    ).concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.boons.some(function(item) { return item.shortId == card.id; }))
-    ).concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.ways.some(function(item) { return item.shortId == card.id; }))
-    ).concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.events.some(function(item) { return item.shortId == card.id; }))
-    ).concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.projects.some(function(item) { return item.shortId == card.id; }))
-    ).concat (
-        LocalTemp_CardsList.filter(card => 
-            this.set.landmarks.some(function(item) { return item.shortId == card.id; }))
-    ))
-	
+ 
     return LocalTemp_CardsList.filter(card => 
             this.set.supplyCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); }))
     .concat (
@@ -296,7 +275,9 @@ console.log(LocalTemp_CardsList.filter(card =>
       if (card.isOfType(CardType.FATE))      { extension= " - Destin"; }
       if (card.isOfType(CardType.DOOM))      { extension= " - Fatalité"; }
       if (card.isOfType(CardType.LIAISON))   { extension= " - Liaison"; }
-
+      if (card.isOfType(CardType.COVER))     { extension= " - " + this.$t(card.id)
+        return {png: "action", label: "Action" + extension};
+      }
 
       if (card.isOfType(CardType.NIGHT)) {
         if (card.isOfType(CardType.DURATION)) { 
@@ -317,7 +298,7 @@ console.log(LocalTemp_CardsList.filter(card =>
         if (card.isOfType(CardType.TRAVELLER)) { return {png: "action-traveller", label: "Action - Itinérant" + extension}; }
         if (card.isOfType(CardType.DURATION)) {
           if (card.isOfType(CardType.REACTION)) { return { png : "action-duration-reaction", label :"Action - Durée - Réaction" + extension}; }
-          if (card.isOfType(CardType.ATTACK)) { return { png : "action-duration", label :"Action - Attaque - Durée" + extension}; }
+          if (card.isOfType(CardType.ATTACK)) { return { png : "action-duration", label :"Action - Durée - Attaque" + extension}; }
           if (NeedHeirloompng) { return {png: "action-duration-heirloom", label: "Action - Durée" + extension}; }
           return {png : "action-duration", label: "Action - Durée" + extension};
         }
@@ -352,6 +333,7 @@ console.log(LocalTemp_CardsList.filter(card =>
       }
     }
     if (card.constructor.name == "OtherCard") {
+		//console.log(card)
       card = card as OtherCard;
       let extension
       extension ="";
@@ -361,11 +343,18 @@ console.log(LocalTemp_CardsList.filter(card =>
       if (card.type.includes("Zombie"))    { extension= " - Zombie";         }
       if (card.type.includes("Knight"))    { extension= " - Chevalier";      }
       if (card.type.includes("Castle"))    { extension= " - Château";        }
+      if (card.type.includes("Clashes"))   { extension= " - Affrontement";   }
+      if (card.type.includes("Townsfolk")) { extension= " - Citoyen";        }
+      if (card.type.includes("Augurs"))    { extension= " - Augure";        }
+      if (card.type.includes("Odyssey"))   { extension= " - Odyssée";        }
+      if (card.type.includes("Fort"))      { extension= " - Fortifications"; }
+      if (card.type.includes("Wizards"))   { extension= " - Magiciens";      }
 
       if (card.type.includes("Ruins")) {
         return {png: "action-ruins", label: "Action - Ruines" + extension};
       }
 
+      /* usion slice(2) to remove "is" in "isVictory" */
       if (card.type.includes("Shelter")) {
         if (card.type.includes(CardType.VICTORY.slice(2))) { return {png: "victory-shelter", label: "Victoire - Refuge" + extension}; }
         if (card.type.includes(CardType.REACTION.slice(2))) { return {png: "reaction-shelter", label: "Réaction - Refuge" + extension}; }
@@ -451,7 +440,7 @@ console.log(LocalTemp_CardsList.filter(card =>
     let pattern = '<div class="card-text-coin-text" style="color: black; display:inline; top:8px;">';
     if (currentCard.id == "fortune") { return "x2"; }
     if (currentCard.id == "ducat") { return 0; }
-    if ( QuestionMarkValue.has(currentCard.id)) { return "?"; }
+    if (QuestionMarkValue.has(currentCard.id)) { console.log('yes ?'); return "?"; }
     let valuePosition = currentCard.text_html.indexOf(pattern)
     if (valuePosition == -1) { return "?"; }
     return currentCard.text_html.charAt(currentCard.text_html.indexOf(pattern) + pattern.length);
@@ -504,7 +493,7 @@ console.log(LocalTemp_CardsList.filter(card =>
   getCardSetById(currentCard: DigitalCard) {
     //return this.set.setId;
     let curr_Card_setid= DominionSets.getCardById(currentCard.id).setId;
-    if (this.set.setId.substring(0,this.set.setId.length-2)== curr_Card_setid.substring(0,this.set.setId.length-2)) 
+    if (this.set.setId.substring(0,this.set.setId.length-2) == curr_Card_setid.substring(0,this.set.setId.length-2)) 
 	{
 		return this.set.setId
 	}
