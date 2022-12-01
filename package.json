@@ -38,7 +38,7 @@
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
     "js-yaml": "^4.1.0",
-    "mini-css-extract-plugin": "^2.7.0",
+    "mini-css-extract-plugin": "^2.7.1",
     "pug": "^3.0.2",
     "pug-walk": "^2.0.0",
     "sass-loader": "^13.2.0",

@@ -540,7 +540,7 @@ cards:
       treasure: 5
       potion: 0
       debt: 0
-    isAction: false
+    isAction: true
     isActionSupplier: false
     isArtifactSupplier: false
     isAttack: false
