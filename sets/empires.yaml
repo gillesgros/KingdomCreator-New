@@ -650,7 +650,7 @@ othercards:
       
   - name: Settlers / Bustling Village - to hide split card
     type: Action - Split Cards
-    orderstring: Settlers / Bustling Villag
+    orderstring: Settlers / Bustling Village
   - name: Settlers
     type: Action - Split Cards
     orderstring: Settlers / Bustling Village step 1

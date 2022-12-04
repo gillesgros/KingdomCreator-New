@@ -38,22 +38,22 @@
                    :items="getCards(OtherCards(set, card.cardType), challenge_sortBoxesSet(card.cardType))" 
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForSupplyCards" :is-vertical="true" />
-    
+	
     <GenericLayout v-for="card in GetOtherCardTypes('horizontal')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForAddons" :is-vertical="false" />
-				   
+	
     <GenericLayout v-for="card in GetOtherCardTypes('verticalMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    generic-nb-columns=3  :is-vertical="true" />
-				   
+	
     <GenericLayout v-for="card in GetOtherCardTypes('horizontalMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    generic-nb-columns=2  :is-vertical="false" />
-				   
+	
     <GenericLayout v-for="card in GetOtherCardTypes('squareMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="getshapeofmat(card.cardType)" :showOverlay="false"
@@ -156,6 +156,9 @@ export default class PresetBoxcontent extends Vue {
   }
  
   OtherCards(usingSet: DominionSet, typeRequested : string) {
+  console.log("typeRequested : " + typeRequested)
+  console.log(usingSet.otherCards)
+  console.log(usingSet.otherCards.filter((card)=>((card.type).includes(typeRequested))))
     return  usingSet.otherCards.filter((card)=>((card.type).includes(typeRequested)));
   }
  
