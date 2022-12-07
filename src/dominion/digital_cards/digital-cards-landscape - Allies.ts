@@ -1,12 +1,26 @@
 import { DigitalCard } from "./digital-cards-type"
 
-export const Cards_list_allies:DigitalCard[]= [
+export const Cards_list_allies:DigitalCard[]= [ 
 
   /* landscape */	{	id: "architectsguild",  frenchName: "Guilde des Architectes",  artwork: "http://wiki.dominionstrategy.com/images/3/3c/Architects%27_GuildArt.jpg",
-  /* landscape */		text_html: ''
+  /* landscape */		text_html: '\
+  <div class="landscape-text" style="top:6px;">\
+  <div style="line-height:18px;">\
+  <div style="display:inline;"><div style="display:inline; font-size:17px;">Quand vous recevez une carte, vous pouvez dépenser</div></div><br>\
+  <div style="display:inline;"><div style="display:inline; font-size:17px;"><div style="display:inline; font-weight:bold;">2 Faveurs</div> pour recevoir une carte non-Victoire moins chère.</div></div><br>\
+  </div>'
+
   /* landscape */	},	
   /* landscape */	{	id: "bandofnomads",  frenchName: "Bande de Nomades",  artwork: "http://wiki.dominionstrategy.com/images/b/b7/Band_of_NomadsArt.jpg",
-  /* landscape */		text_html: ''
+  /* landscape */		text_html: '\
+  <div class="landscape-text" style="top:6px;">\
+  <div style="line-height:18px;">\
+  <div style="display:inline;"><div style="display:inline; font-size:17px;">Recevez une carte Action coûtant jusqu\'à      . Mettez-la</div></div><br>\
+  <div style="display:inline;"><div style="display:inline; font-size:17px;">de côté. Dans ce cas, jouez-la au début de votre prochain tour.</div></div><br>\
+  </div>\
+  <div class="card-text-coin-icon" style="transform:scale(0.17); top:2px; display: inline;left:314px;">\
+  <div class="card-text-coin-text-container" style="display:inline;"><div class="card-text-coin-text" style="color: black; display:inline; top:8px;">4</div></div></div>\
+  </div>'
   /* landscape */	},	
   /* landscape */	{	id: "cavedwellers",  frenchName: "Troglodytes",  artwork: "http://wiki.dominionstrategy.com/images/8/80/Cave_DwellersArt.jpg",
   /* landscape */		text_html: ''
@@ -17,13 +31,13 @@ export const Cards_list_allies:DigitalCard[]= [
   /* landscape */	{	id: "citystate",  frenchName: "Cité-État",  artwork: "http://wiki.dominionstrategy.com/images/3/3e/City-stateArt.jpg",
   /* landscape */		text_html: ''
   /* landscape */	},	
-  /* landscape */	{	id: "coastalhaven",  frenchName: "Havre-Côtier",  artwork: "http://wiki.dominionstrategy.com/images/9/95/Coastal_HavenArt.jpg",
+  /* landscape */	{	id: "coastalhaven",  frenchName: "Guilde des Architectes",  artwork: "http://wiki.dominionstrategy.com/images/9/95/Coastal_HavenArt.jpg",
   /* landscape */		text_html: ''
   /* landscape */	},	
   /* landscape */	{	id: "craftersguild",  frenchName: "Guilde des Artisans",  artwork: "http://wiki.dominionstrategy.com/images/6/6c/Crafters%27_GuildArt.jpg",
   /* landscape */		text_html: ''
   /* landscape */	},	
-  /* landscape */	{	id: "desertguides",  frenchName: "Guides du Déserrt",  artwork: "http://wiki.dominionstrategy.com/images/c/cb/Desert_GuidesArt.jpg",
+  /* landscape */	{	id: "desertguides",  frenchName: "Guilde des Architectes",  artwork: "http://wiki.dominionstrategy.com/images/c/cb/Desert_GuidesArt.jpg",
   /* landscape */		text_html: ''
   /* landscape */	},	
   /* landscape */	{	id: "familyofinventors",  frenchName: "Famille d'Inventeurs",  artwork: "http://wiki.dominionstrategy.com/images/3/3d/Family_of_InventorsArt.jpg",

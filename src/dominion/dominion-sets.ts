@@ -173,16 +173,6 @@ export class DominionSets {
             set.ways, set.boons, set.allies, set.otherCards);
       for (let card of cardsFromSet) {
         cards[card.id] = card;
-        /* insert card with setId_cardId */
-		/*
-        if (card.setId.includes('2add')) {
-          extension ='_2add';
-        } else if (card.setId.includes('2')) {
-          extension ='_2';
-        } else {
-          extension ='';
-        }
-		*/
         if (!cards[card.shortId + extension]) {
           cards[card.shortId +extension] = card;
         }

@@ -112,6 +112,9 @@ export default class CardOnlinePageComponent extends Vue {
     ).concat (
         Cards_list.filter(card => 
             this.set.landmarks.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        Cards_list.filter(card => 
+            this.set.allies.some(function(item) { return item.shortId == card.id; }))
     )
   }
   
@@ -136,6 +139,8 @@ export default class CardOnlinePageComponent extends Vue {
       case "Boon"    : { return {png: "boon", label: "Aubaine", 
                                  style: "top:-2px; left:-8px; font-size:0.9em;" }; }
       case "Way"     : { return {png: "way", label: "Voie", 
+                                 style: "top:3px; left:-15px; font-size:1.2em;" }; }
+      case "Ally"     : { return {png: "ally", label: "Allié", 
                                  style: "top:3px; left:-15px; font-size:1.2em;" }; }
       case "OtherCard" : {
         card = card as OtherCard;
@@ -184,7 +189,8 @@ export default class CardOnlinePageComponent extends Vue {
     if (card.constructor.name == "Boon" || 
         card.constructor.name == "Landmark" || 
         card.constructor.name == "OtherCard" || 
-        card.constructor.name == "Way") {
+        card.constructor.name == "Way" || 
+        card.constructor.name == "Ally") {
       return false;
     }
     return true;
@@ -219,6 +225,8 @@ export default class CardOnlinePageComponent extends Vue {
       if ((currentCard.frenchName).length >=8  ) { return {top: 18, fontsize: 1.5}; } /* 11 */
                                                    return {top: 16, fontsize: 1.8}; /* >= 6 */
     }
+
+    if ((currentCard.frenchName).length >= 22 ) { return {top: 9, fontsize: 0.88}; }
     if ((currentCard.frenchName).length >= 20 ) { return {top: 7, fontsize: 1}; }
     if ((currentCard.frenchName).length >= 17 ) { return {top: 7, fontsize: 1}; } /* 17 */
     if ((currentCard.frenchName).length >= 14 ) { return {top: 6, fontsize: 1.2}; } /* 14 */
@@ -250,7 +258,7 @@ export default class CardOnlinePageComponent extends Vue {
       case SetId.NOCTURNE : return " right: -37px; bottom: -72px; "
       case SetId.PROMOS : return " right: -34px; bottom: -74px; "
       case SetId.MENAGERIE : return " right: -36px; bottom: -24px; "
-
+      case SetId.ALLIES : return " right: -34px; bottom: -78px; "
       default: { return ""; }
     }
   }

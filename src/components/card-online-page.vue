@@ -163,7 +163,12 @@ export default class CardOnlinePageComponent extends Vue {
   //console.log("in get Cards - setName= " + setName)
   // to have only card at a time
   //console.log(this.getCardSetById (Work_Card));
-  //console.log(Work_Card.id);
+  /*console.log(Cards_list.filter(card => 
+            this.set.otherCards.some(function(item) { 
+			console.log( setName +'-'+ card.id +'---'+ item.setId +'-'+item.shortId); 
+			return ((setName == item.setId) && (item.shortId == card.id)); })));*/
+console.log(Cards_list.filter(card => 
+            this.set.otherCards.some(function(item) { return ((setName == item.setId) && (item.shortId == card.id)); })));
   let LocalTemp_CardsList:DigitalCard[] = Cards_list;
   if (setName == this.getCardSetById (Work_Card)) {
     LocalTemp_CardsList= Cards_list.filter(card => card.id == Work_Card.id)
@@ -191,6 +196,9 @@ export default class CardOnlinePageComponent extends Vue {
     ).concat (
         LocalTemp_CardsList.filter(card => 
             this.set.landmarks.some(function(item) { return item.shortId == card.id; }))
+    ).concat (
+        Cards_list.filter(card => 
+            this.set.allies.some(function(item) { return item.shortId == card.id; }))
     )
   }
 
@@ -370,6 +378,7 @@ export default class CardOnlinePageComponent extends Vue {
 
         if (card.type.includes(CardType.DURATION.slice(2))) {
           if (card.type.includes(CardType.REACTION.slice(2))) { return { png : "action-duration-reaction", label :"Action - Durée - Réaction" + extension}; }
+          if (card.type.includes(CardType.VICTORY.slice(2))) { return {png: "action-duration-victory", label: "Action - Victoire - Durée" + extension}; }
           return {png : "action-duration", label: "Action - Durée" + extension};
         }
         if (card.type.includes(CardType.RESERVE.slice(2))) {
@@ -439,8 +448,8 @@ export default class CardOnlinePageComponent extends Vue {
   getValueforTreasureCard(currentCard: DigitalCard) {
     let pattern = '<div class="card-text-coin-text" style="color: black; display:inline; top:8px;">';
     if (currentCard.id == "fortune") { return "x2"; }
-    if (currentCard.id == "ducat") { return 0; }
-    if (QuestionMarkValue.has(currentCard.id)) { console.log('yes ?'); return "?"; }
+    if (currentCard.id == "ducat" || currentCard.id == "sunkentreasure") { return 0; }
+    if (QuestionMarkValue.has(currentCard.id)) { return "?"; }
     let valuePosition = currentCard.text_html.indexOf(pattern)
     if (valuePosition == -1) { return "?"; }
     return currentCard.text_html.charAt(currentCard.text_html.indexOf(pattern) + pattern.length);
@@ -503,10 +512,12 @@ export default class CardOnlinePageComponent extends Vue {
   getCardTypeFontSize(currentCard: DigitalCard) {
     var typeOfCard = this.getCardTypeById(currentCard).label
     /* 1.43em top: 50 px; */
+    if (typeOfCard.length >= 39 ) { return "font-size: 1.36em;  top:50px;"; } /* Action - Victoire - Durée - Fortifications*/
     if (typeOfCard.length >= 35 ) { return "font-size: 1.43em;  top:50px;"; } /* Action - Attaque - Chevalier - Vitoire*/
     if (typeOfCard.length >= 28 ) { return "font-size: 1.75em;  top:50px;"; } /* Action - Attaque - Chevalier */
     if (typeOfCard.length >= 26 ) { return "font-size: 2em;     top:45px;"; } /* Action - Attaque - Pillard */
     if (typeOfCard.length >= 22 ) { return "font-size: 2.2em;   top:40px;"; } /* Action - Attaque - Prix */
+    if (typeOfCard.length >= 21 ) { return "font-size: 2.4em;   top:38px;"; } /* Action - Attaque - Prix */
     if (typeOfCard.length >= 16 ) { return "font-size: 2.8em;   top:35px;"; } /* Action - Attaque */
     if (typeOfCard.length >= 13 ) { return "font-size: 3.125em; top:30px;"; } /* Action - Prix */ /*Action - Durée */
                                     return "font-size: 4.2em;   top:20px;";   /* Nuit - Attaque - Durée */

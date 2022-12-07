@@ -122,7 +122,7 @@ const loadSets = function() {
             card.cardType="6 // allies"
          }
       }
-	  if (set.othercards) {
+      if (set.othercards) {
          for (var i = 0; i < set.othercards.length; i++) {
             var card = set.othercards[i];
             card.id = convertToCardId(setId, card.name);
