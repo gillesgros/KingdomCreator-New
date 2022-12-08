@@ -227,8 +227,10 @@ export default class CardOnlinePageComponent extends Vue {
     }
 
     if ((currentCard.frenchName).length >= 22 ) { return {top: 9, fontsize: 0.88}; }
+    if ((currentCard.frenchName).length >= 21 ) { return {top: 9, fontsize: 0.88}; }
     if ((currentCard.frenchName).length >= 20 ) { return {top: 7, fontsize: 1}; }
     if ((currentCard.frenchName).length >= 17 ) { return {top: 7, fontsize: 1}; } /* 17 */
+    if ((currentCard.frenchName).length >= 16 ) { return {top: 7, fontsize: 1.1}; } /* 17 */
     if ((currentCard.frenchName).length >= 14 ) { return {top: 6, fontsize: 1.2}; } /* 14 */
     if ((currentCard.frenchName).length >= 13 ) { return {top: 4, fontsize: 1.3}; } /* 13 */
                                                   return {top: 4, fontsize: 1.4};  /* >= 12 */
