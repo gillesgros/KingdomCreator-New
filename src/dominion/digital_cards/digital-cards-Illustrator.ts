@@ -698,8 +698,8 @@ export const Cards_list_Illustrator:IllustratorCard[]= [
 { id:"townsfolk", illustrator:"Julien Delval" },
 { id:"towncrier", illustrator:"Julien Delval" },
 { id:"blacksmith", illustrator:"Julien Delval" },
-{ id:"Miller", illustrator:"Julien Delval" },
-{ id:"Elder", illustrator:"Julien Delval" },
+{ id:"miller", illustrator:"Julien Delval" },
+{ id:"elder", illustrator:"Julien Delval" },
 { id:"augurs", illustrator:"Hans Krill" },
 { id:"herbgatherer", illustrator:"Hans Krill" },
 { id:"acolyte", illustrator:"Hans Krill" },
@@ -770,6 +770,7 @@ export const Cards_list_Illustrator:IllustratorCard[]= [
 { id:"peacefulcult", illustrator:"Martin Hoffmann" },
 { id:"plateaushepherds", illustrator:"Matthias Catrein" },
 { id:"trapperslodge", illustrator:"Marco Morte" },
+{ id:"woodworkersguild", illustrator:"Marco Morte" },
 
 
 ];

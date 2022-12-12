@@ -353,10 +353,13 @@ console.log(Cards_list.filter(card =>
       if (card.type.includes("Castle"))    { extension= " - Château";        }
       if (card.type.includes("Clashes"))   { extension= " - Affrontement";   }
       if (card.type.includes("Townsfolk")) { extension= " - Citoyen";        }
-      if (card.type.includes("Augurs"))    { extension= " - Augure";        }
+      if (card.type.includes("Augurs"))    { extension= " - Augure";         }
       if (card.type.includes("Odyssey"))   { extension= " - Odyssée";        }
       if (card.type.includes("Fort"))      { extension= " - Fortifications"; }
-      if (card.type.includes("Wizards"))   { extension= " - Magiciens";      }
+      if (card.type.includes("Wizards"))   { extension= " - Magicien";       }
+      if (card.type.includes("Wizards - Liaison"))  
+                                           { extension= " - Magicien - Liaison"; }
+
 
       if (card.type.includes("Ruins")) {
         return {png: "action-ruins", label: "Action - Ruines" + extension};

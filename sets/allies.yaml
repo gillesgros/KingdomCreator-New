@@ -747,25 +747,25 @@ allies:
   
 othercards:
   - name: Augurs - to hide split card
-    type: Action - Split Cards
+    type: Action - Augurs - Split Cards
     orderstring: Augurs
   - name: Herb Gatherer
-    type: Action - Split Cards
+    type: Action - Augurs - Split Cards
     orderstring: Augurs step 1
     cost:
       treasure: 3
   - name: Acolyte
-    type: Action - Split Cards
+    type: Action - Augurs - Split Cards
     orderstring: Augurs step 2
     cost:
       treasure: 4   
   - name: Sorceress
-    type: Action - Split Cards
+    type: Action - Augurs - Split Cards
     orderstring: Augurs step 3
     cost:
       treasure: 5
   - name: Sibyl
-    type: Action - Split Cards
+    type: Action - Augurs - Split Cards
     orderstring: Augurs step 4
     cost:
       treasure: 6
@@ -784,108 +784,108 @@ othercards:
     cost:
       treasure: 4   
   - name: Warlord
-    type: Action - Split Cards
+    type: Action - Duration - Attack - Clashes - Split Cards
     orderstring: Clashes step 3
     cost:
       treasure: 5
   - name: Territory
-    type: Action - Split Cards
+    type: Victory - Clashes - Split Cards
     orderstring: Clashes step 4
     cost:
       treasure: 6 
  
   - name: Forts - to hide split card
-    type: Action - Split Cards
+    type: Action - Forts - Split Cards
     orderstring: Forts
   - name: Tent
-    type: Action - Split Cards
+    type: Action - Forts - Split Cards
     orderstring: Forts step 1
     cost:
       treasure: 3
   - name: Garrison
-    type: Action - Split Cards
+    type: Action - Duration - Forts - Split Cards
     orderstring: Forts step 2
     cost:
       treasure: 4
   - name: Hill Fort
-    type: Action - Split Cards
+    type: Action - Forts - Split Cards
     orderstring: Forts step 3
     cost:
       treasure: 5
   - name: Stronghold
-    type: Action - Split Cards
+    type: Action - Victory- Duration - Forts - Split Cards
     orderstring: Forts step 4
     cost:
       treasure: 6
 
   - name: Odysseys - to hide split card
-    type: Action - Split Cards
+    type: Action - Odysseys - Split Cards
     orderstring: Odysseys
   - name: Old Map
-    type: Action - Split Cards
+    type: Action - Odysseys - Split Cards
     orderstring: Odysseys step 1
     cost:
       treasure: 4
   - name: Voyage
-    type: Action - Split Cards
+    type: Action - Duration - Odysseys - Split Cards
     orderstring: Odysseys step 2
     cost:
       treasure: 4   
   - name: Sunken Treasure
-    type: Action - Split Cards
+    type: Treasure - Odysseys - Split Cards
     orderstring: Odysseys step 3
     cost:
       treasure: 5
   - name: Distant Shore
-    type: Action - Split Cards
+    type: Action - Victory - Odysseys - Split Cards
     orderstring: Odysseys step 4
     cost:
       treasure: 6 
  
   - name: Townsfolk - to hide split card
-    type: Action - Split Cards
+    type: Action - Townsfolk - Split Cards
     orderstring: Townsfolk
   - name: Town Crier
-    type: Action - Split Cards
+    type: Action - Townsfolk - Split Cards
     orderstring: Townsfolk step 1
     cost:
       treasure: 2
   - name: Blacksmith
-    type: Action - Split Cards
+    type: Action - Townsfolk - Split Cards
     orderstring: Townsfolk step 2
     cost:
       treasure: 3   
   - name: Miller
-    type: Action - Split Cards
+    type: Action - Townsfolk - Split Cards
     orderstring: Townsfolk step 3
     cost:
       treasure: 4
   - name: Elder
-    type: Action - Split Cards
+    type: Action - Townsfolk - Split Cards
     orderstring: Townsfolk step 4
     cost:
       treasure: 5
       
   - name: Wizards - to hide split card
-    type: Action - Split Cards
+    type: Action - Wizards - Split Cards
     orderstring: Wizards
   - name: Student
-    type: Action - Split Cards
+    type: Action - Wizards - Liaison - Split Cards
     orderstring: Wizards step 1
     cost:
       treasure: 3
   - name: Conjurer
-    type: Action - Split Cards
+    type: Action - Duration - Wizards - Split Cards
     orderstring: Wizards step 2
     cost:
       treasure: 4   
   - name: Sorcerer
-    type: Action - Split Cards
+    type: Action - Attack - Wizards - Split Cards
     orderstring: Wizards step 3
     cost:
       treasure: 5
   - name: Lich
-    type: Action - Split Cards
+    type: Action - Wizards - Split Cards
     orderstring: Wizards step 4
     cost:
       treasure: 6

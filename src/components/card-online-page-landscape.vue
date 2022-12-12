@@ -43,8 +43,8 @@
         </div>
 
         <div class="full-card-border">
-          <div class="card-footer landscape-card-footer illustrator" style="color:Black;">{{ getCardIllustrator(Card).illustrator }}</div>
-          <div class="card-footer landscape-card-footer copyright">{{ getCardSetYear(Card) }}</div>
+          <div class="card-footer landscape-card-footer illustrator" style="color:Black;" :style="ExpansionillustratorOffset(Card)">{{ getCardIllustrator(Card).illustrator }}</div>
+          <div class="card-footer landscape-card-footer copyright" :style="ExpansionillustratorOffset(Card)">{{ getCardSetYear(Card) }}</div>
 
         </div>
         <!---->
@@ -261,6 +261,15 @@ export default class CardOnlinePageComponent extends Vue {
       case SetId.PROMOS : return " right: -34px; bottom: -74px; "
       case SetId.MENAGERIE : return " right: -36px; bottom: -24px; "
       case SetId.ALLIES : return " right: -34px; bottom: -78px; "
+      default: { return ""; }
+    }
+  }
+
+  ExpansionillustratorOffset(currentCard: DigitalCard) {
+    let CardSetid = this.getCardSetById(currentCard);
+    switch (CardSetid) {
+
+      case SetId.ALLIES : return " bottom: -2px; "
       default: { return ""; }
     }
   }

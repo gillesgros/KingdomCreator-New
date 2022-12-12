@@ -213,7 +213,7 @@ export const Cards_list_Allies:DigitalCard[]= [
 <div style="display:inline;"><div style="display:inline; font-size:18px;">en jeu 2 exemplaires ou plus.</div></div><br>\
 </div></div></div>'
     	},	
-    	{	id: "territory",  frenchName: "Teritoire",  artwork: "http://wiki.dominionstrategy.com/images/7/7c/TerritoryArt.jpg",
+    	{	id: "territory",  frenchName: "Territoire",  artwork: "http://wiki.dominionstrategy.com/images/7/7c/TerritoryArt.jpg",
     		text_html: '<div class="card-text" style="top:10px;">\
 <div style="position:relative; top:15px;"><div style="line-height:16px;">\
 <div style="display:inline;"><div style="display:inline; font-size:18px;">Vaut       par carte Victoire</div></div><br>\
