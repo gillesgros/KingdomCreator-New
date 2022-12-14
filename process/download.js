@@ -4,7 +4,7 @@ const Fs = require("fs");
 const resize = require("./resize");
 
 const sets = Loader.loadSets()
-const cards = getCards(sets.allies);
+const cards = getCards(sets.alchemy);
 
 getAllImages(cards);
 
@@ -25,7 +25,7 @@ async function getImage(card) {
     return;
   } 
   // const match = response.data.match(/Digital\.jpg\"\ssrc=\"(.+.jpg)\"/);
-  const match = response.data.match(/class="fullImageLink" id="file"><a href="(\/images\/[^.]+Digital\.jpg)\"/);
+  const match = response.data.match(/class="fullImageLink" id="file"><a href="(\/images\/[^.]+\.jpg)\"/);
   if (!match || match.length < 2) {
     console.log(`Unable to find URL: ${card.name}`);
     return;
@@ -52,8 +52,8 @@ async function getImage(card) {
 
 function createPageUrl(card) {
   const name = card.name.replace(/\s/g, "_");
-  console.log(`http://wiki.dominionstrategy.com/index.php/File:${name}Digital.jpg`)
-  return `http://wiki.dominionstrategy.com/index.php/File:${name}Digital.jpg`;
+  console.log(`http://wiki.dominionstrategy.com/index.php/File:${name}.jpg`)
+  return `http://wiki.dominionstrategy.com/index.php/File:${name}.jpg`;
 }
 
 function getCards(set) {
