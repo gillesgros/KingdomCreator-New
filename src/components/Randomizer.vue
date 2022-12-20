@@ -7,10 +7,15 @@
       <Boons />
       <AllySection />
       <Modifiers />
+	  <div style="margin-top: 4px;" >
       <CopyButton
         :text="supplyCardsCopyText"
         class="randomizer-copy-button"
       />
+        <FullScreenButton
+        :text="supplyCardsCopyText"
+        class="randomizer-copy-button"
+      /></div>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -32,6 +37,7 @@ import Modifiers from "./Modifiers.vue";
 import { Kingdom } from "../randomizer/kingdom";
 import { Card } from "../dominion/card";
 import CopyButton from "./CopyButton.vue";
+import FullScreenButton from "./FullScreenButton.vue";
 
 @Component({
   components: {
@@ -42,6 +48,7 @@ import CopyButton from "./CopyButton.vue";
     RandomizerSidebar,
     SortableSupplyCards,
     CopyButton,
+    FullScreenButton,
   }
 })
 export default class Randomizer extends Vue {

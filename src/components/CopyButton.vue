@@ -51,12 +51,13 @@ export default class CopyButton extends Vue {
 .copy-button {
   -webkit-appearance: none;
   border: none;
-  display: block;
+  //display: block;
   height: 30px;
   outline: none;
   padding: 0;
   position: relative;
   width: 30px;
+  
 }
 
 .copy-button__icon {

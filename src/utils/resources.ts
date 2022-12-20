@@ -37,6 +37,14 @@ export function getRulebookUrl(setId: string, language: Language) {
   }
 }
 
+export function ChangeCss(selector:string, property: string, value:string) {
+    for (var i=0; i<document.styleSheets.length;i++) {//Loop through all styles
+        //Try add rule
+        try { document.styleSheets[i].insertRule(selector+ ' {'+property+':'+value+'}', document.styleSheets[i].cssRules.length);
+        } catch(err) {try { document.styleSheets[i].addRule(selector, property+':'+value);} catch(err) {}}//IE
+    }
+}
+
 export function incaseofImgerror(ev:any) {
 	let imgsrc = ev.target.src;
 //console.log('imgsrc: ' + imgsrc)
@@ -172,20 +180,3 @@ export function incaseofImgerrorold(ev:any) {
 	}
   }
 
-/*
-export function getCardImageUrlbyDir(cardId: string, lang="" ) {
-  let fulimgstr = lang + "/" + cardId;
-  let str_splitted = fulimgstr.split('/',2);
-  let SetName = str_splitted[1].split('_',2);
-  let cardName = str_splitted[1].replace(SetName[0]+'_','')
-  return (lang == "" ) 
-    ? `${IMAGE_PREFEX}${str_splitted[0]}/${SetName[0]}/${str_splitted[1]}.jpg`
-    : `${IMAGE_PREFEX}${str_splitted[0]}/${SetName[0]}/${cardName}.jpg`;
-}
-*/
-
-/*
-export function getRulebookUrlLang(setId: string, lang = "" ) {
-  return `${RULE_PDF_PREFEX}${lang}/${setId}.pdf`;
-}
-*/

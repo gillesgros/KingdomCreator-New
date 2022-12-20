@@ -156,9 +156,11 @@ export default class PresetBoxcontent extends Vue {
   }
  
   OtherCards(usingSet: DominionSet, typeRequested : string) {
+/*
   console.log("typeRequested : " + typeRequested)
   console.log(usingSet.otherCards)
   console.log(usingSet.otherCards.filter((card)=>((card.type).includes(typeRequested))))
+  */
     return  usingSet.otherCards.filter((card)=>((card.type).includes(typeRequested)));
   }
  

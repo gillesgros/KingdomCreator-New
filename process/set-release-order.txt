@@ -12,3 +12,4 @@ empires
 nocturne
 renaissance
 allies
+plunder

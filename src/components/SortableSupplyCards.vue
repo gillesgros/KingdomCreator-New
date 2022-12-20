@@ -47,7 +47,6 @@ import { gsap, Sine } from "gsap";
 import { Selection } from "../stores/randomizer/selection";
 import { UPDATE_SPECIFYING_REPLACEMENT_SUPPLY_CARD } from "../stores/randomizer/mutation-types";
 import GridLayout from "./GridLayout.vue";
-
 import { Language } from "../i18n/language"
 
 
@@ -72,6 +71,7 @@ export default class SortableSupplyCards extends Vue {
   @State(state => state.window.width) readonly windowWidth!: number;
   @State(state => state.window.isEnlarged) readonly isEnlarged!: boolean;
   @State(state => state.randomizer.selection) readonly selection!: Selection;
+  @State(state => state.randomizer.isFullScreen) readonly HasFullScreenRequested!: boolean;
   @State(state => state.i18n.language) readonly language!: Language;
   elementIndexMapping = new Map<number, number>();
   kingdomId: number = 0;
@@ -119,6 +119,12 @@ export default class SortableSupplyCards extends Vue {
   handlelanguagenChanged() {
     this.requiresSupplyCardSort = true;
     this.attemptToAnimateSupplyCardSort();
+  }
+  
+  @Watch("HasFullScreenRequested")
+  handleHasFullScreenRequested() {
+    this.cancelActiveAnimations();
+    this.resetCardPositions();
   }
 
   @Watch("windowWidth")

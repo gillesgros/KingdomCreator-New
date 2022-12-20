@@ -16,6 +16,7 @@ export interface State {
   selection: Selection;
   settings: Settings;
   specifyingReplacementSupplyCard: SupplyCard | null;
+  isFullScreen: boolean | false;
 }
 
 export interface Getters {
@@ -38,8 +39,12 @@ export const randomizerStore = {
     selection: Selection.empty(),
     settings: loadSettings(), 
     specifyingReplacementSupplyCard: null,
+    isFullScreen: false,
   } as State,
   getters: {
+    isFullScreen: (state: State) => {
+      return state.isFullScreen;
+    },
     isDistributeCostAllowed: (state: State) => {
       const cardCount = state.settings.selectedSets
           .map(DominionSets.getSetById)
@@ -125,6 +130,9 @@ export const randomizerStore = {
     CLEAR_SPECIFYING_REPLACEMENT_SUPPLY_CARD (state: State) {
       state.specifyingReplacementSupplyCard = null;
     },
+    UPDATE_FULLSCREEN_RANDOMIZER (state: State, isFullScreenState: boolean) {
+      state.isFullScreen = isFullScreenState;
+    }
   },
   actions: actions
 };

@@ -1,0 +1,27 @@
+name: Plunder
+cards:  
+  - name: Cage
+    cost:
+      treasure: 2
+    isDuration: true
+    isTreasure: true
+
+  - name: Grotto
+    cost:
+      treasure: 2
+    isAction: true
+    isActionSupplier: true
+    isDuration: true
+
+  - name: Jewelled Egg
+    cost:
+      treasure: 2
+    isBuySupplier: true
+    isTreasure: true
+
+  - name: Search
+    cost:
+      treasure: 2
+    isAction: true
+    isActionSupplier: true
+    isDuration: true
