@@ -98,6 +98,7 @@ export default class CopyButton extends Vue {
   padding: 3px 5px;
   position: absolute;
   top: 4px;
+  z-index: 3;
 }
 
 .copy-button__copied::before {

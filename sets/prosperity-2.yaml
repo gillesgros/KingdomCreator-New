@@ -5,7 +5,7 @@ cards:
       treasure: 3
     isTreasure: true
     isTrashing: true
-    
+
   - name: Clerk
     cost:
       treasure: 4
@@ -30,7 +30,7 @@ cards:
       treasure: 5
     isAttack: true
     isAction: true
-    
+
   - name: Collection
     cost:
       treasure: 5
@@ -42,7 +42,7 @@ cards:
       treasure: 5
     isTreasure: true
     isTrashing: true
-    
+
   - name: Magnate
     cost:
       treasure: 5
@@ -123,7 +123,6 @@ cards:
     isAction: true
     isTrashing: true
 
-
   - name: Rabble
     cost:
       treasure: 5
@@ -137,12 +136,10 @@ cards:
       treasure: 5
     isAction: true
 
-
   - name: Quarry
     cost:
       treasure: 4
     isTreasure: true
-
 
   - name: Worker's Village
     cost:
@@ -158,7 +155,7 @@ cards:
     isAction: true
     isDrawer: true
     isMultiDrawer: true
-    
+
 othercards:
   - name: Platinum_2nd
     type: Basic Cards

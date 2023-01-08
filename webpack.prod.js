@@ -1,8 +1,4 @@
-/* webpack 5 */
 const { merge } = require('webpack-merge');
-/* webpack 3
-const merge = require('webpack-merge');
-*/
 
 const common = require("./webpack.common.js");
 const TerserJSPlugin = require("terser-webpack-plugin");
@@ -23,11 +19,11 @@ module.exports = merge(common(true), {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ["*", 
            "!favicon.ico", 
-		   "!CNAME", 
-		   "!rules", 
-		   "!rules.fr", 
-		   "!img", 
-		   "!ads.txt"]
+           "!CNAME", 
+           "!rules", 
+           "!rules.fr", 
+           "!img", 
+           "!ads.txt"]
     }),
   ]
 });

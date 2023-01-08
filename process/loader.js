@@ -41,9 +41,7 @@ const loadFilesFromDirectory = function(directory) {
 	  if (files[i].includes("2-add")) continue
       const filename = path.join(directory, files[i]);
       const id = tokenize(path.basename(files[i], '.yaml'));
-      /* js-yaml  v3 to v4
-	  values[id] = yaml.safeLoad(fs.readFileSync(filename, 'utf8')); */
-	  values[id] = yaml.load(fs.readFileSync(filename, 'utf8'));
+      values[id] = yaml.load(fs.readFileSync(filename, 'utf8'));
 
    }
    return values;

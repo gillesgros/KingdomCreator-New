@@ -581,7 +581,7 @@ cards:
       treasure: 5
       potion: 0
       debt: 0
-    isAction: true
+    isAction: false
     isActionSupplier: false
     isAttack: true
     isBuySupplier: false

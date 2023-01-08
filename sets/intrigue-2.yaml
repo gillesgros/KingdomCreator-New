@@ -281,7 +281,7 @@ cards:
     isReaction: true
     isDuration: false
     isActionSupplier: false
-  
+
   - name: Mill
     cost:
       treasure: 4
@@ -295,7 +295,7 @@ cards:
     isReaction: false
     isDuration: false
     isActionSupplier: false
-  
+
   - name: Secret Passage
     cost:
       treasure: 4
@@ -310,7 +310,7 @@ cards:
     isReaction: false
     isDuration: false
     isActionSupplier: false
-  
+
   - name: Patrol
     cost:
       treasure: 5
@@ -325,7 +325,7 @@ cards:
     isReaction: false
     isDuration: false
     isActionSupplier: false
-  
+
   - name: Courtier
     cost:
       treasure: 5
@@ -339,7 +339,7 @@ cards:
     isReaction: false
     isDuration: false
     isActionSupplier: false
-  
+
   - name: Replace
     cost:
       treasure: 5
@@ -361,21 +361,21 @@ othercards:
     isTreasure : true
     cost:
       treasure: 0
-    
+
   - name: Silver2_2nd
     type: Basic Cards
     orderstring: Copper 1
     isTreasure : true
     cost:
       treasure: 3
-    
+
   - name: Gold2_2nd
     type: Basic Cards
     orderstring: Copper 2
     isTreasure : true
     cost:
       treasure: 6
-    
+
   - name: Estate2_2nd
     type: Basic Cards
     orderstring: Estate 1
@@ -403,4 +403,3 @@ othercards:
     cost:
       treasure: 0
     isTrashing: true
-
