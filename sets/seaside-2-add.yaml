@@ -16,7 +16,7 @@ cards:
     cost:
       treasure: 3
     isAction: true
-	
+
   - name: Blockade
     cost:
       treasure: 4
@@ -49,11 +49,10 @@ cards:
     isAction: true
     isReaction: true
     isDuration: true
-  
+
   - name: Sea Witch
     cost:
       treasure: 5
     isAttack: true
     isAction: true
     isDuration: true
-  

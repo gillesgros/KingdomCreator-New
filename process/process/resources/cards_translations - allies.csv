@@ -1,85 +1,85 @@
-card,en,fr,de,nl,es
-allies_bauble,Bauble,Babiole,,,
-allies_sycophant,Sycophant,Sycophante,,,
-allies_townsfolk,Townsfolk,Citoyens,,,
-allies_augurs,Augurs,Augures,,,
-allies_clashes,Clashes,Affrontements,,,
-allies_forts,Forts,Fortifications,,,
-allies_importer,Importer,importateur,,,
-allies_merchantcamp,Merchant Camp,Camp de Marchands,,,
-allies_odysseys,Odysseys,Odyssées,,,
-allies_sentinel,Sentinel,Guetteur,,,
-allies_underling,Underling,Subalterne,,,
-allies_wizards,Wizards,Magiciens,,,
-allies_broker,Broker,Courtier,,,
-allies_carpenter,Carpenter,Charpentière,,,
-allies_courier,Courier,Courrier Rapide,,,
-allies_innkeeper,Innkeeper,Aubergiste,,,
-allies_royalgalley,Royal Galley,Galère Royale,,,
-allies_town,Town,Bourg,,,
-allies_barbarian,Barbarian,Barbare,,,
-allies_capitalcity,Capital City,Capitale,,,
-allies_contract,Contract,Contrat,,,
-allies_emissary,Emissary,Émissaire,,,
-allies_galleria,Galleria,Marché Couvert,,,
-allies_guildmaster,Guildmaster,Maître de Guilde,,,
-allies_highwayman,Highwayman,Bandit de Grand Chemin,,,
-allies_hunter,Hunter,Chasseuse,,,
-allies_modify,Modify,Modification,,,
-allies_skirmisher,Skirmisher,Tirailleur,,,
-allies_specialist,Specialist,Spécialiste,,,
-allies_swap,Swap,Troc,,,
-allies_marquis,Marquis,Marquis,,,
-allies_ally_architectsguild,Architects' Guild,Guilde des Architectes,,,
-allies_ally_bandofnomads,Band of Nomads,Bande de Nomades,,,
-allies_ally_cavedwellers,Cave Dwellers,Troglodytes,,,
-allies_ally_circleofwitches,Circle of Witches,Cercle des Sorcières,,,
-allies_ally_citystate,City-state,Cité-État,,,
-allies_ally_coastalhaven,Coastal Haven,Havre-Côtier,,,
-allies_ally_craftersguild,Crafters' Guild,Guilde des Artisans,,,
-allies_ally_desertguides,Desert Guides,Guides du Déserrt,,,
-allies_ally_familyofinventors,Family of Inventors,Famille d'Inventeurs,,,
-allies_ally_fellowshipofscribes,Fellowship of Scribes,Confrérie des Scribes,,,
-allies_ally_forestdwellers,Forest Dwellers,Habitants des Forêts,,,
-allies_ally_gangofpickpockets,Gang of Pickpockets,Détrousseurs,,,
-allies_ally_islandfolk,Island Folk,Peuple des Îles,,,
-allies_ally_leagueofbankers,League of Bankers,Ligue des Banquiers,,,
-allies_ally_leagueofshopkeepers,League of Shopkeepers,Ligue des Commerçants,,,
-allies_ally_markettowns,Market Towns,Villes Commerçantes,,,
-allies_ally_mountainfolk,Mountain Folk,Montagnards,,,
-allies_ally_orderofastrologers,Order of Astrologers,Ordre des Astrologues,,,
-allies_ally_orderofmasons,Order of Masons,Ordre des Maçons,,,
-allies_ally_peacefulcult,Peaceful Cult,Culte Pacifiuqe,,,
-allies_ally_plateaushepherds,Plateau Shepherds,Bergers du Plateau,,,
-allies_ally_trapperslodge,Trappers' Lodge,Cabane de Trappeurs,,,
-allies_ally_woodworkersguild,Woodworkers' Guild,Guilde des Meunuisiers,,,
-allies_augurstohidesplitcard,Augurs - to hide split card,Augures,,,
-allies_herbgatherer,Herb Gatherer,Cueilleuse d'Herbes,,,
-allies_acolyte,Acolyte,Acolyte,,,
-allies_sorceress,Sorceress,Sorcière Maléfique,,,
-allies_sibyl,Sibyl,Sibylle,,,
-allies_clashestohidesplitcard,Clashes - to hide split card,Affrontements,,,
-allies_battleplan,Battle Plan,Tactique,,,
-allies_archer,Archer,Archère,,,
-allies_warlord,Warlord,Seigneur de Guerre,,,
-allies_territory,Territory,Teritoire,,,
-allies_fortstohidesplitcard,Forts - to hide split card,Fortifications,,,
-allies_tent,Tent,Tente,,,
-allies_garrison,Garrison,Garnison,,,
-allies_hillfort,Hill Fort,Fort de la Colline,,,
-allies_stronghold,Stronghold,Bastion,,,
-allies_odysseystohidesplitcard,Odysseys - to hide split card,Odyssées,,,
-allies_oldmap,Old Map,Vieille Carte,,,
-allies_voyage,Voyage,Voyage,,,
-allies_sunkentreasure,Sunken Treasure,Trésor Englouti,,,
-allies_distantshore,Distant Shore,Rivage Lointain,,,
-allies_townsfolktohidesplitcard,Townsfolk - to hide split card,Citoyens,,,
-allies_towncrier,Town Crier,Crieuse Publique,,,
-allies_blacksmith,Blacksmith,Forgeur,,,
-allies_miller,Miller,Meunier,,,
-allies_elder,Elder,Aînée,,,
-allies_wizardstohidesplitcard,Wizards - to hide split card,Magiciens,,,
-allies_student,Student,Apprenti Magicien,,,
-allies_conjurer,Conjurer,Illusioniste,,,
-allies_sorcerer,Sorcerer,Sorcier,,,
-allies_lich,Lich,Liche,,,
+card;en;fr;de;nl;es
+allies_bauble;Bauble;Babiole;Tand;;
+allies_sycophant;Sycophant;Sycophante;Schmeichler;;
+allies_townsfolk;Townsfolk;Citoyens;B�rger;;
+allies_augurs;Augurs;Augures;Augurinnen;;
+allies_clashes;Clashes;Affrontements;Konflikte;;
+allies_forts;Forts;Fortifications;Bastionen;;
+allies_importer;Importer;importateur;Importeurin;;
+allies_merchantcamp;Merchant Camp;Camp de Marchands;H�ndlerlager;;
+allies_odysseys;Odysseys;Odyssées;Irrfahrten;;
+allies_sentinel;Sentinel;Guetteur;W�chter;;
+allies_underling;Underling;Subalterne;Untergebener;;
+allies_wizards;Wizards;Magiciens;Zauberer;;
+allies_broker;Broker;Courtier;Mittelsmann;;
+allies_carpenter;Carpenter;Charpentière;Schreinerin;;
+allies_courier;Courier;Courrier Rapide;Botin;;
+allies_innkeeper;Innkeeper;Aubergiste;Wirtin;;
+allies_royalgalley;Royal Galley;Galère Royale;K�nigliche Galeere;;
+allies_town;Town;Bourg;Ortschaft;;
+allies_barbarian;Barbarian;Barbare;Barbar;;
+allies_capitalcity;Capital City;Capitale;Hauptstadt;;
+allies_contract;Contract;Contrat;Vertrag;;
+allies_emissary;Emissary;Émissaire;Unterh�ndlerin;;
+allies_galleria;Galleria;Marché Couvert;Markthalle;;
+allies_guildmaster;Guildmaster;Maître de Guilde;Gildemeisterin;;
+allies_highwayman;Highwayman;Bandit de Grand Chemin;Wegelagerer;;
+allies_hunter;Hunter;Chasseuse;J�gerin;;
+allies_modify;Modify;Modification;Umgestaltung;;
+allies_skirmisher;Skirmisher;Tirailleur;Aufwiegler;;
+allies_specialist;Specialist;Spécialiste;Spezialistin;;
+allies_swap;Swap;Troc;Tausch;;
+allies_marquis;Marquis;Marquis;Marquis;;
+allies_ally_architectsguild;Architects' Guild;Guilde des Architectes;Architektengilde;;
+allies_ally_bandofnomads;Band of Nomads;Bande de Nomades;Nomadenstamm;;
+allies_ally_cavedwellers;Cave Dwellers;Troglodytes;H�hlenbewohner;;
+allies_ally_circleofwitches;Circle of Witches;Cercle des Sorcières;Hexenbund;;
+allies_ally_citystate;City-state;Cité-État;Stadtstaat;;
+allies_ally_coastalhaven;Coastal Haven;Havre-Côtier;H�hlenhafen;;
+allies_ally_craftersguild;Crafters' Guild;Guilde des Artisans;Handwerkergilde;;
+allies_ally_desertguides;Desert Guides;Guides du Déserrt;W�stenf�hrer;;
+allies_ally_familyofinventors;Family of Inventors;Famille d'Inventeurs;Erfinderfamilie;;
+allies_ally_fellowshipofscribes;Fellowship of Scribes;Confrérie des Scribes;�Gefolgschaft der Schreiber�;;
+allies_ally_forestdwellers;Forest Dwellers;Habitants des Forêts;Waldbewohner;;
+allies_ally_gangofpickpockets;Gang of Pickpockets;Détrousseurs;Taschendiebe;;
+allies_ally_islandfolk;Island Folk;Peuple des Îles;Inselvolk;;
+allies_ally_leagueofbankers;League of Bankers;Ligue des Banquiers;Bankiersverbund;;
+allies_ally_leagueofshopkeepers;League of Shopkeepers;Ligue des Commerçants;Bund der Ladenbesitzer;;
+allies_ally_markettowns;Market Towns;Villes Commerçantes;Marktst�dte;;
+allies_ally_mountainfolk;Mountain Folk;Montagnards;Bergvolk;;
+allies_ally_orderofastrologers;Order of Astrologers;Ordre des Astrologues;Sterndeuterorden;;
+allies_ally_orderofmasons;Order of Masons;Ordre des Maçons;Freimaurerloge;;
+allies_ally_peacefulcult;Peaceful Cult;Culte Pacifiuqe;Friedlicher Kult;;
+allies_ally_plateaushepherds;Plateau Shepherds;Bergers du Plateau;Sch�fer der Hochebene;;
+allies_ally_trapperslodge;Trappers' Lodge;Cabane de Trappeurs;H�tte der Fallensteller;;
+allies_ally_woodworkersguild;Woodworkers' Guild;Guilde des Meunuisiers;Holzarbeitergilde;;
+allies_augurstohidesplitcard;Augurs - to hide split card;Augures;;;
+allies_herbgatherer;Herb Gatherer;Cueilleuse d'Herbes;Kr�utersammlerin;;
+allies_acolyte;Acolyte;Acolyte;Altardienerin;;
+allies_sorceress;Sorceress;Sorcière Maléfique;Meisterhexe;;
+allies_sibyl;Sibyl;Sibylle;Prophetin;;
+allies_clashestohidesplitcard;Clashes - to hide split card;Affrontements;;;
+allies_battleplan;Battle Plan;Tactique;Schlachtplan;;
+allies_archer;Archer;Archère;Bogensch�tzin;;
+allies_warlord;Warlord;Seigneur de Guerre;Kriegsherr;;
+allies_territory;Territory;Teritoire;Territorium;;
+allies_fortstohidesplitcard;Forts - to hide split card;Fortifications;;;
+allies_tent;Tent;Tente;Zelt;;
+allies_garrison;Garrison;Garnison;Garnison;;
+allies_hillfort;Hill Fort;Fort de la Colline;H�gelfort;;
+allies_stronghold;Stronghold;Bastion;Burg;;
+allies_odysseystohidesplitcard;Odysseys - to hide split card;Odyssées;;;
+allies_oldmap;Old Map;Vieille Carte;Alte Landkarte;;
+allies_voyage;Voyage;Voyage;Seereise;;
+allies_sunkentreasure;Sunken Treasure;Trésor Englouti;Versunkener Schatz;;
+allies_distantshore;Distant Shore;Rivage Lointain;Ferne K�ste;;
+allies_townsfolktohidesplitcard;Townsfolk - to hide split card;Citoyens;;;
+allies_towncrier;Town Crier;Crieuse Publique;Ausruferin;;
+allies_blacksmith;Blacksmith;Forgeur;Eisenschmied;;
+allies_miller;Miller;Meunier;M�ller;;
+allies_elder;Elder;Aînée;�lteste;;
+allies_wizardstohidesplitcard;Wizards - to hide split card;Magiciens;;;
+allies_student;Student;Apprenti Magicien;Zaubersch�ler;;
+allies_conjurer;Conjurer;Illusioniste;Beschw�rer;;
+allies_sorcerer;Sorcerer;Sorcier;Hexenmeister;;
+allies_lich;Lich;Liche;Lich;;
