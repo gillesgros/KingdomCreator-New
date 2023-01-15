@@ -40,8 +40,8 @@ kingdoms:
 
   - name: Everything in Moderation
     sets:
-      - empires
       - baseset2
+      - empires
     supply:
       - baseset2_cellar
       - baseset2_library
@@ -60,8 +60,8 @@ kingdoms:
 
   - name: Silver Bullets
     sets:
-      - empires
       - baseset2
+      - empires
     supply:
       - baseset2_bureaucrat
       - baseset2_gardens
@@ -160,8 +160,8 @@ kingdoms:
 
   - name: Collectors
     sets:
-      - empires
       - alchemy
+      - empires
     supply:
       - alchemy_apothecary
       - alchemy_apprentice
@@ -222,8 +222,8 @@ kingdoms:
 
   - name: Zookeepers
     sets:
-      - empires
       - cornucopia
+      - empires
     supply:
       - cornucopia_fairgrounds
       - cornucopia_horsetraders
@@ -300,8 +300,8 @@ kingdoms:
 
   - name: Tomb of the Rat King
     sets:
-      - empires
       - darkages
+      - empires
     supply:
       - darkages_deathcart
       - darkages_fortress
@@ -322,8 +322,8 @@ kingdoms:
 
   - name: Triumph of the Bandit King
     sets:
-      - empires
       - darkages
+      - empires
     supply:
       - darkages_banditcamp
       - darkages_catacombs
@@ -344,8 +344,8 @@ kingdoms:
 
   - name: The Squire's Ritual
     sets:
-      - empires
       - darkages
+      - empires
     supply:
       - darkages_feodum
       - darkages_hermit
@@ -366,8 +366,8 @@ kingdoms:
 
   - name: Area Control
     sets:
-      - empires
       - adventures
+      - empires
     supply:
       - adventures_coinoftherealm
       - adventures_page
@@ -386,8 +386,8 @@ kingdoms:
 
   - name: No Money No Problems
     sets:
-      - empires
       - adventures
+      - empires
     supply:
       - adventures_dungeon
       - adventures_duplicate

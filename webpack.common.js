@@ -5,6 +5,8 @@ const { VueLoaderPlugin } = require('vue-loader')
 const path = require("path");
 const webpack = require("webpack");
 
+process.traceDeprecation = true;
+
 module.exports = function(isProduction) {
   return {
     resolve: {

@@ -18,6 +18,7 @@ export enum SetId {
   INTRIGUE_2_ADD = "intrigue2add",
   MENAGERIE = "menagerie",
   NOCTURNE = "nocturne",
+  PLUNDER = "plunder",
   PROMOS = "promos",
   PROSPERITY = "prosperity",
   PROSPERITY_2 = "prosperity2",
@@ -58,6 +59,7 @@ export const Set_To_Ignore_Rules_FR =
               SetId.NOCTURNE,
               SetId.MENAGERIE,
               SetId.ALLIES,
+              SetId.PLUNDER,
 ]);
 
 export interface VersionOfSet {

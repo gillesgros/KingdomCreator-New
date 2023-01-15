@@ -441,9 +441,9 @@ kingdoms:
       - intrigue2_steward
       - intrigue2_upgrade
     events:
-      - adventures_event_ball 
+      - adventures_event_ball
       - adventures_event_borrow
-      
+
   - name: Delicious Torture
     sets:
       - intrigue
