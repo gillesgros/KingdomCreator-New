@@ -25,7 +25,7 @@ function convert_Per_File(__dirName, __Pattern) {
         console.log("working on file : "+ file)
         const SetFileName = file.replace(__Pattern,'').replace('.csv','')
         // read file with "utf16le" type
-        local_csv = fs.readFileSync(path.join(__dirName,file), "utf16le");
+        local_csv = fs.readFileSync(path.join(__dirName,file), "utf8");
         let lines=(local_csv.replace(/"/g, "").split(/\r?\n/))
         let start_line=0
         if (lines[start_line].includes("sep=")) {
