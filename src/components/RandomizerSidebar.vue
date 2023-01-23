@@ -4,7 +4,7 @@
       v-if="!isCondensed"
       @click="handleRandomize"
     >
-      {{ randomizeButtonText }}
+      {{ $t(randomizeButtonText) }}
     </a>
     <div class="sidebar-content filters">
       <div class="sidebar-content-title">{{$t("Sets")}}</div>
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="clear"></div>
-      <div class="sidebar-content-title">Options</div>
+      <div class="sidebar-content-title">{{ $t("Options") }}</div>
       <div class="option">
         <label class="checkbox">
           <input type="checkbox" v-model="requireActionProvider">
@@ -77,14 +77,14 @@
         </label>
         <div class="suboption">
           <select :disabled="!isPrioritizeSetEnabled" v-model="prioritizeSet">
-            <option v-if="prioritizeSet == null" :value="null">Choose set...</option>
+            <option v-if="prioritizeSet == null" :value="null">{{ $t("Choose set") }}</option>
             <option v-for="setId in selectedSetIds" :value="setId" :key="setId">
               {{ getSetName(setId) }}
             </option>
           </select>
         </div>
       </div>
-      <div class="sidebar-content-title">Sort</div>
+      <div class="sidebar-content-title">{{ $t("Sort") }}</div>
       <div class="option" v-for="sortOption in sortOptions" :key="sortOption.value">
         <label class="checkbox">
           <input type="radio" name="sortOption" :value="sortOption.value" v-model="selectedSortOption">
@@ -95,7 +95,7 @@
         v-if="isCondensed"
         @click="handleRandomize"
       >
-        {{ randomizeButtonText }}
+        {{ $t(randomizeButtonText) }}
       </a>
     </div>
   </div>

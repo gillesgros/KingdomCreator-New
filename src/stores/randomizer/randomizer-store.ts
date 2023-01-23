@@ -59,7 +59,7 @@ export const randomizerStore = {
       return state.settings.selectedSets.indexOf(SetId.ALCHEMY) != -1;
     },
     randomizeButtonText: (state: State) => {
-      return state.selection.isEmpty() ? "Randomize!" : "Replace!";
+      return state.selection.isEmpty() ? "Randomize" : "Replace";
     },
     addons: (state: State) => {
       return (state.kingdom.events as Addon[]).concat(

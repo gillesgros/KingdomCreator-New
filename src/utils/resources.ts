@@ -46,11 +46,17 @@ export function ChangeCss(selector:string, property: string, value:string) {
 }
 
 export function incaseofImgerror(ev:any) {
+	console.log("starting incaseofImgerror")
+	console.log(ev)
 	let imgsrc = ev.target.src;
-//console.log('imgsrc: ' + imgsrc)
-//console.log('imgURL: ' + ev.target.imgUrl)
+	//console.log('imgsrc: ' + imgsrc)
+	//console.log('imgURL: ' + ev.target.imgUrl)
 	let First_try = false
 	if (ev.target.imgUrl == undefined) {
+		First_try = true
+		ev.target.imgUrl = ev.target.src
+	}
+	if (ev.target.imgUrl == ev.target.src) {
 		First_try = true
 		ev.target.imgUrl = ev.target.src
 	}
@@ -69,8 +75,25 @@ export function incaseofImgerror(ev:any) {
 	let last4letters = imgsrc.slice(indextoInsert -4,indextoInsert)
 
 	let construct_URL=""
+	
+/*
+	last4letters=="2add"
+		si not en
+			switching to en
+	lastletter == "2"
+		si First_try
+			switching 1 st ed
+				gestion selon lang
+		si pas First_try
+			switching 2 nd ed updatepack
+				gestion selon lang
+	sinon
+		switching 2nd ed
+			gestion selon lang
+*/
 
 	if (last4letters=="2add") {
+		console.log('// last4letters == 2add switching to english need to add setname')
 		if (!isLangEN) {
 			// switching to english need to add setname
 			construct_URL = imgsrc.slice(0,indexLang-3)+ imgsrc.slice(indexLang,indextoInsert-4)
@@ -80,9 +103,9 @@ export function incaseofImgerror(ev:any) {
 			ev.target.src = construct_URL
 		}
 	} else if (lastletter == "2") {
-		//console.log('// try 2add if it is not the first try')
+		//console.log('// lastletter == 2')
 		if (First_try) {
-			// if First try remove 2
+			console.log('First try remove 2' + 'Lang is EN : ' + isLangEN)
 			if (isLangEN) { // remove 2
 				construct_URL = imgsrc.slice(0,indextoInsert-1) + imgsrc.slice(indexLang,indextoInsert-1) 
 						+imgsrc.slice(indextoInsert+ indexforSetinCardName)
@@ -94,6 +117,7 @@ export function incaseofImgerror(ev:any) {
 				ev.target.src = construct_URL
 			}
 		} else { // add 2add
+			//console.log('not First try add 2add ' + 'Lang is EN : ' + isLangEN)
 			if (isLangEN) { // add 2add in setname 2 times
 				construct_URL = imgsrc.slice(0,indextoInsert) + "add" + imgsrc.slice(indexLang,indextoInsert) 
 						+ 'add_' +imgsrc.slice(indextoInsert+ indexforSetinCardName+1)
@@ -119,64 +143,7 @@ export function incaseofImgerror(ev:any) {
 			ev.target.src = construct_URL
 		}
 	}
-	//console.log("===============")
+	console.log("===============" + ev.target.src)
 }
-export function incaseofImgerrorold(ev:any) {
-	let imgsrc = ev.target.src;
-	let indextoInsert = imgsrc.lastIndexOf('/'); 
-	// /img/cards.fr/baseset2*/*artisan.jpg or 
-	// /img/cards/baseset2*/*basetset2_artisan.jpg
-	let indexforSetinCardName = (imgsrc.slice(indextoInsert)).indexOf('_'); 
-	if (indexforSetinCardName == -1) indexforSetinCardName = 0
-	// /img/cards/baseset2/basetset2_*artisan.jpg
-	// /img/cards.fr/baseset2/*artisan.jpg
-	let indexLang = (imgsrc.slice(0,indextoInsert-1)).lastIndexOf('/');
-	if (imgsrc.slice(indexLang-3, indexLang-2)== ".") indexforSetinCardName = 0
-	// 
-	let lastletter = imgsrc.slice(indextoInsert + indexforSetinCardName -1,indextoInsert + indexforSetinCardName)
-	//let last4letters = imgsrc.slice(indextoInsert + indexforSetinCardName -1,indextoInsert + indexforSetinCardName)
-	console.log('imgsrc: ' + imgsrc)
-	console.log(ev.target.imgUrl)
-	console.log('imgsrc.slice: ' + imgsrc.slice(indextoInsert + indexforSetinCardName -1,indextoInsert + indexforSetinCardName))
-	/* try in order 
-		not found 2 and it is not 2add 
-			try removing lang 1st 2 2add
-	*/
-	
-	if (lastletter=="2") {
-		console.log('found 2: removing it')
-		ev.target.src = imgsrc.slice(0,indextoInsert-1)+ imgsrc.slice(indextoInsert,indextoInsert + indexforSetinCardName -1) + imgsrc.slice(indextoInsert + indexforSetinCardName)
-		return
-	}
-    if (ev.target.imgUrl == undefined) {
-		/* backup original URL */
-	  // test in removing 1 character if character is 2
-	  //  to try 2nd edition to 1st edition.
-	 /*
-      console.log("error loading " + imgsrc + " - loading " + 
-          imgsrc.slice(0,indextoInsert-1)+ imgsrc.slice(indextoInsert,indextoInsert + indexforSetinCardName -1) + imgsrc.slice(indextoInsert + indexforSetinCardName))
-        console.log(" - loading " + imgsrc.slice(indextoInsert,indextoInsert+indexforSetinCardName -1))
-        console.log("- loading " +  imgsrc.slice(indextoInsert + indexforSetinCardName))
-     */
-	 
-      ev.target.imgUrl =    imgsrc.slice(0,indextoInsert-1)+ imgsrc.slice(indextoInsert,indextoInsert + indexforSetinCardName -1) + imgsrc.slice(indextoInsert + indexforSetinCardName)
-      ev.target.src = ev.target.imgUrl
-    } else {
-	  // test if is 2dd (2nd edition update pack
-	  // to try it (adding 2add
-	  if ((imgsrc.slice(0,indextoInsert)).includes('2add') == false) {
-		let setreplaced = ""
-	    if (indexforSetinCardName !=0) {
-			//console.log("error loading round 2 " + imgsrc + " - loading " + imgsrc.slice(0,indextoInsert)+ '2add' +  imgsrc.slice(indexforSetinCardName))
-			setreplaced = imgsrc.slice(indextoInsert,indextoInsert + indexforSetinCardName)+ '2add'
-		}
-/*
-		console.log("error loading round 2 " + imgsrc + " - loading " + imgsrc.slice(0,indextoInsert)+ '2add' + setreplaced +  
-					imgsrc.slice(indexforSetinCardName + indextoInsert))
-*/
-		ev.target.imgUrl = imgsrc.slice(0,indextoInsert)+ '2add'+ setreplaced +  imgsrc.slice(indexforSetinCardName + indextoInsert)
-        ev.target.src = ev.target.imgUrl
-	  }
-	}
-  }
+
 
