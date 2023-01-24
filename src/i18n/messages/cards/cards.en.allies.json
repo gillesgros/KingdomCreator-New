@@ -1,18 +1,4 @@
 {
-  "alchemy_alchemist": "Alchemist",
-  "alchemy_apothecary": "Apothecary",
-  "alchemy_apprentice": "Apprentice",
-  "alchemy_familiar": "Familiar",
-  "alchemy_golem": "Golem",
-  "alchemy_herbalist": "Herbalist",
-  "alchemy_philosophersstone": "Philosopher's Stone",
-  "alchemy_possession": "Possession",
-  "alchemy_scryingpool": "Scrying Pool",
-  "alchemy_transmute": "Transmute",
-  "alchemy_university": "University",
-  "alchemy_vineyard": "Vineyard",
-  "alchemy_potion": "Potion",
-  "alchemy_potion_2nd": "Potion_2nd",
   "allies_bauble": "Bauble",
   "allies_sycophant": "Sycophant",
   "allies_townsfolk": "Townsfolk",
@@ -96,7 +82,5 @@
   "allies_student": "Student",
   "allies_conjurer": "Conjurer",
   "allies_sorcerer": "Sorcerer",
-  "allies_lich": "Lich",
-  "allies_favors_mat": "Favors_mat",
-  "allies_coinstokens": "CoinsTokens"
+  "allies_lich": "Lich"
 }

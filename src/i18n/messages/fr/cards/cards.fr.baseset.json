@@ -1,4 +1,11 @@
 {
+  "baseset2_harbinger": "Présage",
+  "baseset2_merchant": "Marchand",
+  "baseset2_vassal": "Vassal",
+  "baseset2_poacher": "Braconnier",
+  "baseset2_bandit": "Brigand",
+  "baseset2_sentry": "Sentinelle",
+  "baseset2_artisan": "Artisan",
   "baseset_adventurer": "Aventurier",
   "baseset_bureaucrat": "Bureaucrate",
   "baseset_cellar": "Cave",

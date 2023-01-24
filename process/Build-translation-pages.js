@@ -10,13 +10,27 @@ function transformName(name) {
 function TestAndCreateDir(Path) {
   if (!fs.existsSync(Path)) fs.mkdirSync(Path);
 }
-
-
-//const sets = Loader.loadSets();
-//const types = ["cards", "events", "landmarks", "projects", "boons", "allies", "ways", "othercards"]
-
-// Read in the Dutch and German translations.
-const csv = fs.readFileSync("./process/resources/pages.csv", "utf16le");
+// Read text file "UTF8" containing format
+//sep=	
+//PageName	id	en	nl	de	fr	es	pl
+/*  Current PageName
+  'languages',         'common',
+  'page-boxes',        'page-index',
+  'page-rules',        'page-sets',
+  'sets',              '',
+  'cards.baseset2',    'cards.baseset',
+  'cards.intrigue2',   'cards.intrigue',
+  'cards.seaside',     'cards.seaside2',
+  'cards.alchemy',     'cards.prosperity',
+  'cards.prosperity2', 'cards.cornucopia',
+  'cards.hinterlands', 'cards.hinterlands2',
+  'cards.promos',      'cards.darkages',
+  'cards.guilds',      'cards.adventures',
+  'cards.empires',     'cards.nocturne',
+  'cards.renaissance', 'cards.menagerie',
+  'cards.allies'
+*/
+const csv = fs.readFileSync("./process/resources/pages.csv", "utf8");
 const lines = csv.replace(/"/g, "").split(/\r?\n/);
 const names = {};
 let separator=";"
@@ -61,13 +75,21 @@ for (let i = 0; i < resultPages.length; i++) {
       }
     }
     console.log(languages)
+    const filenamesplitted=(resultPages[i]).split('.')
     for (let j= 2 ; j < languages.length; j++) {
       if (languages[j] != "" ) {
         lang=languages[j]
+        if (lang=="en" && resultPages[i]=="sets") continue
         if (lang=="en") lang =""
         TestAndCreateDir(`./src/i18n/messages/${lang}`)
-        console.log(`./src/i18n/messages/${lang}/${resultPages[i]}.${languages[j]}.json`)
-        fs.writeFileSync(`./src/i18n/messages/${lang}/${resultPages[i]}.${languages[j]}.json`, JSON.stringify(names[languages[j]], null, 2));
+        if (filenamesplitted.length > 1 ) {
+          if (filenamesplitted[0] == "cards") {
+            TestAndCreateDir(`./src/i18n/messages/${lang}/cards`)
+            filename = `./src/i18n/messages/${lang}/cards/${filenamesplitted[0]}.${languages[j]}.${filenamesplitted[1]}.json`
+          } else filename = `./src/i18n/messages/${lang}/${filenamesplitted[0]}.${languages[j]}.${filenamesplitted[1]}.json`
+        } else filename = `./src/i18n/messages/${lang}/${filenamesplitted[0]}.${languages[j]}.json`
+        console.log(filename)
+        fs.writeFileSync(filename, JSON.stringify(names[languages[j]], null, 2));
       }
     }
   }

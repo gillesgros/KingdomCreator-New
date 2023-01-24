@@ -1,4 +1,11 @@
 {
+  "baseset2_harbinger": "Voorbode",
+  "baseset2_merchant": "Koopman",
+  "baseset2_vassal": "Vazal",
+  "baseset2_poacher": "Wilddief",
+  "baseset2_bandit": "Bandiet",
+  "baseset2_sentry": "Cipier",
+  "baseset2_artisan": "Ambachtsman",
   "baseset_adventurer": "Avonturier",
   "baseset_bureaucrat": "Bureaucraat",
   "baseset_cellar": "Kelder",

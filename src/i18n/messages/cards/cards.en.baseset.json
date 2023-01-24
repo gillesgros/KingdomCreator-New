@@ -1,4 +1,11 @@
 {
+  "baseset2_harbinger": "Harbinger",
+  "baseset2_merchant": "Merchant",
+  "baseset2_vassal": "Vassal",
+  "baseset2_poacher": "Poacher",
+  "baseset2_bandit": "Bandit",
+  "baseset2_sentry": "Sentry",
+  "baseset2_artisan": "Artisan",
   "baseset_adventurer": "Adventurer",
   "baseset_bureaucrat": "Bureaucrat",
   "baseset_cellar": "Cellar",
@@ -23,12 +30,5 @@
   "baseset_village": "Village",
   "baseset_witch": "Witch",
   "baseset_woodcutter": "Woodcutter",
-  "baseset_workshop": "Workshop",
-  "baseset_copper": "Copper",
-  "baseset_silver": "Silver",
-  "baseset_gold": "Gold",
-  "baseset_estate": "Estate",
-  "baseset_duchy": "Duchy",
-  "baseset_province": "Province",
-  "baseset_curse": "Curse"
+  "baseset_workshop": "Workshop"
 }

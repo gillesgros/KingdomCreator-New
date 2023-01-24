@@ -56,16 +56,5 @@
   "adventures_soldier": "Soldier",
   "adventures_fugitive": "Fugitive",
   "adventures_disciple": "Disciple",
-  "adventures_teacher": "Teacher",
-  "adventures_tavern_mat": "Tavern_mat",
-  "adventures_action_token": "Action_token",
-  "adventures_buy_token": "Buy_token",
-  "adventures_card_token": "Card_token",
-  "adventures_estate_token": "Estate_token",
-  "adventures_journey_token": "Journey_token",
-  "adventures_minuscard_token": "MinusCard_token",
-  "adventures_minuscoin_token": "MinusCoin_token",
-  "adventures_minuscost_token": "MinusCost_token",
-  "adventures_pluscoin_token": "PlusCoin_token",
-  "adventures_trashing_token": "Trashing_token"
+  "adventures_teacher": "Teacher"
 }
