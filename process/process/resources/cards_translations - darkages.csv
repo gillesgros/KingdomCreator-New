@@ -1,57 +1,58 @@
-card,en,fr,de,nl,es
-darkages_armory,Armory,Armurerie,Waffenkammer,Wapenkamer,Armría
-darkages_vagrant,Vagrant,Vagabond,Landstreicher,Landloper,Vagabundo
-darkages_catacombs,Catacombs,Catacombes,Katakomben,Gewelven,Catacumbas
-darkages_count,Count,Comte,Graf,Graaf,Conde
-darkages_knights,Knights,Chevaliers,Ritter,Ridders,Caballeros
-darkages_fortress,Fortress,Forteresse,Festung,Vesting,Fortaleza
-darkages_scavenger,Scavenger,Pilleur,Lumpensammler,Scharrelaar,Carroñero
-darkages_marketsquare,Market Square,Place du marché,Marktplatz,Marktplein,Plaza del Mercado
-darkages_urchin,Urchin,Orphelin,Gassenjunge,Straatjongen,Pillastre
-darkages_rats,Rats,Rats,Ratten,Ratten,Ratas
-darkages_sage,Sage,Sage,Weiser,Wijsgeer,Sabio
-darkages_forager,Forager,Cueilleur,Mundraub,Jager-Verzamelaar,Merodeador
-darkages_altar,Altar,Autel,Altar,Altaar,Altar
-darkages_procession,Procession,Procession,Prozession,Optocht,Procesión
-darkages_squire,Squire,Écuyer,Knappe,Schildknaap,Escudero
-darkages_beggar,Beggar,Mendiant,Bettler,Bedelaar,Mendigo
-darkages_poorhouse,Poor House,Hospice,Armenhaus,Armenhuis,Hospicio
-darkages_deathcart,Death Cart,Charrette de cadavres,Leichenkarren,Dodenkar,Carro de los Muertos
-darkages_wanderingminstrel,Wandering Minstrel,Ménestrel errant,Barde,Reizende Minstreel,Juglar
-darkages_ironmonger,Ironmonger,Ferronnier,Eisenhändler,Metaalhandelaar,Ferretero
-darkages_hermit,Hermit,Ermite,Eremit,Kluizenaar,Ermitaño
-darkages_pillage,Pillage,Pillage,Raubzug,Plundering,Pillaje
-darkages_mystic,Mystic,Mystique,Medium,Toverfeeks,Pitonisa
-darkages_storeroom,Storeroom,Salle d'entreposage,Lagerraum,Berghok,Depósito
-darkages_huntinggrounds,Hunting Grounds,Territoire de chasse,Jagdgründe,Jachtvelden,Coto de Caza
-darkages_graverobber,Graverobber,Pilleur de tombes,Grabräuber,Grafrover,Ladrón de Tumbas
-darkages_counterfeit,Counterfeit,Contrefaçon,Falschgeld,Vals Geld,Falsificación
-darkages_cultist,Cultist,Cultiste,Kultist,Cultist,Sectario
-darkages_rogue,Rogue,Bandit,Schurke,Schurk,Granuja
-darkages_marauder,Marauder,Maraudeur,Marodeur,Stroper,Salteador
-darkages_bandofmisfits,Band of Misfits,Malfaiteurs,Vogelfreie,Groep Mislukkelingen,Banda de Rufianes
-darkages_junkdealer,Junk Dealer,Brocanteur,Schrotthändler,Opkoper,Chatarrero
-darkages_feodum,Feodum,Fief,Lehen,Feodum,Feudo
-darkages_rebuild,Rebuild,Reconstruction,Neubau,Wederopbouw,Reconstruir
-darkages_banditcamp,Bandit Camp,Camp de bandits,Banditenlager,Bandietenkamp,Campamento de Bandidos
-darkages_abandonedmine,Abandoned Mine,Mine abandonnée,,,
-darkages_ruinedlibrary,Ruined Library,Bibliothèque en ruines,,,
-darkages_ruinedmarket,Ruined Market,Marché en ruines,,,
-darkages_ruinedvillage,Ruined Village,Village en ruines,,,
-darkages_survivors,Survivors,rescapés,,,
-darkages_madman,Madman,Fou,,,
-darkages_mercenary,Mercenary,Mercenaire,,,
-darkages_spoils,Spoils,Butin,,,
-darkages_hovel,Hovel,Cabane,,,
-darkages_necropolis,Necropolis,Nécropole,,,
-darkages_overgrownestate,Overgrown Estate,Domaine luxuriant,,,
-darkages_dameanna,Dame Anna,Dame Anna,,,
-darkages_damejosephine,Dame Josephine,Dame Josephine,,,
-darkages_damemolly,Dame Molly,Dame Molly,,,
-darkages_damenatalie,Dame Natalie,Dame Natalie,,,
-darkages_damesylvia,Dame Sylvia,Dame Sylvia,,,
-darkages_sirbailey,Sir Bailey,Sir Bailey,,,
-darkages_sirdestry,Sir Destry,Sir Destry,,,
-darkages_sirmartin,Sir Martin,Sir Martin,,,
-darkages_sirmichael,Sir Michael,Sir Michael,,,
-darkages_sirvander,Sir Vander,Sir Vander,,,
+sep=	
+card	en	fr	de	nl	es
+darkages_armory	Armory	Armurerie	Waffenkammer	Wapenkamer	Armría
+darkages_vagrant	Vagrant	Vagabond	Landstreicher	Landloper	Vagabundo
+darkages_catacombs	Catacombs	Catacombes	Katakomben	Gewelven	Catacumbas
+darkages_count	Count	Comte	Graf	Graaf	Conde
+darkages_knights	Knights	Chevaliers	Ritter	Ridders	Caballeros
+darkages_fortress	Fortress	Forteresse	Festung	Vesting	Fortaleza
+darkages_scavenger	Scavenger	Pilleur	Lumpensammler	Scharrelaar	Carroñero
+darkages_marketsquare	Market Square	Place du marché	Marktplatz	Marktplein	Plaza del Mercado
+darkages_urchin	Urchin	Orphelin	Gassenjunge	Straatjongen	Pillastre
+darkages_rats	Rats	Rats	Ratten	Ratten	Ratas
+darkages_sage	Sage	Sage	Weiser	Wijsgeer	Sabio
+darkages_forager	Forager	Cueilleur	Mundraub	Jager-Verzamelaar	Merodeador
+darkages_altar	Altar	Autel	Altar	Altaar	Altar
+darkages_procession	Procession	Procession	Prozession	Optocht	Procesión
+darkages_squire	Squire	Écuyer	Knappe	Schildknaap	Escudero
+darkages_beggar	Beggar	Mendiant	Bettler	Bedelaar	Mendigo
+darkages_poorhouse	Poor House	Hospice	Armenhaus	Armenhuis	Hospicio
+darkages_deathcart	Death Cart	Charrette de cadavres	Leichenkarren	Dodenkar	Carro de los Muertos
+darkages_wanderingminstrel	Wandering Minstrel	Ménestrel errant	Barde	Reizende Minstreel	Juglar
+darkages_ironmonger	Ironmonger	Ferronnier	Eisenhändler	Metaalhandelaar	Ferretero
+darkages_hermit	Hermit	Ermite	Eremit	Kluizenaar	Ermitaño
+darkages_pillage	Pillage	Pillage	Raubzug	Plundering	Pillaje
+darkages_mystic	Mystic	Mystique	Medium	Toverfeeks	Pitonisa
+darkages_storeroom	Storeroom	Salle d'entreposage	Lagerraum	Berghok	Depósito
+darkages_huntinggrounds	Hunting Grounds	Territoire de chasse	Jagdgründe	Jachtvelden	Coto de Caza
+darkages_graverobber	Graverobber	Pilleur de tombes	Grabräuber	Grafrover	Ladrón de Tumbas
+darkages_counterfeit	Counterfeit	Contrefaçon	Falschgeld	Vals Geld	Falsificación
+darkages_cultist	Cultist	Cultiste	Kultist	Cultist	Sectario
+darkages_rogue	Rogue	Bandit	Schurke	Schurk	Granuja
+darkages_marauder	Marauder	Maraudeur	Marodeur	Stroper	Salteador
+darkages_bandofmisfits	Band of Misfits	Malfaiteurs	Vogelfreie	Groep Mislukkelingen	Banda de Rufianes
+darkages_junkdealer	Junk Dealer	Brocanteur	Schrotthändler	Opkoper	Chatarrero
+darkages_feodum	Feodum	Fief	Lehen	Feodum	Feudo
+darkages_rebuild	Rebuild	Reconstruction	Neubau	Wederopbouw	Reconstruir
+darkages_banditcamp	Bandit Camp	Camp de bandits	Banditenlager	Bandietenkamp	Campamento de Bandidos
+darkages_abandonedmine	Abandoned Mine	Mine abandonnée			
+darkages_ruinedlibrary	Ruined Library	Bibliothèque en ruines			
+darkages_ruinedmarket	Ruined Market	Marché en ruines			
+darkages_ruinedvillage	Ruined Village	Village en ruines			
+darkages_survivors	Survivors	rescapés			
+darkages_madman	Madman	Fou			
+darkages_mercenary	Mercenary	Mercenaire			
+darkages_spoils	Spoils	Butin			
+darkages_hovel	Hovel	Cabane			
+darkages_necropolis	Necropolis	Nécropole			
+darkages_overgrownestate	Overgrown Estate	Domaine luxuriant			
+darkages_dameanna	Dame Anna	Dame Anna			
+darkages_damejosephine	Dame Josephine	Dame Josephine			
+darkages_damemolly	Dame Molly	Dame Molly			
+darkages_damenatalie	Dame Natalie	Dame Natalie			
+darkages_damesylvia	Dame Sylvia	Dame Sylvia			
+darkages_sirbailey	Sir Bailey	Sir Bailey			
+darkages_sirdestry	Sir Destry	Sir Destry			
+darkages_sirmartin	Sir Martin	Sir Martin			
+darkages_sirmichael	Sir Michael	Sir Michael			
+darkages_sirvander	Sir Vander	Sir Vander			

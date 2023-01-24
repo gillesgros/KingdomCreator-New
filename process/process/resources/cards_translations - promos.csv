@@ -1,14 +1,15 @@
-card,en,fr,de,nl,es
-promos_avanto,Avanto,Trou Dans La Glace,Avanto,Avanto,Avanto
-promos_blackmarket,Black Market,Marché noir,Schwarzmarkt,Zwarte Markt,Mercado Negro
-promos_captain,Captain,Capitaine,Kapitän Tobias,Captain,Captain
-promos_church,Church,Église,Schweriner Dom,Church,Church
-promos_dismantle,Dismantle,Démantelement,Abbruch,Ontmantelen,Dismantle
-promos_envoy,Envoy,Délégué,Gesandter,Gezant,Enviado
-promos_event_summon,Summon,Convocation,Einladung,Summon,Summon
-promos_governor,Governor,Gouverneur,Gouverneur,Gouverneur,Gobernador
-promos_prince,Prince,Prince,Prinz,Prins,Príncipe
-promos_sauna,Sauna,Sauna,Sauna,Sauna,Sauna
-promos_saunaavanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto,Sauna / Avanto
-promos_stash,Stash,Cachette,Geldversteck,Geldbuidel,Alijo
-promos_walledvillage,Walled Village,Ville fortifiée,Befestigtes Dorf,Ommuurd Dorp,Aldea Amurallada
+sep=	
+card	en	fr	de	nl	es
+promos_avanto	Avanto	Trou Dans La Glace	Avanto	Avanto	Avanto
+promos_blackmarket	Black Market	Marché noir	Schwarzmarkt	Zwarte Markt	Mercado Negro
+promos_captain	Captain	Capitaine	Kapitän Tobias	Captain	Captain
+promos_church	Church	Église	Schweriner Dom	Church	Church
+promos_dismantle	Dismantle	Démantelement	Abbruch	Ontmantelen	Dismantle
+promos_envoy	Envoy	Délégué	Gesandter	Gezant	Enviado
+promos_event_summon	Summon	Convocation	Einladung	Summon	Summon
+promos_governor	Governor	Gouverneur	Gouverneur	Gouverneur	Gobernador
+promos_prince	Prince	Prince	Prinz	Prins	Príncipe
+promos_sauna	Sauna	Sauna	Sauna	Sauna	Sauna
+promos_saunaavanto	Sauna / Avanto	Sauna / Avanto	Sauna / Avanto	Sauna / Avanto	Sauna / Avanto
+promos_stash	Stash	Cachette	Geldversteck	Geldbuidel	Alijo
+promos_walledvillage	Walled Village	Ville fortifiée	Befestigtes Dorf	Ommuurd Dorp	Aldea Amurallada

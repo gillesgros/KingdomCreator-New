@@ -1,36 +1,37 @@
-card;en;fr;de;nl;es
-seaside_ghostship;Ghost Ship;Vaisseau fantôme;Geisterschiff;De Vliegende Hollander;Barco Fantasma
-seaside_smugglers;Smugglers;Contrebandiers;Schmuggler;Smokkelaar;Contrabandistas
-seaside_salvager;Salvager;Sauveteur;Müllverwerter;Afvalverwerker;Rescatador
-seaside_haven;Haven;Havre;Hafen;Haven;Puerto
-seaside_ambassador;Ambassador;Ambassadeur;Botschafter;Boodschapper;Embajador
-seaside_seahag;Sea Hag;Sorcière de mer;Seehexe;Zeeheks;Bruja del Mar
-seaside_nativevillage;Native Village;Village indigène;Eingeborenendorf;Inheems Dorp;Poblado Indígena
-seaside_navigator;Navigator;Navigateur;Navigator;Navigator;Navegante
-seaside_tactician;Tactician;Tacticien;Taktiker;Strateeg;Estratega
-seaside_fishingvillage;Fishing Village;Village de pêcheurs;Fischerdorf;Vissersdorp;Pueblo de Pescadores
-seaside_island;Island;Île;Insel;Eiland;Isla
-seaside_wharf;Wharf;Quai;Werft;Scheepswerf;Muelle
-seaside_bazaar;Bazaar;Bazar;Bazar;Bazaar;Bazar
-seaside_treasuremap;Treasure Map;Carte aux trésors;Schatzkarte;Schatkaart;Mapa del Tesoro
-seaside_explorer;Explorer;Explorateur;Entdecker;Ontdekkingsreiziger;Explordora
-seaside_lookout;Lookout;Vigie;Ausguck;Uitkijk;Vigía
-seaside_treasury;Treasury;Trésorerie;Schatzkammer;Schatkamer;Tesorería
-seaside_cutpurse;Cutpurse;Coupeur de bourse;Beutelschneider;Beurzensnijder;Ratero
-seaside_caravan;Caravan;Caravane;Karawane;Karavaan;Caravana
-seaside_warehouse;Warehouse;Entrepôt;Lagerhaus;Pakhuis;Almacén
-seaside_lighthouse;Lighthouse;Phare;Leuchtturm;Vuurtoren;Faro
-seaside_pirateship;Pirate Ship;Bateau pirate;Piratenschiff;Piratenschip;Barco Pirata
-seaside_pearldiver;Pearl Diver;Plongeur de perles;Perlentaucher;Parelduiker;Pescador de Perlas
-seaside_merchantship;Merchant Ship;Navire marchand;Handelsschiff;Handelsschip;Barco Mercante
-seaside_embargo;Embargo;Embargo;Embargo;Embargo;Embargo
-seaside_outpost;Outpost;Avant-poste;Aussenposten;Voorpost;Puesto Avanzado
-seaside2_astrolabe;Astrolabe;Astrolabe;Astrolabium;;
-seaside2_monkey;Monkey;Singe;Affe;;
-seaside2_seachart;Sea Chart;Carte Maritime;Seekarte;;
-seaside2_blockade;Blockade;Blocus;Blockade;;
-seaside2_sailor;Sailor;Navigatrice;Seefahrerin;;
-seaside2_tidepools;Tide Pools;Marée;Gezeitenbecken;;
-seaside2_corsair;Corsair;Corsaire;Korsarenschiff;;
-seaside2_pirate;Pirate;Pirate;Piratin;;
-seaside2_seawitch;Sea Witch;Sorcière Marine;Meerhexe;;
+sep=	
+card	en	fr	de	nl	es
+seaside_ghostship	Ghost Ship	Vaisseau fantôme	Geisterschiff	De Vliegende Hollander	Barco Fantasma
+seaside_smugglers	Smugglers	Contrebandiers	Schmuggler	Smokkelaar	Contrabandistas
+seaside_salvager	Salvager	Sauveteur	Müllverwerter	Afvalverwerker	Rescatador
+seaside_haven	Haven	Havre	Hafen	Haven	Puerto
+seaside_ambassador	Ambassador	Ambassadeur	Botschafter	Boodschapper	Embajador
+seaside_seahag	Sea Hag	Sorcière de mer	Seehexe	Zeeheks	Bruja del Mar
+seaside_nativevillage	Native Village	Village indigène	Eingeborenendorf	Inheems Dorp	Poblado Indígena
+seaside_navigator	Navigator	Navigateur	Navigator	Navigator	Navegante
+seaside_tactician	Tactician	Tacticien	Taktiker	Strateeg	Estratega
+seaside_fishingvillage	Fishing Village	Village de pêcheurs	Fischerdorf	Vissersdorp	Pueblo de Pescadores
+seaside_island	Island	Île	Insel	Eiland	Isla
+seaside_wharf	Wharf	Quai	Werft	Scheepswerf	Muelle
+seaside_bazaar	Bazaar	Bazar	Bazar	Bazaar	Bazar
+seaside_treasuremap	Treasure Map	Carte aux trésors	Schatzkarte	Schatkaart	Mapa del Tesoro
+seaside_explorer	Explorer	Explorateur	Entdecker	Ontdekkingsreiziger	Explordora
+seaside_lookout	Lookout	Vigie	Ausguck	Uitkijk	Vigía
+seaside_treasury	Treasury	Trésorerie	Schatzkammer	Schatkamer	Tesorería
+seaside_cutpurse	Cutpurse	Coupeur de bourse	Beutelschneider	Beurzensnijder	Ratero
+seaside_caravan	Caravan	Caravane	Karawane	Karavaan	Caravana
+seaside_warehouse	Warehouse	Entrepôt	Lagerhaus	Pakhuis	Almacén
+seaside_lighthouse	Lighthouse	Phare	Leuchtturm	Vuurtoren	Faro
+seaside_pirateship	Pirate Ship	Bateau pirate	Piratenschiff	Piratenschip	Barco Pirata
+seaside_pearldiver	Pearl Diver	Plongeur de perles	Perlentaucher	Parelduiker	Pescador de Perlas
+seaside_merchantship	Merchant Ship	Navire marchand	Handelsschiff	Handelsschip	Barco Mercante
+seaside_embargo	Embargo	Embargo	Embargo	Embargo	Embargo
+seaside_outpost	Outpost	Avant-poste	Aussenposten	Voorpost	Puesto Avanzado
+seaside2_astrolabe	Astrolabe	Astrolabe	Astrolabium		
+seaside2_monkey	Monkey	Singe	Affe		
+seaside2_seachart	Sea Chart	Carte Maritime	Seekarte		
+seaside2_blockade	Blockade	Blocus	Blockade		
+seaside2_sailor	Sailor	Navigatrice	Seefahrerin		
+seaside2_tidepools	Tide Pools	Marée	Gezeitenbecken		
+seaside2_corsair	Corsair	Corsaire	Korsarenschiff		
+seaside2_pirate	Pirate	Pirate	Piratin		
+seaside2_seawitch	Sea Witch	Sorcière Marine	Meerhexe		

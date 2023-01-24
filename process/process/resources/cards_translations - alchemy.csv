@@ -1,13 +1,14 @@
-card,en,fr,de,nl,es
-alchemy_alchemist,Alchemist,Alchimiste,Alchemist,Alchemist,Alquimista
-alchemy_apothecary,Apothecary,Apothicaire,Apotheker,Apotheker,Boticario
-alchemy_apprentice,Apprentice,Apprenti,Lehrling,Leerling,Aprendiz
-alchemy_familiar,Familiar,Familier,Vertrauter,Oude bekende,Familiar
-alchemy_golem,Golem,Golem,Golem,Golem,Gólem
-alchemy_herbalist,Herbalist,Herboriste,Kräuterkundiger,Kruidenexpert,Herbalista
-alchemy_philosophersstone,Philosopher's Stone,Pierre philosophale,Stein der Weisen,Steen der wijzen,Piedra Filosofal
-alchemy_possession,Possession,Possession,Besessenheit,Bezeten,Posesión
-alchemy_scryingpool,Scrying Pool,Bassin divinatoire,Vision,Visioen,Hidromancia
-alchemy_transmute,Transmute,Transmutation,Verwandlung,Transformatie,Transmutar
-alchemy_university,University,Université,Universität,Universiteit,Universidad
-alchemy_vineyard,Vineyard,Vignoble,Weinberg,Wijnberg,Viñedo
+sep=	
+card	en	fr	de	nl	es
+alchemy_alchemist	Alchemist	Alchimiste	Alchemist	Alchemist	Alquimista
+alchemy_apothecary	Apothecary	Apothicaire	Apotheker	Apotheker	Boticario
+alchemy_apprentice	Apprentice	Apprenti	Lehrling	Leerling	Aprendiz
+alchemy_familiar	Familiar	Familier	Vertrauter	Oude bekende	Familiar
+alchemy_golem	Golem	Golem	Golem	Golem	Gólem
+alchemy_herbalist	Herbalist	Herboriste	Kräuterkundiger	Kruidenexpert	Herbalista
+alchemy_philosophersstone	Philosopher's Stone	Pierre philosophale	Stein der Weisen	Steen der wijzen	Piedra Filosofal
+alchemy_possession	Possession	Possession	Besessenheit	Bezeten	Posesión
+alchemy_scryingpool	Scrying Pool	Bassin divinatoire	Vision	Visioen	Hidromancia
+alchemy_transmute	Transmute	Transmutation	Verwandlung	Transformatie	Transmutar
+alchemy_university	University	Université	Universität	Universiteit	Universidad
+alchemy_vineyard	Vineyard	Vignoble	Weinberg	Wijnberg	Viñedo

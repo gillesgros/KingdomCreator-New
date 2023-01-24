@@ -1,36 +1,37 @@
-card;en;fr;de;nl;es
-hinterlands_bordervillage;Border Village;Village frontalier;Grenzdorf;Grensdorp;Pueblo Fronterizo
-hinterlands_foolsgold;Fool's Gold;Or des fous;Katzengold;Klatergoud;Oro Falso
-hinterlands_trader;Trader;Troqueuse;Fahrender Händler;Handelaar;Comerciante
-hinterlands_highway;Highway;Route;Fernstrasse;Hoofdweg;Carretera
-hinterlands_silkroad;Silk Road;Route de la soie;Seidenstrasse;Zijderoute;Ruta de la Seda
-hinterlands_illgottengains;Ill-Gotten Gains;Argent noir;Blutzoll;Gestolen goed;Dinero Sucio
-hinterlands_embassy;Embassy;Ambassade;Botschaft;Ambassade;Embajada
-hinterlands_nomadcamp;Nomad Camp;Campement nomade;Nomadencamp;Nomadenkamp;Campamento Nómada
-hinterlands_spicemerchant;Spice Merchant;Marchand d'épices;Gewürzhändler;Specerijenkoopman;Mercader de Especias
-hinterlands_oracle;Oracle;Oracle;Orakel;Orakel;Oráculo
-hinterlands_cartographer;Cartographer;Cartographe;Kartograph;Cartograaf;Cartógrafo
-hinterlands_farmland;Farmland;Terre agricole;Fruchtbares Land;Landbouwgrond;Tierra de Labranza
-hinterlands_noblebrigand;Noble Brigand;Noble brigand;Edler Räuber;Nobele bandiet;Bandido Honrado
-hinterlands_margrave;Margrave;Margrave;Markgraf;Markgraaf;Margrave
-hinterlands_haggler;Haggler;Marchandeur;Feilscher;Sjacheraar;Regateador
-hinterlands_scheme;Scheme;Complot;Komplott;Gekonkel;Confabulación
-hinterlands_inn;Inn;Auberge;Gasthaus;Herberg;Posada
-hinterlands_tunnel;Tunnel;Tunnel;Tunnel;Tunnel;Túnel
-hinterlands_crossroads;Crossroads;Carrefour;Wegkreuzung;Splitsing;Encrucijada
-hinterlands_develop;Develop;Développement;Aufbau;Ontwikkelen;Desarrollo
-hinterlands_oasis;Oasis;Oasis;Oase;Oase;Oasis
-hinterlands_mandarin;Mandarin;Mandarin;Mandarin;Mandarijn;Mandarín
-hinterlands_cache;Cache;Cache;Schatztruhe;Bewaarplaats;Hallazgo
-hinterlands_duchess;Duchess;Duchesse;Herzogin;Hertogin;Duquesa
-hinterlands_stables;Stables;Écuries;Stallungen;Stallen;Caballerizas
-hinterlands_jackofalltrades;Jack of All Trades;Touche-à-tout;Lebenskünstler;Manusje-van-alles;Chico para Todo
-hinterlands2_trail;Trail;Sentier;Pfad;;
-hinterlands2_weaver;Weaver;Tisserande;Weberin;;
-hinterlands2_berserker;Berserker;Berserker;Berserker;;
-hinterlands2_cauldron;Cauldron;Chaudron;Hexenkessel;;
-hinterlands2_guarddog;Guard Dog;Chien de Garde;Wachhund;;
-hinterlands2_nomads;Nomads;Nomades;Nomaden;;
-hinterlands2_souk;Souk;Souk;Souk;;
-hinterlands2_wheelwright;Wheelwright;Charronne;Radmacherin;;
-hinterlands2_witchshut;Witch's Hut;Cabanne de Sorcière;Hexenh�tte;;
+sep=	
+card	en	fr	de	nl	es
+hinterlands_bordervillage	Border Village	Village frontalier	Grenzdorf	Grensdorp	Pueblo Fronterizo
+hinterlands_foolsgold	Fool's Gold	Or des fous	Katzengold	Klatergoud	Oro Falso
+hinterlands_trader	Trader	Troqueuse	Fahrender Händler	Handelaar	Comerciante
+hinterlands_highway	Highway	Route	Fernstrasse	Hoofdweg	Carretera
+hinterlands_silkroad	Silk Road	Route de la soie	Seidenstrasse	Zijderoute	Ruta de la Seda
+hinterlands_illgottengains	Ill-Gotten Gains	Argent noir	Blutzoll	Gestolen goed	Dinero Sucio
+hinterlands_embassy	Embassy	Ambassade	Botschaft	Ambassade	Embajada
+hinterlands_nomadcamp	Nomad Camp	Campement nomade	Nomadencamp	Nomadenkamp	Campamento Nómada
+hinterlands_spicemerchant	Spice Merchant	Marchand d'épices	Gewürzhändler	Specerijenkoopman	Mercader de Especias
+hinterlands_oracle	Oracle	Oracle	Orakel	Orakel	Oráculo
+hinterlands_cartographer	Cartographer	Cartographe	Kartograph	Cartograaf	Cartógrafo
+hinterlands_farmland	Farmland	Terre agricole	Fruchtbares Land	Landbouwgrond	Tierra de Labranza
+hinterlands_noblebrigand	Noble Brigand	Noble brigand	Edler Räuber	Nobele bandiet	Bandido Honrado
+hinterlands_margrave	Margrave	Margrave	Markgraf	Markgraaf	Margrave
+hinterlands_haggler	Haggler	Marchandeur	Feilscher	Sjacheraar	Regateador
+hinterlands_scheme	Scheme	Complot	Komplott	Gekonkel	Confabulación
+hinterlands_inn	Inn	Auberge	Gasthaus	Herberg	Posada
+hinterlands_tunnel	Tunnel	Tunnel	Tunnel	Tunnel	Túnel
+hinterlands_crossroads	Crossroads	Carrefour	Wegkreuzung	Splitsing	Encrucijada
+hinterlands_develop	Develop	Développement	Aufbau	Ontwikkelen	Desarrollo
+hinterlands_oasis	Oasis	Oasis	Oase	Oase	Oasis
+hinterlands_mandarin	Mandarin	Mandarin	Mandarin	Mandarijn	Mandarín
+hinterlands_cache	Cache	Cache	Schatztruhe	Bewaarplaats	Hallazgo
+hinterlands_duchess	Duchess	Duchesse	Herzogin	Hertogin	Duquesa
+hinterlands_stables	Stables	Écuries	Stallungen	Stallen	Caballerizas
+hinterlands_jackofalltrades	Jack of All Trades	Touche-à-tout	Lebenskünstler	Manusje-van-alles	Chico para Todo
+hinterlands2_trail	Trail	Sentier	Pfad		
+hinterlands2_weaver	Weaver	Tisserande	Weberin		
+hinterlands2_berserker	Berserker	Berserker	Berserker		
+hinterlands2_cauldron	Cauldron	Chaudron	Hexenkessel		
+hinterlands2_guarddog	Guard Dog	Chien de Garde	Wachhund		
+hinterlands2_nomads	Nomads	Nomades	Nomaden		
+hinterlands2_souk	Souk	Souk	Souk		
+hinterlands2_wheelwright	Wheelwright	Charronne	Radmacherin		
+hinterlands2_witchshut	Witch's Hut	Cabanne de Sorcière	Hexenhütte		
