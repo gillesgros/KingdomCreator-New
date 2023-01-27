@@ -21,8 +21,8 @@ function createSetMessages(): {[index: string]: string} {
   }
     
   // TODO: Remove once Menagerie & Allies is fully supported.
-  messages["menagerie"] = "Menagerie";
-  messages["allies"] = "Allies";
+  // messages["menagerie"] = "Menagerie";
+  // messages["allies"] = "Allies";
   return messages;
 }
 
