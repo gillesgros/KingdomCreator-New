@@ -32,8 +32,8 @@
       <slot></slot>
       <footer>
         <div class="languages">
-          <template v-for="(language, index) in languages">
-            <router-link :key="language" :to="getLanguageLinkOptions(language)">
+          <template v-for="(language, index) in languages" :key="language">
+            <router-link :to="getLanguageLinkOptions(language)">
               {{ $t(language) }}
             </router-link>
             <span v-if="index < languages.length - 1" :key="`${language}-bullet`">

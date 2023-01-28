@@ -1,13 +1,17 @@
 
-import Vue from "vue"
-import VueI18n from "vue-i18n"
+//import Vue from "vue"
+//import VueI18n from "vue-i18n"
+
+import { createApp } from 'vue'
+import { createI18n } from 'vue-i18n'
+
 import en from "./en";
 import { Language } from "./language";
 
 Vue.use(VueI18n);
 
 export class I18n {
-  private static readonly instance = new VueI18n({
+  private static readonly instance = new createI18n({
     locale: Language.ENGLISH,
     fallbackLocale: Language.ENGLISH,
     messages: { en }
@@ -15,7 +19,7 @@ export class I18n {
   
   private static readonly loaded = new Set([Language.ENGLISH]);
 
-  static getInstance(): VueI18n {
+  static getInstance(): createI18n {
     return this.instance;
   }
 

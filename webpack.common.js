@@ -12,7 +12,8 @@ module.exports = function(isProduction) {
     resolve: {
       extensions: [".tsx", ".ts", ".js", ".styl", ".pug", ".vue"],
       alias: {
-        "vue$": "vue/dist/vue.esm.js"
+        "vue": '@vue/compat'
+        //"vue$": "vue/dist/vue.esm.js"
       }
     },
     entry: {
@@ -38,8 +39,14 @@ module.exports = function(isProduction) {
               // other preprocessors should work out of the box, no loader config like this necessary.
               "scss": "vue-style-loader!css-loader!sass-loader",
               "sass": "vue-style-loader!css-loader!sass-loader?indentedSyntax",
-            }
+            },
             // other vue-loader options go here
+            compilerOptions: {
+              compatConfig: {
+                // default everything to Vue 2 behavior
+                MODE: 2
+              }
+            }
           }
         },
         {
