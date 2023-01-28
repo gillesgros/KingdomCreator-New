@@ -30,7 +30,7 @@ import { CostType } from "../../dominion/cost-type";
 import { Boon } from "../../dominion/boon";
 import { Ally } from "../../dominion/ally";
 
-interface Context extends ActionContext<State, any> {}
+type Context = ActionContext<State, any>
 
 export const actions = {
   LOAD_INITIAL_KINGDOM(context: Context, initialKingdom: Kingdom | null) {

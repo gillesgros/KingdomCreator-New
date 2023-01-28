@@ -15,7 +15,7 @@
           </div>
           <div class="preset-set_title" v-show="this.ShowFilter">
             <div class="preset-kingdom_title_sets" v-for="set in sets" :key="set.setId">
-              <span :id="set.setId" v-on:click="setfilter(set.setId)" :class="set.setId""
+              <span :id="set.setId" v-on:click="setfilter(set.setId)" :class="set.setId"
           class="preset-kingdom_set-name filter-out"> {{ $t(set.setId) }} </span>
             </div>
           </div>

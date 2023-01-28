@@ -6,7 +6,7 @@ import { I18n } from "../../i18n/i18n"
 import { Language } from "../../i18n/language";
 import { Settings } from "./settings";
 
-interface Context extends ActionContext<State, any> {}
+type Context = ActionContext<State, any>
 
 export const actions = {
   async LOAD_DEFAULT_LANGUAGE(context: Context) {

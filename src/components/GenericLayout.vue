@@ -1,6 +1,6 @@
 <template>
   <div v-if="items.length">
-    <div class="preset-kingdom__addon-title"">{{title}}</div> 
+    <div class="preset-kingdom__addon-title">{{title}}</div> 
       <GridLayout
         v-if="items.length"
         :items="items"

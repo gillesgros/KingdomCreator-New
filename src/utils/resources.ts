@@ -50,20 +50,13 @@ export function ChangeCss(selector:string, property: string, value:string) {
 }
 
 export function incaseofImgerror(ev:any) {
-  console.log("starting incaseofImgerror")
-  console.log(ev)
+  //console.log("starting incaseofImgerror")
+  console.log("ev.target.imgUrl: " + ev.target.imgUrl + " ## ev.target.src: " +ev.target.src)
   const imgsrc = ev.target.src;
   //console.log('imgsrc: ' + imgsrc)
   //console.log('imgURL: ' + ev.target.imgUrl)
   let First_try = false
-  if (ev.target.imgUrl == undefined) {
-    First_try = true
-    ev.target.imgUrl = ev.target.src
-  }
-  if (ev.target.imgUrl == ev.target.src) {
-    First_try = true
-    ev.target.imgUrl = ev.target.src
-  }
+
 
   const indextoInsert = imgsrc.lastIndexOf('/'); 
   // /img/cards.fr/baseset2*/artisan.jpg or 
@@ -78,6 +71,17 @@ export function incaseofImgerror(ev:any) {
   const lastletter = imgsrc.slice(indextoInsert -1,indextoInsert)
   const last4letters = imgsrc.slice(indextoInsert -4,indextoInsert)
 
+  if (ev.target.imgUrl == undefined) {
+    First_try = true
+    ev.target.imgUrl = ev.target.src
+	console.log("First_try undefined: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+
+  } else if (ev.target.imgUrl != ev.target.src) {
+    First_try = false
+    ev.target.imgUrl = ev.target.src
+console.log("First_try equal: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+
+  } else console.log("First_try: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
   let construct_URL=""
   
 /*
@@ -95,6 +99,9 @@ export function incaseofImgerror(ev:any) {
     switching 2nd ed
       gestion selon lang
 */
+
+//  switch (finalphrase)
+
 
   if (last4letters=="2add") {
     console.log('// last4letters == 2add switching to english need to add setname')
