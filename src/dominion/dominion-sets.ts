@@ -28,7 +28,7 @@ export class DominionSets {
 
   public static convertToSetIdSafe(stringSetId: string): SetId | null {
     const setIds = Object.keys(SetId);
-    for (let setId of setIds) {
+    for (const setId of setIds) {
       if (SetId[setId as keyof typeof SetId] == stringSetId) {
         return stringSetId as SetId;
       }
@@ -38,18 +38,18 @@ export class DominionSets {
   
   public static GenericConvertToSetId(stringSetId: string) {
     const setIds = Object.keys(SetId);
-    for (let setId of setIds) {
+    for (const setId of setIds) {
       if (SetId[setId as keyof typeof SetId] == stringSetId) {
         return stringSetId as SetId;
       }
     }
-    return stringSetId as SetId;;
+    return stringSetId as SetId;
   }
   
   public static getAllSets(): DominionSet[] {
     const sets: DominionSet[] = [];
     const setIds = Object.keys(DominionSets.sets);
-    for (let setId of setIds) {
+    for (const setId of setIds) {
       sets.push(DominionSets.sets[setId as SetId] as DominionSet);
     }
     return sets.sort((n1,n2) => {
@@ -62,7 +62,7 @@ export class DominionSets {
   public static getAllCards(): Card[] {
     const cards: Card[] = [];
     const cardIds = Object.keys(DominionSets.cards);
-    for (let cardId of cardIds) {
+    for (const cardId of cardIds) {
       cards.push(DominionSets.cards[cardId]);
     }
     return cards;
@@ -90,7 +90,7 @@ export class DominionSets {
 
   public static getSupplyCardByIdSetFiltered(cardId: string, filteredSet:string[]): SupplyCard {
     let card;
-    for (let set of filteredSet) {
+    for (const set of filteredSet) {
       try {
         card = DominionSets.getCardById(set+'_'+cardId);
         break;
@@ -155,7 +155,7 @@ export class DominionSets {
   private static createSets() {
     const setIds = Object.keys(window.DominionSets) as SetId[];
     const sets: {[key in SetId]?: DominionSet} = {};
-    for (let setId of setIds) {
+    for (const setId of setIds) {
       sets[setId] = DominionSet.fromJson(window.DominionSets[setId]);
     }
     return sets;
@@ -164,14 +164,14 @@ export class DominionSets {
   private static createCardMap() {
     const cards: {[index: string]: Card} = {};
     const setIds = Object.keys(DominionSets.sets);
-	let extension = "";
-    for (let setId of setIds) {
+    const extension = "";
+    for (const setId of setIds) {
       const set = DominionSets.sets[setId as SetId] as DominionSet;
       const cardsFromSet: Card[] = 
           (set.supplyCards as Card[]).concat(
             set.events, set.landmarks, set.projects, 
             set.ways, set.boons, set.allies, set.otherCards);
-      for (let card of cardsFromSet) {
+      for (const card of cardsFromSet) {
         cards[card.id] = card;
         if (!cards[card.shortId + extension]) {
           cards[card.shortId +extension] = card;

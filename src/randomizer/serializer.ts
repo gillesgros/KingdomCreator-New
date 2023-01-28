@@ -110,7 +110,7 @@ function deserializeMetadata(serializedKingdom: any): KingdomMetadata {
 
 function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
   const results = [];
-  for (let id of ids) {
+  for (const id of ids) {
     try {
       console.log(lookupFn(id))
       results.push(lookupFn(id));
@@ -123,7 +123,7 @@ function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
 
 function findByIdsFiltered<T>(ids: string[], filteredSet: string[], lookupFn: (id: string, sets:string[]) => T): T[] {
   const results = [];
-  for (let id of ids) {
+  for (const id of ids) {
     try {
       results.push(lookupFn(id,filteredSet));
     } catch (e) {

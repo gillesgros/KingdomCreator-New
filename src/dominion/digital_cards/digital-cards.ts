@@ -49,4 +49,4 @@ Temp_CardsList = Temp_CardsList.concat(Cards_list_Menagerie);
 import { Cards_list_Allies } from "./digital-cards - Allies"
 Temp_CardsList = Temp_CardsList.concat(Cards_list_Allies);
 
-export let Cards_list:DigitalCard[]= Temp_CardsList
+export const Cards_list:DigitalCard[]= Temp_CardsList

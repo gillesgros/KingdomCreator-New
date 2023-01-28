@@ -15,7 +15,7 @@ export class SupplyDivisions {
 
   static getLockedCards(divisions: SupplyDivision[]): SupplyCard[] {
     let cards: SupplyCard[] = [];
-    for (let division of divisions) {
+    for (const division of divisions) {
       cards = cards.concat(division.lockedCards);
     }
     return cards;
@@ -23,7 +23,7 @@ export class SupplyDivisions {
 
   static getSelectedCards(divisions: SupplyDivision[]): SupplyCard[] {
     let cards: SupplyCard[] = [];
-    for (let division of divisions) {
+    for (const division of divisions) {
       cards = cards.concat(division.selectedCards);
     }
     return cards;
@@ -31,7 +31,7 @@ export class SupplyDivisions {
 
   static getAvailableCards(divisions: SupplyDivision[]): SupplyCard[] {
     let availableCards: SupplyCard[] = [];
-    for (let division of divisions) {
+    for (const division of divisions) {
       availableCards = availableCards.concat(division.availableCards);
     }
     return availableCards;
@@ -41,7 +41,7 @@ export class SupplyDivisions {
     const cardsPerDivision =
         SupplyDivisions.getAvailableCardsOfTypePerDivision(divisions, cardType);
     let availableCards: SupplyCard[] = [];
-    for (let cards of cardsPerDivision) {
+    for (const cards of cardsPerDivision) {
       availableCards = availableCards.concat(cards);
     }
     return availableCards;
@@ -62,7 +62,7 @@ export class SupplyDivisions {
   }
 
   static applyBans(division: SupplyDivision, bans: SupplyBan[]) {
-    for (let ban of bans) {
+    for (const ban of bans) {
       const bannedCards = ban.getBannedCards(division.availableCards)
       division = division.createDivisionByRemovingCards(Cards.extractIds(bannedCards));
     }
@@ -70,14 +70,14 @@ export class SupplyDivisions {
   }
 
   static applyDividers(divisions: SupplyDivision[], dividers: SupplyDivider[]) {
-    for (let divider of dividers) {
+    for (const divider of dividers) {
       divisions = divider.subdivideDivisions(divisions);
     }
     return divisions;
   }
 
   static applyCorrections(divisions: SupplyDivision[], corrections: SupplyCorrection[]) {
-    for (let correction of corrections) {
+    for (const correction of corrections) {
       if (!correction.isSatisfied(divisions)) {
         divisions = correction.correctDivisions(divisions);
       }

@@ -39,8 +39,9 @@ export class Replacements {
   
   static createReplacementByRemoveCards(replacements: Map<string, SupplyCard[]>, cardIds: string[]) {
     const newReplacements: Map<string, SupplyCard[]> = new Map();
-    for (let id of replacements.keys()) {
-      newReplacements.set(id, replacements.get(id)!.filter(Cards.filterByExcludedIds(cardIds)));
+    for (const id of replacements.keys()) {
+      newReplacements.set(id, replacements.get(id)?.filter(Cards.filterByExcludedIds(cardIds)) ?? []);
+      //console.log(replacements.get(id)!.filter(Cards.filterByExcludedIds(cardIds)))
     }
     return newReplacements;
   }

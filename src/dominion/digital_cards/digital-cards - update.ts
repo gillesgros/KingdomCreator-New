@@ -1,7 +1,7 @@
 import { DigitalCard } from "./digital-cards-type"
 
 
-export const Work_Card:DigitalCard = {	id: "sauna", frenchName: "",  artwork:"",
+export const Work_Card:DigitalCard = {  id: "sauna", frenchName: "",  artwork:"",
 text_html: '<div class="card-text" style="top:05px;">\
 <div style="position:relative; top:10px;"><div style="line-height:20px;">\
 <div style="display:inline;"><div style="display:inline; font-size:22px; font-weight:bold;">+6 Cartes</div></div><br>\

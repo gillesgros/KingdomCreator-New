@@ -201,7 +201,7 @@ export class Randomizer {
     const selectedWays: Way[] = [];
     const selectedAllies: Ally[] = [];
 
-    for (let card of selectedCards) {
+    for (const card of selectedCards) {
       if (card instanceof Event) {
         selectedEvents.push(card);
       } else if (card instanceof Landmark) {
@@ -380,7 +380,7 @@ export class Randomizer {
     // Removes duplicate cards (cards appearing in multiple sets); keep setA's version.
     // Cards to keep = (A - [B required as A]) + (B - ([A as B] - B required))
     const keys = Object.keys(SETS_WITH_DUPLICATES);
-    for (let key of keys) {
+    for (const key of keys) {
       const setA = key as SetId;
       const setB = SETS_WITH_DUPLICATES[key] as SetId;
       const setACards = cards.filter(Cards.filterByIncludedSetIds([setA]));
@@ -418,7 +418,7 @@ export class Randomizer {
 
   private static replaceSetIdForCards(cards: SupplyCard[], newSetId: string) {
     const cardIds: string[] = [];
-    for (let card of cards) {
+    for (const card of cards) {
       cardIds.push(this.replaceSetIdInCardId(card.id, newSetId));
     }
     return cardIds;

@@ -1,4 +1,3 @@
-
 import Vue from "vue"
 import VueI18n from "vue-i18n"
 import en from "./en";
@@ -20,8 +19,8 @@ export class I18n {
   }
 
   static async setLanguage(language: Language): Promise<any> {
-    this.instance.locale = language;
-    document.querySelector("html")!.setAttribute("lang", language);
+   this.instance.locale = language;
+   document.querySelector("html")?.setAttribute("lang", language) ?? false
   }
 
   static async loadLanguage(language: Language): Promise<any> {
