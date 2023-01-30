@@ -7,11 +7,11 @@
       <Boons />
       <AllySection />
       <Modifiers />
-	  <div style="margin-top: 4px;" >
-      <CopyButton
-        :text="supplyCardsCopyText"
-        class="randomizer-copy-button"
-      />
+      <div style="margin-top: 4px;" >
+        <CopyButton
+          :text="supplyCardsCopyText"
+          class="randomizer-copy-button"
+        />
         <FullScreenButton
         :text="supplyCardsCopyText"
         class="randomizer-copy-button"

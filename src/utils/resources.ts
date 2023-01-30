@@ -79,7 +79,7 @@ export function incaseofImgerror(ev:any) {
   } else if (ev.target.imgUrl != ev.target.src) {
     First_try = false
     ev.target.imgUrl = ev.target.src
-console.log("First_try equal: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+    console.log("First_try equal: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
 
   } else console.log("First_try: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
   let construct_URL=""
