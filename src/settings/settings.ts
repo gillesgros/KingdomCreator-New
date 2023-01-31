@@ -48,7 +48,7 @@ export class Settings implements SettingsParams {
         ? setsFromData.split(",")
         : setsFromData;
     const setIds: SetId[] = [];
-    for (let stringSetId of stringSetIds) {
+    for (const stringSetId of stringSetIds) {
       const setId = DominionSets.convertToSetIdSafe(stringSetId);
       if (setId) {
         setIds.push(setId);
@@ -60,14 +60,14 @@ export class Settings implements SettingsParams {
   private static deserailizeSort(data: any): SortOption {
     if (data.sortOption) {
       const keys = Object.keys(SortOption);
-      for (let key of keys) {
+      for (const key of keys) {
         if (data.sortOption == SortOption[key as keyof typeof SortOption]) {
           return data.sortOption as SortOption;
         }
       }
       return SortOption.SET;
     }
-    if (!!data.sortAlphabetically) {
+    if (data.sortAlphabetically) {
       return SortOption.ALPHABETICAL;
     }
     return SortOption.SET;

@@ -1,8 +1,11 @@
+/*
 /// <reference path="../../node_modules/@types/google.analytics/index.d.ts" />
-/* to include 
+ to include 
 	https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html
 	Triple-slash references instruct the compiler to include additional files in the compilation process.
 */
+
+//import * as Track from "../../node_modules/@types/google.analytics/index.d.ts";
 
 export enum EventType {
   LOAD_FULL_KINGDOM_FROM_URL = "LOAD_FULL_KINGDOM_FROM_URL",

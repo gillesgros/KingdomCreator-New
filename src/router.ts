@@ -10,4 +10,4 @@ export function createRouter(paths: string[], component: typeof Vue) {
       path => { return { name: path, path, component } }
     )
   });
-};
+}

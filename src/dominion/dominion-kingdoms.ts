@@ -18,7 +18,7 @@ export class DominionKingdoms {
   private static createKingdoms() {
     const setIds = Object.keys(window.DominionKingdoms) as SetId[];
     const sets: {[key in SetId]?: DominionKingdom[]} = {};
-    for (let setId of setIds) {
+    for (const setId of setIds) {
       const kingdoms = window.DominionKingdoms[setId].kingdoms;
       sets[setId] = kingdoms.map((json: any) => DominionKingdom.fromJson(json));
     }
@@ -27,8 +27,8 @@ export class DominionKingdoms {
 
   public static getAllKingdoms(): DominionKingdom[] {
     let Kingdoms:DominionKingdom[]= []
-    let setIds = Object.keys(DominionKingdoms.kingdoms);
-    for (let setId of setIds) {
+    const setIds = Object.keys(DominionKingdoms.kingdoms);
+    for (const setId of setIds) {
       Kingdoms = Kingdoms.concat((DominionKingdoms.kingdoms[setId as SetId] as DominionKingdom[]))
          .filter((kingdom, index, self) => index === self.findIndex((t) => (t.name === kingdom.name)))
     }
@@ -36,7 +36,7 @@ export class DominionKingdoms {
   }
 
   public static getAllSets(): SetId[] {
-    let setIds:SetId[] = (Object.keys(DominionKingdoms.kingdoms) as SetId[]).sort((n1,n2) => {
+    const setIds:SetId[] = (Object.keys(DominionKingdoms.kingdoms) as SetId[]).sort((n1,n2) => {
       if (n1> n2) { return 1; }
       if (n1 < n2) { return -1;}
       return 0;

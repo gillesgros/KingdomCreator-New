@@ -70,16 +70,16 @@ export const randomizerStore = {
     hasAddons: (state: State, getters: Getters) => {
       return getters.addons.length > 0;
     },
-    canHaveEvents: (state: State, getters: Getters) => {
-      for (let setId of state.settings.selectedSets) {
+    canHaveEvents: (state: State) => {
+      for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).events.length) {
           return true;
         }
       }
       return false;
     },
-    canHaveLandmarks: (state: State, getters: Getters) => {
-      for (let setId of state.settings.selectedSets) {
+    canHaveLandmarks: (state: State) => {
+      for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).landmarks.length) {
           return true;
         }
@@ -87,7 +87,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveProjects: (state: State) => {
-      for (let setId of state.settings.selectedSets) {
+      for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).projects.length) {
           return true;
         }
@@ -95,7 +95,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveWays: (state: State) => {
-      for (let setId of state.settings.selectedSets) {
+      for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).ways.length) {
           return true;
         }

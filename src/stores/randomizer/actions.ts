@@ -30,7 +30,7 @@ import { CostType } from "../../dominion/cost-type";
 import { Boon } from "../../dominion/boon";
 import { Ally } from "../../dominion/ally";
 
-interface Context extends ActionContext<State, any> {}
+type Context = ActionContext<State, any>
 
 export const actions = {
   LOAD_INITIAL_KINGDOM(context: Context, initialKingdom: Kingdom | null) {
@@ -134,7 +134,7 @@ console.log(kingdom)
 
     try {
       const kingdom = Randomizer.createKingdom(options);
-	  console.log(kingdom)
+      console.log(kingdom)
       context.commit(CLEAR_SELECTION);
       context.commit(UPDATE_KINGDOM, kingdom);
       EventTracker.trackEvent(EventType.RANDOMIZE_KINGDOM);
@@ -157,7 +157,7 @@ console.log(kingdom)
         : [params.selectedSetId!];
 
     const excludeCosts: CostType[] = [];
-    for (let key in CostType) {
+    for (const key in CostType) {
       if (params.selectedCostTypes.indexOf((CostType as any)[key]) == -1) {
         excludeCosts.push((CostType as any)[key] as CostType);
       }
@@ -281,7 +281,7 @@ function randomizeSelectedCards(context: Context): Supply | null {
   const excludeCardIds = getSelectedSupplyCards(context).map((card) => card.id);
   const isBaneSelected = isBaneCardSelected(context);
   if (isBaneSelected) {
-    excludeCardIds.push(context.state.kingdom.supply.baneCard!.id);
+    excludeCardIds.push(context.state.kingdom.supply.baneCard?.id ?? "");
   }
 
   const optionsBuilder = createRandomizerOptionsBuilder(context)
@@ -291,7 +291,7 @@ function randomizeSelectedCards(context: Context): Supply | null {
       .setExcludeTypes(getExcludeTypes(context))
 
   if (!isBaneSelected && context.state.kingdom.supply.baneCard) {
-    optionsBuilder.setBaneCardId(context.state.kingdom.supply.baneCard!.id)
+    optionsBuilder.setBaneCardId(context.state.kingdom.supply.baneCard?.id ?? false)
   }
   const supply = Randomizer.createSupplySafe(optionsBuilder.build());
   if (supply) {
@@ -335,7 +335,7 @@ function randomizeSelectedAlly(context: Context, supply: Supply) {
     if (unselectedAlly !== null) return unselectedAlly
     return Randomizer.getRandomAlly(supply)
   }
-  	console.log('RANDOMIZE_ALLY')
+  console.log('RANDOMIZE_ALLY')
   EventTracker.trackEvent(EventType.RANDOMIZE_ALLY);
   return Randomizer.getRandomAlly(supply, selectedAlly[0].id);
 }
