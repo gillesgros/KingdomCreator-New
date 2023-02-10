@@ -28,32 +28,36 @@
     <GenericLayout :items="getCards(set.boons.concat(OtherCards(set, 'Boons')), sortBoxesSet)"
                    :title="$t('Boons')" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForAddons" :is-vertical="false" />
-    <!-- generic slot : Ally -->
+    <!-- generic slot : Allies -->
     <GenericLayout :items="getCards(set.allies.concat(OtherCards(set, 'Allies')), sortBoxesSet)"
                    :title="$t('Allies')" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForAddons" :is-vertical="false" />
-				   
+    <!-- generic slot : Traits -->
+    <GenericLayout :items="getCards(set.traits.concat(OtherCards(set, 'Traits')), sortBoxesSet)"
+                   :title="$t('Traits')" :shape="Shape.CARD" :showOverlay="false"
+                   :generic-nb-columns="numberOfColumnsForAddons" :is-vertical="false" />
+
     <!-- otherCards : Basic Supply Cards, Ruins, Shelters, Non-Supply, Travellers, Artefacts, Hexes, -->
     <GenericLayout v-for="card in GetOtherCardTypes('vertical')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), challenge_sortBoxesSet(card.cardType))" 
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForSupplyCards" :is-vertical="true" />
-	
+
     <GenericLayout v-for="card in GetOtherCardTypes('horizontal')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    :generic-nb-columns="numberOfColumnsForAddons" :is-vertical="false" />
-	
+
     <GenericLayout v-for="card in GetOtherCardTypes('verticalMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    generic-nb-columns=3  :is-vertical="true" />
-	
+
     <GenericLayout v-for="card in GetOtherCardTypes('horizontalMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="Shape.CARD" :showOverlay="false"
                    generic-nb-columns=2  :is-vertical="false" />
-	
+
     <GenericLayout v-for="card in GetOtherCardTypes('squareMat')" :key="card.cardType"
                    :items="getCards(OtherCards(set, card.cardType), sortBoxesSet)"
                    :title="$t(card.title)" :shape="getshapeofmat(card.cardType)" :showOverlay="false"
@@ -97,6 +101,7 @@ const OTHER_CARD_TYPES: genericCardTypes[] = [
  {cardType: "Travellers Peasant", title: "Supply Cards - Travellers - Peasant Progression" }, /* adventures */
  {cardType: "Prize", title: "Non-Supply Cards"},
  {cardType: "Heirloom", title: "Non-Supply Cards - Heirlooms" }, /*nocturne */
+ {cardType: "Loot", title: "Loot Cards"},
  ];
 
 const OTHER_CARD_TYPES_HORIZONTAL: genericCardTypes[] = [

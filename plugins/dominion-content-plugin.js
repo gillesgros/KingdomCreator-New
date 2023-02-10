@@ -87,6 +87,14 @@ module.exports = class DominionContentPlugin {
           card.setId = setId;
         }
       }
+      if (set.traits) {
+        for (var i = 0; i < set.traits.length; i++) {
+          var card = set.traits[i];
+          card.id = this.convertToTraitId(setId, card.name);
+          card.shortId = this.tokenize(card.name);
+          card.setId = setId;
+        }
+      }
       if (set.othercards) {
         for (var i = 0; i < set.othercards.length; i++) {
           var card = set.othercards[i];
@@ -110,8 +118,6 @@ module.exports = class DominionContentPlugin {
     for (let i = 0; i < files.length; i++) {
       const filename = path.join(directory, files[i]);
       const id = this.tokenize(path.basename(files[i], '.yaml'));
-	  /* js-yamj v3 to v4
-      values[id] = yaml.safeLoad(fs.readFileSync(filename, 'utf8')); */
 	  values[id] = yaml.load(fs.readFileSync(filename, 'utf8'));
     }
     return values;
@@ -139,6 +145,10 @@ module.exports = class DominionContentPlugin {
 
   static convertToAllyId(setId, name) {
     return `${setId}_ally_${this.tokenize(name)}`;
+  }
+  
+  static convertToTraitId(setId, name) {
+    return `${setId}_trait_${this.tokenize(name)}`;
   }
 
   static convertToCardId(setId, name) {

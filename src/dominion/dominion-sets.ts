@@ -8,6 +8,7 @@ import {SetId} from "./set-id";
 import {SupplyCard} from "./supply-card";
 import {Way} from "./way";
 import {Ally} from "./ally";
+import {Trait} from "./trait";
 
 declare global {
   interface Window { DominionSets: any; }
@@ -144,6 +145,14 @@ export class DominionSets {
     return card;
   }
 
+  public static getTraitById(cardId: string) : Trait {
+    const card = DominionSets.getCardById(cardId);
+    if (!(card instanceof Trait)) {
+      throw new Error(`Card id (${cardId}) does not refer to an trait`);
+    }
+    return card;
+  }
+
   public static getAllyById(cardId: string): Ally {
     const card = DominionSets.getCardById(cardId);
     if (!(card instanceof Ally)) {
@@ -170,7 +179,7 @@ export class DominionSets {
       const cardsFromSet: Card[] = 
           (set.supplyCards as Card[]).concat(
             set.events, set.landmarks, set.projects, 
-            set.ways, set.boons, set.allies, set.otherCards);
+            set.ways, set.boons, set.allies, set.traits, set.otherCards);
       for (const card of cardsFromSet) {
         cards[card.id] = card;
         if (!cards[card.shortId + extension]) {

@@ -5,6 +5,7 @@ import {Project} from "../dominion/project";
 import {Supply} from "../randomizer/supply";
 import {Way} from "../dominion/way";
 import {Ally} from "../dominion/ally";
+import {Trait} from "../dominion/trait";
 
 export class Kingdom {
   constructor(
@@ -16,6 +17,7 @@ export class Kingdom {
       readonly ways: Way[],
       readonly boons: Boon[],
       readonly ally: Ally | null,
+      readonly traits: Trait[],
       readonly metadata: Metadata) {
   }
 
@@ -28,7 +30,8 @@ export class Kingdom {
                     [],               /* projects: Project[], */
                     [],               /* ways: Way[], */
                     [],               /* boons: Boon[], */
-                    null,             /* allies: Ally[], */
+                    null,             /* allies: Ally|null, */
+                    [],               /* traits: Trait[]*/
                     new Metadata(false, false));   /* metadata: Metadata */
   }
 }

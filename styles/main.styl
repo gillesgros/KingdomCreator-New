@@ -5,6 +5,8 @@
 
 nb-menu = 4
 condensed-menu-open-height = (10 + nb-menu*42)px;
+SizeDisplayedScreen=1300
+
 
 body
   margin: 0
@@ -62,7 +64,7 @@ header
   flex-direction: row
   justify-content: space-between
   margin: 0 auto 12px auto
-  max-width: 1518px
+  max-width: (SizeDisplayedScreen +18)px
   position: relative
 
 .title-container
@@ -158,7 +160,7 @@ input[type=radio]
   top: -2px
 
 .content
-  max-width: 1500px
+  max-width: (SizeDisplayedScreen)px
   position: relative
   margin: 10px auto 15px auto
 
@@ -207,9 +209,11 @@ input[type=radio]
   color: menagerie-color !important
 .allies
   color: allies-color !important
+.plunder
+  color: plunder-color !important
 
 // Move sidebar to the top
-@media (max-width: 750px)
+@media (max-width: (SizeDisplayedScreen/2)px)
   label.checkbox
     align-items: center
     display: flex

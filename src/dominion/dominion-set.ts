@@ -7,6 +7,7 @@ import {OtherCard} from "./other-card";
 import {SetId} from "./set-id";
 import {Way} from "./way";
 import {Ally} from "./ally";
+import {Trait} from "./trait";
 
 export class DominionSet {
   constructor(
@@ -19,6 +20,7 @@ export class DominionSet {
     readonly boons: Boon[],
     readonly ways: Way[],
     readonly allies: Ally[],
+    readonly traits: Trait[],
     readonly otherCards: OtherCard[]) {
   }
 
@@ -33,6 +35,7 @@ export class DominionSet {
         (json["boons"] || []).map(Boon.fromJson),
         (json["ways"] || []).map(Way.fromJson),
         (json["allies"] || []).map(Ally.fromJson),
+        (json["traits"] || []).map(Trait.fromJson),
         (json["othercards"] || []).map(OtherCard.fromJson)
     );
   }

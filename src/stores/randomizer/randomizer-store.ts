@@ -29,6 +29,7 @@ export interface Getters {
   canHaveLandmarks: boolean;
   canHaveProjects: boolean;
   canHaveWays: boolean;
+  canHaveTraits: boolean;
   canHaveAddons: boolean;
   addonSummary: string;
 }
@@ -65,7 +66,8 @@ export const randomizerStore = {
       return (state.kingdom.events as Addon[]).concat(
         state.kingdom.landmarks as Addon[], 
         state.kingdom.projects as Addon[],
-        state.kingdom.ways as Addon[]);
+        state.kingdom.ways as Addon[],
+        state.kingdom.traits as Addon[]);
     },
     hasAddons: (state: State, getters: Getters) => {
       return getters.addons.length > 0;
@@ -102,11 +104,20 @@ export const randomizerStore = {
       }
       return false;
     },
+    canHaveTraits: (state: State) => {
+      for (const setId of state.settings.selectedSets) {
+        if (DominionSets.getSetById(setId).traits.length) {
+          return true;
+        }
+      }
+      return false;
+    },
     canHaveAddons: (state: State, getters: Getters) => {
       return getters.canHaveEvents
         || getters.canHaveLandmarks
         || getters.canHaveProjects
-        || getters.canHaveWays;
+        || getters.canHaveWays
+        || getters.canHaveTraits;
     }
   },
   mutations: {

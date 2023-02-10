@@ -31,6 +31,9 @@ export function serializeKingdom(kingdom: Kingdom): {[index: string]: string} {
   if (kingdom.ally) {
     result.ally = serializeCards([kingdom.ally]);
   }
+  if (kingdom.traits.length) {
+    result.traits = serializeCards(kingdom.traits)
+  }
   return result;
 }
 
@@ -50,6 +53,7 @@ export function deserializeKingdom(serializedKingdom: any, selectedSets: string[
   const boonIds = parseCommaSeparatedValues(serializedKingdom.boons) || [];
   const wayIds = parseCommaSeparatedValues(serializedKingdom.ways) || [];
   const allyIds = parseCommaSeparatedValues(serializedKingdom.ally) || [];
+  const traitIds = parseCommaSeparatedValues(serializedKingdom.traits) || [];
   
   const supplyCards = findByIdsFiltered(supplyIds, selectedSets, DominionSets.getSupplyCardByIdSetFiltered).slice(0, 10);
   console.log(supplyCards)
@@ -66,6 +70,10 @@ export function deserializeKingdom(serializedKingdom: any, selectedSets: string[
   const ways = 
       findByIds(wayIds, DominionSets.getWayById)
           .slice(0, Math.max(0, 2 - events.length - landmarks.length - projects.length));
+  const traits = 
+      findByIds(traitIds, DominionSets.getTraitById)
+          .slice(0, Math.max(0, 2 - events.length - landmarks.length - projects.length - ways.length));
+
   const allies = findByIds(allyIds, DominionSets.getAllyById).slice(0, 1);
   const boons = findByIds(boonIds, DominionSets.getBoonById).slice(0, 3);
   const supply = new Supply(supplyCards, baneCard, null, Replacements.empty());
@@ -78,7 +86,8 @@ export function deserializeKingdom(serializedKingdom: any, selectedSets: string[
                projects,                                  /* projects: Project[], */
                ways,                                      /* ways: Way[], */
                boons,                                     /* boons: Boon[], */
-               allies[0] || null,                         /* allies: Ally[], */
+               allies[0] || null,                         /* allies: Ally | null */
+               traits,                                    /* traits: Trait[] */
        deserializeMetadata(serializedKingdom)
   );
 }
