@@ -113,10 +113,8 @@ export const actions = {
       context.state.kingdom.id, newSupply, newEvents, newLandmarks, newProjects,
       newWays, newBoons, newAlly, newTraits, context.state.kingdom.metadata);
 
-  console.log('newAlly')
-console.log(newAlly)
-  console.log('kingdom')
-console.log(kingdom)
+    console.log('kingdom')
+    console.log(kingdom)
     context.commit(CLEAR_SELECTION);
     context.commit(UPDATE_KINGDOM, kingdom);
   },
@@ -127,6 +125,7 @@ console.log(kingdom)
     const setIds = getSelectedSetIds(context);
     if (!setIds.length) {
       console.log( "no set selected")
+      /* possibility : randomize sets to generate new kigdoms */
       return;
     }
 

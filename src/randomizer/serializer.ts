@@ -40,7 +40,6 @@ export function serializeKingdom(kingdom: Kingdom): {[index: string]: string} {
 export function deserializeKingdom(serializedKingdom: any, selectedSets: string[]): Kingdom | null {
   const serializedSupply = serializedKingdom.supply || serializedKingdom.cards;
   const supplyIds = parseCommaSeparatedValues(serializedSupply)
-
   // Only use the deserialized kingdom if the supply exists.
   if (!supplyIds || !supplyIds.length) {
     return null;
@@ -55,27 +54,28 @@ export function deserializeKingdom(serializedKingdom: any, selectedSets: string[
   const allyIds = parseCommaSeparatedValues(serializedKingdom.ally) || [];
   const traitIds = parseCommaSeparatedValues(serializedKingdom.traits) || [];
   
-  const supplyCards = findByIdsFiltered(supplyIds, selectedSets, DominionSets.getSupplyCardByIdSetFiltered).slice(0, 10);
-  console.log(supplyCards)
+  
+  
+  const supplyCards = findByIds(supplyIds, DominionSets.getSupplyCardById, "", selectedSets).slice(0, 10);
+  //const supplyCards = findByIds(supplyIds, DominionSets.getSupplyCardById).slice(0, 10);
   let baneCard: SupplyCard | null = null;
   if (baneIds.length) {
-     baneCard = findByIds(baneIds, DominionSets.getSupplyCardById)[0] || null;
+     baneCard = findByIds(baneIds, DominionSets.getSupplyCardById, "", selectedSets)[0] || null;
   }
-  const events = findByIds(eventIds, DominionSets.getEventById).slice(0, 2);
+  const events = findByIds(eventIds, DominionSets.getEventById, "event_", selectedSets).slice(0, 2);
   const landmarks =
-      findByIds(landmarkIds, DominionSets.getLandmarkById).slice(0, Math.max(0, 2 - events.length));
+      findByIds(landmarkIds, DominionSets.getLandmarkById, "landmark_", selectedSets).slice(0, Math.max(0, 2 - events.length));
   const projects = 
-      findByIds(projectIds, DominionSets.getProjectById)
+      findByIds(projectIds, DominionSets.getProjectById, "project_", selectedSets)
           .slice(0, Math.max(0, 2 - events.length - landmarks.length));
   const ways = 
-      findByIds(wayIds, DominionSets.getWayById)
+      findByIds(wayIds, DominionSets.getWayById, "way_", selectedSets)
           .slice(0, Math.max(0, 2 - events.length - landmarks.length - projects.length));
   const traits = 
-      findByIds(traitIds, DominionSets.getTraitById)
+      findByIds(traitIds, DominionSets.getTraitById, "trait_", selectedSets)
           .slice(0, Math.max(0, 2 - events.length - landmarks.length - projects.length - ways.length));
-
-  const allies = findByIds(allyIds, DominionSets.getAllyById).slice(0, 1);
-  const boons = findByIds(boonIds, DominionSets.getBoonById).slice(0, 3);
+  const allies = findByIds(allyIds, DominionSets.getAllyById, "ally_", selectedSets).slice(0, 1);
+  const boons = findByIds(boonIds, DominionSets.getBoonById, "boon_", selectedSets).slice(0, 3);
   const supply = new Supply(supplyCards, baneCard, null, Replacements.empty());
 
   return new Kingdom(
@@ -117,33 +117,55 @@ function deserializeMetadata(serializedKingdom: any): KingdomMetadata {
   );
 }
 
-function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
+/*function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
   const results = [];
   for (const id of ids) {
     try {
-      console.log(lookupFn(id))
       results.push(lookupFn(id));
     } catch (e) {
+		  console.log("error on: " +id)
       // Silently catch failed lookups.
     }
   }
   return results;
-} 
+}
+*/
 
-function findByIdsFiltered<T>(ids: string[], filteredSet: string[], lookupFn: (id: string, sets:string[]) => T): T[] {
+function findByIds<T>(ids: string[], lookupFn: (id: string) => T, ext?: string, filteredSet?: string[])  : T[] {
   const results = [];
-  for (const id of ids) {
-    try {
-      results.push(lookupFn(id,filteredSet));
-    } catch (e) {
-      // Silently catch failed lookups.
+  if (typeof filteredSet !== 'undefined' ) {
+    for (const id of ids) {
+      try {
+        for (const set of filteredSet) {
+          try {
+            results.push(lookupFn(set+'_'+ ext + id));
+            break;
+          } catch (e) {
+            //  console.log("error on: " +set+'_'+id)
+            // Silently catch failed lookups of 'set'_'id'
+          }
+        }
+      } catch (e) {
+        console.log("Full error on: " +id)
+        // Silently catch failed lookups for 'id'
+      }
+    }
+  } else {
+    for (const id of ids) {
+      try {
+        results.push(lookupFn(id));
+      } catch (e) {
+        console.log("error on: " +id)
+        // Silently catch failed lookups.
+      }
     }
   }
   return results;
 } 
 
-function parseCommaSeparatedValues(value: string | null): string[] | null {
-  return value ? value.split(",") : null;
+function parseCommaSeparatedValues(value: any | null): string[] | null {
+  if (typeof value === "string" ) return value ? value.split(",") : null;
+  return null;
 }
 
 function parseBoolean(value: string | null): boolean {

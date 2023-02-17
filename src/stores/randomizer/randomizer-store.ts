@@ -73,6 +73,7 @@ export const randomizerStore = {
       return getters.addons.length > 0;
     },
     canHaveEvents: (state: State) => {
+      if (state.kingdom.events.length >0 ) return true;
       for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).events.length) {
           return true;
@@ -81,6 +82,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveLandmarks: (state: State) => {
+      if (state.kingdom.landmarks.length >0 ) return true;
       for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).landmarks.length) {
           return true;
@@ -89,6 +91,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveProjects: (state: State) => {
+      if (state.kingdom.projects.length >0 ) return true;
       for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).projects.length) {
           return true;
@@ -97,6 +100,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveWays: (state: State) => {
+      if (state.kingdom.ways.length >0 ) return true;
       for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).ways.length) {
           return true;
@@ -105,6 +109,7 @@ export const randomizerStore = {
       return false;
     },
     canHaveTraits: (state: State) => {
+      if (state.kingdom.traits.length >0 ) return true;
       for (const setId of state.settings.selectedSets) {
         if (DominionSets.getSetById(setId).traits.length) {
           return true;

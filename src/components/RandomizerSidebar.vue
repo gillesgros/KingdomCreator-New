@@ -12,7 +12,7 @@
         <div class="set" v-for="set in sets" :key="set.setId">
           <label class="checkbox">
             <input type="checkbox" v-model="selectedSetIds" :id="set.setId" :value="set.setId">
-            <span>{{ $t(set.setId) }} <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> -  1st</span></span>
+            <span>{{ $t(set.setId) }} <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> - 1st</span></span>
           </label>
           <span v-if="FindMultipleVersionSets(set.setId).length !== 0">
               <label class="checkbox suboption-set">
@@ -145,12 +145,12 @@ export default class RandomizerSidebar extends Vue {
     this.$store.commit(UPDATE_SETTINGS, {
       selectedSets: values.map(DominionSets.convertToSetId)
     } as SettingsParams);
-    return;
   }
   
   FindMultipleVersionSets(setValue: string) {
     return MultipleVersionSets.filter(set => {return (set.id===setValue)})
   }
+
   get requireActionProvider() {
     return this.randomizerSettings.requireActionProvider;
   }

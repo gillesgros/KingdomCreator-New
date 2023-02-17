@@ -46,7 +46,6 @@ import { UPDATE_SPECIFYING_REPLACEMENT_SUPPLY_CARD } from "../stores/randomizer/
 import GridLayout from "./GridLayout.vue";
 import { Language } from "../i18n/language"
 
-
 interface MoveDescriptor {
   elementIndex: number;
   newVisualIndex: number;

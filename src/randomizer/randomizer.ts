@@ -69,7 +69,7 @@ export class Randomizer {
                    boons,               /* boons: Boon[], */
                    ally,                /* allies: Ally | null, */
                    addons.traits,       /* Traits: Trait */
-                   metadata);           /* metadata: Metadata */
+                   metadata);           /* metadata: Metadata */ 
   }
 
   static createSupplySafe(randomizerOptions: RandomizerOptions): Supply | null {
@@ -203,7 +203,6 @@ export class Randomizer {
     const selectedWays: Way[] = [];
     const selectedAllies: Ally[] = [];
     const selectedTraits: Trait[] = [];
-
     for (const card of selectedCards) {
       if (card instanceof Event) {
         selectedEvents.push(card);
