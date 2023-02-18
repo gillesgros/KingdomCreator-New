@@ -7,10 +7,10 @@ const sets = Loader.loadSets();
 const trace = false
 
 // for all sets
-getAllSetsImages()
+//getAllSetsImages()
 
 // for 1 set define it 
-//getAllImages(getCards(sets.baseset));
+getAllImages(getCards(sets.plunder));
 
 
 async function getAllSetsImages() {

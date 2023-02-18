@@ -6,6 +6,10 @@ function transformName(name) {
   return name.toLowerCase().replace(/'/g, "");
 }
 
+function TestAndCreateDir(Path) {
+  if (!fs.existsSync(Path)) fs.mkdirSync(Path);
+}
+
 function merge(__dirName, __Pattern, __Output) {
 	local_lines = "xxx"
 	
@@ -15,6 +19,7 @@ function merge(__dirName, __Pattern, __Output) {
 	fileoobjs.forEach((file) => { 
 		if(fs.lstatSync(path.join(__dirName,file)).isFile()) {
 			if (path.extname(file) == ".csv" && path.basename(file).indexOf(__Pattern)!=- 1 ) {
+				console.log("handling file: '" + file + "'")
 				local_csv = fs.readFileSync(path.join(__dirName,file), "utf8");
 				local_cvs_line=(local_csv.replace(/"/g, "").split(/\r?\n/))[0]
 				if (local_lines == "xxx") {
@@ -22,7 +27,7 @@ function merge(__dirName, __Pattern, __Output) {
 					fs.writeFileSync(path.join(__dirName,__Output), "");
 				}
 				if (local_lines != local_cvs_line) {
-					console.log(' First line problem encountered')
+					console.log(' First line problem encountered on file ' + file)
 					console.log(local_lines.toString() + ' versus ' + local_cvs_line.toString())
 				}
 				fs.appendFileSync(path.join(__dirName,__Output), local_csv.toString())
@@ -32,6 +37,29 @@ function merge(__dirName, __Pattern, __Output) {
 	})
 }
 
+function usage() {
+console.log("")
+console.log("")
+console.log("To run properly 'extract-card-names-concat.js' you need to have a set of translation file")
+console.log ("located at './process/resources'.")
+console.log ("and named './process/resources/cards_translations - ${set}.csv'.")
+console.log("")
+console.log("The format of this file is a comma separated value file with a first line")
+console.log("containing the following 'card,en,fr,de,nl,es'.")
+console.log("the list of language is not limited.")
+console.log("All set translation files need to have the same line defining the language order.")
+console.log("")
+console.log("The output are multiple files located at './src/i18n/messages'")
+console.log("and named 'cards.${lang}.json' depending on the languages found in the CSV file")
+console.log("and 'cards.missing.json' file containing card name that miss a translation.")
+console.log("")
+console.log("This translation generation is deprecated.")
+console.log("")
+console.log("")
+}
+
+
+usage()
 // Read in the Dutch and German translations.
 merge("./process/resources","cards_translations - ","cards_translations.csv")
 const csv = fs.readFileSync("./process/resources/cards_translations.csv", "utf8");
@@ -119,6 +147,10 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 
+TestAndCreateDir('./src');
+TestAndCreateDir('./src/i18n');
+TestAndCreateDir('./src/i18n/messages');
+
 const resultLanguages = Object.keys(result);
 for (let i = 0; i < resultLanguages.length; i++) {
   const lang = resultLanguages[i];
@@ -127,3 +159,4 @@ for (let i = 0; i < resultLanguages.length; i++) {
 
 fs.writeFileSync(`./src/i18n/messages/cards.missing.json`, JSON.stringify(missing, null, 2));
 
+usage()

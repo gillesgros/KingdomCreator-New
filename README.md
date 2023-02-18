@@ -65,19 +65,32 @@ with in file kingdom.coffee
 string variable set with kingdom list 
 strings = ["Introduction: Cartographer, Crossroads, Develop, Jack of all Trades, Margrave, Nomads, Oasis, Spice Merchant, Stables, Weaver"]
 
+== Active ==
+to generate new translation files in process directory 
+Use `node Build-translation-pages.js`
+The source is 1 file for all the expansions
+patern is `./process/resources/pages.csv`
+It will create for each language defined at line 2 of page.csv, files in 
+`src\i18n\messages\${lang}` for dominionrandomizer pages and
+a file per set in `src\i18n\messages\${lang}\cards` with card name translation for this set.
 
-to translate cards in process directory 
-Use `node extract-card-names-concat.js`
-to create `src\i18n\messages\cards.{lang}.json` with card name translation
-The source is 1 file for each expansion
-pattern is `./process/resources/cards_translations - {expansion}.csv`
 
+
+== Deprecated ==
 to translate cards in process directory 
 Use `node extract-card-names.js`
-to create `src\i18n\messages\cards.{lang}.json` with card name translation
+to create `src\i18n\messages\cards.${lang}.json` with card name translation
 The source is 1 file for all the expansions
 patern is `./process/resources/cards_translations.csv`
 
+== Deprecated ==
+to translate cards in process directory 
+Use `node extract-card-names-concat.js`
+to create `src\i18n\messages\cards.${lang}.json` with card name translation
+The source is 1 file for each expansion
+pattern is `./process/resources/cards_translations - ${expansion}.csv`
+
+== Deprecated ==
 to translate set name in process directory 
 Use `node extract-set-names.js`
 to create `src\i18n\messages\sets.{lang}.json` with card name translation

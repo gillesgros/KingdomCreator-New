@@ -4,7 +4,33 @@ Loader = require('./loader');
 function transformName(name) {
   return name.toLowerCase().replace(/'/g, "");
 }
-// Read in the Dutch and German translations.
+// Read in the translation file
+
+function TestAndCreateDir(Path) {
+  if (!fs.existsSync(Path)) fs.mkdirSync(Path);
+}
+
+function usage() {
+console.log("")
+console.log("")
+console.log("To run properly 'extract-card-names.js' you need to have a translation file")
+console.log ("located and named './process/resources/cards_translations.csv'.")
+console.log("")
+console.log("The format of this file is a comma separated value file with a first line")
+console.log("containing the following 'card,en,fr,de,nl,es'.")
+console.log("the list of language is not limited.")
+console.log("")
+console.log("The output is mulitple files located at './src/i18n/messages'")
+console.log("and named 'cards.${lang}.json' depending on the languages found in the CSV file")
+console.log("and 'cards.missing.json' file containing card name that miss a translation.")
+console.log("")
+console.log("This translation generation is deprecated.")
+console.log("")
+console.log("")
+}
+
+usage()
+// Read in the translation file
 const csv = fs.readFileSync("./process/resources/cards_translations.csv", "utf8");
 const lines = csv.replace(/"/g, "").split(/\r?\n/);
 const names = {};
@@ -90,6 +116,10 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 
+TestAndCreateDir('./src');
+TestAndCreateDir('./src/i18n');
+TestAndCreateDir('./src/i18n/messages');
+
 const resultLanguages = Object.keys(result);
 for (let i = 0; i < resultLanguages.length; i++) {
   const lang = resultLanguages[i];
@@ -98,3 +128,4 @@ for (let i = 0; i < resultLanguages.length; i++) {
 
 fs.writeFileSync(`./src/i18n/messages/cards.missing.json`, JSON.stringify(missing, null, 2));
 
+usage()
