@@ -34,6 +34,10 @@ const convertToAllyId = function(setId, name) {
    return setId + '_ally_' + tokenize(name);
 };
 
+const convertToTraitId = function(setId, name) {
+   return setId + '_trait_' + tokenize(name);
+};
+
 const loadFilesFromDirectory = function(directory) {
    const values = {};
    const files = fs.readdirSync(directory);
@@ -146,6 +150,7 @@ module.exports = {
    convertToBoonId: convertToBoonId,
    convertToWayId: convertToWayId,
    convertToAllyId: convertToAllyId,
+   convertToTraitId: convertToTraitId,
    loadSets: loadSets,
    loadKingdoms: loadKingdoms,
 };

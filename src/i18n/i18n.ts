@@ -19,8 +19,8 @@ export class I18n {
   }
 
   static async setLanguage(language: Language): Promise<any> {
-   this.instance.locale = language;
-   document.querySelector("html")?.setAttribute("lang", language) ?? false
+    this.instance.locale = language;
+    document.querySelector("html")?.setAttribute("lang", language) ?? false
   }
 
   static async loadLanguage(language: Language): Promise<any> {

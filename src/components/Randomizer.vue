@@ -85,7 +85,6 @@ export default class Randomizer extends Vue {
       //...this.$route.query,
       ...serializeKingdom(this.kingdom)
     };
-
     if (!this.isEqual(this.$route.query, query)) {
       this.$router.replace({query});
     }

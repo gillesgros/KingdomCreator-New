@@ -28,7 +28,7 @@ function TestAndCreateDir(Path) {
   'cards.guilds',      'cards.adventures',
   'cards.empires',     'cards.nocturne',
   'cards.renaissance', 'cards.menagerie',
-  'cards.allies'
+  'cards.allies'     , 'cards.plunder',
 */
 const csv = fs.readFileSync("./process/resources/pages.csv", "utf8");
 const lines = csv.replace(/"/g, "").split(/\r?\n/);

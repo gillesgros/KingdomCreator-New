@@ -40,7 +40,6 @@ export default class AddonTitle extends Vue {
     if (this.hasProjects)  addons.push("addon_projects");
     if (this.hasWays)      addons.push("addon_ways");
     if (this.hasTraits)    addons.push("addon_traits");
-
     return addons;
   }
 

@@ -32,6 +32,10 @@ findCardByShortId = (shortId) ->
          for ally in set.allies
             if shortId == ally.shortId
                return ally
+      if set.traits
+         for trait in set.traits
+            if shortId == trait.shortId
+               return trait
 
    throw Error('Card not found: ' + shortId)
 
@@ -48,6 +52,7 @@ parseSupplyString = (supplyString) ->
    kingdomName = split[0].trim()
    cardNames =
       split[1]
+         .replace(/\//g, ',')
          .replace(/\(/g, ',')
          .replace(/\)/g, '')
          .replace(/•/g, ',')

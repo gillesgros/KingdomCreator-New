@@ -54,8 +54,6 @@ export function deserializeKingdom(serializedKingdom: any, selectedSets: string[
   const allyIds = parseCommaSeparatedValues(serializedKingdom.ally) || [];
   const traitIds = parseCommaSeparatedValues(serializedKingdom.traits) || [];
   
-  
-  
   const supplyCards = findByIds(supplyIds, DominionSets.getSupplyCardById, "", selectedSets).slice(0, 10);
   //const supplyCards = findByIds(supplyIds, DominionSets.getSupplyCardById).slice(0, 10);
   let baneCard: SupplyCard | null = null;
@@ -117,7 +115,8 @@ function deserializeMetadata(serializedKingdom: any): KingdomMetadata {
   );
 }
 
-/*function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
+/*
+function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
   const results = [];
   for (const id of ids) {
     try {
