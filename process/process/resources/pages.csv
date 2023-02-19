@@ -4,7 +4,7 @@ languages	de	German	Duits	Deutsch	Allemand	Alemán	Niemiecki
 languages	en	English	Engels	Englisch	Anglais	Inglés	Angielski
 languages	fr	French	Frans	Französisch	Français	Francés	Francuski
 languages	nl	Dutch	Nederlands	Niederländisch	Néerlandais	Holandés	Niderlandzki
-languages	es	Sapnish	Spaans	Spanisch	Espagnol	Español	Hiszpański
+languages	es	Spanish	Spaans	Spanisch	Espagnol	Español	Hiszpański
 languages	pl	Polish	Pools	Polieren	Polonais	Polaco	Polski
 common	addon_description_format_2	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}
 common	addon_description_format_3	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}
@@ -14,7 +14,8 @@ common	addon_events	Events		Events	Evénements	Eventos
 common	addon_landmarks	Landmarks		Landmarks	Repères	Hitos	
 common	addon_projects	Projects		Projects	Projets	Proyectos	
 common	addon_ways	Ways		Ways	Voies	Sendas	
-common	addon_allies	Allies		Allies	Allies		
+common	addon_allies	Allies			Alliés		
+common	addon_traits	Traits			Comportement		
 common	github_info	Source is on {source}. Feature requests and complaints go {issues}!	Source is on {source}. Feature requests and complaints go {issues}!	Quellcode ist auf {source}. Funktionsanfragen und Beschwerden bitte {issues}!	Le code source est disponible sur {source}. Pour une demande de fonctionnalité ou un problème, s’adresser {issues} !	Código fuente:  {source}. Solictudes, dudas y errores {issues}!	Kod źródłowy znajduje się w repozytorium {source}. Propozycje zmian oraz uwagi można zgłaszać {issues}!
 common	github_info_source	Github	Github	Github	Github	Github	Github
 common	github_info_issues	here	here	hier	ici	aquí	tu
@@ -25,15 +26,15 @@ common	disclaimers_and_credits_creative_commons	CC 3.0 BY	CC 3.0 BY	CC 3.0 BY	CC
 common							
 page-boxes	boxes_page_subtitle	Content of Dominion boxes	Content of Dominion boxes	Content of Dominion boxes	Contenu des boites Dominion	Contenu des boites Dominion	Content of Dominion boxes
 page-boxes	boxes_page_description	All cards available in this dominion set. Card type are kingdom, ruin, victory, treasure, event, landmark, project, boon, Hex, ...			Toutes les cartes présentés dans les boites de Dominion. Les types de cartes sont 		All cards available in this dominion set. Card type are kingdom, ruin, victory, treasure, event, landmark, project, boon, Hex, ...
-page-boxes							
+page-boxes	Sets content	Sets content			Boîtes		
 page-boxes	Kingdoms Cards	Kingdoms Cards			Cartes Royaume		
 page-boxes	Events	Events			Events		
 page-boxes	Landmarks	Landmarks			Landmarks		
 page-boxes	Projects	Projects			Projects		
-page-boxes	Boons 	Boons			Boons		
+page-boxes	Boons	Boons			Boons		
 page-boxes	Ways	Ways			Ways		
 page-boxes	Allies	Allies			Alliés		
-page-boxes							
+page-boxes	Traits	Traits			Comportements		
 page-boxes	States	States			States		
 page-boxes	Hexes	Hexes			Hexes		
 page-boxes	Artifacts	Artifacts			Artifacts		
@@ -47,6 +48,7 @@ page-boxes	Basic Cards - Ruins	Basic Cards - Ruins 			Basic Cards - Ruins
 page-boxes	Basic Cards	Basic Cards			Basic Cards		
 page-boxes	Supply Cards - Castles	Supply Cards - Castles			Supply Cards - Castles		
 page-boxes	Supply Cards - Knights	Supply Cards - Knights			Supply Cards - Knights		
+page-boxes	Loot Cards	Loot Cards			Loot Cards		
 page-boxes							
 page-boxes	Cost	Cost			coût		
 page-boxes	Tokens included in box	Tokens included in box			Pièces incluses dans la boite		
@@ -80,10 +82,10 @@ page-index	Prioritize Set	Prioritize Set  		"Priorisiere Set	Prioritize Sets
 page-index	Set	Set		Nach Set	par Set		
 page-index	Alphabetical	Alphabetical		Alphabetisch	Alphabétique		
 page-index	Cost	Cost		Nach Kosten	par Coût		
-page-index	Choose set	Choose set...		Wähle Set...			
-page-index	Options	Options		Optionen			
-page-index	Replace	Replace!		Ersetzen!			
-page-index	Randomize	Randomize!		Randomisieren!			
+page-index	Choose set	Choose set...		Wähle Set...	Choose set...		
+page-index	Options	Options		Optionen	Options		
+page-index	Replace	Replace!		Ersetzen!	Replace!		
+page-index	Randomize	Randomize!		Randomisieren!	Randomize!		
 page-index	Sort	Sort		Sortieren	Tri		
 page-index							
 page-index							
@@ -104,10 +106,17 @@ page-sets	hide filter	hide filter			masquer le filtre
 page-sets	reset filter	reset filter			reset filter		
 page-sets	show Kingdoms list	show Kingdoms list			afficher la liste des noms de jeux		
 page-sets	hide Kingdoms list	hide Kingdoms list			masquer la liste des noms de jeux		
-page-sets							
+page-sets	mykingdoms	mykingdoms			mykingdoms		
+page-sets	All recommended sets	All recommended sets			All recommended sets		
+page-sets	Personal sets	Personal sets			Personal sets		
 page-sets	Sets	Sets			Sets		
 page-sets	Bane	Bane			Fléau		
+page-sets	Filter Games	Filter Games			Filtrer les jeux		
+page-sets	All Games	All Games			tous les jeux		
+page-sets	Played Games	Played Games			Déjà joués		
+page-sets	Not played Games	Not played Games			Pas encore joués		
 page-sets							
+							
 sets	adventures	adventures	Avonturen	Abenteuer	Aventures	Aventuras	Adventures
 sets	alchemy	alchemy	De Alchemisten	Die Alchemisten	Alchimie	Alquimia	Alchemy
 sets	allies	allies			Alliés		Allies
@@ -710,165 +719,251 @@ cards.renaissance	renaissance_project_croprotation	Crop Rotation	Wisselbouw	Fruc
 cards.renaissance	renaissance_project_innovation	Innovation	Vernieuwing	Innovation	Innovation	Innovación	
 cards.renaissance	renaissance_project_canal	Canal	Kanaal	Kanal	Canal	Canal	
 cards.renaissance	renaissance_project_citadel	Citadel	Burcht	Zitdelle	Citadelle	Ciudadela	
-cards.renaissance	renaissance_flag	Flag			Drapeau		
-cards.renaissance	renaissance_horn	Horn			Corne		
-cards.renaissance	renaissance_key	Key			Clé		
-cards.renaissance	renaissance_lantern	Lantern			Lanterne		
-cards.renaissance	renaissance_treasurechest	Treasure Chest			Coffre		
+cards.renaissance	renaissance_flag	Flag	Vaandel	Fahne	Drapeau		
+cards.renaissance	renaissance_horn	Horn	Hoorn	Horn	Corne		
+cards.renaissance	renaissance_key	Key	Sleutel	Schlüssel	Clé		
+cards.renaissance	renaissance_lantern	Lantern	Lantaarn	Laterne	Lanterne		
+cards.renaissance	renaissance_treasurechest	Treasure Chest	Schatkist	Schatzkiste	Coffre		
 							
-cards.menagerie	menagerie_animalfair	Animal Fair		Viehmarkt	Foire aux bestiaux	Feria de Ganado	
-cards.menagerie	menagerie_barge	Barge		Lastkahn	Chaland	Gabarra	
-cards.menagerie	menagerie_blackcat	Black Cat		Schwarze Katze	Chat noir	Gato Negro	
-cards.menagerie	menagerie_bountyhunter	Bounty Hunter		Kopfgeldjägerin	Chasseur de prime	Cazarrecompensas	
-cards.menagerie	menagerie_cameltrain	Camel Train		Kamelzug	Caravane de chameaux	Recua de Camellos	
-cards.menagerie	menagerie_cardinal	Cardinal		Kardinal	Cardinal	Cardenal	
-cards.menagerie	menagerie_cavalry	Cavalry		Kavallerie	Cavalière	Caballería	
-cards.menagerie	menagerie_coven	Coven		Hexenzirkel	Clan de sorciers	Aquelarre	
-cards.menagerie	menagerie_destrier	Destrier		Schlachtross	Destrier	Destrero	
-cards.menagerie	menagerie_displace	Displace		Vertreibung	Déplacement	Migración	
-cards.menagerie	menagerie_falconer	Falconer		Falknerin	Fauconnière	Halconera	
-cards.menagerie	menagerie_fisherman	Fisherman		Fischer	Pêcheur	Pescador	
-cards.menagerie	menagerie_gatekeeper	Gatekeeper		Wache	Garde	Centinela	
-cards.menagerie	menagerie_goatherd	Goatherd		Ziegenhirtin	Chevrière	Cabrera	
-cards.menagerie	menagerie_groom	Groom		Stallbursche	Palefrenier	Caballerizo	
-cards.menagerie	menagerie_hostelry	Hostelry		Herberge	Hôtel	Hostal	
-cards.menagerie	menagerie_huntinglodge	Hunting Lodge		Jagdhütte	Pavillon de chasse	Refugio de Caza	
-cards.menagerie	menagerie_kiln	Kiln		Brennofen	Four	Horno	
-cards.menagerie	menagerie_livery	Livery		Pferdestall	Pension	Librea	
-cards.menagerie	menagerie_mastermind	Mastermind		Drahtzieher	Génie	Cerebro	
-cards.menagerie	menagerie_paddock	Paddock		Koppel	Enclos	Establo	
-cards.menagerie	menagerie_sanctuary	Sanctuary		Zufluchtsort	Sanctuaire	Santuario	
-cards.menagerie	menagerie_scrap	Scrap		Schrott	Ferraille	Chatarra	
-cards.menagerie	menagerie_sheepdog	Sheepdog		Hirtenhund	Chien de berger	Perro Pastor	
-cards.menagerie	menagerie_sleigh	Sleigh		Schlitten	Traîneau	Trineo	
-cards.menagerie	menagerie_snowyvillage	Snowy Village		Verschneites Dorf	Village enneigé	Aldea Nevada	
-cards.menagerie	menagerie_stockpile	Stockpile		Depot	Stocks	Reservas	
-cards.menagerie	menagerie_supplies	Supplies		Nachschub	Réserves	Suministros	
-cards.menagerie	menagerie_villagegreen	Village Green		Dorfanger	Espace vert	Prado del Pueblo	
-cards.menagerie	menagerie_wayfarer	Wayfarer		Wanderin	Voyageuse	Caminante	
-cards.menagerie	menagerie_event_alliance	Alliance		Bündnis	Alliance	Alianza	
-cards.menagerie	menagerie_event_banish	Banish		Verbannung	Bannissement	Destierro	
-cards.menagerie	menagerie_event_bargain	Bargain		Gutes Geschäft	Affaire	Ganga	
-cards.menagerie	menagerie_event_commerce	Commerce		Kommerz	Négoce	Comercio	
-cards.menagerie	menagerie_event_delay	Delay		Verzögerung	Retard	Retraso	
-cards.menagerie	menagerie_event_demand	Demand		Forderung	Demande	Exigencia	
-cards.menagerie	menagerie_event_desperation	Desperation		Verzweiflung	Désespoir	Desesperación	
-cards.menagerie	menagerie_event_enclave	Enclave		Enklave	Enclave	Enclave	
-cards.menagerie	menagerie_event_enhance	Enhance		Verbesserung	Réhaussement	Reforma	
-cards.menagerie	menagerie_event_gamble	Gamble		Wagnis	Pari	Apuesta	
-cards.menagerie	menagerie_event_invest	Invest		Investition	Investissement	Inversión	
-cards.menagerie	menagerie_event_march	March		Fußmarsch	Marche	Marcha	
-cards.menagerie	menagerie_event_populate	Populate		Besiedlung	Peuplement	Repoblar	
-cards.menagerie	menagerie_event_pursue	Pursue		Verfolgung	Poursuite	Persecución	
-cards.menagerie	menagerie_event_reap	Reap		Reiche Ernte	Moisson	Siega	
-cards.menagerie	menagerie_event_ride	Ride		Reiten	Chevauchée	Paseo	
-cards.menagerie	menagerie_event_seizetheday	Seize the Day		Nutze den Tag	Carpe Diem	Aprovecha el Día	
-cards.menagerie	menagerie_event_stampede	Stampede		Stampede	Ruée	Estampida	
-cards.menagerie	menagerie_event_toil	Toil		Plackerei	Labeur	Labor	
-cards.menagerie	menagerie_event_transport	Transport		Transport	Transport	Transporte	
-cards.menagerie	menagerie_way_wayofthebutterfly	Way of the Butterfly		Weg des Schmetterlings	Voie du papillon	Senda de la Mariposa	
-cards.menagerie	menagerie_way_wayofthecamel	Way of the Camel		Weg des Kamels	Voie du chameau	Senda del Camello	
-cards.menagerie	menagerie_way_wayofthechameleon	Way of the Chameleon		Weg des Chamäleons	Voie du caméléon	Senda del Camaleón	
-cards.menagerie	menagerie_way_wayofthefrog	Way of the Frog		Weg des Frosches	Voie de la grenouille	Senda de la Rana	
-cards.menagerie	menagerie_way_wayofthegoat	Way of the Goat		Weg der Ziege	Voie de la chèvre	Senda de la Cabra	
-cards.menagerie	menagerie_way_wayofthehorse	Way of the Horse		Weg des Pferdes	Voie du cheval	Senda del Caballo	
-cards.menagerie	menagerie_way_wayofthemole	Way of the Mole		Weg des Maulwurfs	Voie de la taupe	Senda del Topo	
-cards.menagerie	menagerie_way_wayofthemonkey	Way of the Monkey		Weg des Affen	Voie du singe	Senda del Mono	
-cards.menagerie	menagerie_way_wayofthemouse	Way of the Mouse		Weg der Maus	Voie de la souirs	Senda del Ratón	
-cards.menagerie	menagerie_way_wayofthemule	Way of the Mule		Weg des Maultiers	Voie de la mule	Senda de la Mula	
-cards.menagerie	menagerie_way_wayoftheotter	Way of the Otter		Weg des Otters	Voie de la loutre	Senda de la Nutria	
-cards.menagerie	menagerie_way_wayoftheowl	Way of the Owl		Weg der Eule	Voie du hibou	Senda del Búho	
-cards.menagerie	menagerie_way_wayoftheox	Way of the Ox		Weg des Ochsen	Voie du bœuf	Senda del Buey	
-cards.menagerie	menagerie_way_wayofthepig	Way of the Pig		Weg des Schweins	Voie du porc	Senda del Cerdo	
-cards.menagerie	menagerie_way_wayoftherat	Way of the Rat		Weg der Ratte	Voie du rat	Senda de la Rata	
-cards.menagerie	menagerie_way_wayoftheseal	Way of the Seal		Weg der Robbe	Voie du phoque	Senda de la Foca	
-cards.menagerie	menagerie_way_wayofthesheep	Way of the Sheep		Weg des Schafes	Voie du mouton	Senda de la Oveja	
-cards.menagerie	menagerie_way_wayofthesquirrel	Way of the Squirrel		Weg des Eichhörnchens	Voie de l'écureuil	Senda de la Ardilla	
-cards.menagerie	menagerie_way_wayoftheturtle	Way of the Turtle		Weg der Schildkröte	Voie de la tortue	Senda de la Tortuga	
-cards.menagerie	menagerie_way_wayoftheworm	Way of the Worm		Weg des Wurms	Voie du ver	Senda del Gusano	
-cards.menagerie	menagerie_horse	Horse			Cheval		
+cards.menagerie	menagerie_animalfair	Animal Fair	Dierenmarkt	Viehmarkt	Foire aux bestiaux	Feria de Ganado	
+cards.menagerie	menagerie_barge	Barge	Aak	Lastkahn	Chaland	Gabarra	
+cards.menagerie	menagerie_blackcat	Black Cat	Zwarte kat	Schwarze Katze	Chat noir	Gato Negro	
+cards.menagerie	menagerie_bountyhunter	Bounty Hunter	Premiejager	Kopfgeldjägerin	Chasseur de prime	Cazarrecompensas	
+cards.menagerie	menagerie_cameltrain	Camel Train	Kamelenkaravaan	Kamelzug	Caravane de chameaux	Recua de Camellos	
+cards.menagerie	menagerie_cardinal	Cardinal	Kardinaal	Kardinal	Cardinal	Cardenal	
+cards.menagerie	menagerie_cavalry	Cavalry	Cavalerie	Kavallerie	Cavalière	Caballería	
+cards.menagerie	menagerie_coven	Coven	Heksenkring	Hexenzirkel	Clan de sorciers	Aquelarre	
+cards.menagerie	menagerie_destrier	Destrier	Krijgsros	Schlachtross	Destrier	Destrero	
+cards.menagerie	menagerie_displace	Displace	Verplaatsing	Vertreibung	Déplacement	Migración	
+cards.menagerie	menagerie_falconer	Falconer	Valkenier	Falknerin	Fauconnière	Halconera	
+cards.menagerie	menagerie_fisherman	Fisherman	Visser	Fischer	Pêcheur	Pescador	
+cards.menagerie	menagerie_gatekeeper	Gatekeeper	Poortwachter	Wache	Garde	Centinela	
+cards.menagerie	menagerie_goatherd	Goatherd	Geitenhoeder	Ziegenhirtin	Chevrière	Cabrera	
+cards.menagerie	menagerie_groom	Groom	Rijknecht	Stallbursche	Palefrenier	Caballerizo	
+cards.menagerie	menagerie_hostelry	Hostelry	Pension	Herberge	Hôtel	Hostal	
+cards.menagerie	menagerie_huntinglodge	Hunting Lodge	Jachthuis	Jagdhütte	Pavillon de chasse	Refugio de Caza	
+cards.menagerie	menagerie_kiln	Kiln	Oven	Brennofen	Four	Horno	
+cards.menagerie	menagerie_livery	Livery	Stalhouderij	Pferdestall	Pension	Librea	
+cards.menagerie	menagerie_mastermind	Mastermind	Meesterbrein	Drahtzieher	Génie	Cerebro	
+cards.menagerie	menagerie_paddock	Paddock	Omheind veld	Koppel	Enclos	Establo	
+cards.menagerie	menagerie_sanctuary	Sanctuary	Gewijde plek	Zufluchtsort	Sanctuaire	Santuario	
+cards.menagerie	menagerie_scrap	Scrap	Schroot	Schrott	Ferraille	Chatarra	
+cards.menagerie	menagerie_sheepdog	Sheepdog	Herdershond	Hirtenhund	Chien de berger	Perro Pastor	
+cards.menagerie	menagerie_sleigh	Sleigh	Slede	Schlitten	Traîneau	Trineo	
+cards.menagerie	menagerie_snowyvillage	Snowy Village	Besneeuwd dorp	Verschneites Dorf	Village enneigé	Aldea Nevada	
+cards.menagerie	menagerie_stockpile	Stockpile	Reserve	Depot	Stocks	Reservas	
+cards.menagerie	menagerie_supplies	Supplies	Voorraden	Nachschub	Réserves	Suministros	
+cards.menagerie	menagerie_villagegreen	Village Green	Dorpsweide	Dorfanger	Espace vert	Prado del Pueblo	
+cards.menagerie	menagerie_wayfarer	Wayfarer	Voetreiziger	Wanderin	Voyageuse	Caminante	
+cards.menagerie	menagerie_event_alliance	Alliance	Bondgenootschap	Bündnis	Alliance	Alianza	
+cards.menagerie	menagerie_event_banish	Banish	Verbannen	Verbannung	Bannissement	Destierro	
+cards.menagerie	menagerie_event_bargain	Bargain	Koopje	Gutes Geschäft	Affaire	Ganga	
+cards.menagerie	menagerie_event_commerce	Commerce	Commercie	Kommerz	Négoce	Comercio	
+cards.menagerie	menagerie_event_delay	Delay	Vertraging	Verzögerung	Retard	Retraso	
+cards.menagerie	menagerie_event_demand	Demand	Vraag	Forderung	Demande	Exigencia	
+cards.menagerie	menagerie_event_desperation	Desperation	Wanhoop	Verzweiflung	Désespoir	Desesperación	
+cards.menagerie	menagerie_event_enclave	Enclave	Enclave	Enklave	Enclave	Enclave	
+cards.menagerie	menagerie_event_enhance	Enhance	Verhoging	Verbesserung	Réhaussement	Reforma	
+cards.menagerie	menagerie_event_gamble	Gamble	Gokken	Wagnis	Pari	Apuesta	
+cards.menagerie	menagerie_event_invest	Invest	Investeren	Investition	Investissement	Inversión	
+cards.menagerie	menagerie_event_march	March	Mars	Fußmarsch	Marche	Marcha	
+cards.menagerie	menagerie_event_populate	Populate	Bevolken	Besiedlung	Peuplement	Repoblar	
+cards.menagerie	menagerie_event_pursue	Pursue	Nastreven	Verfolgung	Poursuite	Persecución	
+cards.menagerie	menagerie_event_reap	Reap	Maaien	Reiche Ernte	Moisson	Siega	
+cards.menagerie	menagerie_event_ride	Ride	Rit	Reiten	Chevauchée	Paseo	
+cards.menagerie	menagerie_event_seizetheday	Seize the Day	Pluk de Dag	Nutze den Tag	Carpe Diem	Aprovecha el Día	
+cards.menagerie	menagerie_event_stampede	Stampede	Stormloop	Stampede	Ruée	Estampida	
+cards.menagerie	menagerie_event_toil	Toil	Gezwoeg	Plackerei	Labeur	Labor	
+cards.menagerie	menagerie_event_transport	Transport	Transport	Transport	Transport	Transporte	
+cards.menagerie	menagerie_way_wayofthebutterfly	Way of the Butterfly	Spoor van de Vlinder	Weg des Schmetterlings	Voie du papillon	Senda de la Mariposa	
+cards.menagerie	menagerie_way_wayofthecamel	Way of the Camel	Spoor van de Kameel	Weg des Kamels	Voie du chameau	Senda del Camello	
+cards.menagerie	menagerie_way_wayofthechameleon	Way of the Chameleon	Spoor van de Kameleon	Weg des Chamäleons	Voie du caméléon	Senda del Camaleón	
+cards.menagerie	menagerie_way_wayofthefrog	Way of the Frog	Spoor van de Kikker	Weg des Frosches	Voie de la grenouille	Senda de la Rana	
+cards.menagerie	menagerie_way_wayofthegoat	Way of the Goat	Spoor van de Geit	Weg der Ziege	Voie de la chèvre	Senda de la Cabra	
+cards.menagerie	menagerie_way_wayofthehorse	Way of the Horse	Spoor van het Paard	Weg des Pferdes	Voie du cheval	Senda del Caballo	
+cards.menagerie	menagerie_way_wayofthemole	Way of the Mole	Spoor van de Mol	Weg des Maulwurfs	Voie de la taupe	Senda del Topo	
+cards.menagerie	menagerie_way_wayofthemonkey	Way of the Monkey	Spoor van de Aap	Weg des Affen	Voie du singe	Senda del Mono	
+cards.menagerie	menagerie_way_wayofthemouse	Way of the Mouse	Spoor van de Muis	Weg der Maus	Voie de la souirs	Senda del Ratón	
+cards.menagerie	menagerie_way_wayofthemule	Way of the Mule	Spoor van de Ezel	Weg des Maultiers	Voie de la mule	Senda de la Mula	
+cards.menagerie	menagerie_way_wayoftheotter	Way of the Otter	Spoor van de Otter	Weg des Otters	Voie de la loutre	Senda de la Nutria	
+cards.menagerie	menagerie_way_wayoftheowl	Way of the Owl	Spoor van de Uil	Weg der Eule	Voie du hibou	Senda del Búho	
+cards.menagerie	menagerie_way_wayoftheox	Way of the Ox	Spoor van de Os	Weg des Ochsen	Voie du bœuf	Senda del Buey	
+cards.menagerie	menagerie_way_wayofthepig	Way of the Pig	Spoor van het Varken	Weg des Schweins	Voie du porc	Senda del Cerdo	
+cards.menagerie	menagerie_way_wayoftherat	Way of the Rat	Spoor van de Rat	Weg der Ratte	Voie du rat	Senda de la Rata	
+cards.menagerie	menagerie_way_wayoftheseal	Way of the Seal	Spoor van de Zeehond	Weg der Robbe	Voie du phoque	Senda de la Foca	
+cards.menagerie	menagerie_way_wayofthesheep	Way of the Sheep	Spoor van het Schaap	Weg des Schafes	Voie du mouton	Senda de la Oveja	
+cards.menagerie	menagerie_way_wayofthesquirrel	Way of the Squirrel	Spoor van de Eekhoorn	Weg des Eichhörnchens	Voie de l'écureuil	Senda de la Ardilla	
+cards.menagerie	menagerie_way_wayoftheturtle	Way of the Turtle	Spoor van de Schildpad	Weg der Schildkröte	Voie de la tortue	Senda de la Tortuga	
+cards.menagerie	menagerie_way_wayoftheworm	Way of the Worm	Spoor van de Worm	Weg des Wurms	Voie du ver	Senda del Gusano	
+cards.menagerie	menagerie_horse	Horse	Paard	Pferd	Cheval		
 							
-cards.allies	allies_bauble	Bauble		Tand	Babiole		
-cards.allies	allies_sycophant	Sycophant		Schmeichler	Sycophante		
-cards.allies	allies_townsfolk	Townsfolk		Bürger	Citoyens		
-cards.allies	allies_augurs	Augurs		Augurinnen	Augures		
-cards.allies	allies_clashes	Clashes		Konflikte	Affrontements		
-cards.allies	allies_forts	Forts		Bastionen	Fortifications		
-cards.allies	allies_importer	Importer		Importeurin	importateur		
-cards.allies	allies_merchantcamp	Merchant Camp		Händlerlager	Camp de Marchands		
-cards.allies	allies_odysseys	Odysseys		Irrfahrten	Odyssées		
-cards.allies	allies_sentinel	Sentinel		Wächter	Guetteur		
-cards.allies	allies_underling	Underling		Untergebener	Subalterne		
-cards.allies	allies_wizards	Wizards		Zauberer	Magiciens		
-cards.allies	allies_broker	Broker		Mittelsmann	Courtier		
-cards.allies	allies_carpenter	Carpenter		Schreinerin	Charpentière		
-cards.allies	allies_courier	Courier		Botin	Courrier Rapide		
-cards.allies	allies_innkeeper	Innkeeper		Wirtin	Aubergiste		
-cards.allies	allies_royalgalley	Royal Galley		Königliche Galeere	Galère Royale		
-cards.allies	allies_town	Town		Ortschaft	Bourg		
-cards.allies	allies_barbarian	Barbarian		Barbar	Barbare		
-cards.allies	allies_capitalcity	Capital City		Hauptstadt	Capitale		
-cards.allies	allies_contract	Contract		Vertrag	Contrat		
-cards.allies	allies_emissary	Emissary		Unterhändlerin	Émissaire		
-cards.allies	allies_galleria	Galleria		Markthalle	Marché Couvert		
-cards.allies	allies_guildmaster	Guildmaster		Gildemeisterin	Maître de Guilde		
-cards.allies	allies_highwayman	Highwayman		Wegelagerer	Bandit de Grand Chemin		
-cards.allies	allies_hunter	Hunter		Jägerin	Chasseuse		
-cards.allies	allies_modify	Modify		Umgestaltung	Modification		
-cards.allies	allies_skirmisher	Skirmisher		Aufwiegler	Tirailleur		
-cards.allies	allies_specialist	Specialist		Spezialistin	Spécialiste		
-cards.allies	allies_swap	Swap		Tausch	Troc		
-cards.allies	allies_marquis	Marquis		Marquis	Marquis		
-cards.allies	allies_ally_architectsguild	Architects' Guild		Architektengilde	Guilde des Architectes		
-cards.allies	allies_ally_bandofnomads	Band of Nomads		Nomadenstamm	Bande de Nomades		
-cards.allies	allies_ally_cavedwellers	Cave Dwellers		Höhlenbewohner	Troglodytes		
-cards.allies	allies_ally_circleofwitches	Circle of Witches		Hexenbund	Cercle des Sorcières		
-cards.allies	allies_ally_citystate	City-state		Stadtstaat	Cité-État		
-cards.allies	allies_ally_coastalhaven	Coastal Haven		Höhlenhafen	Havre-Côtier		
-cards.allies	allies_ally_craftersguild	Crafters' Guild		Handwerkergilde	Guilde des Artisans		
-cards.allies	allies_ally_desertguides	Desert Guides		Wüstenführer	Guides du Déserrt		
-cards.allies	allies_ally_familyofinventors	Family of Inventors		Erfinderfamilie	Famille d'Inventeurs		
-cards.allies	allies_ally_fellowshipofscribes	Fellowship of Scribes		 Gefolgschaft der Schreiber 	Confrérie des Scribes		
-cards.allies	allies_ally_forestdwellers	Forest Dwellers		Waldbewohner	Habitants des Forêts		
-cards.allies	allies_ally_gangofpickpockets	Gang of Pickpockets		Taschendiebe	Détrousseurs		
-cards.allies	allies_ally_islandfolk	Island Folk		Inselvolk	Peuple des Îles		
-cards.allies	allies_ally_leagueofbankers	League of Bankers		Bankiersverbund	Ligue des Banquiers		
-cards.allies	allies_ally_leagueofshopkeepers	League of Shopkeepers		Bund der Ladenbesitzer	Ligue des Commerçants		
-cards.allies	allies_ally_markettowns	Market Towns		Marktstädte	Villes Commerçantes		
-cards.allies	allies_ally_mountainfolk	Mountain Folk		Bergvolk	Montagnards		
-cards.allies	allies_ally_orderofastrologers	Order of Astrologers		Sterndeuterorden	Ordre des Astrologues		
-cards.allies	allies_ally_orderofmasons	Order of Masons		Freimaurerloge	Ordre des Maçons		
-cards.allies	allies_ally_peacefulcult	Peaceful Cult		Friedlicher Kult	Culte Pacifiuqe		
-cards.allies	allies_ally_plateaushepherds	Plateau Shepherds		Schäfer der Hochebene	Bergers du Plateau		
-cards.allies	allies_ally_trapperslodge	Trappers' Lodge		Hütte der Fallensteller	Cabane de Trappeurs		
-cards.allies	allies_ally_woodworkersguild	Woodworkers' Guild		Holzarbeitergilde	Guilde des Meunuisiers		
+cards.allies	allies_bauble	Bauble	Kerstbal	Tand	Babiole		
+cards.allies	allies_sycophant	Sycophant	Hielenlikker	Schmeichler	Sycophante		
+cards.allies	allies_townsfolk	Townsfolk	Stedelingen	Bürger	Citoyens		
+cards.allies	allies_augurs	Augurs	Voorspellers	Augurinnen	Augures		
+cards.allies	allies_clashes	Clashes	Conflicten	Konflikte	Affrontements		
+cards.allies	allies_forts	Forts	Forten	Bastionen	Fortifications		
+cards.allies	allies_importer	Importer	Importeur	Importeurin	importateur		
+cards.allies	allies_merchantcamp	Merchant Camp	Handelaarskamp	Händlerlager	Camp de Marchands		
+cards.allies	allies_odysseys	Odysseys	Zwerftochten	Irrfahrten	Odyssées		
+cards.allies	allies_sentinel	Sentinel	Schildwacht	Wächter	Guetteur		
+cards.allies	allies_underling	Underling	Ondergeschikte	Untergebener	Subalterne		
+cards.allies	allies_wizards	Wizards	Tovenaars	Zauberer	Magiciens		
+cards.allies	allies_broker	Broker	Zaakwaarnemer	Mittelsmann	Courtier		
+cards.allies	allies_carpenter	Carpenter	Houtwerker	Schreinerin	Charpentière		
+cards.allies	allies_courier	Courier	Renbode	Botin	Courrier Rapide		
+cards.allies	allies_innkeeper	Innkeeper	Waard	Wirtin	Aubergiste		
+cards.allies	allies_royalgalley	Royal Galley	Koninklijk Galeischip	Königliche Galeere	Galère Royale		
+cards.allies	allies_town	Town	Nederzetting	Ortschaft	Bourg		
+cards.allies	allies_barbarian	Barbarian	Barbaar	Barbar	Barbare		
+cards.allies	allies_capitalcity	Capital City	Hoofdstad	Hauptstadt	Capitale		
+cards.allies	allies_contract	Contract	Contract	Vertrag	Contrat		
+cards.allies	allies_emissary	Emissary	Afgezant	Unterhändlerin	Émissaire		
+cards.allies	allies_galleria	Galleria	Kunstmuseum	Markthalle	Marché Couvert		
+cards.allies	allies_guildmaster	Guildmaster	Gildenmeester	Gildemeisterin	Maître de Guilde		
+cards.allies	allies_highwayman	Highwayman	Struikrover	Wegelagerer	Bandit de Grand Chemin		
+cards.allies	allies_hunter	Hunter	Jager	Jägerin	Chasseuse		
+cards.allies	allies_modify	Modify	Bijwerken	Umgestaltung	Modification		
+cards.allies	allies_skirmisher	Skirmisher	Tirailleur	Aufwiegler	Tirailleur		
+cards.allies	allies_specialist	Specialist	Specialist	Spezialistin	Spécialiste		
+cards.allies	allies_swap	Swap	Ruilen	Tausch	Troc		
+cards.allies	allies_marquis	Marquis	Markies	Marquis	Marquis		
+cards.allies	allies_ally_architectsguild	Architects' Guild	Bouwmeestersgilde	Architektengilde	Guilde des Architectes		
+cards.allies	allies_ally_bandofnomads	Band of Nomads	Groep Nomaden	Nomadenstamm	Bande de Nomades		
+cards.allies	allies_ally_cavedwellers	Cave Dwellers	Holbewoners	Höhlenbewohner	Troglodytes		
+cards.allies	allies_ally_circleofwitches	Circle of Witches	Heksencirkel	Hexenbund	Cercle des Sorcières		
+cards.allies	allies_ally_citystate	City-state	Stadstaat	Stadtstaat	Cité-État		
+cards.allies	allies_ally_coastalhaven	Coastal Haven	Kusthaven	Höhlenhafen	Havre-Côtier		
+cards.allies	allies_ally_craftersguild	Crafters' Guild	Ambachtsgilde	Handwerkergilde	Guilde des Artisans		
+cards.allies	allies_ally_desertguides	Desert Guides	Woestijngidsen	Wüstenführer	Guides du Déserrt		
+cards.allies	allies_ally_familyofinventors	Family of Inventors	Uitvindersgezin	Erfinderfamilie	Famille d'Inventeurs		
+cards.allies	allies_ally_fellowshipofscribes	Fellowship of Scribes	Schrijversgenootschap	 Gefolgschaft der Schreiber 	Confrérie des Scribes		
+cards.allies	allies_ally_forestdwellers	Forest Dwellers	Bosbewoners	Waldbewohner	Habitants des Forêts		
+cards.allies	allies_ally_gangofpickpockets	Gang of Pickpockets	Bende Zakkenrollers	Taschendiebe	Détrousseurs		
+cards.allies	allies_ally_islandfolk	Island Folk	Eilandbewoners	Inselvolk	Peuple des Îles		
+cards.allies	allies_ally_leagueofbankers	League of Bankers	Bankiersverbond	Bankiersverbund	Ligue des Banquiers		
+cards.allies	allies_ally_leagueofshopkeepers	League of Shopkeepers	Winkeliersverbond	Bund der Ladenbesitzer	Ligue des Commerçants		
+cards.allies	allies_ally_markettowns	Market Towns	Marktsteden	Marktstädte	Villes Commerçantes		
+cards.allies	allies_ally_mountainfolk	Mountain Folk	Bergbewoners	Bergvolk	Montagnards		
+cards.allies	allies_ally_orderofastrologers	Order of Astrologers	Astrologenorde	Sterndeuterorden	Ordre des Astrologues		
+cards.allies	allies_ally_orderofmasons	Order of Masons	Metselaarsorde	Freimaurerloge	Ordre des Maçons		
+cards.allies	allies_ally_peacefulcult	Peaceful Cult	Vreemdzame Sekte	Friedlicher Kult	Culte Pacifiuqe		
+cards.allies	allies_ally_plateaushepherds	Plateau Shepherds	Hooglandherders	Schäfer der Hochebene	Bergers du Plateau		
+cards.allies	allies_ally_trapperslodge	Trappers' Lodge	Jagershut	Hütte der Fallensteller	Cabane de Trappeurs		
+cards.allies	allies_ally_woodworkersguild	Woodworkers' Guild	Timmermansgilde	Holzarbeitergilde	Guilde des Meunuisiers		
 cards.allies	allies_augurstohidesplitcard	Augurs - to hide split card			Augures		
-cards.allies	allies_herbgatherer	Herb Gatherer		Kräutersammlerin	Cueilleuse d'Herbes		
-cards.allies	allies_acolyte	Acolyte		Altardienerin	Acolyte		
-cards.allies	allies_sorceress	Sorceress		Meisterhexe	Sorcière Maléfique		
-cards.allies	allies_sibyl	Sibyl		Prophetin	Sibylle		
+cards.allies	allies_herbgatherer	Herb Gatherer	Kruidenverzamelaar	Kräutersammlerin	Cueilleuse d'Herbes		
+cards.allies	allies_acolyte	Acolyte	Misdienaar	Altardienerin	Acolyte		
+cards.allies	allies_sorceress	Sorceress	Toverheks	Meisterhexe	Sorcière Maléfique		
+cards.allies	allies_sibyl	Sibyl	Sibille	Prophetin	Sibylle		
 cards.allies	allies_clashestohidesplitcard	Clashes - to hide split card			Affrontements		
-cards.allies	allies_battleplan	Battle Plan		Schlachtplan	Tactique		
-cards.allies	allies_archer	Archer		Bogenschützin	Archère		
-cards.allies	allies_warlord	Warlord		Kriegsherr	Seigneur de Guerre		
-cards.allies	allies_territory	Territory		Territorium	Teritoire		
+cards.allies	allies_battleplan	Battle Plan	Strijdplan	Schlachtplan	Tactique		
+cards.allies	allies_archer	Archer	Boogschutter	Bogenschützin	Archère		
+cards.allies	allies_warlord	Warlord	Krijgsheer	Kriegsherr	Seigneur de Guerre		
+cards.allies	allies_territory	Territory	Gebied	Territorium	Teritoire		
 cards.allies	allies_fortstohidesplitcard	Forts - to hide split card			Fortifications		
-cards.allies	allies_tent	Tent		Zelt	Tente		
-cards.allies	allies_garrison	Garrison		Garnison	Garnison		
-cards.allies	allies_hillfort	Hill Fort		Hügelfort	Fort de la Colline		
-cards.allies	allies_stronghold	Stronghold		Burg	Bastion		
+cards.allies	allies_tent	Tent	Tent	Zelt	Tente		
+cards.allies	allies_garrison	Garrison	Garnizoen	Garnison	Garnison		
+cards.allies	allies_hillfort	Hill Fort	Heuvelfort	Hügelfort	Fort de la Colline		
+cards.allies	allies_stronghold	Stronghold	Ridderkasteel	Burg	Bastion		
 cards.allies	allies_odysseystohidesplitcard	Odysseys - to hide split card			Odyssées		
-cards.allies	allies_oldmap	Old Map		Alte Landkarte	Vieille Carte		
-cards.allies	allies_voyage	Voyage		Seereise	Voyage		
-cards.allies	allies_sunkentreasure	Sunken Treasure		Versunkener Schatz	Trésor Englouti		
-cards.allies	allies_distantshore	Distant Shore		Ferne Küste	Rivage Lointain		
+cards.allies	allies_oldmap	Old Map	Oude Landkaart	Alte Landkarte	Vieille Carte		
+cards.allies	allies_voyage	Voyage	Reis	Seereise	Voyage		
+cards.allies	allies_sunkentreasure	Sunken Treasure	Verzonken Schat	Versunkener Schatz	Trésor Englouti		
+cards.allies	allies_distantshore	Distant Shore	Verre Kust	Ferne Küste	Rivage Lointain		
 cards.allies	allies_townsfolktohidesplitcard	Townsfolk - to hide split card			Citoyens		
-cards.allies	allies_towncrier	Town Crier		Ausruferin	Crieuse Publique		
-cards.allies	allies_blacksmith	Blacksmith		Eisenschmied	Forgeur		
-cards.allies	allies_miller	Miller		Müller	Meunier		
-cards.allies	allies_elder	Elder		Älteste	Aînée		
+cards.allies	allies_towncrier	Town Crier	Omroeper	Ausruferin	Crieuse Publique		
+cards.allies	allies_blacksmith	Blacksmith	Kachelsmid	Eisenschmied	Forgeur		
+cards.allies	allies_miller	Miller	Molenaar	Müller	Meunier		
+cards.allies	allies_elder	Elder	Ouderling	Älteste	Aînée		
 cards.allies	allies_wizardstohidesplitcard	Wizards - to hide split card			Magiciens		
-cards.allies	allies_student	Student		Zauberschüler	Apprenti Magicien		
-cards.allies	allies_conjurer	Conjurer		Beschwörer	Illusioniste		
-cards.allies	allies_sorcerer	Sorcerer		Hexenmeister	Sorcier		
-cards.allies	allies_lich	Lich		Lich	Liche		
+cards.allies	allies_student	Student	Student	Zauberschüler	Apprenti Magicien		
+cards.allies	allies_conjurer	Conjurer	Illusionist	Beschwörer	Illusioniste		
+cards.allies	allies_sorcerer	Sorcerer	Heksenmeester	Hexenmeister	Sorcier		
+cards.allies	allies_lich	Lich	Zielenzuiger	Lich	Liche		
+							
+cards.plunder	plunder_abundance	Abundance		Überfluss	Abondance		
+cards.plunder	plunder_buriedtreasure	Buried Treasure		Vergrabener Schatz	Trésor enfoui		
+cards.plunder	plunder_cabinboy	Cabin Boy		Schiffsjunge	Mousse		
+cards.plunder	plunder_cage	Cage		Käfig	Cage		
+cards.plunder	plunder_crew	Crew		Mannschaft	Équipage		
+cards.plunder	plunder_crucible	Crucible		Schmelztiegel	Creuset		
+cards.plunder	plunder_cutthroat	Cutthroat		Meuchlerin	Coupe-gorge		
+cards.plunder	plunder_enlarge	Enlarge		Vergrößerung[ß]	Élargissement		
+cards.plunder	plunder_figurine	Figurine		Figurine	Figurine		
+cards.plunder	plunder_firstmate	First Mate		Erste Maatin	Seconde		
+cards.plunder	plunder_flagship	Flagship		Flaggschiff	Navire Amiral		
+cards.plunder	plunder_fortunehunter	Fortune Hunter		Abenteurerin	Aventurière		
+cards.plunder	plunder_frigate	Frigate		Fregatte	Frégate		
+cards.plunder	plunder_gondola	Gondola		Gondel	Gondole		
+cards.plunder	plunder_grotto	Grotto		Grotte	Grotte		
+cards.plunder	plunder_harborvillage	Harbor Village		Hafendorf	Village Portuaire		
+cards.plunder	plunder_jewelledegg	Jewelled Egg		Juwelen-Ei	Œuf précieux		
+cards.plunder	plunder_kingscache	King's Cache		Königstruhe	Cache du roi		
+cards.plunder	plunder_landingparty	Landing Party		Landungstrupp	Débarquement		
+cards.plunder	plunder_longship	Longship		Langschiff	Drakkar		
+cards.plunder	plunder_mapmaker	Mapmaker		Kartenzeichnerin	Cartographe Marine		
+cards.plunder	plunder_maroon	Maroon		Ausgesetzter	Abandon		
+cards.plunder	plunder_miningroad	Mining Road		Bergbaustraße[ß]	Chemin minier		
+cards.plunder	plunder_pendant	Pendant		Anhänger	Pendentif		
+cards.plunder	plunder_pickaxe	Pickaxe		Spitzhacke	Pioche		
+cards.plunder	plunder_pilgrim	Pilgrim		Pilger	Pèlerin		
+cards.plunder	plunder_quartermaster	Quartermaster		Quartiermeister	Quartier-maître		
+cards.plunder	plunder_rope	Rope		Seil	Corde		
+cards.plunder	plunder_sackofloot	Sack of Loot		Sack voll Kostbarkeiten	Sac à trophées		
+cards.plunder	plunder_search	Search		Suche	Chasse au trésor		
+cards.plunder	plunder_secludedshrine	Secluded Shrine		Einsamer Schrein	Sanctuaire Isolé		
+cards.plunder	plunder_shaman	Shaman		Schamanin	Chamane		
+cards.plunder	plunder_silvermine	Silver Mine		Silbermine	Mine d'argent		
+cards.plunder	plunder_siren	Siren		Sirene	Sirène		
+cards.plunder	plunder_stowaway	Stowaway		Blinder Passagier	Clandestine		
+cards.plunder	plunder_swampshacks	Swamp Shacks		Sumpfhütten	Cabane des marais		
+cards.plunder	plunder_taskmaster	Taskmaster		Vorarbeiter	Surveillant		
+cards.plunder	plunder_tools	Tools		Werkzeug	Outils		
+cards.plunder	plunder_trickster	Trickster		Gauner	Bonneteur		
+cards.plunder	plunder_wealthyvillage	Wealthy Village		Wohlhabendes Dorf	Village prospère		
+cards.plunder	plunder_amphora	Amphora		Amphore	Amphore		
+cards.plunder	plunder_doubloons	Doubloons		Dublonen	Doublons		
+cards.plunder	plunder_endlesschalice	Endless Chalice		Endloserr Kelch	Calice inépuisable		
+cards.plunder	plunder_figurehead	Figurehead		Galionsfigur	Figure de proue		
+cards.plunder	plunder_hammer	Hammer		Hammer	Marteau		
+cards.plunder	plunder_insignia	Insignia		Insignien	Insigne		
+cards.plunder	plunder_jewels	Jewels		Juwelen	Bijoux		
+cards.plunder	plunder_orb	Orb		Kugel	Orbe		
+cards.plunder	plunder_prizegoat	Prize Goat		Zuchtziege	Chèvre de race		
+cards.plunder	plunder_puzzlebox	Puzzle Box		Rätselschatulle	Boîte mystérieuse		
+cards.plunder	plunder_sextant	Sextant		Sextant	Sextant		
+cards.plunder	plunder_shield	Shield		Schild	Bouclier		
+cards.plunder	plunder_spellscroll	Spell Scroll		Zauberrolle	Manuscrit magique		
+cards.plunder	plunder_staff	Staff		Stab	Bâton		
+cards.plunder	plunder_sword	Sword		Schwert	Épée		
+cards.plunder	plunder_event_bury	Bury		Vergraben	Enterrement		
+cards.plunder	plunder_event_avoid	Avoid		Ausweichen	Évitement		
+cards.plunder	plunder_event_deliver	Deliver		Zustellung	Livraison		
+cards.plunder	plunder_event_peril	Peril		Riskieren	Péril		
+cards.plunder	plunder_event_rush	Rush		Beeilung	Précipitation		
+cards.plunder	plunder_event_foray	Foray		Brandschatzung	Incursion		
+cards.plunder	plunder_event_launch	Launch		In See stechen	Embarquement		
+cards.plunder	plunder_event_mirror	Mirror		Spiegeln	Imitation		
+cards.plunder	plunder_event_prepare	Prepare		Vorbereitung	Préparation		
+cards.plunder	plunder_event_scrounge	Scrounge		Herumsuchen	Maraude		
+cards.plunder	plunder_event_journey	Journey		Reise	Traversée		
+cards.plunder	plunder_event_maelstrom	Maelstrom		Mahlstrom	Maelstrom		
+cards.plunder	plunder_event_looting	Looting		Plünderung	Chasse aux trophées		
+cards.plunder	plunder_event_invasion	Invasion		Invasion	Invasion		
+cards.plunder	plunder_event_prosper	Prosper		Aufblühen	Prospérité		
+cards.plunder	plunder_trait_cheap	Cheap		Billig	Abordable		
+cards.plunder	plunder_trait_cursed	Cursed		Verflucht	Maudit		
+cards.plunder	plunder_trait_fated	Fated		Vorherbestimmt	Destiné		
+cards.plunder	plunder_trait_fawning	Fawning		Anbiedernd	Servile		
+cards.plunder	plunder_trait_friendly	Friendly		Freundlich	Amical		
+cards.plunder	plunder_trait_hasty	Hasty		Eilig	Impatient		
+cards.plunder	plunder_trait_inherited	Inherited		Geerbt	Hérité		
+cards.plunder	plunder_trait_inspiring	Inspiring		Inspirierend	Exaltant		
+cards.plunder	plunder_trait_nearby	Nearby		Benachbart	Proche		
+cards.plunder	plunder_trait_patient	Patient		Geduldig	Patient		
+cards.plunder	plunder_trait_pious	Pious		Fromm	Pieux		
+cards.plunder	plunder_trait_reckless	Reckless		Waghalsig	Téméraire		
+cards.plunder	plunder_trait_rich	Rich		Reich	Riche		
+cards.plunder	plunder_trait_shy	Shy		Scheu	Timide		
+cards.plunder	plunder_trait_tireless	Tireless		Unermüdlich	Infatigable		

@@ -12,6 +12,13 @@
   "reset filter": "reset filter",
   "show Kingdoms list": "show Kingdoms list",
   "hide Kingdoms list": "hide Kingdoms list",
+  "mykingdoms": "mykingdoms",
+  "All recommended sets": "All recommended sets",
+  "Personal sets": "Personal sets",
   "Sets": "Sets",
-  "Bane": "Bane"
+  "Bane": "Bane",
+  "Filter Games": "Filter Games",
+  "All Games": "All Games",
+  "Played Games": "Played Games",
+  "Not played Games": "Not played Games"
 }

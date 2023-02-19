@@ -6,13 +6,13 @@
         :items="items"
         :number-of-columns="genericNbColumns"
         :is-vertical="isVertical"
-		:shape="shape"
+        :shape="shape"
       >
         <template v-slot:default="slotProps">
           <StaticCardWithSet
             :card="slotProps.item"
             :is-vertical="false"
-			:showOverlay="showOverlay"
+            :showOverlay="showOverlay"
           />
         </template>
     </GridLayout>

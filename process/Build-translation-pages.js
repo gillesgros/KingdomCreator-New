@@ -121,6 +121,7 @@ for (let i = 0; i < resultPages.length; i++) {
       if (Line_splittted[0] == page) {
 //    names[Line_splittted[0]][Line_splittted[1]]=[]
         for (let j = 2 ; j < Line_splittted.length; j++) {
+          //names[languages[j]][Line_splittted[1]]= Line_splittted[2]
           if (Line_splittted[j] != '') names[languages[j]][Line_splittted[1]]= Line_splittted[j]
         }
       }

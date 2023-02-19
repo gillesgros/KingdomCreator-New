@@ -1,26 +1,28 @@
 <template>
   <div class="sidebar">
     <div class="sidebar-content">
-      <div class="sidebar-content-title">Sets content</div>
-      <div class="sets" v-for="set in sets" :key="set.setId">
-        <div class="set">
+      <div class="sidebar-content-title">{{ $t("Sets content") }}</div>
+      <div class="set">
+        <div class="sets" v-for="set in sets" :key="set.setId">
           <label class="checkbox">
             <input type="radio" v-model="selectedBoxesSetId" :id="set.setId" :value="set.setId">
-            <span>{{ $t(set.setId) }} 
-              <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> -  1st
-                <input type="radio" v-model="selectedBoxesSetId" :id="(FindMultipleVersionSets(set.setId))[0].idv2" :value="(FindMultipleVersionSets(set.setId))[0].idv2">2nd
-              </span>
-            </span>
+            <span>{{ $t(set.setId) }} <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> -  1st</span></span>
           </label>
+          <span v-if="FindMultipleVersionSets(set.setId).length !== 0">
+            <label class="checkbox suboption-set">
+              <input type="radio" v-model="selectedBoxesSetId" :id="(FindMultipleVersionSets(set.setId))[0].idv2" :value="(FindMultipleVersionSets(set.setId))[0].idv2">
+              <span>2nd</span>
+            </label>
+          </span>
         </div>
       </div>
       <div class="clear"></div>
 
-      <div class="sidebar-content-title">Sort</div>
+      <div class="sidebar-content-title">{{ $t("Sort") }}</div>
       <div class="option" v-for="sortOption in sortOptions" :key="sortOption.value">
         <label class="checkbox">
           <input type="radio" name="sortOption" :value="sortOption.value" v-model="selectedSortOption">
-          <span>{{ sortOption.display }}</span>
+          <span>{{ $t(sortOption.display) }}</span>
         </label>
       </div>
 

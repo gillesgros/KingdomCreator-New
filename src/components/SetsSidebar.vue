@@ -1,17 +1,19 @@
 <template>
   <div class="sidebar">
     <div class="sidebar-content">
-      <div class="sidebar-content-title">{{$t("Sets")}}</div>
-      <div class="sets" v-for="set in kingdomsets" :key="set">
-        <div class="set">
+      <div class="sidebar-content-title">{{ $t("Sets") }}</div>
+      <div class="sets">
+        <div class="sets" v-for="set in kingdomsets" :key="set">
           <label class="checkbox">
-            <input type="radio" id="selectedSet" :value="set" v-model="selectedSetId" />
-            <span>{{ $t(set) }}</span>
-			<span v-if="FindMultipleVersionSets(set).length !== 0"> -  1st
-                <input type="radio" v-model="selectedSetId" id="selectedSet" :value="(FindMultipleVersionSets(set))[0].idv2">2nd
-              </span>
-            </span>
+            <input type="radio" v-model="selectedSetId" id="selectedSet" :value="set"/>
+            <span>{{ $t(set) }} <span v-if="FindMultipleVersionSets(set).length !== 0"> - 1st</span></span>
           </label>
+          <span v-if="FindMultipleVersionSets(set).length !== 0">
+            <label class="checkbox suboption-set">
+              <input type="radio" v-model="selectedSetId" id="selectedSet" :value="(FindMultipleVersionSets(set))[0].idv2">
+              <span>2nd</span>
+            </label>
+          </span>
         </div>
       </div><!-- sets {{ set.name }} --><!-- (this.$store.state as State).selectedSetId -->
 
@@ -47,19 +49,19 @@
 
       <div class="clear"></div>
 
-      <div class="sidebar-content-title">Filter Games</div>
+      <div class="sidebar-content-title">{{ $t("Filter Games") }}</div>
       <div class="option" v-for="filterOption in filterOptions" :key="filterOption.value">
         <label class="checkbox">
           <input type="radio" id="filterOption" :value="filterOption.value" v-model="selectedFilterOption">
-          <span>{{ filterOption.display }}</span>
+          <span>{{ $t(filterOption.display) }}</span>
         </label>
       </div>
 
-      <div class="sidebar-content-title">Sort</div>
+      <div class="sidebar-content-title">{{ $t("Sort") }}</div>
       <div class="option" v-for="sortOption in sortOptions" :key="sortOption.value">
         <label class="checkbox">
           <input type="radio" name="sortOption" :value="sortOption.value" v-model="selectedSortOption">
-          <span>{{ sortOption.display }}</span>
+          <span>{{ $t(sortOption.display) }}</span>
         </label>
       </div>
 
