@@ -21,13 +21,14 @@ import * as Cards_Hinterlands from "./messages/de/cards/cards.de.hinterlands.jso
 import * as Cards_Intrigue from "./messages/de/cards/cards.de.intrigue.json";
 import * as Cards_Menagerie from "./messages/de/cards/cards.de.menagerie.json";
 import * as Cards_Nocturne from "./messages/de/cards/cards.de.nocturne.json";
+import * as Cards_Plunder from "./messages/de/cards/cards.de.plunder.json";
 import * as Cards_Promos from "./messages/de/cards/cards.de.promos.json";
 import * as Cards_Prosperity from "./messages/de/cards/cards.de.prosperity.json";
 import * as Cards_Renaissance from "./messages/de/cards/cards.de.renaissance.json";
 import * as Cards_Seaside from "./messages/de/cards/cards.de.seaside.json";
 
 export const messages = {
-  ...(Common as any).default,
+ ...(Common as any).default,
   ...(Sets as any).default,
 
   ...(Languages as any).default, 
@@ -51,6 +52,7 @@ export const messages = {
   ...(Cards_Intrigue as any).default,
   ...(Cards_Menagerie as any).default,
   ...(Cards_Nocturne as any).default,
+  ...(Cards_Plunder as any).default,
   ...(Cards_Promos as any).default,
   ...(Cards_Prosperity as any).default,
   ...(Cards_Renaissance as any).default,
