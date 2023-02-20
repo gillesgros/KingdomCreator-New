@@ -28,7 +28,7 @@ import * as Cards_Renaissance from "./messages/fr/cards/cards.fr.renaissance.jso
 import * as Cards_Seaside from "./messages/fr/cards/cards.fr.seaside.json";
 
 export const messages = {
- ...(Common as any).default,
+  ...(Common as any).default,
   ...(Sets as any).default,
 
   ...(Languages as any).default, 
