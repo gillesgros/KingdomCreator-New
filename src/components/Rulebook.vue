@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { State } from "vuex-class";
+import { defineComponent } from "vue";
+import { useStore } from "vuex";
 import { getSetImageUrl, getRulebookUrl } from "../utils/resources";
 import { Language } from "../i18n/language";
 import TextOverlay from "./TextOverlay.vue";
@@ -21,25 +21,30 @@ export interface RulebookInterface {
   name: string;
 }
 
-@Component({
+export default defineComponent({
+  name: "Rulebook",
   components: {
     TextOverlay,
+  },
+  props: {
+    rulebook: { type: Object as () => RulebookInterface,
+                required: true,
+    },
+  },
+  setup(props) {
+    const store = useStore();
+    const imageUrl = (() => {
+      return getSetImageUrl(props.rulebook.id, store.state.i18n.language as Language);
+    });
+    const rulebookUrl = (() => {
+      return getRulebookUrl(props.rulebook.id, store.state.i18n.language as Language);
+    });
+    return {
+      imageUrl,
+      rulebookUrl,
+    };
   }
-})
-
-
-export default class Rulebook extends Vue {
-  @Prop() readonly rulebook!: RulebookInterface;
-  @State(state => state.i18n.language) readonly language!: Language;
-  
-  get imageUrl() {
-    return getSetImageUrl(this.rulebook.id, this.language);
-  }
-
-  get rulebookUrl() {
-    return getRulebookUrl(this.rulebook.id, this.language);
-  }
-}
+});
 </script>
 
 <style>

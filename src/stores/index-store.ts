@@ -1,10 +1,7 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import { createStore } from 'vuex';
 import { windowStore, State as WindowState } from "./window/window-store";
 import { randomizerStore, State as RandomizerState } from "./randomizer/randomizer-store";
 import { store as i18nStore, State as I18nState } from "./i18n/store";
-
-Vue.use(Vuex);
 
 export interface State {
   window: WindowState;
@@ -12,7 +9,7 @@ export interface State {
   i18n: I18nState
 }
 
-export const store = new Vuex.Store({
+export default createStore({
   state: {
   } as State,
   modules: {

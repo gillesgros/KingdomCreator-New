@@ -1,13 +1,11 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+//import Vue from "vue";
+import { createRouter, createWebHistory } from "vue-router";
 
-Vue.use(VueRouter);
-
-export function createRouter(paths: string[], component: typeof Vue) {
-  return new VueRouter({
-    mode: "history",
+export function AppCreateRouter(paths: string[], component: any) {
+  return createRouter({
+    history: createWebHistory(),
     routes: paths.map(
       path => { return { name: path, path, component } }
     )
   });
-}
+};

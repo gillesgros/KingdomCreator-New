@@ -1,12 +1,9 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import { createStore } from 'vuex';
 import { SetId } from "../dominion/set-id";
 import { windowStore, State as WindowStoreState } from "./window/window-store";
 import { store as i18nStore, State as I18nState } from "./i18n/store";
 import { SortOption } from "../settings/settings";
 
-
-Vue.use(Vuex);
 
 export interface State {
   selectedSetId: SetId;
@@ -20,7 +17,7 @@ export interface State {
   i18n: I18nState;
 }
 
-export const store = new Vuex.Store({
+export default createStore({
   state: {
     selectedSetId: SetId.BASE_SET,
     sortSet: SortOption.SET,
