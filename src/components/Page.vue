@@ -45,12 +45,12 @@
         </div>
 
         <i18n class="github-info" path="github_info" tag="div">
-          <template v-slot:source>
+          <template #source>
             <a href="https://github.com/gillesgros/KingdomCreator-New">{{
               $t("github_info_source")
             }}</a>
           </template>
-          <template v-slot:issues>
+          <template #issues>
             <a href="https://github.com/gillesgros/KingdomCreator-New/issues">{{
               $t("github_info_issues")
             }}</a>
@@ -58,20 +58,20 @@
         </i18n>
 
         <i18n class="disclaimers-and-credit" path="disclaimers_and_credits" tag="div">
-          <template v-slot:wiki>
+          <template #wiki>
             <a href="http://wiki.dominionstrategy.com/index.php/Main_Page">{{
               $t("disclaimers_and_credits_wiki")
             }}</a>
           </template>
-          <template v-slot:smashicons>
+          <template #smashicons>
             <a href="https://www.flaticon.com/authors/smashicons" target="_blank">{{
               $t("disclaimers_and_credits_smashicons")
             }}</a>
           </template>
-          <template v-slot:flaticon>
+          <template #flaticon>
             <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>
           </template>
-          <template v-slot:creativecommons>
+          <template #creativecommons>
             <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">{{
               $t("disclaimers_and_credits_creative_commons")
             }}</a>
@@ -83,12 +83,10 @@
 </template>
 
 <script lang="ts">
-import { Getter, State } from "vuex-class";
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { Vue2Storage } from "vue2-storage";
+import { defineComponent, computed } from "vue";
+import { useRoute } from 'vue-router';
 import { Language } from "../i18n/language";
-
-export declare var process: { env: { NODE_ENV: string } }
+import { useStore } from 'vuex';
 
 export enum MenuItemType {
   RANDOMIZER,
@@ -98,10 +96,13 @@ export enum MenuItemType {
   BOXES,
 }
 
-Vue.use(Vue2Storage, {
+/*
+const storage = createStorage({
   prefix: 'KingdomCreator_',
   driver: 'local'
 });
+Vue.use(storage);
+*/
 
 class MenuItem {
   constructor(readonly type: MenuItemType, readonly title: string, readonly url: string) {
@@ -125,49 +126,58 @@ if (process.env.NODE_ENV == "development"){
   ];
 }
 
+export default defineComponent({
+  name: "Page",
+  props: {
+    subtitle: String,
+    selectedType: {
+      type: Number,
+      required: true,
+    },
+  },
+  setup(props) {
+    const route = useRoute();
+    const store = useStore();
+    const isCondensed = computed(() => store.getters.isCondensed);
+    const language = computed(() => store.state.i18n.language);
+    const menuItems = (() => MENU_ITEMS);
+    const isCondensedMenuActive = computed<boolean>({
+      get: () => false,
+      set: (value) => {
+        store.commit('isCondensedMenuActive', value);
+      },
+    });
+    const shouldShowCondensedMenu = computed<boolean>(() => isCondensed.value && isCondensedMenuActive.value);
+    const languages = computed<string[]>(() => Object.values(Language));
 
+    const getMenuItemUrl = (url: string) =>
+      language.value !== Language.ENGLISH ? `${url}?lang=${language.value}` : url;
 
-@Component
-export default class Page extends Vue {
-  @Prop() readonly subtitle!: string;
-  @Prop() readonly selectedType!: MenuItemType;
-  @Getter("isCondensed") readonly isCondensed!: boolean;
-  @State(state => state.i18n.language) readonly language!: Language;
-  isCondensedMenuActive = false;
-  menuItems = MENU_ITEMS;
-
-  get shouldShowCondensedMenu() {
-    return this.isCondensed && this.isCondensedMenuActive;
-  }
-
-  get languages() {
-    return Object.keys(Language).map(key => Language[key as keyof typeof Language]);
-  }
-
-  getMenuItemUrl(url: string) {
-    return this.language != Language.ENGLISH
-      ? `${url}?lang=${this.language}` 
-      : url;
-  }
-
-  getLanguageLinkOptions(language: string) {
-    return {
-      params: this.$route.params,
+    const getLanguageLinkOptions = (language: string) => ({
+      params: route.params,
       query: {
-        ...this.$route.query,
-        lang: language
-      } 
+        ...route.query,
+        lang: language,
+      },
+    });
+
+    const handleMenuClick = () => {
+      isCondensedMenuActive.value = !isCondensedMenuActive.value;
     };
-  }
 
-  handleMenuClick() {
-    this.isCondensedMenuActive = !this.isCondensedMenuActive;
-  }
+    const isMenuItemActive = (menuItem: MenuItem) => menuItem.type === props.selectedType;
 
-  isMenuItemActive(menuItem: MenuItem) {
-    return menuItem.type == this.selectedType;
-  }
-}
+    return {
+      shouldShowCondensedMenu,
+      menuItems,
+      languages,
+      getMenuItemUrl,
+      getLanguageLinkOptions,
+      handleMenuClick,
+      isMenuItemActive,
+    };
+  },
+});
 </script>
 
 <style scoped>

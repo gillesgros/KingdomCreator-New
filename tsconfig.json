@@ -15,13 +15,15 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "target": "es5",
+    "esModuleInterop": true,
+    "target": "es6",
     "baseUrl": "./",
     "paths": {
         "*" : ["types/*"]
     },
     "types": [
       "google.analytics",
+      "node",
     ],
     "lib": [
       "dom",

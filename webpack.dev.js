@@ -12,7 +12,7 @@ module.exports = merge(common(false), {
     static: {
       directory: __dirname
     },
-	proxy: {
+    proxy: {
       "/img": {
         target: 'http://localhost:8080',
         pathRewrite: {"^/img" : "/docs/img"}

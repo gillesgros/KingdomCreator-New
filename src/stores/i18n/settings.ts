@@ -31,7 +31,7 @@ export class Settings implements SettingsParams {
       return Language.ENGLISH;
     }
     return window.navigator && window.navigator.language
-      ? getLanguage(window.navigator.language)
+      ? (getLanguage(window.navigator.language) as Language)
       : Language.ENGLISH;
   }
 }

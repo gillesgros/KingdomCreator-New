@@ -27,7 +27,6 @@ module.exports = merge(common(true), {
           "!img", 
           "!ads.txt"],
       cleanAfterEveryBuildPatterns: [
-          "*.map", 
           "*.LICENSE.txt", 
           "*.ttf", 
           "*.otf", 

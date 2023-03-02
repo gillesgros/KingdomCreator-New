@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { defineComponent, PropType } from "vue";
 
 export enum Shape {
   CARD = "grid-layout_item--card",
@@ -15,19 +15,38 @@ export enum Shape {
   SMALLSQUARE = "grid-layout_item--smallsquare",
 }
 
-@Component
-export default class GridLayout extends Vue {
-  @Prop() readonly items!: any[];
-  @Prop() readonly numberOfColumns!: number;
-  @Prop() readonly isVertical!: boolean;
-  @Prop({ default: Shape.CARD }) readonly shape!: Shape;
+export default defineComponent({
+  name: "GridLayout",
+  props: {
+    items: {
+      type: Array as PropType<any[]>,
+      required: true,
+    },
+    numberOfColumns: {
+      type: Number,
+      required: true,
+    },
+    isVertical: {
+      type: Boolean,
+      default: false,
+    },
+    shape: {
+      type: String as PropType<Shape>,
+      default: Shape.CARD,
+    },
+  },
+  computed: {
+    columnClasses(): string[] {
+      const columnClasses = ["", "one-column", "two-columns", "three-columns", "four-columns", "five-columns"];
+      const directionClass = this.isVertical ? "grid-layout--vertical" : "grid-layout--horizontal";
+      return [columnClasses[this.numberOfColumns], directionClass];
+    },
+  },
+});
 
-  get columnClasses() {
-    const columnClasses = ["", "one-column", "two-columns", "three-columns", "four-columns", "five-columns"];
-    const directionClass = this.isVertical ? "grid-layout--vertical" : "grid-layout--horizontal";
-    return [columnClasses[this.numberOfColumns], directionClass];
-  }
-}
+
+
+
 </script>
 
 <style>

@@ -1,26 +1,24 @@
-import Vue from "vue"
-import VueI18n from "vue-i18n"
+import { createI18n } from 'vue-i18n'
 import en from "./en";
 import { Language } from "./language";
 
-Vue.use(VueI18n);
+const i18n = createI18n({
+  locale: Language.ENGLISH,
+  fallbackLocale: Language.ENGLISH,
+  silentTranslationWarn: true,
+  messages: { en },
+});
 
 export class I18n {
-  private static readonly instance = new VueI18n({
-    locale: Language.ENGLISH,
-    fallbackLocale: Language.ENGLISH,
-    silentTranslationWarn: true,
-    messages: { en }
-  });
-  
+  private static readonly instance = i18n;
   private static readonly loaded = new Set([Language.ENGLISH]);
 
-  static getInstance(): VueI18n {
+  static getInstance(): any {
     return this.instance;
   }
 
   static async setLanguage(language: Language): Promise<any> {
-    this.instance.locale = language;
+    i18n.global.locale = (language as typeof  i18n.global.locale);
     document.querySelector("html")?.setAttribute("lang", language) ?? false
   }
 
@@ -28,8 +26,10 @@ export class I18n {
     if (this.loaded.has(language)) {
       return Promise.resolve();
     }
-    const { messages } = await import(/* webpackChunkName: "language-[request]" */ `./${language}.ts`);
-    this.instance.setLocaleMessage(language, messages);
+    const { messages } = await import(
+        /* webpackChunkName: "language-[request]" */ `./${language}.ts`);
+    i18n.global.setLocaleMessage(language, messages);
     this.loaded.add(language);
   }
 }
+
