@@ -1,7 +1,10 @@
-import Index from "./views/Index.vue";
-import { store } from "./stores/index-store";
+//import Index from "./views/Index.vue";
+import Rules from "./views/Rules.vue"
+import { default as store } from "./stores/sets-store";
 import { initialize } from "./setup";
-import { createRouter } from "./router";
+import { AppCreateRouter } from "./router";
 
-initialize(createRouter(["/", "/index.html"], Index), store);
-
+/*
+initialize(AppCreateRouter(["/index.html"], Index), store);
+*/
+initialize(AppCreateRouter(["/index.html"], Rules), store);

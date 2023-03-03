@@ -1,6 +1,11 @@
-import Boxes from "./views/Boxes.vue";
-import { store } from "./stores/sets-store";
+//import Boxes from "./views/Boxes.vue";
+import Rules from "./views/Rules.vue"
+import { default as store } from "./stores/sets-store";
 import { initialize } from "./setup";
-import { createRouter } from "./router";
+import { AppCreateRouter } from "./router";
 
-initialize(createRouter(["/boxes.html"], Boxes), store);
+/*
+initialize(AppCreateRouter(["/boxes.html"], Boxes), store);
+*/
+initialize(AppCreateRouter(["/boxes.html"], Rules), store);
+
