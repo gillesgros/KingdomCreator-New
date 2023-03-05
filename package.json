@@ -1,7 +1,7 @@
 {
   "author": "Gilles Gros based on fork from Blake VanLandingham",
   "name": "KingdomCreator-New ",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,8 +10,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js --port 8080",
-    "check": "npm-check-updates",
     "serve-static": "http-server docs -p 8000",
+    "check": "npm-check-updates",
     "eslvue": "eslint --parser vue-eslint-parser --ext .vue src ",
     "eslts": "eslint --ext .js,.ts src"
   },
@@ -28,11 +28,11 @@
     "@intlify/vue-i18n-loader": "^4.2.0",
     "@types/google.analytics": "0.0.42",
     "@types/js-cookie": "^2.2.7",
-    "@types/node": "^18.14.5",
+    "@types/node": "^18.14.6",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "@vue/compiler-sfc": "^3.2.47",
-    "@webdiscus/pug-loader": "^2.10.2",
+    "@webdiscus/pug-loader": "^2.10.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",

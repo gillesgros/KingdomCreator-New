@@ -13,7 +13,7 @@ module.exports = function(isProduction) {
       extensions: [".tsx", ".ts", ".js", ".styl", ".pug", ".vue"],
       alias: {
         "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
-        "vue$": "vue/dist/vue.esm-bundler.js"
+        "vue$": "vue/dist/vue.esm-browser.js"
       }
     },
     entry: {

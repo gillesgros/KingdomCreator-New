@@ -34,14 +34,16 @@ export default defineComponent({
     Rulebook,
   },
   props: {
-    rulebook: { type: Object as PropType<RulebookInterface>, required: true }
+    rulebook: { type: Object as PropType<RulebookInterface>, required: false }
   },
   setup(props) {
+  console.log ("in Rulebooks")
     const store = useStore();
     const { t } = useI18n();
-    const language = computed(() => store.state.i18n.language as Language);
+    const language = store.state.i18n.language;
 
     const rulebooks = computed(() => {
+	console.log(language, Language.FRENCH )
       return DominionSets
         .getAllSets()
         .filter(s => !Set_To_Ignore_Rules.has(s.setId))
@@ -53,7 +55,7 @@ export default defineComponent({
         })
         .concat({
           id: SetId.GUILDSCONUCOPIA as string,
-          name: `$t(SetId.GUILDS) / $t(SetId.CORNUCOPIA)`,
+          name: t(SetId.GUILDS) + " / " + t(SetId.CORNUCOPIA),
         })
         .filter((set) => !(
             language.value == Language.FRENCH  

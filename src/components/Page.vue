@@ -32,7 +32,6 @@
       <slot></slot>
       <footer>
         <div class="languages">
-          <template>
             <span v-for="(language, index) in languages" :key="language">
               <router-link :to="getLanguageLinkOptions(language)">
                 {{ $t(language) }}
@@ -41,10 +40,9 @@
                 &nbsp;&bull;&nbsp;
               </span>
             </span>
-          </template>
         </div>
 
-        <i18n class="github-info" path="github_info" tag="div">
+        <i18n-t class="github-info" keypath="github_info" tag="div">
           <template #source>
             <a href="https://github.com/gillesgros/KingdomCreator-New">{{
               $t("github_info_source")
@@ -55,9 +53,9 @@
               $t("github_info_issues")
             }}</a>
           </template>
-        </i18n>
+        </i18n-t>
 
-        <i18n class="disclaimers-and-credit" path="disclaimers_and_credits" tag="div">
+        <i18n-t class="disclaimers-and-credit" keypath="disclaimers_and_credits" tag="div">
           <template #wiki>
             <a href="http://wiki.dominionstrategy.com/index.php/Main_Page">{{
               $t("disclaimers_and_credits_wiki")
@@ -76,7 +74,7 @@
               $t("disclaimers_and_credits_creative_commons")
             }}</a>
           </template>
-        </i18n>
+        </i18n-t>
       </footer>
     </div>
   </div>
@@ -130,42 +128,44 @@ export default defineComponent({
   name: "Page",
   props: {
     subtitle: String,
-    selectedType: {
-      type: Number,
-      required: true,
+    selectedType: Number,
+    isCondensed: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
+    console.log("in Page")
     const route = useRoute();
     const store = useStore();
-    const isCondensed = computed(() => store.getters.isCondensed);
-    const language = computed(() => store.state.i18n.language);
-    const menuItems = (() => MENU_ITEMS);
-    const isCondensedMenuActive = computed<boolean>({
-      get: () => false,
-      set: (value) => {
-        store.commit('isCondensedMenuActive', value);
-      },
-    });
-    const shouldShowCondensedMenu = computed<boolean>(() => isCondensed.value && isCondensedMenuActive.value);
-    const languages = computed<string[]>(() => Object.values(Language));
+    const isCondensed = store.getters.isCondensed;
+    const language = store.state.i18n.language;
+    let isCondensedMenuActive = false;
 
+    const menuItems = MENU_ITEMS;
+    const shouldShowCondensedMenu = isCondensed && isCondensedMenuActive;
+    const languages = computed<string[]>(() => Object.values(Language));
     const getMenuItemUrl = (url: string) =>
       language.value !== Language.ENGLISH ? `${url}?lang=${language.value}` : url;
 
-    const getLanguageLinkOptions = (language: string) => ({
-      params: route.params,
-      query: {
-        ...route.query,
-        lang: language,
-      },
-    });
+
+    const getLanguageLinkOptions = (language: string) => {
+      return {
+        path: "/rules.html",
+        params: route.params,
+        query: {
+          ...route.query,
+          lang: language,
+        }
+      };
+    };
 
     const handleMenuClick = () => {
-      isCondensedMenuActive.value = !isCondensedMenuActive.value;
+      isCondensedMenuActive = !isCondensedMenuActive;
     };
 
     const isMenuItemActive = (menuItem: MenuItem) => menuItem.type === props.selectedType;
+    console.log("in finalPage")
 
     return {
       shouldShowCondensedMenu,
