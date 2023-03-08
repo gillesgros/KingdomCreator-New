@@ -17,11 +17,11 @@ module.exports = function(isProduction) {
       }
     },
     entry: {
-     index: ["./src/index-page.ts", "./styles/index.styl"],
-     sets: ["./src/sets-page.ts", "./styles/sets.styl"],
+    // index: ["./src/index-page.ts", "./styles/index.styl"],
+    // sets: ["./src/sets-page.ts", "./styles/sets.styl"],
       rules: ["./src/rules-page.ts", "./styles/rules.styl"],
-     cards: ["./src/cards-page.ts", "./styles/cards.styl"],
-     boxes: ["./src/boxes-page.ts", "./styles/sets.styl"],
+    // cards: ["./src/cards-page.ts", "./styles/cards.styl"],
+    // boxes: ["./src/boxes-page.ts", "./styles/sets.styl"],
     },
     output: {
       path: path.resolve(__dirname, "docs"),
@@ -49,6 +49,7 @@ module.exports = function(isProduction) {
           exclude: /node_modules/,
           options: {
             appendTsSuffixTo: [/\.vue$/],
+            transpileOnly: true
           }
         },
         {

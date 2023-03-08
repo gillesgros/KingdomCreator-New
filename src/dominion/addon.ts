@@ -1,5 +1,5 @@
-import {Card} from "./card"
-import {Cost} from "./cost"
+import type {Card} from "./card"
+import type {Cost} from "./cost"
 
 export interface Addon extends Card {
   readonly name: string;

@@ -1,7 +1,9 @@
 import { Language } from "../../i18n/language"
-import { I18n } from "../../i18n/i18n";
+import { i18n, setLocale } from "../../i18n/i18n";
+import { I18n } from "vue-i18n";
 import { Settings } from "./settings";
 import { actions } from "./actions";
+
 
 export interface State {
   language: Language;
@@ -14,7 +16,8 @@ export const store = {
   actions,
   mutations: {
     SET_LANGUAGE (state: State, language: Language) {
-      I18n.setLanguage(language);
+      console.log("in SET_LANGAUGE")
+      setLocale(i18n as I18n, language)
       state.language = language;
       new Settings(language).save();
     }

@@ -17,7 +17,7 @@ npm install -global npm-check-updates
 ### Commands
 
 set PATH=%PATH%;"%cd%\..\..\# Portable App\node-v18.9.0-win-x64"
-$env:Path = (($env:Path -split ';') + ((Get-Location).ToString()+"/../../# Portable App\node-v18.13.0-win-x64")) -join ';'
+$env:Path = (($env:Path -split ';') + ((Get-Location).ToString()+"/../../# Portable App\node-v19-win-x64")) -join ';'
 
 `npm start` - Run the development server with hot reloading at `localhost:8080`
 

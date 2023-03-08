@@ -1,5 +1,5 @@
 import {DominionKingdom} from "./dominion-kingdom"
-import {SetId} from "./set-id"
+import type {SetId} from "./set-id"
 
 interface DominionContentKingdoms {
   kingdoms: any[];

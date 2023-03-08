@@ -16,35 +16,34 @@
   </div>
 </template>
 
-
 <script lang="ts">
-import { defineComponent, PropType, computed } from "vue";
+import { defineComponent, computed } from "vue";
 import { useStore } from "vuex";
 import { useI18n } from "vue-i18n";
+import type { I18n } from "vue-i18n";
+
 import GridLayout, { Shape } from "./GridLayout.vue";
-import Rulebook, { RulebookInterface } from "./Rulebook.vue";
+import Rulebook from "./Rulebook.vue";
+import type { RulebookInterface } from "./Rulebook.vue";
 import { SetId, Set_To_Ignore_Rules, Set_To_Ignore_Rules_FR } from "../dominion/set-id";
 import { DominionSets } from "../dominion/dominion-sets";
 import { Language } from "../i18n/language";
+import { i18n, getLocale } from "../i18n/i18n";
 
 export default defineComponent({
   name: "Rulebooks",
   components: {
     GridLayout,
-    Rulebook,
+    Rulebook
   },
-  props: {
-    rulebook: { type: Object as PropType<RulebookInterface>, required: false }
-  },
-  setup(props) {
-  console.log ("in Rulebooks")
+  setup() {
     const store = useStore();
     const { t } = useI18n();
-    const language = store.state.i18n.language;
+    const language = computed(() => getLocale(i18n as I18n));
 
+    console.log(language.value, t(SetId.GUILDS))
     const rulebooks = computed(() => {
-	console.log(language, Language.FRENCH )
-      return DominionSets
+      const listSets =  DominionSets
         .getAllSets()
         .filter(s => !Set_To_Ignore_Rules.has(s.setId))
         .map(s => {
@@ -65,16 +64,15 @@ export default defineComponent({
         .sort((a, b) => {
           return a.id == b.id ? 0 : a.id < b.id ? -1 : 1;
         });
-      });
-
-      return {
-      language,
-      rulebooks,
-      Shape,
+      return listSets;
+    });
+    
+    return { 
+      rulebooks, 
+      Shape 
     };
   }
 });
-
 </script>
 
 <style>

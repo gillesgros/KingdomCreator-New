@@ -1,5 +1,5 @@
 import {Boon} from "./boon";
-import {Card} from "./card";
+import type {Card} from "./card";
 import {DominionSet} from "./dominion-set";
 import {Event} from "./event";
 import {Landmark} from "./landmark";

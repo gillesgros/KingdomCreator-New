@@ -1,5 +1,4 @@
 <template>
-
   <a class="rulebook" target="_rulebookDominion" :href="rulebookUrl">
     <img class="rulebook__img" :src="imageUrl" />
     <TextOverlay>
@@ -11,11 +10,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore } from "vuex";
+import { defineComponent, computed, ref } from "vue";
+// import { useStore } from "vuex";
 import { getSetImageUrl, getRulebookUrl } from "../utils/resources";
-import { Language } from "../i18n/language";
+// import type { Language } from "../i18n/language";
 import TextOverlay from "./TextOverlay.vue";
+import { i18n, getLocale } from "../i18n/i18n";
+import type { I18n } from "vue-i18n";
 
 export interface RulebookInterface {
   id: string;
@@ -33,14 +34,13 @@ export default defineComponent({
     },
   },
   setup(props) {
-    console.log ("in Rulebook")
-    const store = useStore();
+    const lang = computed (() => getLocale(i18n as I18n));
     const imageUrl = computed(() => {
-      return getSetImageUrl(props.rulebook.id, store.state.i18n.language as Language);
+      return getSetImageUrl(props.rulebook.id, lang.value);
     });
 
     const rulebookUrl = computed(() => {
-      return getRulebookUrl(props.rulebook.id, store.state.i18n.language as Language);
+      return getRulebookUrl(props.rulebook.id, lang.value);
     });
 
     return {

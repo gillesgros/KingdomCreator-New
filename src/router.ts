@@ -7,7 +7,7 @@ export function AppCreateRouter(paths: string[], component: any) {
     routes: paths.map(
       path => { return { 
                     name: component.name, 
-	                path : path,
+                    path : path,
                     component : component } }
     )
   });

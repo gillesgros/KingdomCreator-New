@@ -27,7 +27,7 @@ import * as Cards_Prosperity from "./messages/nl/cards/cards.nl.prosperity.json"
 import * as Cards_Renaissance from "./messages/nl/cards/cards.nl.renaissance.json";
 import * as Cards_Seaside from "./messages/nl/cards/cards.nl.seaside.json";
 
-export const messages = {
+export default {
   ...(Common as any).default,
   ...(Sets as any).default,
 

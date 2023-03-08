@@ -27,7 +27,7 @@ import * as Cards_Prosperity from "./messages/de/cards/cards.de.prosperity.json"
 import * as Cards_Renaissance from "./messages/de/cards/cards.de.renaissance.json";
 import * as Cards_Seaside from "./messages/de/cards/cards.de.seaside.json";
 
-export const messages = {
+export default {
   ...(Common as any).default,
   ...(Sets as any).default,
 
@@ -59,3 +59,4 @@ export const messages = {
   ...(Cards_Seaside as any).default
 
 }
+

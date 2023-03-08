@@ -1,9 +1,10 @@
 import { createStore } from 'vuex';
 import { SetId } from "../dominion/set-id";
-import { windowStore, State as WindowStoreState } from "./window/window-store";
-import { store as i18nStore, State as I18nState } from "./i18n/store";
+import { windowStore } from "./window/window-store";
+import type { State as WindowStoreState } from "./window/window-store";
+import { store as i18nStore } from "./i18n/store";
+import type { State as I18nState } from "./i18n/store";
 import { SortOption } from "../settings/settings";
-
 
 export interface State {
   selectedSetId: SetId;

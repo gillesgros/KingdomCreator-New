@@ -41,8 +41,7 @@
               </span>
             </span>
         </div>
-
-        <i18n-t class="github-info" keypath="github_info" tag="div">
+        <i18n-t scope="global" class="github-info" keypath="github_info" tag="div">
           <template #source>
             <a href="https://github.com/gillesgros/KingdomCreator-New">{{
               $t("github_info_source")
@@ -54,8 +53,7 @@
             }}</a>
           </template>
         </i18n-t>
-
-        <i18n-t class="disclaimers-and-credit" keypath="disclaimers_and_credits" tag="div">
+        <i18n-t scope="global" class="disclaimers-and-credit" keypath="disclaimers_and_credits" tag="div">
           <template #wiki>
             <a href="http://wiki.dominionstrategy.com/index.php/Main_Page">{{
               $t("disclaimers_and_credits_wiki")
@@ -82,9 +80,13 @@
 
 <script lang="ts">
 import { defineComponent, computed } from "vue";
+import { useI18n } from "vue-i18n";
+import type { I18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
+
 import { Language } from "../i18n/language";
 import { useStore } from 'vuex';
+import { i18n, getLocale } from '../i18n/i18n'
 
 export enum MenuItemType {
   RANDOMIZER,
@@ -135,23 +137,25 @@ export default defineComponent({
     },
   },
   setup(props) {
-    console.log("in Page")
+    console.log("Page: Setup")
     const route = useRoute();
     const store = useStore();
+    const { t } = useI18n();
     const isCondensed = store.getters.isCondensed;
-    const language = store.state.i18n.language;
+    const language = getLocale(i18n as I18n);
     let isCondensedMenuActive = false;
 
     const menuItems = MENU_ITEMS;
     const shouldShowCondensedMenu = isCondensed && isCondensedMenuActive;
-    const languages = computed<string[]>(() => Object.values(Language));
+    const languages = computed (() => {
+        console.log(getLocale(i18n as I18n)); 
+        return Object.values(Language)
+    });
     const getMenuItemUrl = (url: string) =>
-      language.value !== Language.ENGLISH ? `${url}?lang=${language.value}` : url;
-
+      language !== Language.ENGLISH ? `${url}?lang=${language}` : url;
 
     const getLanguageLinkOptions = (language: string) => {
       return {
-        path: "/rules.html",
         params: route.params,
         query: {
           ...route.query,
@@ -165,7 +169,6 @@ export default defineComponent({
     };
 
     const isMenuItemActive = (menuItem: MenuItem) => menuItem.type === props.selectedType;
-    console.log("in finalPage")
 
     return {
       shouldShowCondensedMenu,

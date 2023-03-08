@@ -1,3 +1,5 @@
+import type { Locale } from 'vue-i18n'
+
 export enum Language {
   DUTCH = "nl",
   ENGLISH = "en",
@@ -7,7 +9,7 @@ export enum Language {
   POLISH ="pl"
 }
 
-export function getLanguage(value: string):Language {
+export function getLanguage(value: string):Locale {
   const [prefix] = value.split("-");
   for (const key of Object.keys(Language)) {
     if (Language[key as keyof typeof Language] == prefix) {

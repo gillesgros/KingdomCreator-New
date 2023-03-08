@@ -14,7 +14,7 @@ html
     script(src=htmlWebpackPlugin.options.isProduction ? "./dominion-content.js?" + Date.now() : "./dominion-content.js")
     
     //- Ads
-    // script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-33669676-2")
+    //- script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-33669676-2")
     
     - if (htmlWebpackPlugin.options.isProduction)
       script.
@@ -24,13 +24,13 @@ html
         }
         //- Google Analytics
         window.dataLayer = window.dataLayer || [];
-        //function gtag(){dataLayer.push(arguments);}
-        //gtag("js", new Date());
-        //gtag("config", "UA-33669676-2");
+        //- function gtag(){dataLayer.push(arguments);}
+        //- gtag("js", new Date());
+        //- gtag("config", "UA-33669676-2");
 
         //- Heap.io
-        //window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
-        //heap.load("3826781935");
+        //- window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+        //- heap.load("3826781935");
 
     block head
 

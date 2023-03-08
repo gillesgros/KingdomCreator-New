@@ -1,41 +1,15 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*"],
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "preserveConstEnums": true,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "target": "es6",
-    "baseUrl": "./",
-    "paths": {
-        "*" : ["types/*"]
-    },
+    "isolatedModules": false,
+    "preserveValueImports": true,
     "types": [
-      "google.analytics",
       "node",
     ],
-    "lib": [
-      "dom",
-      "es5",
-      "scripthost",
-      "es2015"
-    ],
-  },
-  "include": [
-    "./src/**/*",
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }

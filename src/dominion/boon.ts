@@ -1,5 +1,5 @@
-import {Card} from "./card";
-import {SetId} from "./set-id";
+import type { Card } from "./card";
+import type { SetId } from "./set-id";
 
 export class Boon implements Card {
   constructor(
@@ -7,7 +7,7 @@ export class Boon implements Card {
     readonly shortId: string,
     readonly setId: SetId,
     readonly name: string,
-    readonly orderstring: string ) {
+    readonly orderstring: string) {
   }
 
   public static fromJson(json: any) {

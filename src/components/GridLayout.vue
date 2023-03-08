@@ -7,7 +7,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, computed } from "vue";
+import type { PropType } from "vue";
 
 export enum Shape {
   CARD = "grid-layout_item--card",
@@ -35,17 +36,18 @@ export default defineComponent({
       default: Shape.CARD,
     },
   },
-  computed: {
-    columnClasses(): string[] {
+  setup(props){
+    let columnClasses = computed(() => {
       const columnClasses = ["", "one-column", "two-columns", "three-columns", "four-columns", "five-columns"];
-      const directionClass = this.isVertical ? "grid-layout--vertical" : "grid-layout--horizontal";
-      return [columnClasses[this.numberOfColumns], directionClass];
-    },
-  },
+      const directionClass = props.isVertical ? "grid-layout--vertical" : "grid-layout--horizontal";
+      return [columnClasses[props.numberOfColumns], directionClass];
+    });
+  
+    return {
+      columnClasses
+    };
+  }
 });
-
-
-
 
 </script>
 

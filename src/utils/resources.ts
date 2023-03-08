@@ -1,3 +1,4 @@
+import type { Locale } from "vue-i18n";
 import { Language } from "../i18n/language";
 
 const IMAGE_PREFEX = "/img/cards";
@@ -18,7 +19,7 @@ export function getCardImageUrl(cardId: string, language: Language) {
 }
 
 
-export function getSetImageUrl(setId: string, language: Language) {
+export function getSetImageUrl(setId: string, language: Locale) {
   const ext = PNG_SET_IMAGES.has(setId) ? "png" : "jpg";
   switch (language) {
     case Language.FRENCH:
@@ -28,7 +29,7 @@ export function getSetImageUrl(setId: string, language: Language) {
   }
 }
 
-export function getRulebookUrl(setId: string, language: Language) {
+export function getRulebookUrl(setId: string, language: Locale) {
     switch (language) {
     case Language.FRENCH:
       return `${RULE_PDF_PREFEX}.${language}/${setId}.pdf`;
