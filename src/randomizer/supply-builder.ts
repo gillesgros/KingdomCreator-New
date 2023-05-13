@@ -1,11 +1,11 @@
 import {Cards} from "../utils/cards";
 import {SegmentedRange} from "../utils/segmented-range";
-import {SupplyCard} from "../dominion/supply-card";
-import {SupplyBan} from "./supply-ban";
-import {SupplyCorrection} from "./supply-correction";
-import {SupplyDivider} from "./supply-divider";
+import type {SupplyCard} from "../dominion/supply-card";
+import type {SupplyBan} from "./supply-ban";
+import type {SupplyCorrection} from "./supply-correction";
+import type {SupplyDivider} from "./supply-divider";
 import {SupplyDivision} from "./supply-division";
-import {SupplyRequirement} from "./supply-requirement";
+import type {SupplyRequirement} from "./supply-requirement";
 import {Supply, Replacements} from "./supply";
 import {getRandomInt, selectRandom} from "../utils/rand";
 import { SupplyDivisions } from "./supply-divisions";

@@ -7,8 +7,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+/* import Vue, typescript */
+import { defineComponent, computed ,watch} from "vue";
 import type { PropType } from "vue";
+
+/* import Dominion Objects and type*/
+/* import store  */
+/* import Components */
 
 export enum Shape {
   CARD = "grid-layout_item--card",
@@ -48,7 +53,6 @@ export default defineComponent({
     };
   }
 });
-
 </script>
 
 <style>
@@ -113,6 +117,18 @@ export default defineComponent({
   flex-basis: 99.8%;
   padding-bottom: 62.454%; /* 99.8 * (296 / 473) */
   margin: 0 0.1% 4px 0.1%;
+}
+
+.five-columns .grid-layout_item--square {
+  flex-basis: 19.5%;;
+  padding-bottom: 19.5%;; /* 19.5 * (500 / 500) */
+  margin: 0.25%;
+}
+
+.four-columns .grid-layout_item--square {
+  flex-basis: 24.2%;
+  padding-bottom: 24.2%; /* 24.2 * (500 / 500) */
+  margin: 0.4%;
 }
 
 .three-columns .grid-layout_item--square {

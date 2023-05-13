@@ -1,5 +1,5 @@
-import {CardType} from "../dominion/card-type";
-import {CostType} from "../dominion/cost-type";
+import type {CardType} from "../dominion/card-type";
+import type {CostType} from "../dominion/cost-type";
 import {SetId} from "../dominion/set-id";
 
 export class RandomizerOptions {

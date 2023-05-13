@@ -7,7 +7,7 @@
           <div class="sets-description">{{$t("boxes_page_description")}}</div>
           <div class="kingdoms">
 		  <!-- Box content -->
-            <PresetBoxcontent  />
+            <PresetBoxcontent />
           </div>
         </div>
       </div>
@@ -17,36 +17,31 @@
 </template>
 
 <script lang="ts">
-import { Component } from "vue-property-decorator";
-import Base from "./base";
-import Page, { MenuItemType } from "../components/Page.vue";
+import { defineComponent } from 'vue';
+import useBase from "./base";
+import Page from "../components/Page.vue";
+import { MenuItemType } from "../components/Page.vue";
 import EnlargeButton from "../components/EnlargeButton.vue";
 import PresetBoxcontent from "../components/PresetBoxcontent.vue";
 import BoxesSidebar from "../components/BoxesSidebar.vue";
 
-/*
-import { DominionSets } from "../dominion/dominion-sets";
-import { DominionSet } from "../dominion/dominion-set";
-import { State } from "../stores/sets-store";
-*/
 
-@Component({
+export default defineComponent({
+  name: "Boxes", 
   components: {
     Page,
     PresetBoxcontent,
     BoxesSidebar,
-    EnlargeButton,
-  }
-})
-export default class Boxes extends Base {
-  selectedType = MenuItemType.BOXES
+    EnlargeButton
+  },
+  setup() {
+    useBase();
+    const selectedType = MenuItemType.BOXES;
 
-/*
-  get sets() {
-    const setId = (this.$store.state as State).selectedBoxesSetId;
-	console.log("in Boxes : set is = " + setId);
-    return [ (DominionSets.sets[setId] as DominionSet) ];
+  return {
+      selectedType,
+    };
   }
-  */
-}
+
+});
 </script>

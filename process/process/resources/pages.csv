@@ -5,15 +5,15 @@ languages	en	English	Engels	Englisch	Anglais	Inglés	Angielski
 languages	fr	French	Frans	Französisch	Français	Francés	Francuski
 languages	nl	Dutch	Nederlands	Niederländisch	Néerlandais	Holandés	Niderlandzki
 languages	es	Spanish	Spaans	Spanisch	Espagnol	Español	Hiszpański
-languages	pl	Polish	Pools	Polieren	Polonais	Polaco	Polski
+languages	pl	Polish	Pools	Polnisch	Polonais	Polaco	Polski
 common	addon_description_format_2	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}	{one} & {two}
 common	addon_description_format_3	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}	{one}, {two} & {three}
 common	addon_description_format_4	{one}, {two}, {three} & {four}	{one}, {two}, {three} & {four}	{one}, {two}, {three} & {four}	{one}, {two}, {three} & {four}	{one}, {two}, {three} & {four}	{one}, {two}, {three} & {four}
 common	addon_description_format_5	{one}, {two}, {three}, {four} & {five}	{one}, {two}, {three}, {four} & {five}	{one}, {two}, {three}, {four} & {five}	{one}, {two}, {three}, {four} & {five}	{one}, {two}, {three}, {four} & {five}	{one}, {two}, {three}, {four} & {five}
-common	addon_events	Events		Events	Evénements	Eventos	
-common	addon_landmarks	Landmarks		Landmarks	Repères	Hitos	
-common	addon_projects	Projects		Projects	Projets	Proyectos	
-common	addon_ways	Ways		Ways	Voies	Sendas	
+common	addon_events	Events		Ereignisse	Evénements	Eventos	
+common	addon_landmarks	Landmarks		Landmarke	Repères	Hitos	
+common	addon_projects	Projects		Projekte	Projets	Proyectos	
+common	addon_ways	Ways		Wege	Voies	Sendas	
 common	addon_allies	Allies			Alliés		
 common	addon_traits	Traits			Comportement		
 common	github_info	Source is on {source}. Feature requests and complaints go {issues}!	Source is on {source}. Feature requests and complaints go {issues}!	Quellcode ist auf {source}. Funktionsanfragen und Beschwerden bitte {issues}!	Le code source est disponible sur {source}. Pour une demande de fonctionnalité ou un problème, s’adresser {issues} !	Código fuente:  {source}. Solictudes, dudas y errores {issues}!	Kod źródłowy znajduje się w repozytorium {source}. Propozycje zmian oraz uwagi można zgłaszać {issues}!
@@ -119,7 +119,7 @@ page-sets
 							
 sets	adventures	adventures	Avonturen	Abenteuer	Aventures	Aventuras	Adventures
 sets	alchemy	alchemy	De Alchemisten	Die Alchemisten	Alchimie	Alquimia	Alchemy
-sets	allies	allies			Alliés		Allies
+sets	allies	allies		Verbündete	Alliés		Allies
 sets	baseset2add	baseset2add			Dominion updatepack		Dominion updatepack
 sets	baseset2	baseset2	Dominion II	Dominion II	Dominion (2nd ed)	Dominion 2ª Ed.	Dominion II
 sets	baseset	baseset	Dominion	Dominion	Dominion	Dominion	Dominion
@@ -138,7 +138,7 @@ sets	nocturne	nocturne	Nocturne	Nocturne	Nocturne	Nocturno	Pieśń nocy
 sets	promos	promos	Promos	Promos	Promos	Promos	Promos
 sets	prosperity	prosperity	Welvaart	Blütezeit	Prospérité	Prosperidad	Złoty wiek
 sets	prosperity2add	prosperity2add	Welvaart updatepack	Blütezeit updatepack	Prospérité updatepack	Prosperidad updatepack	Złoty wiek updatepack
-sets	prosperity2	prosperity2		BlütezeitII	Prospérité (2nd ed)	Prosperidad 2ª Ed.	Złoty wiek II
+sets	prosperity2	prosperity2		Blütezeit II	Prospérité (2nd ed)	Prosperidad 2ª Ed.	Złoty wiek II
 sets	renaissance	renaissance	Renaissance	Renaissance	Renaissance	Renacimiento	Renaissance
 sets	seaside	seaside	Hijs de Zeilen	Seaside	Rivages	Terramar	Przystań
 sets	seaside2	seaside2	Hijs de Zeilen II	Seaside II	Rivages (2nd ed)	Terramar 2ª Ed.	Przystań II
@@ -837,7 +837,7 @@ cards.allies	allies_ally_coastalhaven	Coastal Haven	Kusthaven	Höhlenhafen	Havre
 cards.allies	allies_ally_craftersguild	Crafters' Guild	Ambachtsgilde	Handwerkergilde	Guilde des Artisans		
 cards.allies	allies_ally_desertguides	Desert Guides	Woestijngidsen	Wüstenführer	Guides du Déserrt		
 cards.allies	allies_ally_familyofinventors	Family of Inventors	Uitvindersgezin	Erfinderfamilie	Famille d'Inventeurs		
-cards.allies	allies_ally_fellowshipofscribes	Fellowship of Scribes	Schrijversgenootschap	 Gefolgschaft der Schreiber 	Confrérie des Scribes		
+cards.allies	allies_ally_fellowshipofscribes	Fellowship of Scribes	Schrijversgenootschap	Gefolgschaft der Schreiber	Confrérie des Scribes		
 cards.allies	allies_ally_forestdwellers	Forest Dwellers	Bosbewoners	Waldbewohner	Habitants des Forêts		
 cards.allies	allies_ally_gangofpickpockets	Gang of Pickpockets	Bende Zakkenrollers	Taschendiebe	Détrousseurs		
 cards.allies	allies_ally_islandfolk	Island Folk	Eilandbewoners	Inselvolk	Peuple des Îles		

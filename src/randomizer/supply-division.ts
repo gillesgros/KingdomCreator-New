@@ -1,5 +1,5 @@
 import {Cards} from "../utils/cards"
-import {SupplyCard} from "../dominion/supply-card"
+import type {SupplyCard} from "../dominion/supply-card"
 import { Replacements } from "./supply";
 
 export class SupplyDivision {

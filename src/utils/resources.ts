@@ -44,20 +44,16 @@ export function ChangeCss(selector:string, property: string, value:string) {
       try { document.styleSheets[i].insertRule(selector+ ' {'+property+':'+value+'}', document.styleSheets[i].cssRules.length);
       } catch(err) {
         try { document.styleSheets[i].addRule(selector, property+':'+value);
-        } catch(err) { console.log("do nothing")
+        } catch(err) { 
+          // console.log("do nothing")
         }
       }//IE
     }
 }
 
 export function incaseofImgerror(ev:any) {
-  //console.log("starting incaseofImgerror")
-  console.log("ev.target.imgUrl: " + ev.target.imgUrl + " ## ev.target.src: " +ev.target.src)
   const imgsrc = ev.target.src;
-  //console.log('imgsrc: ' + imgsrc)
-  //console.log('imgURL: ' + ev.target.imgUrl)
   let First_try = false
-
 
   const indextoInsert = imgsrc.lastIndexOf('/'); 
   // /img/cards.fr/baseset2*/artisan.jpg or 
@@ -75,14 +71,16 @@ export function incaseofImgerror(ev:any) {
   if (ev.target.imgUrl == undefined) {
     First_try = true
     ev.target.imgUrl = ev.target.src
-	console.log("First_try undefined: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+	// console.log("First_try undefined: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
 
   } else if (ev.target.imgUrl != ev.target.src) {
     First_try = false
     ev.target.imgUrl = ev.target.src
-    console.log("First_try equal: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+    // console.log("First_try equal: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
 
-  } else console.log("First_try: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+  } else {
+    // console.log("First_try: " + First_try + " ## lastletter: "+ lastletter + " ## last4letters: " + last4letters)
+  }
   let construct_URL=""
   
 /*
@@ -105,40 +103,30 @@ export function incaseofImgerror(ev:any) {
 
 
   if (last4letters=="2add") {
-    console.log('// last4letters == 2add switching to english need to add setname')
     if (!isLangEN) {
       // switching to english need to add setname
       construct_URL = imgsrc.slice(0,indexLang-3)+ imgsrc.slice(indexLang,indextoInsert-4)
           + imgsrc.slice(indexLang,indextoInsert-4) + '_' +imgsrc.slice(indextoInsert+1)
-      //console.log('// switching to english need to add setname')
-      //console.log(construct_URL)
       ev.target.src = construct_URL
     }
   } else if (lastletter == "2") {
-    //console.log('// lastletter == 2')
     if (First_try) {
-      console.log('First try remove 2' + 'Lang is EN : ' + isLangEN)
       if (isLangEN) { // remove 2
         construct_URL = imgsrc.slice(0,indextoInsert-1) + imgsrc.slice(indexLang,indextoInsert-1) 
             +imgsrc.slice(indextoInsert+ indexforSetinCardName)
-        //console.log(construct_URL)
         ev.target.src = construct_URL
       } else {
         construct_URL = imgsrc.slice(0,indextoInsert-1) + imgsrc.slice(indextoInsert)
-        //console.log(construct_URL)
         ev.target.src = construct_URL
       }
     } else { // add 2add
-      //console.log('not First try add 2add ' + 'Lang is EN : ' + isLangEN)
       if (isLangEN) { // add 2add in setname 2 times
         construct_URL = imgsrc.slice(0,indextoInsert) + "add" + imgsrc.slice(indexLang,indextoInsert) 
             + 'add_' +imgsrc.slice(indextoInsert+ indexforSetinCardName+1)
-        //console.log(construct_URL)
         ev.target.src = construct_URL
 
       } else {
         construct_URL = imgsrc.slice(0,indextoInsert) + "add" + imgsrc.slice(indextoInsert)
-        //console.log(construct_URL)
         ev.target.src = construct_URL
       }
     }
@@ -147,15 +135,12 @@ export function incaseofImgerror(ev:any) {
     if (isLangEN) { // add 2 in setname 2 times
       construct_URL = imgsrc.slice(0,indextoInsert) + "2" +
            imgsrc.slice(indexLang,indextoInsert) + '2_' + imgsrc.slice(indextoInsert+ indexforSetinCardName+1)
-      //console.log(construct_URL)
       ev.target.src = construct_URL
     } else {
       construct_URL = imgsrc.slice(0,indextoInsert) + "2" + imgsrc.slice(indextoInsert)
-      //console.log(construct_URL)
       ev.target.src = construct_URL
     }
   }
-  console.log("===============" + ev.target.src)
 }
 
 

@@ -1,9 +1,9 @@
 import {CardType} from "../dominion/card-type";
 import {Cards} from "../utils/cards";
 import {SegmentedRange} from "../utils/segmented-range";
-import {SupplyCard} from "../dominion/supply-card";
-import {SupplyCorrection} from "./supply-correction";
-import {SupplyDivision} from "./supply-division";
+import type {SupplyCard} from "../dominion/supply-card";
+import type {SupplyCorrection} from "./supply-correction";
+import type {SupplyDivision} from "./supply-division";
 import {SupplyDivisions} from "./supply-divisions";
 import {getRandomInt} from "../utils/rand";
 

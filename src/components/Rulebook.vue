@@ -10,13 +10,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref } from "vue";
-// import { useStore } from "vuex";
+/* import Vue, typescript */
+import { defineComponent, computed } from "vue";
+
+/* import Dominion Objects and type*/
 import { getSetImageUrl, getRulebookUrl } from "../utils/resources";
-// import type { Language } from "../i18n/language";
+
+/* import store  */
+import { usei18nStore } from '../pinia/i18n-store';
+
+/* import Components */
 import TextOverlay from "./TextOverlay.vue";
-import { i18n, getLocale } from "../i18n/i18n";
-import type { I18n } from "vue-i18n";
 
 export interface RulebookInterface {
   id: string;
@@ -34,7 +38,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const lang = computed (() => getLocale(i18n as I18n));
+    const i18nStore = usei18nStore();
+    const lang = computed(() => {return i18nStore.language});
     const imageUrl = computed(() => {
       return getSetImageUrl(props.rulebook.id, lang.value);
     });

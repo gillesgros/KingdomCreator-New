@@ -1,12 +1,7 @@
-//import Cards from "./views/Cards.vue";
-import Rules from "./views/Rules.vue"
-import { default as store } from "./stores/sets-store";
+import Cards from "./views/Cards.vue"
 import { initialize } from "./setup";
 import { AppCreateRouter } from "./router";
 
-/*
-initialize(AppCreateRouter(["/cards.html"], Cards), store);
-*/
-initialize(AppCreateRouter(["/cards.html"], Rules), store);
+import '../styles/cards.styl';
 
-
+initialize(AppCreateRouter(["/cards.html"], Cards));

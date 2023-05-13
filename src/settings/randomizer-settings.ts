@@ -13,6 +13,17 @@ export interface RandomizerSettingsParams {
   isAlchemyRecommendationEnabled?: boolean;
 }
 
+export interface RandomizerSettingsParamsBoolean {
+  requireActionProvider?: boolean;
+  requireCardProvider?: boolean;
+  requireBuyProvider?: boolean;
+  allowAttacks?: boolean;
+  requireReaction?: boolean;
+  requireTrashing?: boolean;
+  distributeCost?: boolean;
+  isAlchemyRecommendationEnabled?: boolean;
+}
+
 export class RandomizerSettings implements RandomizerSettingsParams {
   constructor(
       readonly requireActionProvider: boolean,

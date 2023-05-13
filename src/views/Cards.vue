@@ -1,48 +1,54 @@
 <template>
   <Page :subtitle="$t('sets_page_subtitle')" :selectedType="selectedType">
     <div class="content">
-     <BoxesSidebar />
-     <div class="main">
-       <card-online-page-component :set="set"  v-if="true"/>
-       <card-online-page-landscape-component :set="set"  v-if="true"/>
-       <card-online-page-othercard-component :set="set" v-if="true"/>
+      <BoxesSidebar />
+      <div class="main">
+        <card-online-page-component :set="set" v-if="true" />
+        <card-online-page-landscape-component :set="set" v-if="true" />
+        <card-online-page-othercard-component :set="set" v-if="true" />
       </div>
     </div>
   </Page>
-
 </template>
 
 <script lang="ts">
-import { Component } from "vue-property-decorator";
-import Base from "./base";
-import Page, { MenuItemType } from "../components/Page.vue";
+import { computed, defineComponent } from 'vue';
+import useBase from "./base";
+import Page from "../components/Page.vue";
+import { MenuItemType } from "../components/Page.vue";
 
 import CardOnlinePageComponent from "../components/card-online-page.vue";
 import CardOnlinePageLandscapeComponent from "../components/card-online-page-landscape.vue";
 import CardOnlinePageOthercardComponent from "../components/card-online-page-othercard.vue";
 import BoxesSidebar from "../components/BoxesSidebar.vue";
-import { State } from "../stores/sets-store";
 import { DominionSets } from "../dominion/dominion-sets";
-import { DominionSet } from "../dominion/dominion-set";
+import type { DominionSet } from "../dominion/dominion-set";
+import { useSetsStore } from "../pinia/sets-store";
 
-
-@Component({
+export default defineComponent({
+  name: "Cards",
   components: {
     Page,
     BoxesSidebar,
     "card-online-page-component": CardOnlinePageComponent,
     "card-online-page-landscape-component": CardOnlinePageLandscapeComponent,
     "card-online-page-othercard-component": CardOnlinePageOthercardComponent
+  },
+  setup() {
+    const setsStore = useSetsStore();
+
+    useBase();
+    const selectedType = MenuItemType.CARDS
+
+    const set = computed(() => {
+      const setId = setsStore.selectedBoxesSetId;
+      return (DominionSets.sets[setId] as DominionSet);
+    })
+
+    return {
+      selectedType,
+      set
+    };
   }
 })
-
-export default class Cards extends Base {
-  selectedType = MenuItemType.CARDS
-  
-  get set() {
-    const setId = (this.$store.state as State).selectedBoxesSetId;
-    return (DominionSets.sets[setId] as DominionSet);
-  }
-  
-}
 </script>

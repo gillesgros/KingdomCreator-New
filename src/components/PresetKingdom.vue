@@ -86,18 +86,25 @@
 </template>
 
 <script lang="ts">
-import AddonTitle from "./AddonTitle.vue";
-import GridLayout from "./GridLayout.vue";
+/* import Vue, typescript */
+import { defineComponent, computed } from 'vue';
+import type { PropType } from "vue";
+import { useI18n } from "vue-i18n";
+
+/* import Dominion Objects and type*/
 import { DominionKingdom } from "../dominion/dominion-kingdom";
 import { DominionSets } from "../dominion/dominion-sets";
-import { SupplyCard } from "../dominion/supply-card";
-import { State } from "vuex-class";
-import { State as StoreState } from "../stores/sets-store";
-import { UPDATE_NEED_REFRESH } from "../stores/sets-store-mutation-types";
+import type { SupplyCard } from "../dominion/supply-card";
 import { SupplyCardSorter } from "../utils/supply-card-sorter";
-import { SortOption } from "../settings/settings";
+import type { SortOption } from "../settings/settings";
 
-import { Vue, Component, Prop } from "vue-property-decorator";
+/* import store  */
+import { useWindowStore } from '../pinia/window-store';
+import { useSetsStore } from "../pinia/sets-store";
+
+/* import Components */
+import AddonTitle from "./AddonTitle.vue";
+import GridLayout from "./GridLayout.vue";
 import StaticCardWithSet from "./StaticCardWithSet.vue";
 import BaneCardCover from "./BaneCardCover.vue";
 import CopyButton from "./CopyButton.vue";
@@ -105,50 +112,60 @@ import CopyButton from "./CopyButton.vue";
 const FOUR_COLUMN_SUPPLY_CARD_WIDTH = 450;
 const TWO_COLUMN_ADDON_WIDTH = 525;
 
-@Component({
+export default defineComponent({
+  name: 'PresetKingdom',
   components: {
     AddonTitle,
     GridLayout,
     StaticCardWithSet,
     BaneCardCover,
-    CopyButton,
-  }
-})
-export default class PresetKingdom extends Vue {
-  @Prop() readonly kingdom!: DominionKingdom;
-  @State(state => state.sortSet) readonly sortSet!: string;
-  @State(state => state.window.width) windowWidth!: number;
+    CopyButton
+  },
+  props: {
+    kingdom: {
+      type: DominionKingdom as PropType<DominionKingdom>,
+      required: true
+    }
+  },
+  setup(props) {
+    const windowStore = useWindowStore();
+    const setsStore = useSetsStore();
+    const { t } = useI18n();
 
-  get sets() {
-    return this.kingdom.setIds.map(DominionSets.getSetById);
-  }
+    const sets = computed(() => {
+      return props.kingdom.setIds.map(DominionSets.getSetById);
+    });
 
-  get numberOfColumnsForSupplyCards() {
-    return this.windowWidth <= FOUR_COLUMN_SUPPLY_CARD_WIDTH ? 4 : 5;
-  }
+    const numberOfColumnsForSupplyCards = computed(() => {
+      return windowStore.isEnlarged ? 2 : windowStore.width <= FOUR_COLUMN_SUPPLY_CARD_WIDTH ? 4 : 5;
+    });
 
-  get numberOfColumnsForAddons() {
-    return this.windowWidth <= TWO_COLUMN_ADDON_WIDTH ? 2 : 3;
-  }
+    const numberOfColumnsForAddons = computed(() => {
+      return windowStore.isEnlarged ? 1 : windowStore.width <= TWO_COLUMN_ADDON_WIDTH ? 2 : 3;
+    });
 
-  get addonIds() {
-    return this.kingdom.eventIds.concat(
-        this.kingdom.landmarkIds, this.kingdom.projectIds, this.kingdom.wayIds, this.kingdom.allyIds, this.kingdom.traitIds);
-  }
 
-  get hasMetadata() {
-    return this.kingdom.metadata.useColonies || this.kingdom.metadata.useShelters;
-  }
+// export default class PresetKingdom extends Vue {
+//   @Prop() readonly kingdom!: DominionKingdom;
 
-  get copyText() {
-    return this.kingdom.supplyIds.concat(this.addonIds).map((id) => this.$t(id)).join(", ");
-  }
+  const addonIds = computed(() => {
+    return props.kingdom.eventIds.concat(
+      props.kingdom.landmarkIds, props.kingdom.projectIds, props.kingdom.wayIds, props.kingdom.allyIds, props.kingdom.traitIds);
+  });
 
-  getSupplyCards(kingdom: DominionKingdom) {
-    const cardIds = this.kingdom.supplyIds.concat();
-    let Cards = SupplyCardSorter.sort(this.getCards(cardIds) as SupplyCard[], (this.$store.state as StoreState).sortSet as SortOption, this.$t.bind(this));
-    if (this.kingdom.baneCardId) {
-      Cards.push(this.getCards([this.kingdom.baneCardId])[0]);
+  const hasMetadata = computed(() => {
+    return props.kingdom.metadata.useColonies || props.kingdom.metadata.useShelters;
+  });
+
+  const copyText = computed(() => {
+    return props.kingdom.supplyIds.concat(addonIds.value).map((id) => t(id)).join(", ");
+  });
+
+  const getSupplyCards = (kingdom: DominionKingdom) => {
+    const cardIds = props.kingdom.supplyIds.concat();
+    let Cards = SupplyCardSorter.sort(getCards(cardIds) as SupplyCard[], setsStore.sortSet as SortOption, t);
+    if (props.kingdom.baneCardId) {
+      Cards.push(getCards([props.kingdom.baneCardId])[0]);
     }
     /*
     if (this.kingdom.obeliskCardId) {
@@ -156,69 +173,88 @@ export default class PresetKingdom extends Vue {
     }
     */
     return Cards;
-  }
+  };
 
-  getCards(cardIds: string[]) {
-    return SupplyCardSorter.sort(cardIds.map(DominionSets.getCardById) as SupplyCard[], (this.$store.state as StoreState).sortSet as SortOption, this.$t.bind(this));
-  }
+  const getCards = (cardIds: string[]) => {
+    return SupplyCardSorter.sort(cardIds.map(DominionSets.getCardById) as SupplyCard[], setsStore.sortSet as SortOption, t);
+  };
 
-  isBaneCard(supplyCard: SupplyCard) {
-    return this.kingdom.baneCardId &&
-      this.kingdom.baneCardId == supplyCard.id;
-  }
+  const isBaneCard = (supplyCard: SupplyCard) => {
+    return props.kingdom.baneCardId &&
+    props.kingdom.baneCardId == supplyCard.id;
+  };
 
-  isObeliskCard(supplyCard: SupplyCard) {
-    return this.kingdom.obeliskCardId &&
-      this.kingdom.obeliskCardId == supplyCard.id;
-  }
+  const isObeliskCard = (supplyCard: SupplyCard) => {
+    return props.kingdom.obeliskCardId &&
+    props.kingdom.obeliskCardId == supplyCard.id;
+  };
 
 //  getCopyText(kingdom: DominionKingdom) {
 //    return this.getSupplyCards(kingdom).map((card) => card.name).join(", ");
 //  }
   
-  isPlayFavImg(kingdomName: string) {
-    let PlayedGames = this.$storage.get("playedGames")
+  const isPlayFavImg = (kingdomName: string) => {
+    let PlayedGames = setsStore.playedGames;
     let myIndex = PlayedGames.indexOf(kingdomName,0)
     if (myIndex > -1) {
       return "check";
     } else {
        return "light_blue_cross";
     }
-  }
+  };
 
-  isGameDisplayed(kingdomName: string) {
-    if ((this.$store.state as StoreState).showFilterPlayGames == "PNP") { return true }
-    let PlayedGames = this.$storage.get("playedGames")
+  const isGameDisplayed = (kingdomName: string) => {
+    if (setsStore.showFilterPlayGames == "PNP") { return true }
+    let PlayedGames = setsStore.playedGames;
     let myIndex = PlayedGames.indexOf(kingdomName,0)
-    if ((this.$store.state as StoreState).showFilterPlayGames == "P") {
+    if (setsStore.showFilterPlayGames == "P") {
       return (myIndex > -1) ? true : false;  }
-    if ((this.$store.state as StoreState).showFilterPlayGames == "NP") {
+    if (setsStore.showFilterPlayGames == "NP") {
       return myIndex > -1 ? false : true; }
     return true
-  }
+  };
 
-  onclick(ev: any, kingdomName: string) {
-    let PlayedGames = this.$storage.get("playedGames")
+  const onclick = (ev: any, kingdomName: string) => {
+    let PlayedGames = setsStore.playedGames
     let myIndex = PlayedGames.indexOf(kingdomName,0)
     if (myIndex > -1) {
       /* remove it */
       PlayedGames.splice(myIndex,1)
-      this.$storage.set("playedGames",PlayedGames)
+      setsStore.updatePlayedGames(PlayedGames)
       ev.target.src="/img/elements/light_blue_cross.png"
     } else {
        /* add it */
-       this.$storage.set("playedGames", PlayedGames.concat(kingdomName))
+       setsStore.updatePlayedGames(PlayedGames.concat(kingdomName))
        ev.target.src="/img/elements/check.png"
     }
-    if ((this.$store.state as StoreState).showFilterPlayGames != "PNP") { 
-      this.forceRerender() }
-  }
+    if (setsStore.showFilterPlayGames != "PNP") { 
+      forceRerender() }
+  };
 
-   forceRerender() {
-     this.$store.commit(UPDATE_NEED_REFRESH);
-  }
+   const forceRerender = () => {
+     setsStore.updateNeedRefresh()
+  };
 
-}
+  return {
+      t,
+      sets,
+      numberOfColumnsForSupplyCards,
+      numberOfColumnsForAddons,
+
+      addonIds,
+      hasMetadata,
+      copyText,
+      getSupplyCards,
+      getCards,
+ 
+      isBaneCard,
+      isObeliskCard,
+      isPlayFavImg,
+      isGameDisplayed,
+      onclick
+    };
+  }
+})
 </script>
 
 <style>

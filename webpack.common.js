@@ -7,7 +7,7 @@ const webpack = require("webpack");
 
 process.traceDeprecation = true;
 
-module.exports = function(isProduction) {
+module.exports = function (isProduction) {
   return {
     resolve: {
       extensions: [".tsx", ".ts", ".js", ".styl", ".pug", ".vue"],
@@ -17,11 +17,11 @@ module.exports = function(isProduction) {
       }
     },
     entry: {
-    // index: ["./src/index-page.ts", "./styles/index.styl"],
-    // sets: ["./src/sets-page.ts", "./styles/sets.styl"],
+      index: ["./src/index-page.ts", "./styles/index.styl"],
+      sets: ["./src/sets-page.ts", "./styles/sets.styl"],
       rules: ["./src/rules-page.ts", "./styles/rules.styl"],
-    // cards: ["./src/cards-page.ts", "./styles/cards.styl"],
-    // boxes: ["./src/boxes-page.ts", "./styles/sets.styl"],
+      cards: ["./src/cards-page.ts", "./styles/cards.styl"],
+      boxes: ["./src/boxes-page.ts", "./styles/sets.styl"],
     },
     output: {
       path: path.resolve(__dirname, "docs"),
@@ -57,14 +57,14 @@ module.exports = function(isProduction) {
           type: "javascript/auto",
           loader: "@intlify/vue-i18n-loader"
         },
-        { 
+        {
           test: /\.pug$/,
           use: ["@webdiscus/pug-loader"],
         },
         {
           test: /\.styl$/,
           use: [
-            {loader: MiniCssExtractPlugin.loader},
+            { loader: MiniCssExtractPlugin.loader },
             "css-loader",
             "stylus-loader"
           ]
@@ -81,9 +81,9 @@ module.exports = function(isProduction) {
     plugins: [
       new VueLoaderPlugin(),
       new DominionContentPlugin(),
-/*
+
       new HtmlWebpackPlugin({
-        template: "./views/index.pug",
+        template: "./views/layout.pug",
         chunks: ["index"],
         filename: "index.html",
         isProduction: isProduction,
@@ -93,37 +93,34 @@ module.exports = function(isProduction) {
         chunks: ["sets"],
         filename: "sets.html",
         isProduction: isProduction,
-      })
-*/
+      }),
       new HtmlWebpackPlugin({
-        template: "./views/rules.pug",
+        template: "./views/layout.pug",
         chunks: ["rules"],
         filename: "rules.html",
         isProduction: isProduction,
       }),
-/*
       new HtmlWebpackPlugin({
-        template: "./views/cards.pug",
+        template: "./views/layout.pug",
         chunks: ["cards"],
         filename: "cards.html",
         isProduction: isProduction,
       }),
       new HtmlWebpackPlugin({
-        template: "./views/boxes.pug",
+        template: "./views/layout.pug",
         chunks: ["boxes"],
         filename: "boxes.html",
         isProduction: isProduction,
       }),
-*/
       new MiniCssExtractPlugin({
         filename: "[name]-[contenthash].css",
         chunkFilename: "[id]-[contenthash].css",
       }),
       new webpack.DefinePlugin({
-        // Définit la variable globale pour les options de Vue
+        // Dï¿½finit la variable globale pour les options de Vue
         '__VUE_OPTIONS_API__': true,
-        '__VUE_PROD_DEVTOOLS__': false,
-    }),
+        '__VUE_PROD_DEVTOOLS__': true,
+      }),
     ]
   }
 } 

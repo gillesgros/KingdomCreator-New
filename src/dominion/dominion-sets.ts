@@ -59,6 +59,11 @@ export class DominionSets {
       return 0;
       });
   }
+  public static getAllSetsIds(): SetId[] {
+    const sets: DominionSet[] = [];
+    const setIds = Object.keys(DominionSets.sets) as SetId[]
+    return setIds.sort();
+  }
 
   public static getAllCards(): Card[] {
     const cards: Card[] = [];

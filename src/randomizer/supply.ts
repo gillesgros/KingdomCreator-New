@@ -1,4 +1,4 @@
-import {SupplyCard} from "../dominion/supply-card";
+import type {SupplyCard} from "../dominion/supply-card";
 import { Cards } from "../utils/cards";
 
 export class Supply {
@@ -41,7 +41,6 @@ export class Replacements {
     const newReplacements: Map<string, SupplyCard[]> = new Map();
     for (const id of replacements.keys()) {
       newReplacements.set(id, replacements.get(id)?.filter(Cards.filterByExcludedIds(cardIds)) ?? []);
-      //console.log(replacements.get(id)!.filter(Cards.filterByExcludedIds(cardIds)))
     }
     return newReplacements;
   }

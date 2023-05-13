@@ -21,7 +21,6 @@ export default defineComponent({
     Rulebooks
   },
   setup() {
-    console.log("Rules: setup")
     useBase();
     const selectedType = MenuItemType.RULES;
 

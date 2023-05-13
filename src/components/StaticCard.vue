@@ -6,18 +6,34 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { incaseofImgerror } from "../utils/resources";
+/* import Vue, typescript */
+import { defineComponent } from "vue";
 
-@Component
-export default class StaticCard extends Vue {
-  @Prop() readonly cardImageUrl!: string | null;
-  @Prop() readonly isVertical!: boolean;
-  
-  incaseoferror (ev:any) {
-    incaseofImgerror(ev);
-  }
-}
+/* import Dominion Objects and type*/
+import { incaseofImgerror } from '../utils/resources';
+
+/* import store  */
+/* import Components */
+
+export default defineComponent({
+  props: {
+    cardImageUrl: {
+      type: String,
+      default: null,
+    },
+    isVertical: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  setup() {
+    const incaseoferror = (ev:any) => { incaseofImgerror(ev); };
+
+    return {
+      incaseoferror,
+    };
+  },
+});
 </script>
 
 <style>

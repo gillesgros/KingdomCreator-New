@@ -1,5 +1,3 @@
-import type { Locale } from 'vue-i18n'
-
 export enum Language {
   DUTCH = "nl",
   ENGLISH = "en",
@@ -9,12 +7,14 @@ export enum Language {
   POLISH ="pl"
 }
 
-export function getLanguage(value: string):Locale {
+export const defaultLanguage = Language.ENGLISH;
+
+export function getLanguage(value: string) :Language {
   const [prefix] = value.split("-");
   for (const key of Object.keys(Language)) {
     if (Language[key as keyof typeof Language] == prefix) {
       return Language[key as keyof typeof Language];
     }
   }
-  return Language.ENGLISH;
+  return defaultLanguage;
 }

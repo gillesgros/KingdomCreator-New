@@ -2,8 +2,8 @@
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*"],
   "compilerOptions": {
-    "isolatedModules": false,
-    "preserveValueImports": true,
+    "isolatedModules": true,
+    // "preserveValueImports": true,
     "types": [
       "node",
     ],

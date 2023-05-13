@@ -1,6 +1,10 @@
 import Index from "./views/Index.vue"
-import { default as store } from "./stores/sets-store";
 import { initialize } from "./setup";
 import { AppCreateRouter } from "./router";
 
-initialize(AppCreateRouter(["/"], Index), store);
+import '../styles/index.styl';
+
+initialize(AppCreateRouter(["/index.html","/"], Index));
+
+// initialize(AppCreateRouter(["/index.html"], Index));
+// initialize(AppCreateRouter(["/cards.html"], Cards));

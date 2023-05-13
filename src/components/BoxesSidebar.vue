@@ -3,14 +3,17 @@
     <div class="sidebar-content">
       <div class="sidebar-content-title">{{ $t("Sets content") }}</div>
       <div class="set">
-        <div class="sets" v-for="set in sets" :key="set.setId">
+        <div class="sets" v-for="setId in sets" :key="setId">
           <label class="checkbox">
-            <input type="radio" v-model="selectedBoxesSetId" :id="set.setId" :value="set.setId">
-            <span>{{ $t(set.setId) }} <span v-if="FindMultipleVersionSets(set.setId).length !== 0"> -  1st</span></span>
+            <input type="radio" v-model="selectedBoxesSetId" :id="setId" :value="setId"
+              @change="handleSelectionChange(setId)" />
+            <span>{{ $t(setId) }} <span v-if="findMultipleVersionSets(setId).length !== 0"> - 1st</span></span>
           </label>
-          <span v-if="FindMultipleVersionSets(set.setId).length !== 0">
+          <span v-if="findMultipleVersionSets(setId).length !== 0">
             <label class="checkbox suboption-set">
-              <input type="radio" v-model="selectedBoxesSetId" :id="(FindMultipleVersionSets(set.setId))[0].idv2" :value="(FindMultipleVersionSets(set.setId))[0].idv2">
+              <input type="radio" v-model="selectedBoxesSetId" :id="findMultipleVersionSets(setId)[0].idv2"
+                :value="findMultipleVersionSets(setId)[0].idv2" 
+                @change="handleSelectionChange(findMultipleVersionSets(setId)[0].idv2)" />
               <span>2nd</span>
             </label>
           </span>
@@ -21,7 +24,8 @@
       <div class="sidebar-content-title">{{ $t("Sort") }}</div>
       <div class="option" v-for="sortOption in sortOptions" :key="sortOption.value">
         <label class="checkbox">
-          <input type="radio" name="sortOption" :value="sortOption.value" v-model="selectedSortOption">
+          <input type="radio" name="sortOption" :value="sortOption.value" v-model="sortBoxesSet"
+            @change="handleSortChange(sortOption.value)">
           <span>{{ $t(sortOption.display) }}</span>
         </label>
       </div>
@@ -31,62 +35,61 @@
 </template>
 
 <script lang="ts">
-import { UPDATE_SELECTED_BOXESSET } from "../stores/sets-store-mutation-types";
-import { UPDATE_SORT_BOXES_SET } from "../stores/sets-store-mutation-types";
+/* import Vue, typescript */
+import { defineComponent, ref } from "vue";
 
+/* import Dominion Objects and type*/
 import { DominionSets } from "../dominion/dominion-sets";
-import { State } from "../stores/sets-store";
-import { SetId } from "../dominion/set-id";
+import type { SetId } from "../dominion/set-id";
 import { MultipleVersionSets, HideMultipleVersionSets } from "../dominion/set-id";
 import { SortOption } from "../settings/settings";
 
-import { Vue, Component } from "vue-property-decorator";
-//import { incaseofImgerrornew }  from "../utils/resources";
+/* import store  */
+import { useSetsStore } from '../pinia/sets-store';
 
-@Component
-export default class BoxesSidebar extends Vue {
+/* import Components */
 
-  beforeMount() {
-    if (this.$storage.has("selectedBoxesSetId")) {
-      if (!((this.$store.state as State).selectedBoxesSetId === this.$storage.get("selectedBoxesSetId"))) {
-        this.$store.commit(UPDATE_SELECTED_BOXESSET, this.$storage.get("selectedBoxesSetId"));
-      }
-    } else {
-      this.$storage.set("selectedBoxesSetId", (this.$store.state as State).selectedBoxesSetId);
-    }
-  }
+const sortOptions = [
+  { display: "Alphabetical", value: SortOption.ALPHABETICAL },
+  { display: "Cost", value: SortOption.COST },
+];
 
-  get sets() {
-    return DominionSets.getAllSets().filter(set => {return (HideMultipleVersionSets.indexOf(set.setId) == -1)});
-  }
 
-  get selectedBoxesSetId() {
-    if (!this.$storage.has("selectedBoxesSetId")) {
-       this.$storage.set("selectedBoxesSetId", (this.$store.state as State).selectedBoxesSetId);
-    }
-    return (this.$store.state as State).selectedBoxesSetId;
-  }
-  
-  set selectedBoxesSetId(value: SetId) {
-    this.$storage.set("selectedBoxesSetId", value);
-    this.$store.commit(UPDATE_SELECTED_BOXESSET, value);
-  }
+export default defineComponent({
+  name: 'BoxesSidebar',
+  setup() {
+    const setsStore = useSetsStore()
+    const selectedBoxesSetId = ref(setsStore.selectedBoxesSetId)
+    const sortBoxesSet = ref(setsStore.sortBoxesSet);
 
-  get sortOptions(){
-    return [
-      {display: "Alphabetical", value: SortOption.ALPHABETICAL},
-      {display: "Cost", value: SortOption.COST},
-    ];
+    const sets = DominionSets.getAllSetsIds()
+      .filter(setId => { return (HideMultipleVersionSets.indexOf(setId) == -1) });
+
+    const handleSelectionChange = (value: SetId) => {
+      setsStore.updateSelectedBoxesSet(value);
+    };
+
+    const handleSortChange = (value: SortOption) => {
+      console.log(value);
+      setsStore.updateSortBoxesSet(value);
+    };
+
+    const findMultipleVersionSets = (setValue: string) => {
+      return MultipleVersionSets.filter(set => {
+        return (set.id === setValue)
+      });
+    };
+
+    return {
+      selectedBoxesSetId,
+      sortBoxesSet,
+
+      sortOptions,
+      sets,
+      handleSelectionChange,
+      handleSortChange,
+      findMultipleVersionSets
+    };
   }
-  get selectedSortOption() {
-    return (this.$store.state as State).sortBoxesSet;
-  }
-  set selectedSortOption(sortOption: string) {
-    this.$store.commit(UPDATE_SORT_BOXES_SET, sortOption);
-  }
-  
-  FindMultipleVersionSets(setValue: string) {
-    return MultipleVersionSets.filter(set => {return (set.id===setValue)})
-  }
-}
+});
 </script>

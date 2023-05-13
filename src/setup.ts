@@ -1,12 +1,12 @@
 import { createApp } from "vue";
-import { UPDATE_WINDOW_WIDTH } from "./stores/window/mutation-types";
-import type { Store } from "vuex";
-
 import { i18n } from "./i18n/i18n";
 import type { Router } from "vue-router";
+import { createPinia } from "pinia";
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { useWindowStore } from "./pinia/window-store";
+// import gsap from "gsap";
 
-export function initialize<S>(router: Router, store: Store<S>) {
-  initializeWindowListener(store);
+export function initialize<S>(router: Router) {
   const app = createApp({
     template: `
       <div id="app">
@@ -14,19 +14,23 @@ export function initialize<S>(router: Router, store: Store<S>) {
       </div>
     `
   });
+
   app.use(i18n);
   app.use(router);
-  app.use(store);
+  console.log(router)
+  app.use(createPinia().use(piniaPluginPersistedstate));
+  initializeWindowListener();
   app.mount('#app');
 };
 
-function initializeWindowListener<S>(store: Store<S>) {
+function initializeWindowListener () {
   window.addEventListener("resize", () => {
-    updateWindowSize(store);
+    updateWindowSize();
   });
-  updateWindowSize(store);   
+  updateWindowSize();   
 };
 
-function updateWindowSize<S>(store: Store<S>) {
-  store.commit(UPDATE_WINDOW_WIDTH, window.outerWidth);
+function updateWindowSize () {
+  const WindowStore = useWindowStore();
+  WindowStore.updateWindowWidth(window.outerWidth);
 };

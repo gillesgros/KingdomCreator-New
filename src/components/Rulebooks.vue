@@ -17,18 +17,23 @@
 </template>
 
 <script lang="ts">
+/* import Vue, typescript */
 import { defineComponent, computed } from "vue";
-import { useStore } from "vuex";
 import { useI18n } from "vue-i18n";
-import type { I18n } from "vue-i18n";
 
+/* import Dominion Objects and type*/
+import { SetId, Set_To_Ignore_Rules, Set_To_Ignore_Rules_FR } from "../dominion/set-id";
+import { DominionSets } from "../dominion/dominion-sets";
+
+import { Language } from "../i18n/language";
+
+/* import store  */
+import { usei18nStore } from '../pinia/i18n-store';
+
+/* import Components */
 import GridLayout, { Shape } from "./GridLayout.vue";
 import Rulebook from "./Rulebook.vue";
 import type { RulebookInterface } from "./Rulebook.vue";
-import { SetId, Set_To_Ignore_Rules, Set_To_Ignore_Rules_FR } from "../dominion/set-id";
-import { DominionSets } from "../dominion/dominion-sets";
-import { Language } from "../i18n/language";
-import { i18n, getLocale } from "../i18n/i18n";
 
 export default defineComponent({
   name: "Rulebooks",
@@ -37,11 +42,11 @@ export default defineComponent({
     Rulebook
   },
   setup() {
-    const store = useStore();
     const { t } = useI18n();
-    const language = computed(() => getLocale(i18n as I18n));
+    const i18nStore = usei18nStore();
+    const language = computed(() => {return i18nStore.language});
 
-    console.log(language.value, t(SetId.GUILDS))
+
     const rulebooks = computed(() => {
       const listSets =  DominionSets
         .getAllSets()

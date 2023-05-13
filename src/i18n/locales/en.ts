@@ -1,4 +1,4 @@
-import { DominionSets } from "../dominion/dominion-sets";
+import { DominionSets } from "../../dominion/dominion-sets";
 import * as Common from "./messages/en/common.en.json";
 import * as Languages from "./messages/en/languages.en.json";
 import * as PageIndex from "./messages/en/page-index.en.json";

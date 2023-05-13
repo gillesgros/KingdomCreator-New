@@ -1,21 +1,21 @@
 import { isRef, nextTick } from 'vue';
 import { createI18n } from 'vue-i18n'
-import type { Composer, VueI18n, I18nMode, I18n, Locale } from 'vue-i18n'
+import type { Composer, VueI18n, I18nMode, I18n } from 'vue-i18n'
 
-import en from "./en";
-import { Language } from "./language";
+import en from "./locales/en";
+import { Language, defaultLanguage} from "./language";
 
 export const i18n = createI18n({
   legacy: false,
-  locale: Language.ENGLISH,
-  fallbackLocale: Language.ENGLISH,
+  locale: defaultLanguage,
+  fallbackLocale: defaultLanguage,
   globalInjection: true,
   fallbackWarn: false,
   missingWarn: false,
   messages: { en }
 });
 
-setI18nLanguage(i18n as I18n, Language.ENGLISH);
+setI18nLanguage(i18n as I18n, defaultLanguage);
 
 function isComposer(
   instance: VueI18n | Composer,
@@ -32,7 +32,7 @@ export function getLocale(i18n: I18n): string {
   }
 }
 
-export function setLocale(i18n: I18n, locale: Locale): void {
+export function setLocale(i18n: I18n, locale: Language): void {
   if (!i18n.global.availableLocales.includes(locale)) {
     loadLocaleMessages(i18n, locale)
   }
@@ -51,7 +51,7 @@ export function getAvailabletLocale(i18n: I18n): string[] {
   }
 }
 
-export function setI18nLanguage(i18n: I18n, locale: Locale): void {
+export function setI18nLanguage(i18n: I18n, locale: Language): void {
   setLocale(i18n, locale)
   /**
    * NOTE:
@@ -63,22 +63,28 @@ export function setI18nLanguage(i18n: I18n, locale: Locale): void {
   document.querySelector('html')!.setAttribute('lang', locale)
 }
 
-export async function loadLocaleMessages(i18n: I18n, language: Locale): Promise<any> {
+export async function loadLocaleMessages(i18n: I18n, locale: Language): Promise<any> {
   // load locale messages
-  if (i18n.global.availableLocales.includes(language)) {
-    console.log("locale already loaded")
+  if (i18n.global.availableLocales.includes(locale)) {
+    //console.log("locale already loaded")
     return Promise.resolve();
   }
-  console.log("need to load locale", language);
-  const { messages } = await import( 
-  	/* webpackChunkName: "language-[request]" */ `./${language}.ts`); 
-console.log(messages);
+  console.log("need to load locale", locale);
+  const messagesWebPack = await import( 
+  	/* webpackChunkName: "language-[request]" */ `./locales/${locale}.ts`); 
+  const messages= messagesWebPack.default
+
+  // with vite.js
+  // const messages = await fetch(`./locales/${locale}.json`)
+  //   .then((response) => { return response.json(); })
+
   // fetch() error occurred.
   if (messages === undefined) return nextTick();
   
   // set locale and locale message
-  i18n.global.setLocaleMessage(language, messages);
-  console.log(i18n);
+  i18n.global.setLocaleMessage(locale, messages);
+  console.log(i18n)
+  
   return nextTick();
 }
 

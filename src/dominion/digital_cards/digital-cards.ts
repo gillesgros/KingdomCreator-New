@@ -1,4 +1,4 @@
-import { DigitalCard } from "./digital-cards-type"
+import type { DigitalCard } from "./digital-cards-type"
 let Temp_CardsList:DigitalCard[] = [];
 
 import { Cards_list_Baseset, Cards_list_Baseset2 } from "./digital-cards - Baseset"
