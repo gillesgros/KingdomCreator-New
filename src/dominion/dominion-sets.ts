@@ -1,5 +1,5 @@
 import {Boon} from "./boon";
-import {Card} from "./card";
+import type {Card} from "./card";
 import {DominionSet} from "./dominion-set";
 import {Event} from "./event";
 import {Landmark} from "./landmark";
@@ -58,6 +58,11 @@ export class DominionSets {
       if (n1.setId < n2.setId) { return -1;}
       return 0;
       });
+  }
+  public static getAllSetsIds(): SetId[] {
+    const sets: DominionSet[] = [];
+    const setIds = Object.keys(DominionSets.sets) as SetId[]
+    return setIds.sort();
   }
 
   public static getAllCards(): Card[] {

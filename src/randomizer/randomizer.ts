@@ -1,28 +1,28 @@
-import {Addon} from "../dominion/addon";
+import type {Addon} from "../dominion/addon";
 import {CardSupplyBan} from "./card-supply-ban";
 import {CostSupplyBan} from "./cost-supply-ban";
 import {CostSupplyDivider} from "./cost-supply-divider";
 import {CardType} from "../dominion/card-type";
 import {Cards} from "../utils/cards";
-import {DominionSet} from "../dominion/dominion-set";
+import type {DominionSet} from "../dominion/dominion-set";
 import {DominionSets} from "../dominion/dominion-sets";
 import {Event} from "../dominion/event"
 import {Kingdom} from "./kingdom";
 import {Landmark} from "../dominion/landmark"
 import {Metadata as KingdomMetadata} from "./kingdom";
 import {Project} from "../dominion/project"
-import {RandomizerOptions} from "./randomizer-options";
+import type {RandomizerOptions} from "./randomizer-options";
 import {SetId} from "../dominion/set-id";
 import {SetSupplyBan} from "./set-supply-ban";
 import {SetSupplyDivider} from "./set-supply-divider";
-import {Supply} from "./supply";
+import type {Supply} from "./supply";
 import {SupplyBuilder} from "./supply-builder";
-import {SupplyCard} from "../dominion/supply-card";
+import type {SupplyCard} from "../dominion/supply-card";
 import {SupplyDivisions} from "./supply-divisions";
 import {TypeSupplyBan} from "./type-supply-ban";
 import {TypeSupplyRequirement} from "./type-supply-requirement";
 import {getRandomInt, getRandomInts, selectRandomN} from "../utils/rand";
-import {Boon} from "../dominion/boon";
+import type {Boon} from "../dominion/boon";
 import {Way} from "../dominion/way";
 import {Ally} from "../dominion/ally";
 import {Trait} from "../dominion/trait";

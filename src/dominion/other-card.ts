@@ -1,5 +1,5 @@
-import {Card} from "./card"
-import {SetId} from "./set-id"
+import type {Card} from "./card"
+import type {SetId} from "./set-id"
 import {Cost} from "./cost"
 
 import {CardType} from "./card-type"

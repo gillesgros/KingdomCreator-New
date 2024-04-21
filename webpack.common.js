@@ -7,12 +7,13 @@ const webpack = require("webpack");
 
 process.traceDeprecation = true;
 
-module.exports = function(isProduction) {
+module.exports = function (isProduction) {
   return {
     resolve: {
       extensions: [".tsx", ".ts", ".js", ".styl", ".pug", ".vue"],
       alias: {
-        "vue$": "vue/dist/vue.esm.js"
+        "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
+        "vue$": "vue/dist/vue.esm-browser.js"
       }
     },
     entry: {
@@ -48,6 +49,7 @@ module.exports = function(isProduction) {
           exclude: /node_modules/,
           options: {
             appendTsSuffixTo: [/\.vue$/],
+            transpileOnly: true
           }
         },
         {
@@ -55,14 +57,14 @@ module.exports = function(isProduction) {
           type: "javascript/auto",
           loader: "@intlify/vue-i18n-loader"
         },
-        { 
+        {
           test: /\.pug$/,
           use: ["@webdiscus/pug-loader"],
         },
         {
           test: /\.styl$/,
           use: [
-            {loader: MiniCssExtractPlugin.loader},
+            { loader: MiniCssExtractPlugin.loader },
             "css-loader",
             "stylus-loader"
           ]
@@ -79,8 +81,9 @@ module.exports = function(isProduction) {
     plugins: [
       new VueLoaderPlugin(),
       new DominionContentPlugin(),
+
       new HtmlWebpackPlugin({
-        template: "./views/index.pug",
+        template: "./views/layout.pug",
         chunks: ["index"],
         filename: "index.html",
         isProduction: isProduction,
@@ -92,19 +95,19 @@ module.exports = function(isProduction) {
         isProduction: isProduction,
       }),
       new HtmlWebpackPlugin({
-        template: "./views/rules.pug",
+        template: "./views/layout.pug",
         chunks: ["rules"],
         filename: "rules.html",
         isProduction: isProduction,
       }),
       new HtmlWebpackPlugin({
-        template: "./views/cards.pug",
+        template: "./views/layout.pug",
         chunks: ["cards"],
         filename: "cards.html",
         isProduction: isProduction,
       }),
       new HtmlWebpackPlugin({
-        template: "./views/boxes.pug",
+        template: "./views/layout.pug",
         chunks: ["boxes"],
         filename: "boxes.html",
         isProduction: isProduction,
@@ -112,6 +115,11 @@ module.exports = function(isProduction) {
       new MiniCssExtractPlugin({
         filename: "[name]-[contenthash].css",
         chunkFilename: "[id]-[contenthash].css",
+      }),
+      new webpack.DefinePlugin({
+        // D�finit la variable globale pour les options de Vue
+        '__VUE_OPTIONS_API__': true,
+        '__VUE_PROD_DEVTOOLS__': true,
       }),
     ]
   }

@@ -1,6 +1,7 @@
-import Boxes from "./views/Boxes.vue";
-import { store } from "./stores/sets-store";
-import { initialize } from "./setup";
-import { createRouter } from "./router";
+import Boxes from './views/Boxes.vue'
+import { initialize } from './setup';
+import { AppCreateRouter } from './router';
 
-initialize(createRouter(["/boxes.html"], Boxes), store);
+import '../styles/sets.styl';
+
+initialize(AppCreateRouter(["/boxes.html"], Boxes));

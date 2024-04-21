@@ -16,53 +16,68 @@
   </div>
 </template>
 
-
 <script lang="ts">
+/* import Vue, typescript */
+import { defineComponent, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
-import { Vue, Component } from "vue-property-decorator";
-import { State } from "vuex-class";
-import GridLayout, { Shape } from "./GridLayout.vue";
-import Rulebook, { RulebookInterface } from "./Rulebook.vue";
+/* import Dominion Objects and type*/
 import { SetId, Set_To_Ignore_Rules, Set_To_Ignore_Rules_FR } from "../dominion/set-id";
 import { DominionSets } from "../dominion/dominion-sets";
+
 import { Language } from "../i18n/language";
 
-// const SETS_TO_IGNORE = new Set([SetId.PROMOS]);
+/* import store  */
+import { usei18nStore } from '../pinia/i18n-store';
 
-@Component({
+/* import Components */
+import GridLayout, { Shape } from "./GridLayout.vue";
+import Rulebook from "./Rulebook.vue";
+import type { RulebookInterface } from "./Rulebook.vue";
+
+export default defineComponent({
+  name: "Rulebooks",
   components: {
     GridLayout,
     Rulebook
-  }
-})
-export default class Rulebooks extends Vue {
-  @State(state => state.i18n.language) readonly language!: Language;
-  Shape = Shape;
+  },
+  setup() {
+    const { t } = useI18n();
+    const i18nStore = usei18nStore();
+    const language = computed(() => {return i18nStore.language});
 
-  get rulebooks() {
-    return DominionSets
-      .getAllSets()
-      .filter(s => !Set_To_Ignore_Rules.has(s.setId))
-      .map(s => {
-        return {
-          id: s.setId,
-          name: this.$t(s.setId),
-        } as RulebookInterface
-      })
-      .concat({
-        id: SetId.GUILDSCONUCOPIA as string,
-        name: `${this.$tc(SetId.GUILDS)} / ${this.$tc(SetId.CORNUCOPIA)}`,
-      })
-      .filter((set) => !(
-          this.language == Language.FRENCH  
-          ? Set_To_Ignore_Rules_FR.has(set.id as SetId) 
-          : "" )
-      )
-      .sort((a, b) => {
-        return a.id == b.id ? 0 : a.id < b.id ? -1 : 1;
-      });
+
+    const rulebooks = computed(() => {
+      const listSets =  DominionSets
+        .getAllSets()
+        .filter(s => !Set_To_Ignore_Rules.has(s.setId))
+        .map(s => {
+          return {
+            id: s.setId,
+            name: t(s.setId),
+          } as RulebookInterface
+        })
+        .concat({
+          id: SetId.GUILDSCONUCOPIA as string,
+          name: t(SetId.GUILDS) + " / " + t(SetId.CORNUCOPIA),
+        })
+        .filter((set) => !(
+            language.value == Language.FRENCH  
+            ? Set_To_Ignore_Rules_FR.has(set.id as SetId) 
+            : "" )
+        )
+        .sort((a, b) => {
+          return a.id == b.id ? 0 : a.id < b.id ? -1 : 1;
+        });
+      return listSets;
+    });
+    
+    return { 
+      rulebooks, 
+      Shape 
+    };
   }
-};
+});
 </script>
 
 <style>

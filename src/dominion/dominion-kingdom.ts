@@ -1,4 +1,4 @@
-import {SetId} from "./set-id"
+import type {SetId} from "./set-id"
 
 export class DominionKingdom {
   constructor(

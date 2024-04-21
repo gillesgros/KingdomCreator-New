@@ -1,6 +1,6 @@
-import {Addon} from "./addon"
+import type {Addon} from "./addon"
 import {Cost} from "./cost"
-import {SetId} from "./set-id"
+import type {SetId} from "./set-id"
 
 export class Ally implements Addon {
   constructor(

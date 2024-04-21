@@ -5,10 +5,15 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+/* import Vue, typescript */
+import { defineComponent } from "vue";
+/* import Dominion Objects and type*/
+/* import store  */
+/* import Components */
 
-@Component
-export default class TextOverlay extends Vue {}
+export default defineComponent({
+  name: "TextOverlay",
+});
 </script>
 
 <style>

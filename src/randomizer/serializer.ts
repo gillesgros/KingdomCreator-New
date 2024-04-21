@@ -1,7 +1,7 @@
-import {Card} from "../dominion/card";
+import type {Card} from "../dominion/card";
 import {DominionSets} from "../dominion/dominion-sets";
 import {Kingdom} from "./kingdom";
-import {SupplyCard} from "../dominion/supply-card";
+import type {SupplyCard} from "../dominion/supply-card";
 import {Metadata as KingdomMetadata} from "./kingdom";
 import {Supply, Replacements} from "../randomizer/supply";
 
@@ -115,20 +115,6 @@ function deserializeMetadata(serializedKingdom: any): KingdomMetadata {
   );
 }
 
-/*
-function findByIds<T>(ids: string[], lookupFn: (id: string) => T): T[] {
-  const results = [];
-  for (const id of ids) {
-    try {
-      results.push(lookupFn(id));
-    } catch (e) {
-		  console.log("error on: " +id)
-      // Silently catch failed lookups.
-    }
-  }
-  return results;
-}
-*/
 
 function findByIds<T>(ids: string[], lookupFn: (id: string) => T, ext?: string, filteredSet?: string[])  : T[] {
   const results = [];
@@ -140,12 +126,10 @@ function findByIds<T>(ids: string[], lookupFn: (id: string) => T, ext?: string, 
             results.push(lookupFn(set+'_'+ ext + id));
             break;
           } catch (e) {
-            //  console.log("error on: " +set+'_'+id)
             // Silently catch failed lookups of 'set'_'id'
           }
         }
       } catch (e) {
-        console.log("Full error on: " +id)
         // Silently catch failed lookups for 'id'
       }
     }
@@ -154,7 +138,6 @@ function findByIds<T>(ids: string[], lookupFn: (id: string) => T, ext?: string, 
       try {
         results.push(lookupFn(id));
       } catch (e) {
-        console.log("error on: " +id)
         // Silently catch failed lookups.
       }
     }

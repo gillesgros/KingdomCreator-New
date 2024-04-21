@@ -20,30 +20,50 @@
 </template>
 
 <script lang="ts">
-import GridLayout from "./GridLayout.vue";
-import StaticCardWithSet from "./StaticCardWithSet.vue";
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { State } from "vuex-class";
+/* import Vue, typescript */
+import { defineComponent, PropType } from 'vue';
 
-@Component({
+/* import Dominion Objects and type*/
+/* import store  */
+/* import Components */
+import GridLayout , { Shape }from "./GridLayout.vue";
+import StaticCardWithSet from "./StaticCardWithSet.vue";
+
+export default defineComponent({
+  name: "GenericLayout",
   components: {
     GridLayout,
-    StaticCardWithSet,
+    StaticCardWithSet
+  },
+  props: {
+    items: {
+      type: Array as PropType<any[]>,
+      required: true
+    },
+    genericNbColumns: {
+      type: Number,
+      required: true
+    },
+    isVertical: {
+      type: Boolean,
+      required: true
+    },
+    shape: {
+      type: String as PropType<Shape>,
+      default: Shape.CARD,
+    },
+    showOverlay: {
+      type: Boolean,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    }
+  },
+  setup() {
   }
-})
-
-export default class PresetKingdom extends Vue {
-  @State(state => state.window.width) readonly windowWidth!: number;
-  @State(state => state.window.isEnlarged) readonly isEnlarged!: boolean;
-  @Prop() readonly items!: any[];
-  @Prop() readonly genericNbColumns!: number;
-  @Prop() readonly isVertical!: boolean;
-  @Prop() readonly shape!: string;
-  @Prop() readonly showOverlay!: boolean;
-  @Prop() readonly title!: string;
-  
-}
-
+});
 </script>
 
 <style>

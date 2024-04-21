@@ -1,10 +1,10 @@
-import {CardType} from "../dominion/card-type";
+import type {CardType} from "../dominion/card-type";
 import {Cards} from "../utils/cards";
-import {SupplyCard} from "../dominion/supply-card";
-import {SupplyDivision} from "./supply-division";
-import { SupplyDivider } from "./supply-divider";
-import { SupplyBan } from "./supply-ban";
-import { SupplyCorrection } from "./supply-correction";
+import type {SupplyCard} from "../dominion/supply-card";
+import type {SupplyDivision} from "./supply-division";
+import type { SupplyDivider } from "./supply-divider";
+import type { SupplyBan } from "./supply-ban";
+import type { SupplyCorrection } from "./supply-correction";
 import { selectRandom } from "../utils/rand";
 
 export class SupplyDivisions {

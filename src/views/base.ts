@@ -1,51 +1,74 @@
-import { State } from "vuex-class";
-import { Vue, Component, Watch } from "vue-property-decorator";
+/* import Vue, typescript */
+import { computed, watch } from "vue";
+import type { I18n } from "vue-i18n";
+import { useRoute, useRouter } from "vue-router";
+
+/* import Dominion Objects and type*/
+/* import store  */
+import { usei18nStore } from "../pinia/i18n-store";
 import { Language, getLanguage } from "../i18n/language";
-import { UPDATE_LANGUAGE, LOAD_DEFAULT_LANGUAGE } from "../stores/i18n/action-types";
+import { i18n, getLocale } from "../i18n/i18n";
 
-@Component
-export default class Base extends Vue {
-  @State(state => state.i18n.language) readonly language!: Language;
+/* import Components */
 
-  created() {
-    if (this.$route.query.lang) {
-      this.updateLanguageForQueryParam();    
-    } else {
-      this.$store.dispatch(LOAD_DEFAULT_LANGUAGE);
+const useBase = () => {
+  const i18nStore = usei18nStore();
+  const route = useRoute();
+  const router = useRouter();
+
+  const languageStateStr = computed(() => getLocale(i18n as I18n));
+  const routeQueryLang = computed(() => route.query.lang);
+
+  // function for onBeforeMount 
+  const loadLanguageForQueryParam = () => {
+    const langStr = Array.isArray(route.query.lang)
+      ? route.query.lang[0]
+      : route.query.lang;
+    if (langStr && typeof langStr === 'string' && langStr !== languageStateStr.value) {
+      i18nStore.UPDATE_LANGUAGE(getLanguage(langStr) as Language);
     }
+  };
+
+  if (route.query.lang) {
+    loadLanguageForQueryParam();
+  } else {
+    i18nStore.UPDATE_LANGUAGE(i18nStore.language);
   }
 
-  @Watch("$route.query.lang")
-  onLanguageQueryParameterChanged() {
-    if (this.$route.query.lang != this.language) {
-      this.$store.dispatch(UPDATE_LANGUAGE, this.$route.query.lang);
-    }
-  }
-
-  @Watch("language")
-  onLanguageChanged() {
-    if (this.$route.query.lang == this.language) {
-      return;
-    }
-    if (this.language == Language.ENGLISH) {
-      const { lang, ...query } = this.$route.query;
-      this.$router.replace({query});
+  // for Watch function : languageStateStr
+  const onLanguageChanged = () => {
+    if (route.query.lang === languageStateStr.value) { return; }
+    if (getLanguage(languageStateStr.value) === Language.ENGLISH) {
+      const { lang, ...query } = route.query;
+      router.replace({ query });
     } else {
-      this.$router.replace({
+      router.replace({
         query: {
-          ...this.$route.query,
-          lang: this.language
-        }
+          ...route.query,
+          lang: languageStateStr.value,
+        },
       });
     }
-  }
+  };
 
-  updateLanguageForQueryParam() {
-    const lang = this.$route.query.lang instanceof Array 
-      ? this.$route.query.lang[0]!
-      : this.$route.query.lang as string;
-    if (lang != this.language) {
-      this.$store.dispatch(UPDATE_LANGUAGE, getLanguage(lang));
+  // for Watch function : $route.query.lang
+  const onLanguageQueryParameterChanged = () => {
+    if (route.query.lang !== languageStateStr.value) {
+      //loadLocaleMessages(i18n as I18n, (route.query.lang as any) as Language);
+      //setI18nLanguage(i18n as I18n, (route.query.lang as any) as Language);
+      i18nStore.UPDATE_LANGUAGE(route.query.lang as Language);
     }
-  }
+  };
+
+  watch(languageStateStr, onLanguageChanged);
+  watch(routeQueryLang, onLanguageQueryParameterChanged);
+
+  return {
+    languageStateStr,
+    routeQueryLang,
+    onLanguageChanged,
+    onLanguageQueryParameterChanged,
+  };
 }
+
+export default useBase

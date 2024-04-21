@@ -1,74 +1,88 @@
 <template>
-  <button
-    class="fullscreen-button"
-    :class="{ 'fullscreen-button--has-copied': IsFullScreen }"
-    @click="handleClick"
-  >
-    <input ref="textInputfull" class="fullscreen-button__input" type="text" :value="textfull" readonly />
+  <button :aria-label="$t('fullscreenButton')" class="fullscreen-button" :class="{ 'fullscreen-button--has-copied': isFullScreen }" @click="handleClick">
+    <input :aria-label="$t('fullscreenButton')" ref="textInputfull" class="fullscreen-button__input" type="text" :value="textfull" readonly />
     <div class="fullscreen-button__icon">
-      <svg v-if="	IsFullScreen" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M15 2h2v5h7v2h-9v-7zm9 13v2h-7v5h-2v-7h9zm-15 7h-2v-5h-7v-2h9v7zm-9-13v-2h7v-5h2v7h-9z"/>
+      <svg v-if="isFullScreen" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M15 2h2v5h7v2h-9v-7zm9 13v2h-7v5h-2v-7h9zm-15 7h-2v-5h-7v-2h9v7zm-9-13v-2h7v-5h2v7h-9z" />
       </svg>
       <svg v-else height="32" width="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M1 1v6h2V3h4V1H1zm2 12H1v6h6v-2H3v-4zm14 4h-4v2h6v-6h-2v4zm0-16h-4v2h4v4h2V1h-2z"/>
+        <path d="M1 1v6h2V3h4V1H1zm2 12H1v6h6v-2H3v-4zm14 4h-4v2h6v-6h-2v4zm0-16h-4v2h4v4h2V1h-2z" />
       </svg>
     </div>
     <transition name="fade-slide-in">
-      <div v-if="IsFullScreen" class="fullscreen-button__copied">
-        FullScreen!
+      <div v-if="isFullScreen" class="fullscreen-button__copied">
+        {{$t("fullscreen")}}
       </div>
     </transition>
   </button>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { State } from "vuex-class";
+/* import Vue, typescript */
+import { defineComponent, computed } from "vue";
+
+/* import Dominion Objects and type*/
+
 import { ChangeCss } from "../utils/resources";
-import { UPDATE_FULLSCREEN_RANDOMIZER } from "../stores/randomizer/mutation-types";
+
+/* imoprt store  */
+import { useRandomizerStore } from "../pinia/randomizer-store";
+
+/* import Components */
 
 
-@Component
-export default class FullScreenButton extends Vue {
-  @State(state => state.randomizer.isFullScreen) HasFullScreenRequested!: boolean;
-  @Prop() readonly textfull!: string; 
+export default defineComponent({
+  name: "FullScreenButton",
+  components: {
+  },
+  props: {
+    textfull: {
+      type: String,
+      default: ""
+    }
+  },
+  setup() {
+    const randomizerStore = useRandomizerStore();
+    const isFullScreen = computed(() => { return randomizerStore.isFullScreen });
 
-  get IsFullScreen() {
-    return Boolean(this.HasFullScreenRequested);
-  }
+    // const IsFullScreen= () => {
+    //   HasFullScreenRequested.value;
+    // }
 
+    const handleClick = () => {
+      if (isFullScreen.value == false) {
+        randomizerStore.UPDATE_FULLSCREEN_RANDOMIZER(true);
+        ChangeCss('.content .sidebar', 'display', 'none');
+        ChangeCss('.content', 'max-width', 'unset');
+        ChangeCss('.content .main', 'margin-right', 'unset');
+      } else {
+        randomizerStore.UPDATE_FULLSCREEN_RANDOMIZER(false);
+        ChangeCss('.content .sidebar', 'display', 'unset');
+        ChangeCss('.content', 'max-width', '1450px');
+        ChangeCss('.content .main', 'margin-right', '255px');
+      }
+    }
 
-  handleClick() {
-  console.log("in handleClick")
-  
-    if (this.HasFullScreenRequested == false ) {
-    this.$store.commit(UPDATE_FULLSCREEN_RANDOMIZER, true);
-      ChangeCss('.content .sidebar', 'display', 'none');
-      ChangeCss('.content', 'max-width', 'unset');
-      ChangeCss('.content .main', 'margin-right', 'unset');
-    } else {
-    this.$store.commit(UPDATE_FULLSCREEN_RANDOMIZER, false);
-      ChangeCss('.content .sidebar', 'display', 'unset');
-      ChangeCss('.content', 'max-width', '1450px');
-      ChangeCss('.content .main', 'margin-right', '255px');
+    return {
+      isFullScreen,
+      handleClick,
     }
   }
-
-}
+})
 </script>
 
 
 <style>
 .fullscreen-button {
   -webkit-appearance: none;
+  appearance: none;
   border: none;
-  //display: block;
   height: 30px;
   outline: none;
   padding: 0;
   position: relative;
   width: 30px;
-  
+
 }
 
 .fullscreen-button__icon {
@@ -89,7 +103,7 @@ export default class FullScreenButton extends Vue {
 }
 
 .fullscreen-button__icon {
-  background: #fff; 
+  background: #fff;
   box-sizing: border-box;
   padding: 3px;
   z-index: 1;

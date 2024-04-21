@@ -1,6 +1,7 @@
-import Sets from "./views/Sets.vue"
-import { store } from "./stores/sets-store";
-import { initialize } from "./setup";
-import { createRouter } from "./router";
+import Sets from './views/Sets.vue'
+import { initialize } from './setup';
+import { AppCreateRouter } from './router';
 
-initialize(createRouter(["/sets.html"], Sets), store);
+import '../styles/sets.styl';
+
+initialize(AppCreateRouter(["/sets.html"], Sets));

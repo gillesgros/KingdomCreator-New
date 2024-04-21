@@ -1,6 +1,6 @@
 import {Range} from "../utils/range";
 import {SegmentedRange} from "../utils/segmented-range";
-import {SupplyCard} from "../dominion/supply-card";
+import type {SupplyCard} from "../dominion/supply-card";
 import {SupplyDivision} from "./supply-division";
 import {getRandomInts} from "../utils/rand";
 

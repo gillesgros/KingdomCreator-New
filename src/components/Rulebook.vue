@@ -10,10 +10,16 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-import { State } from "vuex-class";
+/* import Vue, typescript */
+import { defineComponent, computed } from "vue";
+
+/* import Dominion Objects and type*/
 import { getSetImageUrl, getRulebookUrl } from "../utils/resources";
-import { Language } from "../i18n/language";
+
+/* import store  */
+import { usei18nStore } from '../pinia/i18n-store';
+
+/* import Components */
 import TextOverlay from "./TextOverlay.vue";
 
 export interface RulebookInterface {
@@ -21,25 +27,33 @@ export interface RulebookInterface {
   name: string;
 }
 
-@Component({
+export default defineComponent({
+  name: "Rulebook",
   components: {
     TextOverlay,
-  }
-})
+  },
+  props: {
+    rulebook: { type: Object as () => RulebookInterface,
+                required: true,
+    },
+  },
+  setup(props) {
+    const i18nStore = usei18nStore();
+    const lang = computed(() => {return i18nStore.language});
+    const imageUrl = computed(() => {
+      return getSetImageUrl(props.rulebook.id, lang.value);
+    });
 
+    const rulebookUrl = computed(() => {
+      return getRulebookUrl(props.rulebook.id, lang.value);
+    });
 
-export default class Rulebook extends Vue {
-  @Prop() readonly rulebook!: RulebookInterface;
-  @State(state => state.i18n.language) readonly language!: Language;
-  
-  get imageUrl() {
-    return getSetImageUrl(this.rulebook.id, this.language);
+    return {
+      imageUrl,
+      rulebookUrl,
+    };
   }
-
-  get rulebookUrl() {
-    return getRulebookUrl(this.rulebook.id, this.language);
-  }
-}
+});
 </script>
 
 <style>
