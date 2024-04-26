@@ -4,7 +4,7 @@ import {DominionSet} from "./dominion-set";
 import {Event} from "./event";
 import {Landmark} from "./landmark";
 import {Project} from "./project";
-import {SetId} from "./set-id";
+import {SetId, Sets_To_Ignore_Regroup} from "./set-id";
 import {SupplyCard} from "./supply-card";
 import {Way} from "./way";
 import {Ally} from "./ally";

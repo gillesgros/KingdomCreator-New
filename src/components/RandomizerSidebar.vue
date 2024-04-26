@@ -106,7 +106,7 @@ import { defineComponent, ref, computed, watch } from "vue";
 
 /* import Dominion Objects and type*/
 import { DominionSets } from "../dominion/dominion-sets";
-import { MultipleVersionSets, HideMultipleVersionSets } from "../dominion/set-id";
+import { MultipleVersionSets, HideMultipleVersionSets, Sets_To_Ignore_Regroup } from "../dominion/set-id";
 import type { SetId } from "../dominion/set-id";
 
 /* imoprt store  */
@@ -134,7 +134,7 @@ export default defineComponent({
     const settings = computed(() => { return randomizerStore.settings });
     const randomizerSettings = computed(() => { return randomizerStore.settings.randomizerSettings });
 
-    const setIds = DominionSets.getAllSetsIds()
+    const setIds = DominionSets.getAllSetsIds().filter(setId => !Sets_To_Ignore_Regroup.has(setId))
       .filter(setId => { return (HideMultipleVersionSets.indexOf(setId) == -1) });
 
     const selectedSetIds = ref(settings.value.selectedSets);

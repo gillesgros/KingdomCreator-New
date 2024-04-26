@@ -57,7 +57,7 @@ export default defineComponent({
             name: t(s.setId),
           } as RulebookInterface
         })
-        .concat({
+/*        .concat({
           id: SetId.GUILDSCONUCOPIA as string,
           name: t(SetId.GUILDS) + " / " + t(SetId.CORNUCOPIA),
         })
@@ -65,7 +65,7 @@ export default defineComponent({
             language.value == Language.FRENCH  
             ? Set_To_Ignore_Rules_FR.has(set.id as SetId) 
             : "" )
-        )
+        ) */
         .sort((a, b) => {
           return a.id == b.id ? 0 : a.id < b.id ? -1 : 1;
         });

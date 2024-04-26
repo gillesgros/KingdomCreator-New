@@ -9,7 +9,7 @@ export enum SetId {
   DARK_AGES = "darkages",
   EMPIRES = "empires",
   GUILDS = "guilds",
-  GUILDSCONUCOPIA = "guildscornucopia",
+  GUILDSCORNUCOPIA = "guildscornucopia",
   HINTERLANDS = "hinterlands",
   HINTERLANDS_2 = "hinterlands2",
   HINTERLANDS_2_ADD = "hinterlands2add",
@@ -36,6 +36,9 @@ export const Set_To_Ignore_Kingdoms =
     new Set([SetId.PROMOS,
              SetId.PERSONAL]);
 
+export const Sets_To_Ignore_Regroup = 
+    new Set([SetId.GUILDSCORNUCOPIA]);
+
 export const Set_To_Ignore_Rules =
     new Set([ SetId.PROMOS,
               SetId.BASE_SET_2_ADD,
@@ -53,7 +56,7 @@ export const Set_To_Ignore_Rules_FR =
               SetId.SEASIDE_2,
               SetId.PROSPERITY_2,
               SetId.HINTERLANDS_2,
-              SetId.GUILDSCONUCOPIA,
+              SetId.GUILDSCORNUCOPIA,
               SetId.RENAISSANCE,
               SetId.EMPIRES,
               SetId.NOCTURNE,

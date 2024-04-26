@@ -50,6 +50,7 @@ import PresetKingdomList from "../components/PresetKingdomList.vue";
 import SetsSidebar from "../components/SetsSidebar.vue";
 import { DominionKingdoms } from "../dominion/dominion-kingdoms";
 import { DominionSets } from "../dominion/dominion-sets";
+import { Sets_To_Ignore_Regroup } from "../dominion/set-id";
 import type { SetId } from "../dominion/set-id";
 import { useSetsStore } from '../pinia/sets-store';
 
@@ -68,7 +69,7 @@ export default defineComponent({
     const ShowFilter = ref(false);
     ShowFilter.value = setsStore.showFilterSets
 
-    const setIds = DominionSets.getAllSetsIds();
+    const setIds = DominionSets.getAllSetsIds().filter(setId => !Sets_To_Ignore_Regroup.has(setId))
 
     const kingdoms = computed(() => {
       const setId = setsStore.selectedSetId;
